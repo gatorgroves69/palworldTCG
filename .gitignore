@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 data/games/.logger.lock
 .cache/
+.pytest_cache/
+.venv/
+results/
+*.egg-info/
