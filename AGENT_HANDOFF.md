@@ -73,4 +73,30 @@ Paste the raw output here, then commit and push. It's about 1 minute of CPU and 
 
 M4 is built: `python -m sim gauntlet --deck <list> --games N --seed S [--bot heuristic2]` writes `summary.json`, `games.jsonl` and **`telegram.txt`** (a message under 900 characters you can forward to Bobby as is) under `results/gauntlet/<timestamp>_<deck>/`. A 1,000-game demo takes about 1 minute on the Mac.
 
-Next Claude action: when Bobby approves, write the first overnight job spec here (command, commit, seed, budget) for Mew to run on the Optiplex.
+### Job specs for Mew: run ONLY after Bobby approves them to you directly (Telegram)
+
+Always run on a clean checkout: `git pull --ff-only`, then confirm HEAD is **the commit that added these specs, or later**. Make no engine edits. For each job, record the exact command, the HEAD commit, the start and end time (UTC), and the stdout tail in `results/runs/<job>/notes.md`, then commit that folder and push. If a job crashes, commit the error text and the seed and stop. Never invent numbers.
+
+**J0: benchmark** (~1 min). This is message C1 above: paste the output here under your section.
+
+**J1: 10-deck matrix, two-step bot.** Size it from J0: if the J0 400-game run took under 60 s, use `--games 2000`, otherwise `--games 1000`.
+```
+python3 -m sim matrix --decks data/decks/*.txt --games 2000 --seed 21 --bot heuristic2 --out results/runs/J1-matrix
+```
+Commit `results/runs/J1-matrix/matrix.md`, `matrix.json` and `notes.md` only, not the per-pair game files. Telegram Bobby the "N/M calibrated pairs within ±5" line from stdout.
+
+**J2: optimizer, Cattiva·Azurobe against the full top-8 field** (starting from the list with the Chillet swap already applied):
+```
+python3 -m sim optimize --deck results/runs/cattiva-azurobe-br_after-chillet-swap.txt --rounds 4 --max-tries 8 --seed 22
+```
+It appends to `results/experiments.md` (tracked). Commit that file and `results/runs/J2-optimize/notes.md`, and copy `results/opt/<run>/best.txt` to `results/runs/J2-optimize/best.txt`. This is long: roughly 2–5 h, depending on J0.
+
+**J3: summary for Bobby, after J2.**
+```
+python3 -m sim gauntlet --deck results/runs/J2-optimize/best.txt --games 20000 --seed 23 --out results/runs/J3-gauntlet
+```
+Commit `summary.json`, `telegram.txt` and `notes.md`, then send `telegram.txt` to Bobby as is.
+
+Run J1–J3 one after another, not in parallel. Claude will not run optimizer or matrix jobs on the Mac while these are pending, so `results/experiments.md` won't conflict.
+
+Next Claude action: work on calibration scoring that accounts for noise in the real data (engine lane, no long runs), then review J1–J3 results when they're pushed.

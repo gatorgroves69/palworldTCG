@@ -6,4 +6,5 @@ data/games/.logger.lock
 .venv/
 results/*
 !results/experiments.md
+!results/runs/
 *.egg-info/
