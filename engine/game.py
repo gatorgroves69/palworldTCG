@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 from typing import Callable, Protocol, Sequence
 
 from .abilities import CardImpl, Event, Trigger
+from .config import RulesConfig
 from .actions import (Action, Activate, Attack, Decision, EndMain, Pass, PlayCard,
                       SoulDraw, UseInterrupt)
 from .deck import Deck
@@ -82,6 +83,7 @@ class Game:
         seed: int,
         log: bool = False,
         turn_cap: int = DEFAULT_TURN_CAP,
+        rules: RulesConfig | None = None,
     ) -> None:
         assert len(decks) == 2 and len(agents) == 2
         self.seed = seed
@@ -91,6 +93,7 @@ class Game:
         self.logging = log
         self.lines: list[str] = []
         self.turn_cap = turn_cap
+        self.rules = rules or RulesConfig()
 
         self.players = [PlayerState(0), PlayerState(1)]
         self.cards: dict[int, CardInstance] = {}
@@ -197,8 +200,8 @@ class Game:
         for c in opp.base:
             if c.is_pal and (c.rested or attacker.kw("assault")):
                 targets.append(c.uid)
-            elif c.is_structure:  # A2: structures attackable standing or rested
-                targets.append(c.uid)
+            elif c.is_structure and (c.rested or self.rules.structures_attackable == "any"):
+                targets.append(c.uid)  # A2: configurable. Gear is never a target (CR 9.2.3)
         taunters = [t for t in targets if t is not None and self.card(t).kw("taunt")]
         return taunters or targets
 
@@ -396,7 +399,8 @@ class Game:
         self.log(f"  {c.name} {stat} {amount:+d}" + (f" until end of {until}" if until else ""))
 
     def deal_card_damage(self, c: CardInstance, n: int, source: CardInstance | None = None) -> None:
-        if n > 0 and c.zone is Zone.BASE:
+        # Only Pals and structures have damage (CR 4.4.4); gear can't be damaged.
+        if n > 0 and c.zone is Zone.BASE and (c.is_pal or c.is_structure):
             c.damage += n
             self.log(f"  {c.name} takes {n} damage (total {c.damage}/{self.power(c)})")
 

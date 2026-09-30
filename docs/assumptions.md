@@ -5,28 +5,23 @@ These are the places where the rules are ambiguous or silent and I had to choose
 
 ## Rules
 
-### A1: Can the first player attack on turn 1? (`OPEN`)
-- The CR has no rule against it. CR 9.2.2.3 says Pals can attack the turn they're deployed.
-- The first player's only turn-1 handicap is skipping the draw (CR 7.3.1).
-- **Chosen:** yes, the first player can deploy and attack on turn 1.
-- **Impact:** high for aggressive decks and for the first/second-player split.
+### A1: Can the first player attack on turn 1? (`CONFIRMED`)
+- Yes. Only the draw is skipped (CR 7.3.1), and Pals can attack the turn they're deployed (CR 9.2.2.3). The user ruled on this on 2026-09-29.
 
-### A2: Can standing Structures be attacked? (`OPEN`)
-- CR 9.2.3: "the non-turn player, or 1 of the structures or Pals in the resting state". It's unclear whether "in the resting state" applies to structures too.
-- The QM lists "opposing Pal, structure, or player" as attack targets. The QM Q&A requires Pals to be rested, but says nothing about structures being rested.
-- Normal play never rests a structure (assigning rests the *Pal*). If structures had to be rested, durability would almost never matter.
-- **Chosen:** any opposing Structure can be attacked, standing or rested.
-- **Impact:** medium. It only matters for decks that play Structures.
+### A2: Can standing Structures be attacked? (`OPEN`, config flag)
+- CR 9.2.3 is ambiguous: "the non-turn player, or 1 of the structures or Pals in the resting state".
+- The user asked for this to be a flag rather than a guess, so it's `RulesConfig.structures_attackable`, set to `any` (the default) or `rested_only`.
+- M1 calibration runs both settings and reports which one lands closer to the real-world 56%.
 
-### A3: How does Gear attach to Pals? (`OPEN`, waiting on card data)
-- The CR says Gear is "fielded to assist your Pals" and is deployed to the base. It has no general rules for equipping.
-- **Chosen:** the engine deploys Gear to the base. Anything about equipping or attaching is handled by that card's own implementation, following its text. I'll read the Gear cards in `cards.json` before writing any of this, and I'll ask if the text is unclear.
+### A3: Gear (`CONFIRMED`)
+- Gear is deployed to its controller's own base as a card in its own right (CR 4.4.1, 10.6.2.4.1).
+- It is implemented from each card's own text, and attaches to a Pal only if the text says so.
+- Gear can't be attacked or damaged (CR 4.4.4, 9.2.3), and it doesn't count toward the 5-Pal limit.
 
-### A4: Do soul cards have any rules text? (`OPEN`, waiting on card data)
-- The QM shows soul cards with a small text box, but no rules mention soul card abilities.
-- **Chosen:** soul cards are blank resources. If any soul card in `cards.json` has real text, I'll stop and ask.
+### A4: Do soul cards have any rules text? (`RESOLVED`)
+- They're blank resources. Every soul entry in `data/cards.json` (SOUL-000 to SOUL-024) has only reminder text for the "rest 3 souls, draw 1" main-phase action (CR 8.5), and reminder text doesn't affect the game (CR 2.12.2). The engine handles that action already.
 
-### A5: Order of simultaneous triggers controlled by one player (simplification, `OPEN`)
+### A5: Order of simultaneous triggers controlled by one player (simplification, `CONFIRMED for now`)
 - CR 10.5.3: the controller picks which of their waiting triggers to resolve first.
 - **Chosen:** each player's triggers resolve in the order they triggered. The bot doesn't choose. The turn player's triggers still resolve before the non-turn player's, as the CR requires.
 - **Impact:** low, unless a deck has order-sensitive trigger chains. I'll check again once the M1 cards are implemented.
@@ -43,6 +38,13 @@ These are the places where the rules are ambiguous or silent and I had to choose
 
 ### A9: Deck color limit (`RESOLVED`, from QM)
 - The CR doesn't mention it. The QM says "Up to 2 colors can be used in a deck. Colorless cards can be used freely in any deck." Enforced when a deck is validated.
+
+## Data caveats
+
+### D1: Calibration target has no sample size or first/second split (`OPEN`)
+- `data/calibration/matchups_2026-09-29.json` gives Cattiva·Azurobe (br) vs Chillet·Relaxaurus (bp) as 0.56, with `games: null`. Hermes couldn't get game counts.
+- Without a sample size, the real rate's own confidence interval is unknown, so the ±5-point pass band is the only tolerance I apply.
+- There's no first/second breakdown in the file, so the "does better going first" check can only confirm the direction, not compare numbers.
 
 ## Simulation choices (not rules questions)
 

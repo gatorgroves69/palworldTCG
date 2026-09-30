@@ -39,7 +39,8 @@ Every place where I had to choose an interpretation is tagged **⚠ INTERPRETATI
 | Resolution | public, shared | yes | Temporary; the engine does not model it as a zone |
 
 A card that leaves the base becomes a new object. Effects that applied to it on the base stop applying (CR 4.1.4).
-Pals and Structures in the base have a **damage taken** counter (CR 4.4.4).
+Pals and Structures in the base have a **damage taken** counter (CR 4.4.4). **Gear doesn't have one and can't be damaged.**
+Gear is deployed to your own base as a card in its own right (CR 4.4.1, 10.6.2.4.1). It attaches to a Pal only if that card's text says so.
 
 ## 3. Setup (CR 6.2)
 
@@ -66,12 +67,14 @@ Pals and Structures in the base have a **damage taken** counter (CR 4.4.4).
 ## 5. Battle (CR 9)
 
 **Who can attack (CR 9.2.2):** a standing Pal you control that isn't prevented by an effect.
-**Pals can attack on the turn they're deployed** (CR 9.2.2.3). No rule stops the first player from attacking on turn 1. ⚠ INTERPRETATION A1.
+**Pals can attack on the turn they're deployed** (CR 9.2.2.3). The first player **may attack on turn 1**; only their draw is skipped (CR 7.3.1). Confirmed by the user (A1).
 
 **What can be attacked (CR 9.2.3):**
 - the opponent (the player),
 - a **rested** opposing Pal (a standing Pal only if the attacker has *Assault*),
-- an opposing **Structure**, standing or rested. ⚠ INTERPRETATION A2.
+- an opposing **Structure**. Whether it must be rested is ambiguous (CR 9.2.3), so it's a
+  config flag, `RulesConfig.structures_attackable`: `any` (the default) or `rested_only`. ⚠ A2.
+- **Gear can never be attacked** (CR 9.2.3).
 
 Steps:
 

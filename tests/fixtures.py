@@ -28,6 +28,7 @@ CARDS = {
     "T-VIG": pal("T-VIG", 200),
     "T-INT": CardDef("T-INT", "Interrupt Pal", R.PAL, Color.BLUE, 2, 200, 1),
     "T-WALL": CardDef("T-WALL", "Wall", R.STRUCTURE, Color.RED, 2, 500, 0),
+    "T-GEAR": CardDef("T-GEAR", "Gear", R.GEAR, Color.RED, 1, 0, 0),
     "T-DRAW2": CardDef("T-DRAW2", "Draw Two", R.EVENT, Color.BLUE, 1),
     "T-SOUL": CardDef("T-SOUL", "Soul", R.SOUL),
     "T-GREEN": pal("T-GREEN", 100, color=Color.GREEN),
@@ -52,6 +53,7 @@ def make_registry() -> Registry:
     kw("T-VIG", vigilance=True)
     kw("T-INT", interrupt=True)
     reg.vanilla("T-WALL")
+    reg.vanilla("T-GEAR")
 
     @reg.register
     class DrawTwo(CardImpl):
@@ -82,7 +84,7 @@ def legal_deck(name="legal") -> Deck:
 
 def toolbox(name="toolbox") -> Deck:
     """Not construction-legal: 3 of every test card, for arranging board states."""
-    codes = RED_PALS + ["T-INT", "T-WALL", "T-DRAW2"]
+    codes = RED_PALS + ["T-INT", "T-WALL", "T-DRAW2", "T-GEAR"]
     return deck(name, extra=[c for c in codes for _ in range(3)])
 
 
@@ -111,16 +113,17 @@ class ScriptedBot(Bot):
         return list(decision.options[: decision.min])
 
 
-def make_game(d0=None, d1=None, seed=1, log=True):
+def make_game(d0=None, d1=None, seed=1, log=True, rules=None):
     bots = [ScriptedBot(), ScriptedBot()]
-    g = Game([d0 or deck("A"), d1 or deck("B")], make_registry(), bots, seed=seed, log=log)
+    g = Game([d0 or deck("A"), d1 or deck("B")], make_registry(), bots, seed=seed, log=log,
+             rules=rules)
     return g, bots
 
 
-def staged(d0=None, d1=None, active=0):
+def staged(d0=None, d1=None, active=0, rules=None):
     """A game past setup, at player `active`'s main phase, with empty hands,
     8 standing souls each and life 10. Use `put` to arrange cards."""
-    g, bots = make_game(d0 or toolbox("A"), d1 or toolbox("B"))
+    g, bots = make_game(d0 or toolbox("A"), d1 or toolbox("B"), rules=rules)
     g.setup()
     for ps in g.players:
         for c in list(ps.hand):

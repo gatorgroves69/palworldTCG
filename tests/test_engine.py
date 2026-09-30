@@ -3,7 +3,7 @@ import pytest
 
 from bots import RandomBot
 from cards.decklist import DecklistError, build_deck, parse_decklist
-from engine import (Activate, Attack, CardType, Deck, DeckError, Game, GameOver, PlayCard,
+from engine import (Activate, RulesConfig, Attack, CardType, Deck, DeckError, Game, GameOver, PlayCard,
                     SoulDraw, UnimplementedCardError, UseInterrupt, Zone, validate_deck)
 from tests.fixtures import CARDS, deck, legal_deck, make_game, make_registry, put, stack_top, staged
 
@@ -234,6 +234,44 @@ def test_structure_attack_no_damage_back():
     assert w.uid in g.attack_targets(a)  # standing structure is a target (A2)
     g.perform(Attack(a.uid, w.uid))
     assert a.damage == 0 and w.damage == 300 and w.zone is Zone.BASE
+
+
+def test_structures_rested_only_config():
+    g, _ = staged(rules=RulesConfig(structures_attackable="rested_only"))
+    a = put(g, 0, "T-300")
+    w = put(g, 1, "T-WALL")
+    assert w.uid not in g.attack_targets(a)
+    w.rested = True
+    assert w.uid in g.attack_targets(a)
+
+
+def test_bad_rules_config():
+    with pytest.raises(ValueError):
+        RulesConfig(structures_attackable="sometimes")
+
+
+def test_gear_deploys_to_own_base_and_is_untouchable():
+    g, _ = staged()
+    gear = put(g, 0, "T-GEAR", Zone.HAND)
+    g.perform(PlayCard(gear.uid))
+    assert gear in g.players[0].base and gear.zone is Zone.BASE
+    a = put(g, 1, "T-300")
+    gear.rested = True
+    assert gear.uid not in g.attack_targets(a)
+    g.deal_card_damage(gear, 500)
+    g.check_timing()
+    assert gear.damage == 0 and gear.zone is Zone.BASE
+    assert len(g.players[0].pals) == 0  # gear doesn't count toward the Pal limit
+
+
+def test_first_player_can_attack_turn_one():
+    g, bots = make_game()
+    g.setup()
+    f = g.first_player
+    pal = g.players[f].hand[0]  # default deck is all T-100
+    bots[f].actions.extend([PlayCard(pal.uid), Attack(pal.uid, None)])
+    g.take_turn()
+    assert g.turn == 1 and g.stats[f].attacks == 1
 
 
 def test_taunt_forces_target():
