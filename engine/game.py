@@ -789,6 +789,7 @@ class Game:
                     self.move(c, Zone.DECK)
                 self.rng.shuffle(ps.deck)
                 ps.redrew = self.stats[p].redrew = True
+                self.stats[p].drawn = []  # the redrawn hand was never kept
                 self.draw(p, OPENING_HAND)
             else:
                 self.log(f"{self.pname(p)} keeps")

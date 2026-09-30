@@ -1,0 +1,68 @@
+"""sim runner + analysis (small batches, single process)."""
+import json
+
+import pytest
+
+from analysis.report import draw_impact, write_report
+from analysis.tags import loss_tags, rnd
+from cards.db import DEFAULT_PATH, load_card_db
+from sim.runner import MatchSpec, game_seed, make_game, rate, run, wilson
+
+pytestmark = pytest.mark.skipif(not DEFAULT_PATH.exists(), reason="data/cards.json missing")
+SPEC = MatchSpec("data/decks/cattiva-azurobe-br.txt", "data/decks/chillet-relaxaurus-bp.txt")
+
+
+def test_wilson():
+    lo, hi = wilson(56, 100)
+    assert 0.46 < lo < 0.47 and 0.65 < hi < 0.66
+    assert wilson(0, 0) == (0.0, 0.0)
+
+
+def test_rate_counts_draws_as_half():
+    gs = [{"winner": "deck"}, {"winner": "draw"}, {"winner": "opp"}, {"winner": "opp"}]
+    r = rate(gs)
+    assert r["win_rate"] == 0.375 and r["draws"] == 1
+
+
+def test_run_writes_outputs_and_replays(tmp_path):
+    s = run(SPEC, games=6, seed=7, out=tmp_path, workers=1, logs=1, progress=False)
+    assert s["games"] == 6 and s["going_first"]["games"] + s["going_second"]["games"] == 6
+    recs = [json.loads(x) for x in (tmp_path / "games.jsonl").read_text().splitlines()]
+    assert len(recs) == 6 and recs[0]["seed"] == game_seed(7, 0)
+    for key in ("seed", "winner", "turns", "drawn", "first"):
+        assert key in recs[0]
+    g = make_game(SPEC, recs[0]["seed"], log=True)
+    g.play()
+    assert "\n".join(g.lines) == (tmp_path / "logs" / f"game_{recs[0]['seed']}.log").read_text()
+    report = write_report(tmp_path).read_text()
+    assert "Why cattiva-azurobe-br loses" in report and "Calibration" in report
+
+
+def test_same_seed_same_results(tmp_path):
+    a = run(SPEC, 4, 3, tmp_path / "a", workers=1, logs=0, progress=False)
+    b = run(SPEC, 4, 3, tmp_path / "b", workers=2, logs=0, progress=False)
+    assert (tmp_path / "a" / "games.jsonl").read_text() == (tmp_path / "b" / "games.jsonl").read_text()
+    assert a["win_rate"] == b["win_rate"]
+
+
+def test_loss_tags_synthetic():
+    db = load_card_db()
+    g = {"winner": "opp", "first": "opp", "turns": 10, "reason": "life",
+         "opening": [["BP01-002"] * 5, []],  # all ◇7: weak opening
+         "played": [[[6, "BP01-002"]], []],
+         "history": [[t, (t + 1) % 2, [10, 10], [5, 5], [40, 40], [0, 2], [0, 1500]]
+                     for t in range(1, 11)],
+         "life_lost_to": [{"BP01-027": 9, "BP01-025": 1}, {}],
+         "lucky_saves": [0, 0]}
+    tags = loss_tags(g, db)
+    assert "weak_opening_hand" in tags and "no_early_play" in tags
+    assert "behind_on_board_by_round_1-3" in tags and "lost_to:BP01-027" in tags
+    assert "too_slow_on_the_draw" in tags
+    assert rnd(1) == 1 and rnd(4) == 2
+
+
+def test_draw_impact_math():
+    gs = ([{"drawn": [["X"], []], "winner": "deck"}] * 40
+          + [{"drawn": [[], []], "winner": "opp"}] * 40)
+    (row,) = draw_impact(gs, 0)
+    assert row["delta"] == 1.0 and row["significant"]
