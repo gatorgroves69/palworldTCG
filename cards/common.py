@@ -19,10 +19,10 @@ def opp_pals(game: Game, player: int) -> list[CardInstance]:
 
 def choose_pal(game: Game, player: int, prompt: str,
                pred: Callable[[CardInstance], bool] = lambda c: True,
-               up_to: bool = True) -> CardInstance | None:
+               up_to: bool = True, intent: str = "", amount: int = 0) -> CardInstance | None:
     """"Choose (up to) 1 Pal" among Pals in either base that satisfy `pred`."""
     picked = game.choose_cards(player, prompt, [c for c in all_pals(game) if pred(c)],
-                               n=1, up_to=up_to)
+                               n=1, up_to=up_to, intent=intent, amount=amount)
     return picked[0] if picked else None
 
 

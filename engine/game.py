@@ -159,9 +159,11 @@ class Game:
             return f"  {self.pname(p)} base: (empty)"
         cards = []
         for c in ps.base:
-            s = f"{c.name} {self.power(c)}"
+            s = c.name
             if c.is_pal:
-                s += f"/S{self.strike(c)}"
+                s += f" {self.power(c)}/S{self.strike(c)}"
+            elif c.is_structure:
+                s += f" dur {self.power(c)}"
             if c.rested:
                 s += " (rested)"
             if c.damage:
@@ -310,17 +312,26 @@ class Game:
         return choice
 
     def choose_cards(self, player: int, prompt: str, candidates: list[CardInstance],
-                     n: int = 1, up_to: bool = False) -> list[CardInstance]:
-        """CR 10.6.3: choose as many as possible up to n (or 0..n for 'up to')."""
+                     n: int = 1, up_to: bool = False, intent: str = "",
+                     amount: int = 0) -> list[CardInstance]:
+        """CR 10.6.3: choose as many as possible up to n (or 0..n for 'up to').
+
+        `intent` tells bots what the choice does, so they can pick without
+        parsing prompts: "harm" (damage/rest/destroy/-power), "lock" (rest and
+        keep it from standing), "help" (buffs),
+        "discard", "sacrifice", "top" (put on top of deck), "recover" (to hand).
+        `amount` is the damage or power change, if any."""
         if not candidates:
             return []
         k = min(n, len(candidates))
         uids = self.ask(Decision("target", player, prompt, [c.uid for c in candidates],
-                                 min=0 if up_to else k, max=k))
+                                 min=0 if up_to else k, max=k,
+                                 context={"intent": intent, "amount": amount}))
         return [self.card(u) for u in uids]
 
-    def may(self, player: int, prompt: str) -> bool:
-        return self.ask(Decision("may", player, prompt, [True, False]))[0]
+    def may(self, player: int, prompt: str, intent: str = "") -> bool:
+        return self.ask(Decision("may", player, prompt, [True, False],
+                                 context={"intent": intent}))[0]
 
     # ================================================================ zones
     def _zone_list(self, c: CardInstance) -> list[CardInstance] | None:
@@ -557,7 +568,7 @@ class Game:
                 newest = max(self._deploy_order.get(c.uid, 0) for c in pals)
                 older = [c for c in pals if self._deploy_order.get(c.uid, 0) != newest]
                 gone = self.choose_cards(ps.idx, f"Too many Pals: choose {excess} to send to the "
-                                         "graveyard", older, n=excess)
+                                         "graveyard", older, n=excess, intent="sacrifice")
                 for c in gone:
                     self.send_to_graveyard(c, "Pal limit")
                 return True
@@ -652,7 +663,8 @@ class Game:
         if n:
             def serious(g: Game, pal=pal, n=int(n)) -> None:  # CR 12.7
                 pals = [x for ps in g.players for x in ps.pals]
-                for t in g.choose_cards(pal.owner, f"Serious {n}: choose a Pal", pals):
+                for t in g.choose_cards(pal.owner, f"Serious {n}: choose a Pal", pals,
+                                        intent="help", amount=n):
                     g.add_mod(t, "power", n, "turn", f"Serious ({pal.name})")
             self.queue(pal.owner, f"Serious {n}: {pal.name}", serious, pal)
         self.emit(Event("assigned", pal.owner, pal.uid, {"structure": structure.uid}))
@@ -787,12 +799,22 @@ class Game:
     def play(self) -> GameResult:
         try:
             self.setup()
+        except GameOver:
+            return self._result()
+        return self.play_on()
+
+    def play_on(self) -> GameResult:
+        """Play from the current turn boundary to the end of the game."""
+        try:
             while self.turn < self.turn_cap:
                 self.take_turn()
             self.winner, self.reason = None, "turn_cap"
             self.log(f"GAME OVER: turn cap ({self.turn_cap}) reached, draw")
         except GameOver:
             pass
+        return self._result()
+
+    def _result(self) -> GameResult:
         return GameResult(self.seed, self.winner, self.reason, self.turn, self.first_player,
                           [ps.life for ps in self.players], self.stats, self.history)
 
@@ -878,17 +900,47 @@ class Game:
         self.active = self.opponent(p)
 
     # ================================================================ search seam
-    def clone(self, agents: Sequence[Agent]) -> "Game":
-        """Deep copy for lookahead. Only valid at a decision point with no
-        pending triggers (e.g. choosing a main-phase action)."""
+    def clone(self, agents: Sequence[Agent], rng: random.Random | None = None) -> "Game":
+        """Copy for lookahead. Only valid with no pending triggers (e.g. at a
+        main-phase or Quick-step decision). Much faster than deepcopy: card
+        definitions and implementations are shared, mutable state is copied.
+        Logging is off and stats/history start empty in the copy."""
         if self.pending:
             raise RuntimeError("cannot clone with pending triggers")
-        saved, self.agents = self.agents, None
-        try:
-            g = copy.deepcopy(self)
-        finally:
-            self.agents = saved
+        g = Game.__new__(Game)
+        g.__dict__.update(self.__dict__)
+        g.rng = random.Random()
+        g.rng.setstate(self.rng.getstate())
+        if rng is not None:
+            g.rng.seed(rng.random())
         g.agents = list(agents)
         g.logging = False
         g.lines = []
+        g.stats = [PlayerStats(), PlayerStats()]
+        g.history = []
+        g.pending = []
+        g._deploy_order = dict(self._deploy_order)
+        cmap: dict[int, CardInstance] = {}
+        for uid, c in self.cards.items():
+            n = copy.copy(c)
+            n.mods = list(c.mods)
+            n.act_uses = dict(c.act_uses)
+            n.granted = list(c.granted)
+            n.stand_locks = list(c.stand_locks)
+            n.skip_stand = list(c.skip_stand)
+            cmap[uid] = n
+        g.cards = cmap
+        g.players = []
+        for ps in self.players:
+            n = copy.copy(ps)
+            for zone in ("deck", "hand", "base", "graveyard", "exile"):
+                setattr(n, zone, [cmap[c.uid] for c in getattr(ps, zone)])
+            n.resources = dict(ps.resources)
+            g.players.append(n)
+        if self.battle is not None:
+            b = copy.copy(self.battle)
+            b.attacker = cmap[b.attacker.uid]
+            b.target = cmap[b.target.uid] if b.target else None
+            b.blocked_by = cmap[b.blocked_by.uid] if b.blocked_by else None
+            g.battle = b
         return g

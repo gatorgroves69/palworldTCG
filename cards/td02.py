@@ -24,7 +24,8 @@ class Astegon(CardImpl):
             "too).")
 
     def on_deploy(self, game, card):
-        t = choose_pal(game, card.owner, "Astegon: -1000 power to up to 1 Pal")
+        t = choose_pal(game, card.owner, "Astegon: -1000 power to up to 1 Pal", intent="harm",
+                       amount=-1000)
         if t:
             game.add_mod(t, "power", -1000, "turn", "Astegon")
 
@@ -52,7 +53,8 @@ class StrikeFromTheDarkness(CardImpl):
     text = "Choose 1 Pal, and put it into the graveyard."
 
     def resolve_event(self, game, card, mode):
-        t = choose_pal(game, card.owner, "Strike from the Darkness: destroy 1 Pal", up_to=False)
+        t = choose_pal(game, card.owner, "Strike from the Darkness: destroy 1 Pal", up_to=False,
+                       intent="harm")
         if t:
             game.send_to_graveyard(t, "Strike from the Darkness")
 

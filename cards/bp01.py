@@ -29,7 +29,8 @@ class Suzaku(CardImpl):
         return amount
 
     def on_deploy(self, game, card):
-        t = choose_pal(game, card.owner, "Suzaku: deal 700 damage to up to 1 Pal")
+        t = choose_pal(game, card.owner, "Suzaku: deal 700 damage to up to 1 Pal",
+                       intent="harm", amount=700)
         if t:
             game.deal_card_damage(t, 700, card)
 
@@ -43,7 +44,7 @@ class Kitsun(CardImpl):
 
     def on_deploy(self, game, card):
         t = choose_pal(game, card.owner, "Kitsun: deal 1200 to up to 1 ◇7+ Pal",
-                       lambda c: c.defn.cost >= 7)
+                       lambda c: c.defn.cost >= 7, intent="harm", amount=1200)
         if t:
             game.deal_card_damage(t, 1200, card)
 
@@ -57,13 +58,14 @@ class Sparkit(CardImpl):
 
     def on_deploy(self, game, card):
         t = choose_pal(game, card.owner, "Sparkit: deal 500 to up to 1 standing Pal",
-                       lambda c: not c.rested)
+                       lambda c: not c.rested, intent="harm", amount=500)
         if t:
             game.deal_card_damage(t, 500, card)
 
 
 def _plus200(game, card, ctx):
-    t = choose_pal(game, card.owner, f"{card.name}: +200 power to 1 Pal", up_to=False)
+    t = choose_pal(game, card.owner, f"{card.name}: +200 power to 1 Pal", up_to=False,
+                   intent="help", amount=200)
     if t:
         game.add_mod(t, "power", 200, "turn", card.name)
 
@@ -108,7 +110,7 @@ class Azurobe(CardImpl):
 
     def on_deploy(self, game, card):
         game.draw(card.owner)
-        t = choose_pal(game, card.owner, "Azurobe: rest up to 1 Pal")
+        t = choose_pal(game, card.owner, "Azurobe: rest up to 1 Pal", intent="harm")
         if t:
             rest_card(game, t)
 
@@ -160,7 +162,8 @@ BARRAGE = ActAbility("Rocket barrage (X = power to all opposing Pals)", _barrage
 
 
 def _launcher(game, card, ctx):
-    t = choose_pal(game, card.owner, "Rocket Launcher: choose 1 Pal", up_to=False)
+    t = choose_pal(game, card.owner, "Rocket Launcher: choose 1 Pal", up_to=False,
+                   intent="help", amount=200)
     if t is None:
         return
     if t.defn.main_name == "Pengullet":
@@ -206,7 +209,7 @@ class AuroraGuide(CardImpl):
         p = card.owner
         game.draw(p)
         for c in game.choose_cards(p, "Aurora Guide: put up to 1 card from hand on top of deck",
-                                   list(game.players[p].hand), n=1, up_to=True):
+                                   list(game.players[p].hand), n=1, up_to=True, intent="top"):
             put_on_top(game, c)
 
 
@@ -258,20 +261,21 @@ class ZoesStrategy(CardImpl):
             game.log(f"  {game.pname(opp)} resources now {res}")
         elif mode == 1:
             gy = [c for c in game.players[p].graveyard if c.is_pal]
-            for c in game.choose_cards(p, "Zoe: return up to 1 Pal from graveyard", gy, 1, True):
+            for c in game.choose_cards(p, "Zoe: return up to 1 Pal from graveyard", gy, 1, True,
+                                       intent="recover"):
                 game.return_to_hand(c)
             for c in game.choose_cards(opp, "Zoe: choose 1 card from your hand to discard",
-                                       list(game.players[opp].hand), 1):
+                                       list(game.players[opp].hand), 1, intent="discard"):
                 game.log(f"  {game.pname(opp)} discards {c.name}")
                 game.discard(c)
         elif mode == 2:
             mine = game.choose_cards(p, "Zoe: butcher 1 of your Pals",
-                                     list(game.players[p].pals), 1)
+                                     list(game.players[p].pals), 1, intent="sacrifice")
             for c in mine:
                 game.send_to_graveyard(c, "butchered")
             if mine:
                 for c in game.choose_cards(p, "Zoe: put 1 opposing Pal into the graveyard",
-                                           opp_pals(game, p), 1):
+                                           opp_pals(game, p), 1, intent="harm"):
                     game.send_to_graveyard(c, "Zoe's Strategy")
 
 
@@ -288,7 +292,7 @@ class Elphidran(CardImpl):
         dragons = [c for c in game.players[card.owner].hand if is_dragon_pal(c)]
         # Revealing a non-Dragon does nothing, so only Dragon Pals are offered.
         shown = game.choose_cards(card.owner, "Elphidran: reveal a Dragon Pal from hand?",
-                                  dragons, 1, up_to=True)
+                                  dragons, 1, up_to=True, intent="help", amount=500)
         if shown:
             game.log(f"  {game.pname(card.owner)} reveals {shown[0].name}")
             game.add_mod(card, "power", 500, "turn", "Elphidran")
@@ -310,7 +314,7 @@ class Chillet(CardImpl):
             return
         game.stats[p].drawn.append(top.code)  # the card reaches hand or base: count it as seen
         if (is_dragon_pal(top) and top.defn.cost <= 8
-                and game.may(p, f"Chillet: deploy {top.name} for free?")):
+                and game.may(p, f"Chillet: deploy {top.name} for free?", intent="deploy")):
             game.log(f"  {game.pname(p)} deploys {top.name} with Chillet")
             game.deploy(top)
         else:
@@ -329,7 +333,7 @@ class Relaxaurus(CardImpl):
 
     def on_deploy(self, game, card):
         t = choose_pal(game, card.owner, "Relaxaurus: rest and lock up to 1 ◇6- Pal",
-                       lambda c: c.defn.cost <= 6)
+                       lambda c: c.defn.cost <= 6, intent="lock")
         if t:
             rest_card(game, t)
             game.lock_standing(t, card)
@@ -347,7 +351,7 @@ class Jormuntide(CardImpl):
     def on_deploy(self, game, card):
         game.draw(card.owner)
         t = choose_pal(game, card.owner, "Jormuntide: rest up to 1 ◇7- Pal",
-                       lambda c: c.defn.cost <= 7)
+                       lambda c: c.defn.cost <= 7, intent="lock")
         if t:
             rest_card(game, t)
             game.skip_next_stand(t, game.opponent(card.owner))

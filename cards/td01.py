@@ -35,7 +35,7 @@ class ElphidranAqua(CardImpl):
         p = card.owner
         game.draw(p, 2)
         for c in game.choose_cards(p, "Elphidran Aqua: put 1 card from hand on top of the deck",
-                                   list(game.players[p].hand), 1):
+                                   list(game.players[p].hand), 1, intent="top"):
             put_on_top(game, c)
 
 
@@ -48,7 +48,7 @@ class HangyuCryst(CardImpl):
 
     def on_deploy(self, game, card):
         t = choose_pal(game, card.owner, "Hangyu Cryst: rest up to 1 ◇3- Pal",
-                       lambda c: c.defn.cost <= 3)
+                       lambda c: c.defn.cost <= 3, intent="harm")
         if t:
             rest_card(game, t)
 
