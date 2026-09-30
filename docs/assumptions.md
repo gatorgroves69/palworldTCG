@@ -93,5 +93,11 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### S3: Hidden information
 - Bots get the full `Game` object so a future search bot can clone it. The heuristic bot must only read public information and its own hand, and I review it for that. A search bot will have to *determinize* (sample the opponent's hidden cards) instead of peeking at them.
 
+### S5: Bot (`bots/heuristic.py`)
+- Both sides always use the same bot. It looks one action ahead: for each main-phase action it copies the game, reshuffles the hidden information (so there's no peeking at the opponent's hand or the next damage-check flip), plays the action, and scores the position.
+- The scoring weights are hand-set by card economics (a card in hand = 3.5, a life point = 4, a Pal on the board = 3 + power/150 + 1.5 × strike). **They must not be tuned toward a calibration target.** A change is allowed only when a log or card-usage audit shows a specific misplay, and it has to be recorded here.
+- Change log: after the first M1 run, Gear on the base is valued at its card value + 0.4 × cost. Before that, Pengullet Rocket Launcher was never deployed. The fix moved M1 by less than 0.1 point.
+- Known weaknesses: no combo planning (Launcher → Pengullet barrage), and too cautious about attacking into likely Interrupts. See docs/m1-calibration.md.
+
 ### S4: Overloaded Pals (CR 11.5)
 - The player keeps the newest Pals as the rule requires. When they have to choose among older Pals, the bot sends the one with the lowest power to the graveyard.

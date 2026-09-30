@@ -47,7 +47,15 @@ Stop on source access blocks, dirty/conflicting Git state, or schema drift. No f
 
 A simulation lab for the **Palworld Official Card Game** (Bushiroad). It plays decks against each other thousands of times to measure matchups and find card swaps that improve a deck.
 
-Status: the rules engine skeleton is done. Card implementations are waiting on `data/`. See [docs/rules.md](docs/rules.md) for the rules as implemented and [docs/assumptions.md](docs/assumptions.md) for the interpretations that still need confirming.
+Status: **M1 calibration passed** (Cattiva · Azurobe vs Chillet · Relaxaurus: sim 56.7% vs real 56%). See [docs/m1-calibration.md](docs/m1-calibration.md). Rules as implemented: [docs/rules.md](docs/rules.md). Open interpretations: [docs/assumptions.md](docs/assumptions.md).
+
+```bash
+python -m sim run --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/chillet-relaxaurus-bp.txt --games 2000 --seed 1 --out results/my_run/
+python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/chillet-relaxaurus-bp.txt --game-seed 1000000
+python -m cards.validate data/decks/*.txt
+```
+
+A run writes `summary.json` (win rate, 95% CI, first/second split, average length), `games.jsonl` (one line per game), `report.md` (loss tags, per-card draw impact, calibration check) and full logs for the first few games.
 
 ## Layout
 
@@ -55,7 +63,9 @@ Status: the rules engine skeleton is done. Card implementations are waiting on `
 |---|---|
 | `engine/` | Game state, turns, battle, damage checks, rule actions, deck legality. Pure logic, no I/O |
 | `cards/` | One implementation per card code in `REGISTRY`, plus the decklist parser. A deck with an unimplemented card fails loudly |
-| `bots/` | AI players behind `bots.base.Bot`. `RandomBot` is only for fuzzing the engine; the heuristic bot comes next |
+| `bots/` | AI players behind `bots.base.Bot`: `HeuristicBot` (the default: one-action lookahead on reshuffled copies of the game), `RuleBot` (fast rules), and `RandomBot` (engine fuzzing only) |
+| `sim/` | Command-line runner: parallel, seeded batches, and replay of any single game |
+| `analysis/` | Loss tags, per-card draw impact, per-run `report.md` |
 | `data/` | Card data, decklists and calibration data. **Owned by Hermes**; don't edit it by hand |
 | `docs/` | Rules and assumptions |
 | `tests/` | pytest. `tests/fixtures.py` defines test-only `T-*` cards |

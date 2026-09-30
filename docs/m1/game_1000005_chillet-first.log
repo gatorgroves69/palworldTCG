@@ -1,0 +1,214 @@
+Seed 1000005. P1 = cattiva-azurobe-br, P2 = chillet-relaxaurus-bp
+P2 goes first; P1 starts with 1 soul
+  P2 draws Zoe's Strategy, Cryolinx – Arctic Ordeal, Pengullet Rocket Launcher, Pal Sphere, Reindrix – Icy Gaze
+  P1 draws Cattiva – My First Pal, Reindrix – Icy Gaze, Lamball – My First Pal, Kitsun – Wyrmbane Fangs, Pengullet – Yearning for the Sky
+P2 redraws
+  P2 draws Aurora Guide, Reindrix – Icy Gaze, Aurora Guide, Strike from the Darkness, Cryolinx – Arctic Ordeal
+P1 keeps
+
+=== Turn 1: P2 (chillet-relaxaurus-bp) ===
+  P2 skips the draw (first turn)
+  P2 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 1/1, grave 0 | P2: life 10, hand 5, deck 45, souls 2/2, grave 0
+  P1 base: (empty)
+  P2 base: (empty)
+
+=== Turn 2: P1 (cattiva-azurobe-br) ===
+  P1 draws Sparkit – Hazardous Contact
+  P1 gains 2 soul(s): 3 total
+  P1: life 10, hand 6, deck 44, souls 3/3, grave 0 | P2: life 10, hand 5, deck 45, souls 2/2, grave 0
+P1 plays Lamball – My First Pal [TD01-023]#45 (cost 2)
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Jormuntide – Surging Sea Serpent (LUCKY): damage cancelled
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: (empty)
+
+=== Turn 3: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Blazehowl Noct – Darkflame Defender
+  P2 gains 2 soul(s): 4 total
+  P1: life 10, hand 5, deck 44, souls 1/3, grave 0 | P2: life 10, hand 6, deck 43, souls 4/4, grave 1
+P2 plays Strike from the Darkness [TD02-021]#98 (cost 4)
+  Lamball – My First Pal [TD01-023]#45 (P1) goes to the graveyard (Strike from the Darkness)
+  P1 base: (empty)
+  P2 base: (empty)
+
+=== Turn 4: P1 (cattiva-azurobe-br) ===
+  P1 draws Fuack – Manic Wave Ripper
+  P1 gains 2 soul(s): 5 total
+  P1: life 10, hand 6, deck 43, souls 5/5, grave 1 | P2: life 10, hand 5, deck 43, souls 0/4, grave 2
+P1 plays Reindrix – Icy Gaze [TD01-016]#39 (cost 5)
+P1: Reindrix – Icy Gaze (600/S2) attacks P2
+  P2 takes 2 damage from Reindrix – Icy Gaze: damage check
+    flip 1: Pengullet – Yearning for the Sky
+    flip 2: Chillet – Dragon Whisperer (LUCKY): damage cancelled
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested)
+  P2 base: (empty)
+
+=== Turn 5: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Relaxaurus – Hungry Gunner
+  P2 gains 2 soul(s): 6 total
+  P1: life 10, hand 5, deck 43, souls 0/5, grave 1 | P2: life 10, hand 6, deck 40, souls 6/6, grave 4
+P2 plays Cryolinx – Arctic Ordeal [BP01-038]#66 (cost 6)
+P2: Cryolinx – Arctic Ordeal (900/S2) attacks P1
+  P1 takes 2 damage from Cryolinx – Arctic Ordeal: damage check
+    flip 1: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested)
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested)
+
+=== Turn 6: P1 (cattiva-azurobe-br) ===
+  P1 draws Hangyu Cryst – Frigid Wanderer
+  P1 gains 2 soul(s): 7 total
+  P1: life 10, hand 6, deck 41, souls 7/7, grave 2 | P2: life 10, hand 5, deck 40, souls 0/6, grave 4
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#18 (cost 4)
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#24 (cost 2)
+P1: Reindrix – Icy Gaze (600/S2) attacks P2
+  P2 takes 2 damage from Reindrix – Icy Gaze: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Elphidran Aqua – Gentle Ripples
+    P2 loses 2 life -> 8
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Blazehowl Noct – Darkflame Defender
+    P2 loses 1 life -> 7
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Zoe's Strategy
+    flip 2: Chillet – Dragon Whisperer (LUCKY): damage cancelled
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested), Pengullet – Yearning for the Sky 600/S2 (rested), Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested)
+
+=== Turn 7: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Pengullet Rocket Launcher
+  P2 gains 2 soul(s): 8 total
+  P1: life 10, hand 4, deck 41, souls 1/7, grave 2 | P2: life 7, hand 6, deck 34, souls 8/8, grave 9
+P2 plays Relaxaurus – Hungry Gunner [BP01-026]#55 (cost 7)
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+  Reindrix – Icy Gaze is chosen (already rested)
+  Reindrix – Icy Gaze does not stand while Relaxaurus – Hungry Gunner is in the base
+P2: Relaxaurus – Hungry Gunner (1200/S3) attacks Pengullet – Yearning for the Sky
+  battle: Relaxaurus – Hungry Gunner deals 1200 to Pengullet – Yearning for the Sky, Pengullet – Yearning for the Sky deals 600 back
+  Pengullet – Yearning for the Sky [BP01-028]#18 (P1) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Fuack – Manic Wave Ripper
+P2: Cryolinx – Arctic Ordeal (900/S2) attacks Fuack – Manic Wave Ripper
+  [trigger] Fuack – Manic Wave Ripper: +300 when attacked
+  Fuack – Manic Wave Ripper power +300 until end of turn
+  battle: Cryolinx – Arctic Ordeal deals 900 to Fuack – Manic Wave Ripper, Fuack – Manic Wave Ripper deals 500 back
+  Fuack – Manic Wave Ripper [BP01-032]#24 (P1) goes to the graveyard (defeated)
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested)
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested), Relaxaurus – Hungry Gunner 1200/S3 (rested)
+
+=== Turn 8: P1 (cattiva-azurobe-br) ===
+  Reindrix – Icy Gaze does not stand (locked)
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 2 soul(s): 9 total
+  P1: life 10, hand 6, deck 39, souls 9/9, grave 4 | P2: life 7, hand 5, deck 34, souls 1/8, grave 9
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#7 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Relaxaurus – Hungry Gunner takes 1200 damage (total 1200/1200)
+  Relaxaurus – Hungry Gunner [BP01-026]#55 (P2) goes to the graveyard (defeated)
+P1 plays Hangyu Cryst – Frigid Wanderer [TD01-015]#34 (cost 4)
+  [trigger] On Deploy: Hangyu Cryst – Frigid Wanderer
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested), Kitsun – Wyrmbane Fangs 400/S2, Hangyu Cryst – Frigid Wanderer 600/S2
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested)
+
+=== Turn 9: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Chillet – Dragon Whisperer
+  P2 gains 2 soul(s): 10 total
+  P1: life 10, hand 4, deck 39, souls 0/9, grave 4 | P2: life 7, hand 6, deck 33, souls 10/10, grave 10
+P2 plays Chillet – Dragon Whisperer [BP01-025]#51 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Reindrix – Icy Gaze from the top of the deck
+  Reindrix – Icy Gaze is added to P2's hand
+P2: Cryolinx – Arctic Ordeal (900/S2) attacks P1
+  P1 takes 2 damage from Cryolinx – Arctic Ordeal: damage check
+    flip 1: Fuack – Manic Wave Ripper
+    flip 2: Foxparks – A Toasty Hug
+    P1 loses 2 life -> 8
+P2: Chillet – Dragon Whisperer (900/S2) attacks Reindrix – Icy Gaze
+  P1 blocks with Kitsun – Wyrmbane Fangs (400)
+  battle: Chillet – Dragon Whisperer deals 900 to Kitsun – Wyrmbane Fangs, Kitsun – Wyrmbane Fangs deals 400 back
+  Kitsun – Wyrmbane Fangs [BP01-007]#7 (P1) goes to the graveyard (defeated)
+P2 plays Reindrix – Icy Gaze [TD01-016]#92 (cost 5)
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested), Hangyu Cryst – Frigid Wanderer 600/S2
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested), Chillet – Dragon Whisperer 900/S2 (rested), Reindrix – Icy Gaze 600/S2
+
+=== Turn 10: P1 (cattiva-azurobe-br) ===
+  P1 draws Foxparks – A Toasty Hug
+  P1 gains 1 soul(s): 10 total
+  P1: life 8, hand 5, deck 36, souls 10/10, grave 7 | P2: life 7, hand 5, deck 32, souls 0/10, grave 10
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#16 (cost 4)
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 blocks with Reindrix – Icy Gaze (600)
+  battle: Pengullet – Yearning for the Sky deals 600 to Reindrix – Icy Gaze, Reindrix – Icy Gaze deals 600 back
+  Pengullet – Yearning for the Sky [BP01-028]#16 (P1) goes to the graveyard (defeated)
+  Reindrix – Icy Gaze [TD01-016]#92 (P2) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Fuack – Manic Wave Ripper
+P1 plays Cattiva – My First Pal [TD02-023]#46 (cost 2)
+P1: Hangyu Cryst – Frigid Wanderer (600/S2) attacks P2
+  P2 takes 2 damage from Hangyu Cryst – Frigid Wanderer: damage check
+    flip 1: Cryolinx – Arctic Ordeal
+    flip 2: Reindrix – Icy Gaze
+    P2 loses 2 life -> 5
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#25 (cost 2)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Cryolinx – Arctic Ordeal
+    P2 loses 1 life -> 4
+P1: Reindrix – Icy Gaze (600/S2) attacks P2
+  P2 takes 2 damage from Reindrix – Icy Gaze: damage check
+    flip 1: Astegon – Aegis Wyvern of Death (LUCKY): damage cancelled
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#27 (cost 2)
+P1: Cattiva – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Cattiva – My First Pal: damage check
+    flip 1: Pengullet – Yearning for the Sky
+    P2 loses 1 life -> 3
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Pyrin Noct – Steed of Azure Flames
+    P2 loses 1 life -> 2
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested), Hangyu Cryst – Frigid Wanderer 600/S2 (rested), Cattiva – My First Pal 200/S1 (rested), Fuack – Manic Wave Ripper 200/S1 (rested), Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested), Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 11: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Zoe's Strategy
+  P2 gains 0 soul(s): 10 total
+  P1: life 8, hand 2, deck 35, souls 0/10, grave 8 | P2: life 2, hand 6, deck 25, souls 10/10, grave 17
+P2: Cryolinx – Arctic Ordeal (900/S2) attacks Hangyu Cryst – Frigid Wanderer
+P1 uses Interrupt: Foxparks – A Toasty Hug (discarding Sparkit – Hazardous Contact)
+  the attack is nullified
+P2: Chillet – Dragon Whisperer (900/S2) attacks Reindrix – Icy Gaze
+  battle: Chillet – Dragon Whisperer deals 900 to Reindrix – Icy Gaze, Reindrix – Icy Gaze deals 600 back
+  Reindrix – Icy Gaze [TD01-016]#39 (P1) goes to the graveyard (defeated)
+P2 plays Blazehowl Noct – Darkflame Defender [TD02-017]#96 (cost 6)
+P2: Blazehowl Noct – Darkflame Defender (900/S2) attacks Hangyu Cryst – Frigid Wanderer
+  battle: Blazehowl Noct – Darkflame Defender deals 900 to Hangyu Cryst – Frigid Wanderer, Hangyu Cryst – Frigid Wanderer deals 600 back
+  Hangyu Cryst – Frigid Wanderer [TD01-015]#34 (P1) goes to the graveyard (defeated)
+P2 plays Aurora Guide [BP01-048]#75 (cost 2)
+  P2 draws Pengullet Rocket Launcher
+  P1 base: Cattiva – My First Pal 200/S1 (rested), Fuack – Manic Wave Ripper 200/S1 (rested), Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: Cryolinx – Arctic Ordeal 900/S2 (rested), Chillet – Dragon Whisperer 900/S2 (rested), Blazehowl Noct – Darkflame Defender 900/S2 (rested)
+
+=== Turn 12: P1 (cattiva-azurobe-br) ===
+  P1 draws Sparkit – Hazardous Contact
+  P1 gains 0 soul(s): 10 total
+  P1: life 8, hand 1, deck 34, souls 10/10, grave 12 | P2: life 2, hand 5, deck 24, souls 2/10, grave 18
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Jormuntide – Surging Sea Serpent (LUCKY): damage cancelled
+P1: Cattiva – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Cattiva – My First Pal: damage check
+    flip 1: Pyrin Noct – Steed of Azure Flames
+    P2 loses 1 life -> 1
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+P2 uses Interrupt: Reindrix – Icy Gaze (resting 1 soul)
+  the attack is nullified
+P1 plays Sparkit – Hazardous Contact [BP01-008]#10 (cost 3)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+P1: Sparkit – Hazardous Contact (400/S1) attacks P2
+  P2 takes 1 damage from Sparkit – Hazardous Contact: damage check
+    flip 1: Pyrin Noct – Steed of Azure Flames
+    P2 loses 1 life -> 0
+GAME OVER: P1 (cattiva-azurobe-br) wins by life

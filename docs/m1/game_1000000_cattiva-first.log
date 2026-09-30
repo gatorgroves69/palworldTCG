@@ -1,0 +1,293 @@
+Seed 1000000. P1 = cattiva-azurobe-br, P2 = chillet-relaxaurus-bp
+P1 goes first; P2 starts with 1 soul
+  P1 draws Hangyu Cryst – Frigid Wanderer, Pump-Action Shotgun, Suzaku – Hellfire Wings, Azurobe – Water Dragon Waltz, Fuack – Manic Wave Ripper
+  P2 draws Pengullet Rocket Launcher, Jormuntide – Surging Sea Serpent, Pal Sphere, Relaxaurus – Hungry Gunner, Aurora Guide
+P1 keeps
+P2 redraws
+  P2 draws Zoe's Strategy, Elphidran Aqua – Gentle Ripples, Zoe's Strategy, Reindrix – Icy Gaze, Chillet – Dragon Whisperer
+
+=== Turn 1: P1 (cattiva-azurobe-br) ===
+  P1 skips the draw (first turn)
+  P1 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 2/2, grave 0 | P2: life 10, hand 5, deck 45, souls 1/1, grave 0
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#27 (cost 2)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Pengullet Rocket Launcher
+    P2 loses 1 life -> 9
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: (empty)
+
+=== Turn 2: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Chillet – Dragon Whisperer
+  P2 gains 2 soul(s): 3 total
+  P1: life 10, hand 4, deck 45, souls 0/2, grave 0 | P2: life 9, hand 6, deck 43, souls 3/3, grave 1
+P2 rests 3 souls to draw 1
+  P2 draws Chillet – Dragon Whisperer
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: (empty)
+
+=== Turn 3: P1 (cattiva-azurobe-br) ===
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 2 soul(s): 4 total
+  P1: life 10, hand 5, deck 44, souls 4/4, grave 0 | P2: life 9, hand 7, deck 42, souls 0/3, grave 1
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#17 (cost 4)
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Pyrin Noct – Steed of Azure Flames
+    flip 2: Cryolinx – Arctic Ordeal
+    P2 loses 2 life -> 7
+  P1 base: Fuack – Manic Wave Ripper 200/S1, Pengullet – Yearning for the Sky 600/S2 (rested)
+  P2 base: (empty)
+
+=== Turn 4: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Strike from the Darkness
+  P2 gains 2 soul(s): 5 total
+  P1: life 10, hand 4, deck 44, souls 0/4, grave 0 | P2: life 7, hand 8, deck 39, souls 5/5, grave 3
+P2 plays Chillet – Dragon Whisperer [BP01-025]#51 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Pyrin Noct – Steed of Azure Flames from the top of the deck
+  Pyrin Noct – Steed of Azure Flames is added to P2's hand
+P2: Chillet – Dragon Whisperer (900/S2) attacks Pengullet – Yearning for the Sky
+  P1 blocks with Fuack – Manic Wave Ripper (200)
+  battle: Chillet – Dragon Whisperer deals 900 to Fuack – Manic Wave Ripper, Fuack – Manic Wave Ripper deals 200 back
+  Fuack – Manic Wave Ripper [BP01-032]#27 (P1) goes to the graveyard (defeated)
+  P1 base: Pengullet – Yearning for the Sky 600/S2 (rested)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 5: P1 (cattiva-azurobe-br) ===
+  P1 draws Pump-Action Shotgun
+  P1 gains 2 soul(s): 6 total
+  P1: life 10, hand 5, deck 43, souls 6/6, grave 1 | P2: life 7, hand 8, deck 38, souls 0/5, grave 3
+P1 plays Azurobe – Water Dragon Waltz [BP01-029]#23 (cost 6)
+  [trigger] On Deploy: Azurobe – Water Dragon Waltz
+  P1 draws Foxparks – A Toasty Hug
+  Chillet – Dragon Whisperer is chosen (already rested)
+P1: Azurobe – Water Dragon Waltz (1200/S2) attacks P2
+  P2 takes 2 damage from Azurobe – Water Dragon Waltz: damage check
+    flip 1: Pengullet – Yearning for the Sky
+    flip 2: Zoe's Strategy
+    P2 loses 2 life -> 5
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Cryolinx – Arctic Ordeal
+    flip 2: Pyrin Noct – Steed of Azure Flames
+    P2 loses 2 life -> 3
+  P1 base: Pengullet – Yearning for the Sky 600/S2 (rested), Azurobe – Water Dragon Waltz 1200/S2 (rested)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 6: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Elphidran – Gentle Radiance
+  P2 gains 2 soul(s): 7 total
+  P1: life 10, hand 5, deck 42, souls 0/6, grave 1 | P2: life 3, hand 9, deck 33, souls 7/7, grave 7
+P2 plays Chillet – Dragon Whisperer [BP01-025]#52 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Jormuntide – Surging Sea Serpent from the top of the deck
+  P2 deploys Jormuntide – Surging Sea Serpent with Chillet
+  [trigger] On Deploy: Jormuntide – Surging Sea Serpent
+  P2 draws Reindrix – Icy Gaze
+  Azurobe – Water Dragon Waltz is chosen (already rested)
+  Azurobe – Water Dragon Waltz will not stand in P1's next stand phase
+P2: Chillet – Dragon Whisperer (900/S2) attacks Pengullet – Yearning for the Sky
+P1 uses Interrupt: Foxparks – A Toasty Hug (discarding Hangyu Cryst – Frigid Wanderer)
+  the attack is nullified
+P2: Chillet – Dragon Whisperer (900/S2) attacks Pengullet – Yearning for the Sky
+  battle: Chillet – Dragon Whisperer deals 900 to Pengullet – Yearning for the Sky, Pengullet – Yearning for the Sky deals 600 back
+  Pengullet – Yearning for the Sky [BP01-028]#17 (P1) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Foxparks – A Toasty Hug
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks Azurobe – Water Dragon Waltz
+P1 uses Interrupt: Foxparks – A Toasty Hug (discarding Pump-Action Shotgun)
+  the attack is nullified
+  P1 base: Azurobe – Water Dragon Waltz 1200/S2 (rested)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested), Chillet – Dragon Whisperer 900/S2 (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 7: P1 (cattiva-azurobe-br) ===
+  Azurobe – Water Dragon Waltz does not stand this stand phase
+  P1 draws Suzaku – Hellfire Wings
+  P1 gains 2 soul(s): 8 total
+  P1: life 10, hand 3, deck 40, souls 8/8, grave 6 | P2: life 3, hand 9, deck 31, souls 2/7, grave 7
+P1 plays Pump-Action Shotgun [BP01-020]#15 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Chillet – Dragon Whisperer takes 1200 damage (total 1200/900)
+  Chillet – Dragon Whisperer takes 1200 damage (total 1200/900)
+  Jormuntide – Surging Sea Serpent takes 1200 damage (total 1200/1600)
+  Chillet – Dragon Whisperer [BP01-025]#51 (P2) goes to the graveyard (defeated)
+  Chillet – Dragon Whisperer [BP01-025]#52 (P2) goes to the graveyard (defeated)
+P1 activates Pump-Action Shotgun: +200 power
+  Azurobe – Water Dragon Waltz power +200 until end of turn
+  P1 base: Azurobe – Water Dragon Waltz 1200/S2 (rested), Pump-Action Shotgun (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 8: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Pal Sphere
+  P2 gains 2 soul(s): 9 total
+  P1: life 10, hand 2, deck 40, souls 1/8, grave 6 | P2: life 3, hand 10, deck 30, souls 9/9, grave 9
+P2 plays Chillet – Dragon Whisperer [BP01-025]#50 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Cryolinx – Arctic Ordeal from the top of the deck
+  Cryolinx – Arctic Ordeal is added to P2's hand
+P2 plays Strike from the Darkness [TD02-021]#98 (cost 4)
+  Azurobe – Water Dragon Waltz [BP01-029]#23 (P1) goes to the graveyard (Strike from the Darkness)
+P2: Chillet – Dragon Whisperer (900/S2) attacks P1
+  P1 takes 2 damage from Chillet – Dragon Whisperer: damage check
+    flip 1: Kitsun – Wyrmbane Fangs
+    flip 2: Lamball – My First Pal
+    P1 loses 2 life -> 8
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks P1
+  P1 takes 3 damage from Jormuntide – Surging Sea Serpent: damage check
+    flip 1: Lamball – My First Pal
+    flip 2: Sparkit – Hazardous Contact
+    flip 3: Hangyu Cryst – Frigid Wanderer
+    P1 loses 3 life -> 5
+  P1 base: Pump-Action Shotgun (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 9: P1 (cattiva-azurobe-br) ===
+  P1 draws Kitsun – Wyrmbane Fangs
+  P1 gains 2 soul(s): 10 total
+  P1: life 5, hand 3, deck 34, souls 10/10, grave 12 | P2: life 3, hand 9, deck 29, souls 0/9, grave 10
+P1 plays Suzaku – Hellfire Wings [BP01-002]#3 (cost 7)
+  [trigger] On Deploy: Suzaku – Hellfire Wings
+  Chillet – Dragon Whisperer takes 900 damage (total 900/900)
+  Chillet – Dragon Whisperer [BP01-025]#50 (P2) goes to the graveyard (defeated)
+P1: Suzaku – Hellfire Wings (1200/S3) attacks P2
+P2 uses Interrupt: Reindrix – Icy Gaze (discarding Zoe's Strategy)
+  the attack is nullified
+P1 activates Pump-Action Shotgun: +200 power
+  Suzaku – Hellfire Wings power +200 until end of turn
+P1 rests 3 souls to draw 1
+  P1 draws Cattiva – My First Pal
+  P1 base: Pump-Action Shotgun (rested), Suzaku – Hellfire Wings 1200/S3 (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 10: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Elphidran – Gentle Radiance
+  P2 gains 1 soul(s): 10 total
+  P1: life 5, hand 3, deck 33, souls 0/10, grave 12 | P2: life 3, hand 8, deck 28, souls 10/10, grave 13
+P2 plays Elphidran Aqua – Gentle Ripples [TD01-012]#89 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P2 draws Relaxaurus – Hungry Gunner, Blazehowl Noct – Darkflame Defender
+  P2 puts Zoe's Strategy from hand on top of the deck
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks Suzaku – Hellfire Wings
+  battle: Jormuntide – Surging Sea Serpent deals 1600 to Suzaku – Hellfire Wings, Suzaku – Hellfire Wings deals 1200 back
+  Suzaku – Hellfire Wings [BP01-002]#3 (P1) goes to the graveyard (defeated)
+P2 plays Pal Sphere [BP01-047]#71 (cost 4)
+  P2 draws Zoe's Strategy, Pengullet – Yearning for the Sky, Pengullet – Yearning for the Sky
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks P1
+  P1 takes 2 damage from Elphidran Aqua – Gentle Ripples: damage check
+    flip 1: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+  P1 base: Pump-Action Shotgun (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Elphidran Aqua – Gentle Ripples 900/S2 (rested)
+
+=== Turn 11: P1 (cattiva-azurobe-br) ===
+  P1 draws Reindrix – Icy Gaze
+  P1 gains 0 soul(s): 10 total
+  P1: life 5, hand 4, deck 31, souls 10/10, grave 14 | P2: life 3, hand 10, deck 24, souls 0/10, grave 14
+P1 plays Suzaku – Hellfire Wings [BP01-002]#0 (cost 7)
+  [trigger] On Deploy: Suzaku – Hellfire Wings
+  Elphidran Aqua – Gentle Ripples takes 900 damage (total 900/900)
+  Elphidran Aqua – Gentle Ripples [TD01-012]#89 (P2) goes to the graveyard (defeated)
+P1 activates Pump-Action Shotgun: +200 power
+  Suzaku – Hellfire Wings power +200 until end of turn
+P1 plays Cattiva – My First Pal [TD02-023]#47 (cost 2)
+P1: Cattiva – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Cattiva – My First Pal: damage check
+    flip 1: Jormuntide – Surging Sea Serpent (LUCKY): damage cancelled
+  P1 base: Pump-Action Shotgun (rested), Suzaku – Hellfire Wings 1200/S3, Cattiva – My First Pal 200/S1 (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 12: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Elphidran Aqua – Gentle Ripples
+  P2 gains 0 soul(s): 10 total
+  P1: life 5, hand 2, deck 31, souls 1/10, grave 14 | P2: life 3, hand 11, deck 22, souls 10/10, grave 16
+P2 plays Relaxaurus – Hungry Gunner [BP01-026]#54 (cost 7)
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+  Cattiva – My First Pal is chosen (already rested)
+  Cattiva – My First Pal does not stand while Relaxaurus – Hungry Gunner is in the base
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks Cattiva – My First Pal
+P1 uses Interrupt: Reindrix – Icy Gaze (resting 1 soul)
+  the attack is nullified
+P2 rests 3 souls to draw 1
+  P2 draws Elphidran Aqua – Gentle Ripples
+  P1 base: Pump-Action Shotgun (rested), Suzaku – Hellfire Wings 1200/S3, Cattiva – My First Pal 200/S1 (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Relaxaurus – Hungry Gunner 1200/S3
+
+=== Turn 13: P1 (cattiva-azurobe-br) ===
+  Cattiva – My First Pal does not stand (locked)
+  P1 draws Lamball – My First Pal
+  P1 gains 0 soul(s): 10 total
+  P1: life 5, hand 2, deck 30, souls 10/10, grave 15 | P2: life 3, hand 11, deck 21, souls 0/10, grave 16
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#6 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Relaxaurus – Hungry Gunner takes 1400 damage (total 1400/1200)
+  Relaxaurus – Hungry Gunner [BP01-026]#54 (P2) goes to the graveyard (defeated)
+P1: Kitsun – Wyrmbane Fangs (400/S2) attacks P2
+  P2 takes 2 damage from Kitsun – Wyrmbane Fangs: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Elphidran – Gentle Radiance
+    P2 loses 2 life -> 1
+P1 activates Pump-Action Shotgun: +200 power
+  Suzaku – Hellfire Wings power +200 until end of turn
+P1 plays Lamball – My First Pal [TD01-023]#42 (cost 2)
+P1: Lamball – My First Pal (200/S1) attacks P2
+P2 uses Interrupt: Reindrix – Icy Gaze (discarding Zoe's Strategy)
+  the attack is nullified
+P1 rests 3 souls to draw 1
+  P1 draws Foxparks – A Toasty Hug
+  P1 base: Pump-Action Shotgun (rested), Suzaku – Hellfire Wings 1200/S3, Cattiva – My First Pal 200/S1 (rested), Kitsun – Wyrmbane Fangs 400/S2 (rested), Lamball – My First Pal 200/S1 (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 14: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Zoe's Strategy
+  P2 gains 0 soul(s): 10 total
+  P1: life 5, hand 1, deck 29, souls 0/10, grave 15 | P2: life 1, hand 10, deck 18, souls 10/10, grave 21
+P2 plays Elphidran Aqua – Gentle Ripples [TD01-012]#88 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P2 draws Strike from the Darkness, Cryolinx – Arctic Ordeal
+  P2 puts Zoe's Strategy from hand on top of the deck
+P2 plays Strike from the Darkness [TD02-021]#99 (cost 4)
+  Suzaku – Hellfire Wings [BP01-002]#0 (P1) goes to the graveyard (Strike from the Darkness)
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks Kitsun – Wyrmbane Fangs
+  battle: Elphidran Aqua – Gentle Ripples deals 900 to Kitsun – Wyrmbane Fangs, Kitsun – Wyrmbane Fangs deals 400 back
+  Kitsun – Wyrmbane Fangs [BP01-007]#6 (P1) goes to the graveyard (defeated)
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks Cattiva – My First Pal
+  battle: Jormuntide – Surging Sea Serpent deals 1600 to Cattiva – My First Pal, Cattiva – My First Pal deals 200 back
+  Cattiva – My First Pal [TD02-023]#47 (P1) goes to the graveyard (defeated)
+  P1 base: Pump-Action Shotgun (rested), Lamball – My First Pal 200/S1 (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Elphidran Aqua – Gentle Ripples 900/S2 (rested)
+
+=== Turn 15: P1 (cattiva-azurobe-br) ===
+  P1 draws Foxparks – A Toasty Hug
+  P1 gains 0 soul(s): 10 total
+  P1: life 5, hand 2, deck 28, souls 10/10, grave 18 | P2: life 1, hand 9, deck 17, souls 0/10, grave 22
+P1 plays Foxparks – A Toasty Hug [TD01-004]#32 (cost 4)
+P1: Foxparks – A Toasty Hug (400/S2) attacks P2
+P2 uses Interrupt: Cryolinx – Arctic Ordeal (discarding Elphidran – Gentle Radiance)
+  the attack is nullified
+P1: Lamball – My First Pal (200/S1) attacks P2
+P2 uses Interrupt: Blazehowl Noct – Darkflame Defender (discarding Elphidran – Gentle Radiance)
+  the attack is nullified
+P1 plays Foxparks – A Toasty Hug [TD01-004]#30 (cost 4)
+P1: Foxparks – A Toasty Hug (400/S2) attacks P2
+P2 uses Interrupt: Cryolinx – Arctic Ordeal (discarding Pengullet – Yearning for the Sky)
+  the attack is nullified
+  P1 base: Pump-Action Shotgun, Lamball – My First Pal 200/S1 (rested), Foxparks – A Toasty Hug 400/S2 (rested), Foxparks – A Toasty Hug 400/S2 (rested)
+  P2 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Elphidran Aqua – Gentle Ripples 900/S2 (rested)
+
+=== Turn 16: P2 (chillet-relaxaurus-bp) ===
+  P2 draws Zoe's Strategy
+  P2 gains 0 soul(s): 10 total
+  P1: life 5, hand 0, deck 28, souls 2/10, grave 18 | P2: life 1, hand 4, deck 16, souls 10/10, grave 28
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks P1
+  P1 takes 3 damage from Jormuntide – Surging Sea Serpent: damage check
+    flip 1: Pal Sphere
+    flip 2: Kitsun – Wyrmbane Fangs
+    flip 3: Reindrix – Icy Gaze
+    P1 loses 3 life -> 2
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks P1
+  P1 takes 2 damage from Elphidran Aqua – Gentle Ripples: damage check
+    flip 1: Pal Sphere
+    flip 2: Cattiva – My First Pal
+    P1 loses 2 life -> 0
+GAME OVER: P2 (chillet-relaxaurus-bp) wins by life
