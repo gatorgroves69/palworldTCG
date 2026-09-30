@@ -11,3 +11,8 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 | 2026-09-30 08:37 | 20260930-080346 | cattiva-azurobe-br | -2 Suzaku – Hellfire Wings / +2 Jormuntide Ignis – Savage Lava Dragon | heuristic2 | -2.5 ± 1.7 | -1.53 | 1610 | — | **not better (futility)** |
 | 2026-09-30 08:38 | 20260930-080346 | cattiva-azurobe-br | -2 Pal Sphere / +2 Mounted Machine Gun | heuristic2 | -1.8 ± 1.7 | -1.07 | 1610 | — | **not better (futility)** |
 | 2026-09-30 08:41 | 20260930-080346 | cattiva-azurobe-br | -2 Pal Sphere / +2 Blazehowl – Hellflame Defender | heuristic2 | -0.1 ± 1.3 | -0.08 | 2415 | — | **not better (futility)** |
+
+**Verification of run 20260930-080346's kept swap (−2 Azurobe / +2 Chillet), 3,000 fresh games per version, seed 99:**
+- **heuristic2:** 60.5% → 64.3% (+3.8). The gain comes from Chillet-BP (+5.8, 43.7% of the field) and Chillet-BR (+7.8, 16.2%), not from the unreliable Stone Pit matchup (+1.6).
+- **heuristic:** 63.5% → 67.6% (+4.1). It rises against every opponent.
+- **Verdict:** a robust gain under both bots. Recommended.
