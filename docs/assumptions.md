@@ -41,21 +41,21 @@ These are the places where the rules are ambiguous or silent and I had to choose
 
 ## Card interpretations (M1)
 
-### C1: Fuack: does *blocking* count as "this card is attacked"? (`OPEN`)
+### C1: Fuack: does *blocking* count as "this card is attacked"? (`CONFIRMED` 2026-09-30)
 - CR 9.3.2: a card has "been attacked" when it's chosen as the target at the attack declaration. Blocking (CR 9.4.2.1) changes the target later and isn't described as being attacked.
 - **Chosen:** Fuack gets +300 only when it's declared as the target, not when it blocks.
 - **Impact:** medium. A blocking Fuack is 200 instead of 500.
 
-### C2: Lamball / Cattiva "cannot be attacked by": can they still *block* those Pals? (`OPEN`)
+### C2: Lamball / Cattiva "cannot be attacked by": can they still *block* those Pals? (`CONFIRMED` 2026-09-30)
 - The restriction applies to choosing attack targets (CR 9.2.4.1). CR 9.4.2 only stops Pals "restricted from blocking", and blocking isn't declaring an attack.
 - **Chosen:** they can still block any attacker. For example, Lamball can block a ◇4+ Pal.
 - **Impact:** low to medium. They're 200-power bodies, so blocking with them is mostly chump-blocking.
 
-### C3: Suzaku: two copies stack (`OPEN`, low impact)
+### C3: Suzaku: two copies stack (`CONFIRMED` 2026-09-30)
 - Each Suzaku is its own replacement effect, and CR 10.11.2.3 only limits the *same* effect to once per situation.
 - **Chosen:** two Suzakus give +400. "Your red card" includes red Gear (Pump-Action Shotgun: 1200 → 1400 per Pal) and Suzaku itself (700 → 900). It applies only to non-battle damage dealt to **Pals**.
 
-### C4: "Dragon Pal" = Pal with the Dragon element (`OPEN`, low impact)
+### C4: "Dragon Pal" = Pal with the Dragon element (`CONFIRMED` 2026-09-30)
 - Chillet and Elphidran check for a "Dragon Pal". I read that as a Pal with the Dragon element icon (CR 2.4).
 - Elements come from Palify's `game.element` field in `cards.json` (e.g. "Water / Dragon"), which is the only element data available. I checked every M1 Pal's element and they look right.
 - Dragon Pals in M1: Azurobe, Chillet, Relaxaurus, Jormuntide, Elphidran, Elphidran Aqua, Astegon.

@@ -40,11 +40,29 @@ def main(argv=None) -> int:
     r.add_argument("--logs", type=int, default=2, help="write full logs for the first N games")
     r.add_argument("--no-report", action="store_true")
 
+    m = sub.add_parser("matrix", help="every pair of decks, calibrated against real data")
+    m.add_argument("--decks", nargs="+", required=True)
+    m.add_argument("--games", type=int, default=2000)
+    m.add_argument("--seed", type=int, default=1)
+    m.add_argument("--out", type=Path, default=None)
+    m.add_argument("--workers", type=int, default=None)
+    m.add_argument("--bot", default="heuristic", choices=["heuristic", "rules", "random"])
+    m.add_argument("--structures", default="any", choices=["any", "rested_only"])
+
     p = sub.add_parser("replay", help="replay one game and print its full log")
     common(p)
     p.add_argument("--game-seed", type=int, required=True)
 
     a = ap.parse_args(argv)
+    if a.cmd == "matrix":
+        from .matrix import run_matrix
+        out = a.out or Path("results") / (
+            datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S") + "_matrix")
+        r = run_matrix(a.decks, a.games, a.seed, out, a.bot, a.structures, a.workers)
+        print((out / "matrix.md").read_text(encoding="utf-8"))
+        print(f"wrote {out}/matrix.json, matrix.md ({r['passing_pairs']}/"
+              f"{r['calibrated_pairs']} calibrated pairs within ±5)")
+        return 0
     spec = _spec(a)
     if a.cmd == "replay":
         g = make_game(spec, a.game_seed, log=True)

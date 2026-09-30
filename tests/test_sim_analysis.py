@@ -66,3 +66,13 @@ def test_draw_impact_math():
           + [{"drawn": [[], []], "winner": "opp"}] * 40)
     (row,) = draw_impact(gs, 0)
     assert row["delta"] == 1.0 and row["significant"]
+
+
+def test_matrix_small(tmp_path):
+    from sim.matrix import run_matrix, win_rate
+    decks = ["data/decks/cattiva-azurobe-br.txt", "data/decks/chillet-relaxaurus-bp.txt"]
+    r = run_matrix(decks, games=4, seed=2, out=tmp_path, workers=1)
+    (p,) = r["pairs"]
+    assert p["real"] == 0.56 and r["calibrated_pairs"] == 1
+    assert win_rate(r, "chillet-relaxaurus-bp", "cattiva-azurobe-br") == 1 - p["sim"]
+    assert "Calibration" in (tmp_path / "matrix.md").read_text()
