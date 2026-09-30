@@ -198,6 +198,8 @@ class Game:
         opp = self.players[self.opponent(attacker.owner)]
         targets: list[int | None] = [None]
         for c in opp.base:
+            if not c.impl.can_be_attacked_by(self, c, attacker):
+                continue
             if c.is_pal and (c.rested or attacker.kw("assault")):
                 targets.append(c.uid)
             elif c.is_structure and (c.rested or self.rules.structures_attackable == "any"):
@@ -209,9 +211,15 @@ class Game:
         return (c.is_pal and c.zone is Zone.BASE and not c.rested
                 and c.owner == self.active and c.impl.can_attack(self, c))
 
+    def acts_of(self, c: CardInstance) -> list:
+        """Printed ACT abilities followed by granted ones (〈〉), in a stable order."""
+        return list(c.impl.acts) + [a for a, _until in c.granted]
+
     def _can_activate(self, p: int, c: CardInstance, i: int, quick_only: bool) -> bool:
-        a = c.impl.acts[i]
+        a = self.acts_of(c)[i]
         if quick_only and not a.quick:
+            return False
+        if a.rest_self and c.rested:
             return False
         if a.once_per_turn and c.act_uses.get(i, 0) >= 1:
             return False
@@ -235,9 +243,9 @@ class Game:
                 continue
             seen.add(c.code)
             if ps.souls_standing >= self.cost(c) and c.impl.can_play(self, c):
-                acts.append(PlayCard(c.uid))
+                acts += self._play_actions(c)
         for c in ps.base:
-            for i, a in enumerate(c.impl.acts):
+            for i, a in enumerate(self.acts_of(c)):
                 if not self._can_activate(p, c, i, quick_only=False):
                     continue
                 if a.assign:
@@ -254,6 +262,12 @@ class Game:
             acts.append(SoulDraw())
         acts.append(EndMain())
         return acts
+
+    def _play_actions(self, c: CardInstance) -> list[Action]:
+        modes = c.impl.modes(self, c)
+        if modes:
+            return [PlayCard(c.uid, i) for i in range(len(modes))]
+        return [PlayCard(c.uid)]
 
     def quick_actions(self, p: int) -> list[Action]:
         """What the non-turn player may do in the Quick step (CR 9.5)."""
@@ -274,9 +288,9 @@ class Game:
                         acts.append(UseInterrupt(c.uid, o.uid))
             if (c.type is CardType.EVENT and c.impl.quick
                     and ps.souls_standing >= self.cost(c) and c.impl.can_play(self, c)):
-                acts.append(PlayCard(c.uid))
+                acts += self._play_actions(c)
         for c in ps.base:
-            for i, a in enumerate(c.impl.acts):
+            for i, a in enumerate(self.acts_of(c)):
                 if self._can_activate(p, c, i, quick_only=True):
                     if a.assign:
                         acts += [Activate(c.uid, i, x.uid) for x in ps.pals if not x.rested]
@@ -399,8 +413,16 @@ class Game:
         self.log(f"  {c.name} {stat} {amount:+d}" + (f" until end of {until}" if until else ""))
 
     def deal_card_damage(self, c: CardInstance, n: int, source: CardInstance | None = None) -> None:
+        """Non-battle damage from an effect. Replacement effects (e.g. Suzaku)
+        may change the amount (CR 10.11); battle damage doesn't come through here."""
         # Only Pals and structures have damage (CR 4.4.4); gear can't be damaged.
-        if n > 0 and c.zone is Zone.BASE and (c.is_pal or c.is_structure):
+        if n <= 0 or c.zone is not Zone.BASE or not (c.is_pal or c.is_structure):
+            return
+        if source is not None:
+            for ps in self.players:
+                for x in ps.base:
+                    n = x.impl.modify_effect_damage(self, x, source, c, n)
+        if n > 0:
             c.damage += n
             self.log(f"  {c.name} takes {n} damage (total {c.damage}/{self.power(c)})")
 
@@ -411,8 +433,34 @@ class Game:
     def rest(self, c: CardInstance) -> None:
         c.rested = True
 
+    def can_stand(self, c: CardInstance) -> bool:
+        """False while a "does not stand" effect holds it (e.g. Relaxaurus)."""
+        c.stand_locks = [(u, inc) for u, inc in c.stand_locks
+                         if self.on_base(self.card(u), inc)]
+        return not c.stand_locks
+
     def stand(self, c: CardInstance) -> None:
-        c.rested = False
+        if self.can_stand(c):
+            c.rested = False
+
+    def lock_standing(self, c: CardInstance, source: CardInstance) -> None:
+        """`c` does not stand while `source` stays in the base."""
+        c.stand_locks.append((source.uid, source.incarnation))
+
+    def skip_next_stand(self, c: CardInstance, player: int) -> None:
+        """`c` does not stand during `player`'s next stand phase."""
+        c.skip_stand.append(player)
+
+    def reveal_top(self, p: int) -> CardInstance | None:
+        ps = self.players[p]
+        if not ps.deck:
+            return None
+        self.log(f"  {self.pname(p)} reveals {ps.deck[0].name} from the top of the deck")
+        return ps.deck[0]
+
+    def grant_act(self, c: CardInstance, ability, until: str = "turn") -> None:
+        c.granted.append((ability, until))
+        self.log(f"  {c.name} gains 〈{ability.name}〉 until end of {until}")
 
     def nullify_attack(self) -> None:
         if self.battle is not None:
@@ -523,7 +571,7 @@ class Game:
     # ================================================================ actions
     def perform(self, action: Action) -> None:
         if isinstance(action, PlayCard):
-            self.play_card(self.card(action.uid).owner, self.card(action.uid))
+            self.play_card(self.card(action.uid).owner, self.card(action.uid), action.mode)
         elif isinstance(action, Activate):
             c = self.card(action.uid)
             self.activate(c.owner, c, action.index, action.assign_uid)
@@ -543,15 +591,19 @@ class Game:
             raise TypeError(action)
         self.check_timing()
 
-    def play_card(self, p: int, c: CardInstance) -> None:
+    def play_card(self, p: int, c: CardInstance, mode: int | None = None) -> None:
         cost = self.cost(c)
+        modes = c.impl.modes(self, c)
+        if modes and (mode is None or not 0 <= mode < len(modes)):
+            raise ValueError(f"{c.label()} needs a mode (0..{len(modes) - 1})")
         self.pay_souls(p, cost)
         self.stats[p].played.append((self.turn, c.code))
-        self.log(f"{self.pname(p)} plays {c.label()} (cost {cost})")
+        self.log(f"{self.pname(p)} plays {c.label()} (cost {cost})"
+                 + (f", mode: {modes[mode]}" if modes else ""))
         if c.type is CardType.EVENT:
             self.players[p].hand.remove(c)
             c.zone = Zone.RESOLUTION  # CR 10.6.2.4.2
-            c.impl.resolve_event(self, c)
+            c.impl.resolve_event(self, c, mode)
             if c.zone is Zone.RESOLUTION:
                 self.move(c, Zone.GRAVEYARD)
         else:
@@ -569,8 +621,12 @@ class Game:
         self.emit(Event("deployed", c.owner, c.uid))
 
     def activate(self, p: int, c: CardInstance, index: int, assign_uid: int | None = None) -> None:
-        a = c.impl.acts[index]
+        a = self.acts_of(c)[index]
         self.pay_souls(p, a.souls)
+        if a.rest_self:
+            if c.rested:
+                raise ValueError(f"{c.label()} is already rested")
+            c.rested = True
         ctx: dict = {}
         if a.assign:
             pal = self.card(assign_uid) if assign_uid is not None else None
@@ -667,7 +723,7 @@ class Game:
             if isinstance(choice, UseInterrupt):
                 self.use_interrupt(choice)
             elif isinstance(choice, PlayCard):
-                self.play_card(opp, self.card(choice.uid))
+                self.play_card(opp, self.card(choice.uid), choice.mode)
             elif isinstance(choice, Activate):
                 self.activate(opp, self.card(choice.uid), choice.index, choice.assign_uid)
             self.check_timing()
@@ -749,8 +805,18 @@ class Game:
         self.log(f"=== Turn {self.turn}: {self.pname(p)} ({self.deck_names[p]}) ===")
 
         self.phase = "stand"  # CR 7.2
-        for c in ps.base:
-            c.rested = False
+        for q in self.players:
+            for c in q.base:
+                skip = p in c.skip_stand
+                if skip:
+                    c.skip_stand = [x for x in c.skip_stand if x != p]
+                if q is ps:
+                    if skip:
+                        self.log(f"  {c.name} does not stand this stand phase")
+                    elif not self.can_stand(c):
+                        self.log(f"  {c.name} does not stand (locked)")
+                    else:
+                        c.rested = False
         ps.souls_rested = 0
         self.emit(Event("turn_start", p))
         self.check_timing()
@@ -795,6 +861,7 @@ class Game:
             for c in q.base:
                 c.damage = 0
                 c.mods = [m for m in c.mods if m.until not in ("turn", "battle")]
+                c.granted = [(a, u) for a, u in c.granted if u not in ("turn", "battle")]
                 c.act_uses.clear()
                 c.assigned_to = None
         ps.soul_draw_used = False

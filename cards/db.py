@@ -36,7 +36,14 @@ def _to_def(raw: dict) -> CardDef:
         lucky=bool(raw.get("lucky")),
         subtype=raw.get("subtype") or "",
         text=raw.get("effect") or "",
+        elements=_elements(raw),
     )
+
+
+def _elements(raw: dict) -> tuple[str, ...]:
+    # Palify keeps the element icons under "game.element", e.g. "Water / Dragon".
+    el = (raw.get("game") or {}).get("element") or ""
+    return tuple(e.strip().lower() for e in el.split("/") if e.strip())
 
 
 def load_card_db(path: str | Path = DEFAULT_PATH) -> dict[str, CardDef]:

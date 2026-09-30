@@ -9,6 +9,7 @@ from typing import Any
 @dataclass(frozen=True)
 class PlayCard:
     uid: int
+    mode: int | None = None  # for "Choose 1 of the following" cards
 
 @dataclass(frozen=True)
 class Activate:

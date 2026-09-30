@@ -42,6 +42,9 @@ class CardInstance:
     deployed_turn: int = -1
     assigned_to: int | None = None  # uid of the structure this Pal was assigned to this turn
     act_uses: dict[int, int] = field(default_factory=dict)  # ACT index -> uses this turn
+    granted: list = field(default_factory=list)  # [(ActAbility, until)] granted by effects (〈〉)
+    stand_locks: list = field(default_factory=list)  # [(source uid, source incarnation)]
+    skip_stand: list = field(default_factory=list)  # players whose next stand phase it skips
 
     @property
     def code(self) -> str:
@@ -73,6 +76,9 @@ class CardInstance:
         self.incarnation += 1
         self.assigned_to = None
         self.act_uses.clear()
+        self.granted.clear()
+        self.stand_locks.clear()
+        self.skip_stand.clear()
 
     def label(self) -> str:
         return f"{self.name} [{self.code}]#{self.uid}"

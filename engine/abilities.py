@@ -36,6 +36,7 @@ class ActAbility:
     effect: Callable[["Game", "CardInstance", dict], None]
     souls: int = 0
     assign: bool = False
+    rest_self: bool = False  # cost includes [Rest this card]
     once_per_turn: bool = False
     quick: bool = False
     can_pay_extra: Callable[["Game", "CardInstance"], bool] | None = None
@@ -80,7 +81,12 @@ class CardImpl:
         """Change to this card's cost while it is in hand."""
         return 0
 
-    def resolve_event(self, game: "Game", card: "CardInstance") -> None:
+    def modes(self, game: "Game", card: "CardInstance") -> list[str]:
+        """For "Choose 1 of the following" cards: the mode names. The mode is
+        chosen when the card is played (CR 10.6.2.2.1) and is part of the action."""
+        return []
+
+    def resolve_event(self, game: "Game", card: "CardInstance", mode: int | None) -> None:
         """Effect of an event card when played."""
 
     @property
@@ -112,6 +118,16 @@ class CardImpl:
 
     def can_attack(self, game: "Game", card: "CardInstance") -> bool:
         return True
+
+    def can_be_attacked_by(self, game: "Game", card: "CardInstance",
+                           attacker: "CardInstance") -> bool:
+        return True
+
+    def modify_effect_damage(self, game: "Game", card: "CardInstance", source: "CardInstance",
+                             target: "CardInstance", amount: int) -> int:
+        """Replacement effect on non-battle damage dealt to a Pal or structure
+        (e.g. Suzaku). `card` is the card with this ability, on the base."""
+        return amount
 
     def __deepcopy__(self, memo):  # stateless; share across game clones
         return self

@@ -35,6 +35,7 @@ class CardDef:
     lucky: bool = False
     subtype: str = ""
     text: str = ""
+    elements: tuple[str, ...] = ()  # lower-case, e.g. ("water", "dragon") (CR 2.4)
 
     @property
     def main_name(self) -> str:
@@ -43,6 +44,9 @@ class CardDef:
             if sep in self.name:
                 return self.name.split(sep, 1)[0]
         return self.name
+
+    def has_element(self, element: str) -> bool:
+        return element.lower() in self.elements
 
     def __deepcopy__(self, memo):  # immutable; share across game clones
         return self

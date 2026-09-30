@@ -1,8 +1,8 @@
 """Card effect implementations, one per card code, registered in REGISTRY.
 
-The card database loader (data/cards.json -> CardDef) is written once the
-file exists, so its field mapping is based on the real data rather than a guess.
+Importing this package registers every implemented card.
 """
+from . import bp01, souls, td01, td02  # noqa: F401  (registration side effects)
 from .registry import REGISTRY, Registry
 
 __all__ = ["REGISTRY", "Registry"]

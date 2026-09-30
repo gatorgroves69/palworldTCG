@@ -60,7 +60,7 @@ def make_registry() -> Registry:
         code = "T-DRAW2"
         text = "Draw 2 cards."
 
-        def resolve_event(self, game, card):
+        def resolve_event(self, game, card, mode):
             game.draw(card.owner, 2)
 
     return reg
