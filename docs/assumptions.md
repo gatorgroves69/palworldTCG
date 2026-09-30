@@ -44,7 +44,7 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### D1: Calibration target has no sample size or first/second split (`OPEN`)
 - `data/calibration/matchups_2026-09-29.json` gives Cattiva·Azurobe (br) vs Chillet·Relaxaurus (bp) as 0.56, with `games: null`. Hermes couldn't get game counts.
 - Without a sample size, the real rate's own confidence interval is unknown, so the ±5-point pass band is the only tolerance I apply.
-- There's no first/second breakdown in the file, so the "does better going first" check can only confirm the direction, not compare numbers.
+- There's no first/second breakdown in the file. On 2026-09-29 the user supplied a deck-level split instead: Cattiva·Azurobe wins **60% going first and 52% going second**, across all matchups, over 7,468 games (palworldtcg.gg, last 30 days). It covers the deck overall, not this matchup, so I use it only as a **directional check**: the sim should show Cattiva·Azurobe doing better going first, with a gap of roughly the same size (about 8 points). It isn't a tight target.
 
 ## Simulation choices (not rules questions)
 
