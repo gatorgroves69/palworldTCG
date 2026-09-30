@@ -78,6 +78,7 @@ def play_one(args) -> dict:
         "played": [st.played for st in r.stats],
         "life_lost_to": [dict(st.life_lost_to) for st in r.stats],
         "lucky_saves": [st.lucky_saves for st in r.stats],
+        "hand_end": [[c.code for c in g.players[p].hand] for p in (0, 1)],
         "history": [[h["turn"], h["active"], h["life"], h["hand"], h["deck"], h["pals"],
                      h["board_power"]] for h in r.history],
     }

@@ -76,3 +76,39 @@ def test_matrix_small(tmp_path):
     assert p["real"] == 0.56 and r["calibrated_pairs"] == 1
     assert win_rate(r, "chillet-relaxaurus-bp", "cattiva-azurobe-br") == 1 - p["sim"]
     assert "Calibration" in (tmp_path / "matrix.md").read_text()
+
+
+def test_field_weights_normalised():
+    from sim.gauntlet import allocate, field_weights
+    w = field_weights()
+    assert abs(sum(w.values()) - 1) < 1e-9 and "cattiva-azurobe-br" in w
+    assert max(w, key=w.get) == "chillet-relaxaurus-bp"
+    a = allocate(w, 1000)
+    assert a["chillet-relaxaurus-bp"] > a["chillet-relaxaurus-bg"] >= 20
+
+
+def test_optimizer_smoke(tmp_path):
+    import sim.optimize as opt
+    cfg = opt.TestConfig(batch=24, max_batches=2, confirm_games=24)
+    best = opt.optimize("data/decks/cattiva-azurobe-br.txt", rounds=1, bot="rules",
+                        confirm_bot="rules", max_tries=2, cfg=cfg, baseline_games=40,
+                        matrix_dir=str(tmp_path / "none"), results=tmp_path)
+    assert best.exists()
+    assert (tmp_path / "experiments.md").read_text().count("| rules |") >= 1
+
+
+def test_proposals_are_legal():
+    import cards
+    from pathlib import Path
+    from cards.db import load_card_db
+    from sim.optimize import is_legal, propose, read_list
+    db = load_card_db()
+    main, soul = read_list(Path("data/decks/cattiva-azurobe-br.txt"))
+    stats = {c: {"impact": 0.0, "stuck": 0.0, "drawn": 10} for c in main}
+    swaps = propose(main, soul, stats, {}, db, cards.REGISTRY, 2)
+    assert swaps
+    for o, i in swaps:
+        m = main.copy()
+        m[o] -= 2
+        m[i] += 2
+        assert is_legal(+m, soul, db) and db[i].color.value in ("red", "blue", "colorless")

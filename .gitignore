@@ -4,5 +4,6 @@ data/games/.logger.lock
 .cache/
 .pytest_cache/
 .venv/
-results/
+results/*
+!results/experiments.md
 *.egg-info/

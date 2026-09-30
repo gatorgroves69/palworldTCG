@@ -51,11 +51,29 @@ def main(argv=None) -> int:
     m.add_argument("--bot", default="heuristic", choices=sorted(BOTS))
     m.add_argument("--structures", default="any", choices=["any", "rested_only"])
 
+    o = sub.add_parser("optimize", help="M3: propose and test card swaps vs the weighted field")
+    o.add_argument("--deck", required=True)
+    o.add_argument("--rounds", type=int, default=1)
+    o.add_argument("--seed", type=int, default=1)
+    o.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    o.add_argument("--confirm-bot", default="heuristic", choices=sorted(BOTS))
+    o.add_argument("--max-tries", type=int, default=6, help="swaps tested per round")
+    o.add_argument("--batch", type=int, default=800, help="games per batch per version")
+    o.add_argument("--max-batches", type=int, default=5)
+    o.add_argument("--confirm-games", type=int, default=3000)
+    o.add_argument("--baseline-games", type=int, default=3000)
+
     p = sub.add_parser("replay", help="replay one game and print its full log")
     common(p)
     p.add_argument("--game-seed", type=int, required=True)
 
     a = ap.parse_args(argv)
+    if a.cmd == "optimize":
+        from .optimize import TestConfig, optimize
+        cfg = TestConfig(batch=a.batch, max_batches=a.max_batches, confirm_games=a.confirm_games)
+        optimize(a.deck, a.rounds, a.seed, a.bot, a.confirm_bot, a.max_tries, cfg,
+                 a.baseline_games)
+        return 0
     if a.cmd == "matrix":
         from .matrix import run_matrix
         out = a.out or Path("results") / (
