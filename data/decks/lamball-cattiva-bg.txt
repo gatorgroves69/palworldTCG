@@ -1,0 +1,19 @@
+# main
+4 BP01-025 Chillet – Dragon Whisperer
+2 BP01-026 Relaxaurus – Hungry Gunner
+4 BP01-028 Pengullet – Yearning for the Sky
+2 BP01-029 Azurobe – Water Dragon Waltz
+4 BP01-032 Fuack – Manic Wave Ripper
+2 BP01-046 Victor's Strategy
+2 BP01-049 Lyleen – Blessing of the Goddess
+4 BP01-052 Rushoar – Reckless Destruction
+2 BP01-070 Lily's Strategy
+4 BP01-098 Elphidran – Gentle Radiance
+4 TD01-012 Elphidran Aqua – Gentle Ripples
+2 TD01-015 Hangyu Cryst – Frigid Wanderer
+2 TD01-016 Reindrix – Icy Gaze
+4 TD01-023 Lamball – My First Pal
+4 TD02-004 Dinossom – Radiant Fragrance
+4 TD02-023 Cattiva – My First Pal
+# soul
+10 SOUL-001 Soul

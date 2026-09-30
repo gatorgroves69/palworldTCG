@@ -1,0 +1,17 @@
+# main
+4 BP01-025 Chillet – Dragon Whisperer
+4 BP01-026 Relaxaurus – Hungry Gunner
+2 BP01-027 Jormuntide – Surging Sea Serpent
+3 BP01-034 Teafant – Fountain of Cheer
+4 BP01-038 Cryolinx – Arctic Ordeal
+4 BP01-046 Victor's Strategy
+4 BP01-047 Pal Sphere
+4 BP01-048 Aurora Guide
+2 BP01-049 Lyleen – Blessing of the Goddess
+3 BP01-071 Found an Egg!
+4 BP01-098 Elphidran – Gentle Radiance
+4 TD01-012 Elphidran Aqua – Gentle Ripples
+4 TD01-016 Reindrix – Icy Gaze
+4 TD02-004 Dinossom – Radiant Fragrance
+# soul
+10 SOUL-001 Soul
