@@ -1,0 +1,749 @@
+{
+  "url": "https://palworldtcg.gg/meta/matchups",
+  "http_status": 200,
+  "captured_at_utc": "2026-09-30T08:31:14.247640+00:00",
+  "source_updated_date": "2026-09-29",
+  "html_sha256": "4a1e2b37554d568b7d04f161fcbc115c6f2b25b0264600dd02f5efeb595d46cf",
+  "filters": {
+    "time_window": "30 days",
+    "game_type": "All",
+    "matrix_size": "Top 12"
+  },
+  "mapping": {
+    "chillet-relaxaurus-bp": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner",
+    "chillet-relaxaurus-br": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner",
+    "lamball-stone-pit-pr": "Purple Red Lamball – My First Pal and Stone Pit",
+    "tombat-medicine-gp": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!?",
+    "machine-gun-furnace-br": "Blue Red Mounted Machine Gun and Primitive Furnace",
+    "shadowbeak-menasting-bp": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion",
+    "foxparks-harness-br": "Blue Red Foxparks – Light of Courage and Foxparks' Harness",
+    "cattiva-azurobe-br": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz",
+    "pengullet-launcher-bg": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer",
+    "foxparks-harness-pr": "Purple Red Foxparks – Light of Courage and Foxparks' Harness",
+    "lamball-cattiva-bg": "Blue Green Lamball – My First Pal and Cattiva – My First Pal",
+    "furnace-machine-gun-gr": "Green Red Primitive Furnace and Mounted Machine Gun"
+  },
+  "note": "Explicit per-cell title counts, including source mirror counts as displayed. No estimates from shading or global totals. Win rates retain verified whole-percent baseline precision.",
+  "cells": [
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 50.0% 49.2% to 50.8% · 16,398 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 51.9% 50.5% to 53.2% · 5,529 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Purple Red Lamball – My First Pal and Stone Pit · 53.4% 52.0% to 54.8% · 4,716 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 60.3% 58.5% to 62.0% · 2,974 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Mounted Machine Gun and Primitive Furnace · 56.4% 54.5% to 58.4% · 2,480 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 63.9% 61.9% to 65.8% · 2,319 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 55.4% 53.4% to 57.4% · 2,338 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 44.5% 42.5% to 46.5% · 2,389 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 60.2% 58.0% to 62.4% · 1,863 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 61.9% 59.7% to 64.0% · 1,987 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 48.8% 46.6% to 50.9% · 2,047 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-bp",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Green Red Primitive Furnace and Mounted Machine Gun · 63.3% 60.3% to 66.1% · 1,083 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 48.1% 46.8% to 49.5% · 5,529 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 50.0% 47.9% to 52.1% · 2,208 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Purple Red Lamball – My First Pal and Stone Pit · 47.3% 44.7% to 49.9% · 1,455 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 55.6% 52.7% to 58.4% · 1,161 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Mounted Machine Gun and Primitive Furnace · 53.9% 50.8% to 57.1% · 966 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 63.3% 60.3% to 66.1% · 1,064 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 50.4% 47.0% to 53.9% · 811 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 43.9% 40.3% to 47.5% · 725 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 52.5% 49.0% to 55.9% · 802 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 50.6% 46.8% to 54.4% · 658 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 44.9% 41.0% to 48.8% · 624 games"
+    },
+    {
+      "deck_a": "chillet-relaxaurus-br",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · Green Red Primitive Furnace and Mounted Machine Gun · 60.1% 55.3% to 64.7% · 411 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 46.6% 45.2% to 48.0% · 4,716 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 52.7% 50.1% to 55.3% · 1,455 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Purple Red Lamball – My First Pal and Stone Pit · 50.0% 47.4% to 52.6% · 1,400 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 61.3% 57.8% to 64.7% · 773 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Red Mounted Machine Gun and Primitive Furnace · 65.0% 61.2% to 68.5% · 651 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 68.3% 64.6% to 71.8% · 637 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 50.1% 46.4% to 53.8% · 698 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 44.1% 40.5% to 47.8% · 705 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 57.8% 53.5% to 62.1% · 498 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 45.1% 40.8% to 49.5% · 490 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 40.5% 36.6% to 44.6% · 575 games"
+    },
+    {
+      "deck_a": "lamball-stone-pit-pr",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Purple Red Lamball – My First Pal and Stone Pit · Green Red Primitive Furnace and Mounted Machine Gun · 57.0% 51.1% to 62.8% · 270 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 39.7% 38.0% to 41.5% · 2,974 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 44.4% 41.6% to 47.3% · 1,161 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Purple Red Lamball – My First Pal and Stone Pit · 38.7% 35.3% to 42.2% · 773 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 50.0% 46.2% to 53.8% · 656 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Red Mounted Machine Gun and Primitive Furnace · 45.3% 41.1% to 49.6% · 521 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 56.8% 52.5% to 61.0% · 523 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 45.2% 40.6% to 49.8% · 445 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 42.1% 37.1% to 47.3% · 361 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 44.7% 40.1% to 49.4% · 432 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 43.4% 38.3% to 48.6% · 348 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 35.7% 30.6% to 41.2% · 308 games"
+    },
+    {
+      "deck_a": "tombat-medicine-gp",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · Green Red Primitive Furnace and Mounted Machine Gun · 48.9% 42.5% to 55.4% · 227 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 43.6% 41.6% to 45.5% · 2,480 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 46.1% 42.9% to 49.2% · 966 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Purple Red Lamball – My First Pal and Stone Pit · 35.0% 31.5% to 38.8% · 651 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 54.7% 50.4% to 58.9% · 521 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Red Mounted Machine Gun and Primitive Furnace · 50.0% 46.2% to 53.8% · 648 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 55.7% 51.6% to 59.7% · 580 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 42.5% 37.7% to 47.4% · 391 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 39.7% 34.9% to 44.7% · 378 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 50.6% 45.9% to 55.3% · 431 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 41.7% 36.5% to 47.0% · 336 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 42.9% 37.7% to 48.3% · 331 games"
+    },
+    {
+      "deck_a": "machine-gun-furnace-br",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Red Mounted Machine Gun and Primitive Furnace · Green Red Primitive Furnace and Mounted Machine Gun · 49.8% 43.9% to 55.7% · 269 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 36.1% 34.2% to 38.1% · 2,319 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 36.7% 33.9% to 39.7% · 1,064 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Purple Red Lamball – My First Pal and Stone Pit · 31.7% 28.2% to 35.4% · 637 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 43.2% 39.0% to 47.5% · 523 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Red Mounted Machine Gun and Primitive Furnace · 44.3% 40.3% to 48.4% · 580 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 50.0% 46.1% to 53.9% · 620 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 38.3% 33.7% to 43.2% · 402 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 29.6% 25.0% to 34.6% · 348 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 43.9% 39.3% to 48.5% · 440 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 44.1% 38.9% to 49.5% · 331 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 28.5% 23.1% to 34.5% · 239 games"
+    },
+    {
+      "deck_a": "shadowbeak-menasting-bp",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · Green Red Primitive Furnace and Mounted Machine Gun · 46.3% 40.3% to 52.4% · 255 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 44.6% 42.6% to 46.6% · 2,338 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 49.6% 46.1% to 53.0% · 811 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Purple Red Lamball – My First Pal and Stone Pit · 49.9% 46.2% to 53.6% · 698 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 54.8% 50.2% to 59.4% · 445 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Mounted Machine Gun and Primitive Furnace · 57.5% 52.6% to 62.3% · 391 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 61.7% 56.8% to 66.3% · 402 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 50.0% 44.7% to 55.3% · 344 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 44.4% 39.2% to 49.7% · 338 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 60.2% 54.5% to 65.7% · 289 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 56.9% 51.3% to 62.4% · 304 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 41.2% 35.3% to 47.3% · 255 games"
+    },
+    {
+      "deck_a": "foxparks-harness-br",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Red Foxparks – Light of Courage and Foxparks' Harness · Green Red Primitive Furnace and Mounted Machine Gun · 60.6% 52.1% to 68.5% · 132 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 55.5% 53.5% to 57.5% · 2,389 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 56.1% 52.5% to 59.7% · 725 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Purple Red Lamball – My First Pal and Stone Pit · 55.9% 52.2% to 59.5% · 705 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 57.9% 52.7% to 62.9% · 361 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Red Mounted Machine Gun and Primitive Furnace · 60.3% 55.3% to 65.1% · 378 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 70.4% 65.4% to 75.0% · 348 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 55.6% 50.3% to 60.8% · 338 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 50.0% 45.0% to 55.0% · 382 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 67.4% 61.1% to 73.2% · 227 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 61.0% 55.5% to 66.2% · 315 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 50.7% 45.6% to 55.8% · 365 games"
+    },
+    {
+      "deck_a": "cattiva-azurobe-br",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · Green Red Primitive Furnace and Mounted Machine Gun · 61.2% 52.7% to 69.0% · 134 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 39.8% 37.6% to 42.0% · 1,863 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 47.5% 44.1% to 51.0% · 802 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Purple Red Lamball – My First Pal and Stone Pit · 42.2% 37.9% to 46.5% · 498 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 55.3% 50.6% to 59.9% · 432 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Red Mounted Machine Gun and Primitive Furnace · 49.4% 44.7% to 54.1% · 431 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 56.1% 51.5% to 60.7% · 440 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 39.8% 34.3% to 45.5% · 289 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 32.6% 26.8% to 38.9% · 227 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 50.0% 44.6% to 55.4% · 328 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 48.6% 42.4% to 54.8% · 247 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 34.8% 28.6% to 41.5% · 207 games"
+    },
+    {
+      "deck_a": "pengullet-launcher-bg",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · Green Red Primitive Furnace and Mounted Machine Gun · 51.7% 44.3% to 59.0% · 174 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 38.1% 36.0% to 40.3% · 1,987 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 49.4% 45.6% to 53.2% · 658 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Purple Red Lamball – My First Pal and Stone Pit · 54.9% 50.5% to 59.2% · 490 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 56.6% 51.4% to 61.7% · 348 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Mounted Machine Gun and Primitive Furnace · 58.3% 53.0% to 63.5% · 336 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 55.9% 50.5% to 61.1% · 331 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 43.1% 37.6% to 48.7% · 304 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 39.0% 33.8% to 44.5% · 315 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 51.4% 45.2% to 57.6% · 247 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 50.0% 44.5% to 55.5% · 316 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 38.9% 33.5% to 44.5% · 296 games"
+    },
+    {
+      "deck_a": "foxparks-harness-pr",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Purple Red Foxparks – Light of Courage and Foxparks' Harness · Green Red Primitive Furnace and Mounted Machine Gun · 58.3% 49.8% to 66.4% · 132 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 51.2% 49.1% to 53.4% · 2,047 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 55.1% 51.2% to 59.0% · 624 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Purple Red Lamball – My First Pal and Stone Pit · 59.5% 55.4% to 63.4% · 575 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 64.3% 58.8% to 69.4% · 308 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Red Mounted Machine Gun and Primitive Furnace · 57.1% 51.7% to 62.3% · 331 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 71.5% 65.5% to 76.9% · 239 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 58.8% 52.7% to 64.7% · 255 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 49.3% 44.2% to 54.4% · 365 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 65.2% 58.5% to 71.4% · 207 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 61.1% 55.5% to 66.5% · 296 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 50.0% 44.3% to 55.7% · 292 games"
+    },
+    {
+      "deck_a": "lamball-cattiva-bg",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Blue Green Lamball – My First Pal and Cattiva – My First Pal · Green Red Primitive Furnace and Mounted Machine Gun · 60.7% 51.8% to 68.9% · 122 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "chillet-relaxaurus-bp",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 36.7% 33.9% to 39.7% · 1,083 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "chillet-relaxaurus-br",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner · 39.9% 35.3% to 44.7% · 411 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "lamball-stone-pit-pr",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Purple Red Lamball – My First Pal and Stone Pit · 43.0% 37.2% to 48.9% · 270 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "tombat-medicine-gp",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!? · 51.1% 44.6% to 57.5% · 227 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "machine-gun-furnace-br",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Red Mounted Machine Gun and Primitive Furnace · 50.2% 44.3% to 56.1% · 269 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "shadowbeak-menasting-bp",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion · 53.7% 47.6% to 59.7% · 255 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "foxparks-harness-br",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Red Foxparks – Light of Courage and Foxparks' Harness · 39.4% 31.5% to 47.9% · 132 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "cattiva-azurobe-br",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz · 38.8% 31.0% to 47.3% · 134 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "pengullet-launcher-bg",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer · 48.3% 41.0% to 55.7% · 174 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "foxparks-harness-pr",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Purple Red Foxparks – Light of Courage and Foxparks' Harness · 41.7% 33.6% to 50.2% · 132 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "lamball-cattiva-bg",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Blue Green Lamball – My First Pal and Cattiva – My First Pal · 39.3% 31.1% to 48.2% · 122 games"
+    },
+    {
+      "deck_a": "furnace-machine-gun-gr",
+      "deck_b": "furnace-machine-gun-gr",
+      "tooltip": "Green Red Primitive Furnace and Mounted Machine Gun · Green Red Primitive Furnace and Mounted Machine Gun · 50.0% 42.4% to 57.6% · 162 games"
+    }
+  ]
+}
