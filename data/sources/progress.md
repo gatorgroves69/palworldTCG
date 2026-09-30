@@ -14,5 +14,5 @@ Corrected data/decks/README.md: eight committed validated lists, two missing top
 ## Step 3 — DONE
 HTTP 200 from https://palworldtcg.gg/meta/matchups on 2026-09-30. Real sample sizes are shown in cell title tooltips (missed by the prior accessibility-only capture). Saved 144 rows to data/calibration/matchups_2026-09-30.json and exact tooltip evidence to data/sources/2026-09-30/matchup-counts.json. Source update remains 2026-09-29; verified 30 days / All / Top 12. All original labels/rates checked, positive integer counts and reciprocal counts validated. No numbers guessed. Completion commit: `b7fc262` (pushed).
 
-## Step 4 — STARTED
-Inspect per-matchup first/second splits; do not substitute aggregate deck splits.
+## Step 4 — BLOCKED (inspection finished; no split data added)
+Public matchup matrix tooltips expose rate, confidence interval and games only. The Deck matchups tab shows overall matchup percentages, with no first/second filter or split values. Inspected Tombat deck overview and Deep dive: PREFER 2ND is aggregate advice, not per-opponent split values; Deep dive displays a SUPPORTER ANALYTICS gate. No qualifying per-matchup first/second data was shown. Stopped this step without inventing fields or bypassing access controls. Completion commit hash: pending checkpoint.
