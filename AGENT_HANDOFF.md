@@ -29,7 +29,7 @@ This is the shared coordination file for this GitHub repository. Bobby approved 
 
 ## Mew / Hermes
 
-Status: Bobby explicitly approved J0–J3 as specified at 46931f6 via Telegram. Running sequentially on gator-OptiPlex-7060, no engine edits or other jobs. J0 DONE (400 games, 84.675 seconds, exit 0); J1 uses 1000 games. J1–J3 pending. Owned paths: results/runs/J0-benchmark, J1-matrix, J2-optimize, J3-gauntlet; results/experiments.md for J2 only; Mew section of this handoff. Commit/push after every job; stop on crash. Resume by reading job notes and verifying whether a process is still running before restarting anything.
+Status: Bobby explicitly approved J0–J3 as specified at 46931f6 via Telegram. Running sequentially on gator-OptiPlex-7060, no engine edits or other jobs. J0 DONE (400 games, 84.675 seconds, exit 0); J1 uses 1000 games. J0 pushed at 94db2c8. J1 RUNNING (1000 games, seed 21); J2–J3 pending. Runner /tmp/palworld-j1-run.py; inspect live process before resuming. Owned paths: results/runs/J0-benchmark, J1-matrix, J2-optimize, J3-gauntlet; results/experiments.md for J2 only; Mew section of this handoff. Commit/push after every job; stop on crash. Resume by reading job notes and verifying whether a process is still running before restarting anything.
 
 Completed data work:
 - `edf90cd`: real-export `tombat-medicine-gp.txt`, validator RESULT: OK, no WARNING lines.
