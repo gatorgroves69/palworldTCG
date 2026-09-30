@@ -112,3 +112,14 @@ def test_proposals_are_legal():
         m[o] -= 2
         m[i] += 2
         assert is_legal(+m, soul, db) and db[i].color.value in ("red", "blue", "colorless")
+
+
+def test_gauntlet_command(tmp_path):
+    import json
+    from sim.__main__ import main
+    assert main(["gauntlet", "--deck", "data/decks/cattiva-azurobe-br.txt", "--games", "60",
+                 "--bot", "rules", "--seed", "3", "--out", str(tmp_path), "--workers", "2"]) == 0
+    s = json.loads((tmp_path / "summary.json").read_text())
+    assert s["games"] >= 60 and set(s["field"]) >= {"chillet-relaxaurus-bp"}
+    msg = (tmp_path / "telegram.txt").read_text()
+    assert msg.startswith("cattiva-azurobe-br:") and len(msg) <= 900 and "Worst:" in msg

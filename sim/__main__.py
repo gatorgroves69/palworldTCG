@@ -63,11 +63,25 @@ def main(argv=None) -> int:
     o.add_argument("--confirm-games", type=int, default=3000)
     o.add_argument("--baseline-games", type=int, default=3000)
 
+    gt = sub.add_parser("gauntlet", help="M4: one deck vs the weighted field; Telegram summary")
+    gt.add_argument("--deck", required=True)
+    gt.add_argument("--games", type=int, default=20000)
+    gt.add_argument("--seed", type=int, default=1)
+    gt.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    gt.add_argument("--out", type=Path, default=None)
+    gt.add_argument("--workers", type=int, default=None)
+
     p = sub.add_parser("replay", help="replay one game and print its full log")
     common(p)
     p.add_argument("--game-seed", type=int, required=True)
 
     a = ap.parse_args(argv)
+    if a.cmd == "gauntlet":
+        from .overnight import run_gauntlet
+        r = run_gauntlet(a.deck, a.games, a.seed, a.bot, a.out, a.workers)
+        print((Path(r["out"]) / "telegram.txt").read_text(encoding="utf-8"))
+        print(f"\nwrote {r['out']}/summary.json, telegram.txt, games.jsonl")
+        return 0
     if a.cmd == "optimize":
         from .optimize import TestConfig, optimize
         cfg = TestConfig(batch=a.batch, max_batches=a.max_batches, confirm_games=a.confirm_games)

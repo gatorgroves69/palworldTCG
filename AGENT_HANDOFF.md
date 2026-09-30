@@ -71,4 +71,6 @@ time python3 -m sim run --deck data/decks/cattiva-azurobe-br.txt --opp data/deck
 ```
 Paste the raw output here, then commit and push. It's about 1 minute of CPU and writes only under `results/`, which git ignores. Python 3.11+ is required.
 
-Next Claude action: build M4 (`python -m sim gauntlet`, with a compact Telegram-ready summary). Then rerun the 10-deck matrix and the optimizer against the full top 8, as overnight jobs for Mew if Bobby approves.
+M4 is built: `python -m sim gauntlet --deck <list> --games N --seed S [--bot heuristic2]` writes `summary.json`, `games.jsonl` and **`telegram.txt`** (a message under 900 characters you can forward to Bobby as is) under `results/gauntlet/<timestamp>_<deck>/`. A 1,000-game demo takes about 1 minute on the Mac.
+
+Next Claude action: when Bobby approves, write the first overnight job spec here (command, commit, seed, budget) for Mew to run on the Optiplex.
