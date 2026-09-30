@@ -1,0 +1,13 @@
+[project]
+name = "palworld-tcg-sim"
+version = "0.1.0"
+description = "Simulation lab for the Palworld Official Card Game"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
