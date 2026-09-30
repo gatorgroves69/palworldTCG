@@ -30,3 +30,31 @@
 3. **Don't fit the scoring weights to the real data.** They stay hand-set. If a stronger bot still misses on specific pairs, those misses become the next diagnosis targets.
 
 Cost: roughly 10–50× slower per game, depending on search budget. That's fine for Hermes's overnight runs, and heavy but workable on the Mac.
+
+## Update: search bots and learned evaluation (sign-off given for "stronger bot")
+
+| Bot | Mirror score vs HeuristicBot | Calibration | Speed |
+|---|---|---|---|
+| SearchBot (flat Monte Carlo + simulated opponent reply, FastBot rollouts) | 31–42%, weaker | not run | ~1 s/game |
+| PlanBot (per-turn attack style picked from rollouts) | 44–52%, no better | not run | ~1.5 s/game |
+| HeuristicBot + evaluation learned from self-play (v1) | 53–62% in 4/5 decks, modestly stronger | **3/21, mean abs error 17.3** ([matrix](m2/matrix-learned.md)) | ~0.2 s/game |
+| Learned evaluation, second self-play round | 0–6%, broken (learned "never attack") | discarded | — |
+
+**Bot agreement check** (HeuristicBot vs learned HeuristicBot, all 28 pairs): only **6/28 within 5 points**, mean difference 18.5 points, maximum 46.8. The absolute matchup numbers still depend mostly on which bot plays.
+
+Per deck (average against the gauntlet):
+
+| Deck | HeuristicBot | Learned | Real |
+|---|---|---|---|
+| cattiva-azurobe-br | 62.7 | 66.7 | 59.2 |
+| chillet-relaxaurus-bg | 42.9 | 62.6 | 47.5 |
+| chillet-relaxaurus-bp | 56.8 | 59.9 | 58.2 |
+| chillet-relaxaurus-br | 74.5 | 52.7 | 52.8 |
+| foxparks-harness-br | 56.5 | 35.3 | 51.7 |
+| lamball-cattiva-bg | 52.2 | 76.3 | 58.6 |
+| **lamball-stone-pit-pr** | **29.1** | **29.1** | 53.9 |
+| **shadowbeak-menasting-bp** | **25.2** | **17.5** | 39.5 |
+
+**The two misses that don't depend on the bot:** Lamball·Stone Pit and Shadowbeak·Menasting are 15–25 points too weak under *every* bot. A miss that survives a change of bot is the strongest sign of a card or rules problem (or of a strategy none of these bots can play), so these two are the next diagnosis targets.
+
+Also fixed along the way: determinize() left stale zone labels on reshuffled cards (duplicated or looping cards in simulated copies; affected HeuristicBot too).
