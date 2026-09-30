@@ -1,0 +1,18 @@
+# main
+4 BP01-001 Jormuntide Ignis – Savage Lava Dragon
+4 BP01-002 Suzaku – Hellfire Wings
+2 BP01-005 Reptyro – Ore Gorger
+2 BP01-007 Kitsun – Wyrmbane Fangs
+4 BP01-012 Flambelle – Scorching Tears
+4 BP01-015 Mounted Machine Gun
+4 BP01-016 Primitive Furnace
+4 BP01-020 Pump-Action Shotgun
+4 BP01-038 Cryolinx – Arctic Ordeal
+2 BP01-045 Grappling Gun
+1 BP01-047 Pal Sphere
+4 TD01-004 Foxparks – A Toasty Hug
+4 TD01-010 Single-Shot Rifle
+4 TD01-016 Reindrix – Icy Gaze
+3 TD01-023 Lamball – My First Pal
+# soul
+10 SOUL-001 Soul
