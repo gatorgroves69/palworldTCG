@@ -1,7 +1,8 @@
 """TD02 trial deck (Green・Purple) cards used by the M1 decks."""
 from __future__ import annotations
 
-from engine.abilities import CardImpl
+from engine.abilities import CardImpl, Trigger
+from engine.state import Zone
 
 from .common import all_pals, choose_pal
 from .registry import REGISTRY
@@ -68,3 +69,34 @@ class Cattiva(CardImpl):
 
     def can_be_attacked_by(self, game, card, attacker):
         return attacker.defn.cost > 3
+
+
+# TD02-004 Dinossom – Radiant Fragrance
+# ACT Interrupt (Hand Quick [①, discard this card] OR [Discard this card and 1 other card from
+# hand] Nullify the opponent's attack. Battle damage does not occur)
+@reg
+class Dinossom(CardImpl):
+    code = "TD02-004"
+    text = INTERRUPT_TEXT
+    keywords = {"interrupt": True}
+
+
+# TD02-014 Leezpunk – Treasure Bandit
+# AUTO When this card is put into the graveyard, your opponent chooses 1 card from their hand,
+# and discards it.
+@reg
+class Leezpunk(CardImpl):
+    code = "TD02-014"
+    text = ("AUTO When this card is put into the graveyard, your opponent chooses 1 card from "
+            "their hand, and discards it.")
+
+    def triggers(self, game, card, event):
+        if (event.kind == "left_base" and event.card_uid == card.uid
+                and event.data["to"] is Zone.GRAVEYARD):
+            def fire(g, opp=game.opponent(card.owner)):
+                for c in g.choose_cards(opp, "Leezpunk: choose 1 card from your hand to discard",
+                                        list(g.players[opp].hand), 1, intent="discard"):
+                    g.log(f"  {g.pname(opp)} discards {c.name}")
+                    g.discard(c)
+            return [Trigger(card.owner, f"{card.name}: opponent discards", fire, card.uid)]
+        return []

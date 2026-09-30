@@ -43,6 +43,8 @@ class CardInstance:
     assigned_to: int | None = None  # uid of the structure this Pal was assigned to this turn
     act_uses: dict[int, int] = field(default_factory=dict)  # ACT index -> uses this turn
     granted: list = field(default_factory=list)  # [(ActAbility, until)] granted by effects (〈〉)
+    granted_kw: list = field(default_factory=list)  # [(keyword, until)]
+    granted_auto: list = field(default_factory=list)  # [(hook, name, fn(game, card), until)]
     stand_locks: list = field(default_factory=list)  # [(source uid, source incarnation)]
     skip_stand: list = field(default_factory=list)  # players whose next stand phase it skips
 
@@ -77,6 +79,8 @@ class CardInstance:
         self.assigned_to = None
         self.act_uses.clear()
         self.granted.clear()
+        self.granted_kw.clear()
+        self.granted_auto.clear()
         self.stand_locks.clear()
         self.skip_stand.clear()
 
@@ -100,6 +104,7 @@ class PlayerState:
     resources: dict[str, int] = field(default_factory=lambda: {"material": 0, "ingredient": 0})
     redrew: bool = False
     soul_draw_used: bool = False
+    gear_discount: int = 0  # Primitive Furnace: next gear from hand costs X less this turn
 
     @property
     def souls_standing(self) -> int:

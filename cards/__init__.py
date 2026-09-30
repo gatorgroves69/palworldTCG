@@ -2,7 +2,7 @@
 
 Importing this package registers every implemented card.
 """
-from . import bp01, souls, td01, td02  # noqa: F401  (registration side effects)
+from . import bp01, bp01_blue_green, bp01_purple, bp01_red, souls, td01, td02  # noqa: F401
 from .registry import REGISTRY, Registry
 
 __all__ = ["REGISTRY", "Registry"]

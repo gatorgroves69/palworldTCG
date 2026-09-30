@@ -16,6 +16,7 @@ class Activate:
     uid: int
     index: int
     assign_uid: int | None = None  # Pal assigned to pay the cost, if the ability needs one
+    x: int | None = None  # chosen X for "Consume X ..." costs
 
 @dataclass(frozen=True)
 class Attack:

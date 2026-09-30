@@ -121,7 +121,9 @@ class Game:
         self.phase = "setup"
         self.battle: Battle | None = None
         self.pending: list[Trigger] = []
-        self.night = False
+        self.night = False  # forced night (tests); see is_night()
+        self.night_until: int | None = None  # timed night lasts through this turn number
+        self.delayed: list[tuple[int, Trigger, int | None]] = []  # (turn, trigger, source uid)
         self.winner: int | None = None
         self.reason = ""
         self.stats = [PlayerStats(), PlayerStats()]
@@ -181,16 +183,52 @@ class Game:
     def power(self, c: CardInstance) -> int:
         v = c.defn.power + sum(m.amount for m in c.mods if m.stat == "power")
         v += c.impl.power_mod(self, c)
-        if c.kw("nocturnal") and self.night:  # CR 12.13
-            v += 300
+        if c.zone is Zone.BASE:
+            if self.is_night():
+                v += 300 * self.kw_count(c, "nocturnal")  # CR 12.13, one +300 per instance
+            for ps in self.players:
+                for x in ps.base:
+                    if x is not c:
+                        v += x.impl.aura_power(self, x, c)
         return v
+
+    def kw_count(self, c: CardInstance, name: str) -> int:
+        """Instances of a flag keyword: printed + granted until end of turn + granted by
+        CONT abilities of cards on the base (e.g. Lamp grants Nocturnal)."""
+        n = c.impl.keywords.get(name, 0)
+        n = int(n) if not isinstance(n, bool) else int(n)
+        n += sum(1 for k, _ in c.granted_kw if k == name)
+        if c.zone is Zone.BASE:
+            for ps in self.players:
+                for x in ps.base:
+                    n += x.impl.grant_keywords(self, x, c).get(name, 0)
+        return n
+
+    def has_kw(self, c: CardInstance, name: str) -> bool:
+        return self.kw_count(c, name) > 0
+
+    def is_night(self) -> bool:
+        """CR 5.3: the specific state "night"."""
+        if self.night or self.night_until is not None:
+            return True
+        return any(x.impl.makes_night(self, x) for ps in self.players for x in ps.base)
+
+    def make_night(self, p: int) -> None:
+        """"It becomes night until the end of the opponent's next turn" (player p's effect)."""
+        until = self.turn + 1 if self.active == p else self.turn + 2
+        self.night_until = max(self.night_until or 0, until)
+        self.log(f"  it becomes night until the end of turn {self.night_until}")
 
     def strike(self, c: CardInstance) -> int:
         v = c.defn.strike + sum(m.amount for m in c.mods if m.stat == "strike")
         return v + c.impl.strike_mod(self, c)
 
     def cost(self, c: CardInstance) -> int:
-        return max(0, c.defn.cost + c.impl.cost_mod(self, c))
+        v = max(0, c.defn.cost + c.impl.cost_mod(self, c))
+        disc = self.players[c.owner].gear_discount
+        if disc and c.type is CardType.GEAR and c.zone is Zone.HAND:
+            v = max(1, v - disc)  # Primitive Furnace: "does not become ◇0 or less"
+        return v
 
     def on_base(self, c: CardInstance, incarnation: int | None = None) -> bool:
         return c.zone is Zone.BASE and (incarnation is None or c.incarnation == incarnation)
@@ -202,11 +240,11 @@ class Game:
         for c in opp.base:
             if not c.impl.can_be_attacked_by(self, c, attacker):
                 continue
-            if c.is_pal and (c.rested or attacker.kw("assault")):
+            if c.is_pal and (c.rested or self.has_kw(attacker, "assault")):
                 targets.append(c.uid)
             elif c.is_structure and (c.rested or self.rules.structures_attackable == "any"):
                 targets.append(c.uid)  # A2: configurable. Gear is never a target (CR 9.2.3)
-        taunters = [t for t in targets if t is not None and self.card(t).kw("taunt")]
+        taunters = [t for t in targets if t is not None and self.has_kw(self.card(t), "taunt")]
         return taunters or targets
 
     def can_attack(self, c: CardInstance) -> bool:
@@ -223,7 +261,7 @@ class Game:
             return False
         if a.rest_self and c.rested:
             return False
-        if a.once_per_turn and c.act_uses.get(i, 0) >= 1:
+        if a.once_per_turn and c.act_uses.get(a.limit_key or i, 0) >= 1:
             return False
         if self.players[p].souls_standing < a.souls:
             return False
@@ -233,7 +271,15 @@ class Game:
             return False
         if a.condition and not a.condition(self, c):
             return False
+        if a.x_options and not a.x_options(self, c):
+            return False
         return True
+
+    def _activate_actions(self, p: int, c: CardInstance, i: int) -> list[Action]:
+        a = self.acts_of(c)[i]
+        xs = a.x_options(self, c) if a.x_options else [None]
+        pals = [x.uid for x in self.players[p].pals if not x.rested] if a.assign else [None]
+        return [Activate(c.uid, i, u, x) for u in pals for x in xs]
 
     def legal_actions(self, p: int) -> list[Action]:
         """Main-phase actions for the turn player (CR 8)."""
@@ -247,15 +293,9 @@ class Game:
             if ps.souls_standing >= self.cost(c) and c.impl.can_play(self, c):
                 acts += self._play_actions(c)
         for c in ps.base:
-            for i, a in enumerate(self.acts_of(c)):
-                if not self._can_activate(p, c, i, quick_only=False):
-                    continue
-                if a.assign:
-                    for pal in ps.pals:
-                        if not pal.rested:
-                            acts.append(Activate(c.uid, i, pal.uid))
-                else:
-                    acts.append(Activate(c.uid, i))
+            for i in range(len(self.acts_of(c))):
+                if self._can_activate(p, c, i, quick_only=False):
+                    acts += self._activate_actions(p, c, i)
         for c in ps.pals:
             if self.can_attack(c):
                 for t in self.attack_targets(c):
@@ -280,7 +320,7 @@ class Game:
             if c.code in seen:
                 continue
             seen.add(c.code)
-            if c.kw("interrupt"):
+            if self.has_kw(c, "interrupt"):
                 if ps.souls_standing >= 1:
                     acts.append(UseInterrupt(c.uid, None))
                 other_codes: set[str] = set()
@@ -292,12 +332,9 @@ class Game:
                     and ps.souls_standing >= self.cost(c) and c.impl.can_play(self, c)):
                 acts += self._play_actions(c)
         for c in ps.base:
-            for i, a in enumerate(self.acts_of(c)):
+            for i in range(len(self.acts_of(c))):
                 if self._can_activate(p, c, i, quick_only=True):
-                    if a.assign:
-                        acts += [Activate(c.uid, i, x.uid) for x in ps.pals if not x.rested]
-                    else:
-                        acts.append(Activate(c.uid, i))
+                    acts += self._activate_actions(p, c, i)
         return acts
 
     # ================================================================ decisions
@@ -395,21 +432,21 @@ class Game:
         opp = b.opponent_of(c)
         if opp is None:
             return
-        if c.kw("retaliate") and self.on_base(opp):
+        if self.has_kw(c, "retaliate") and self.on_base(opp):
             inc = opp.incarnation
 
             def retaliate(g: Game, opp=opp, inc=inc, src=c) -> None:
                 if g.on_base(opp, inc):
                     g.send_to_graveyard(opp, f"Retaliate from {src.name}")
-            self.pending.append(Trigger(c.owner, f"Retaliate ({c.name})", retaliate, c.uid))
-        if c is b.target and b.attacker.kw("breakthrough"):
+            self.push_trigger(Trigger(c.owner, f"Retaliate ({c.name})", retaliate, c.uid), c)
+        if c is b.target and self.has_kw(b.attacker, "breakthrough"):
             dmg = self.strike(b.attacker)  # last known information if it has left too
             att = b.attacker
 
             def breakthrough(g: Game, victim=c.owner, dmg=dmg, att=att) -> None:
                 g.deal_player_damage(victim, dmg, att)
-            self.pending.append(Trigger(b.attacker_player, f"Breakthrough ({att.name})",
-                                        breakthrough, att.uid))
+            self.push_trigger(Trigger(b.attacker_player, f"Breakthrough ({att.name})",
+                                      breakthrough, att.uid), att)
 
     # ================================================================ effects API
     def pay_souls(self, p: int, n: int) -> None:
@@ -436,6 +473,57 @@ class Game:
         if n > 0:
             c.damage += n
             self.log(f"  {c.name} takes {n} damage (total {c.damage}/{self.power(c)})")
+
+    def gain_resource(self, p: int, kind: str, n: int) -> None:
+        """"Get N Material/Ingredient" (CR 3.3)."""
+        self.players[p].resources[kind] += n
+        self.log(f"  {self.pname(p)} gets {n} {kind} ({self.players[p].resources[kind]})")
+
+    def consume(self, p: int, kind: str, n: int) -> bool:
+        """CR 5.13 / 3.3.3.2: consume only if you have enough."""
+        res = self.players[p].resources
+        if res[kind] < n:
+            return False
+        res[kind] -= n
+        self.log(f"  {self.pname(p)} consumes {n} {kind} ({res[kind]} left)")
+        return True
+
+    def mill(self, p: int, n: int) -> list[CardInstance]:
+        """Put the top n cards of the deck into the graveyard."""
+        ps = self.players[p]
+        cards = ps.deck[:n]
+        for c in cards:
+            self.move(c, Zone.GRAVEYARD)
+        if cards:
+            self.log(f"  {self.pname(p)} puts {', '.join(c.name for c in cards)} from the top of "
+                     "the deck into the graveyard")
+        return cards
+
+    def add_soul_rested(self, p: int) -> None:
+        """Move 1 soul card from the soul deck to the soul area, rested (C11)."""
+        ps = self.players[p]
+        if ps.soul_deck > 0:
+            ps.soul_deck -= 1
+            ps.souls += 1
+            ps.souls_rested += 1
+            self.log(f"  {self.pname(p)} adds 1 soul in the rest state ({ps.souls} total)")
+
+    def can_block(self, c: CardInstance) -> bool:
+        return not any(m.stat == "no_block" for m in c.mods)
+
+    def grant_keyword(self, c: CardInstance, kw: str, until: str = "turn") -> None:
+        c.granted_kw.append((kw, until))
+        self.log(f"  {c.name} gains {kw} until end of {until}")
+
+    def grant_auto(self, c: CardInstance, hook: str, name: str, fn, until: str = "turn") -> None:
+        """Grant an AUTO ability (e.g. 〈OnAttack ...〉). `fn(game, card)` must not capture
+        card objects, so game clones stay independent."""
+        c.granted_auto.append((hook, name, fn, until))
+        self.log(f"  {c.name} gains 〈{name}〉 until end of {until}")
+
+    def at_end_of_turn(self, trigger: Trigger, source: CardInstance | None = None) -> None:
+        """Delayed triggered ability for the end of this turn (CR 10.8.5)."""
+        self.delayed.append((self.turn, trigger, source.uid if source else None))
 
     def gain_life(self, p: int, n: int) -> None:
         self.players[p].life += n
@@ -522,11 +610,21 @@ class Game:
                 if c.uid in seen:
                     continue
                 seen.add(c.uid)
-                self.pending.extend(c.impl.triggers(self, c, event))
+                for t in c.impl.triggers(self, c, event):
+                    self.push_trigger(t, c)
 
     def queue(self, master: int, name: str, fn: Callable[["Game"], None],
               source: CardInstance | None = None) -> None:
-        self.pending.append(Trigger(master, name, fn, source.uid if source else None))
+        self.push_trigger(Trigger(master, name, fn, source.uid if source else None), source)
+
+    def push_trigger(self, t: Trigger, source: CardInstance | None) -> None:
+        """Put an AUTO ability into the standby state, possibly several times (CR 5.21)."""
+        n = 1
+        if source is not None and source.is_pal:
+            # CR 5.21.2: with several "activates N times" effects, only one applies.
+            n = max([x.impl.auto_multiplier(self, x, source)
+                     for x in self.players[source.owner].base] + [1])
+        self.pending.extend([t] * n)
 
     def check_timing(self) -> None:
         """CR 10.5.3: rule actions until none remain, then one trigger at a time
@@ -587,7 +685,7 @@ class Game:
             self.play_card(self.card(action.uid).owner, self.card(action.uid), action.mode)
         elif isinstance(action, Activate):
             c = self.card(action.uid)
-            self.activate(c.owner, c, action.index, action.assign_uid)
+            self.activate(c.owner, c, action.index, action.assign_uid, action.x)
         elif isinstance(action, Attack):
             self.attack(self.card(action.attacker_uid), action.target_uid)
         elif isinstance(action, SoulDraw):
@@ -610,6 +708,8 @@ class Game:
         if modes and (mode is None or not 0 <= mode < len(modes)):
             raise ValueError(f"{c.label()} needs a mode (0..{len(modes) - 1})")
         self.pay_souls(p, cost)
+        if c.type is CardType.GEAR and self.players[p].gear_discount:
+            self.players[p].gear_discount = 0  # "your next gear" has now been played
         self.stats[p].played.append((self.turn, c.code))
         self.log(f"{self.pname(p)} plays {c.label()} (cost {cost})"
                  + (f", mode: {modes[mode]}" if modes else ""))
@@ -622,10 +722,10 @@ class Game:
         else:
             self.deploy(c)
 
-    def deploy(self, c: CardInstance) -> None:
+    def deploy(self, c: CardInstance, rested: bool = False) -> None:
         """CR 5.15: put a Pal/structure/gear onto its master's base."""
         self.move(c, Zone.BASE)
-        c.rested = False
+        c.rested = rested
         c.deployed_turn = self.turn
         self._deploy_seq += 1
         self._deploy_order[c.uid] = self._deploy_seq
@@ -633,14 +733,17 @@ class Game:
             self.queue(c.owner, f"On Deploy: {c.name}", lambda g, c=c: c.impl.on_deploy(g, c), c)
         self.emit(Event("deployed", c.owner, c.uid))
 
-    def activate(self, p: int, c: CardInstance, index: int, assign_uid: int | None = None) -> None:
+    def activate(self, p: int, c: CardInstance, index: int, assign_uid: int | None = None,
+                 x: int | None = None) -> None:
         a = self.acts_of(c)[index]
+        if a.x_options and x not in a.x_options(self, c):
+            raise ValueError(f"{c.label()}: X={x} not allowed")
         self.pay_souls(p, a.souls)
         if a.rest_self:
             if c.rested:
                 raise ValueError(f"{c.label()} is already rested")
             c.rested = True
-        ctx: dict = {}
+        ctx: dict = {"x": x}
         if a.assign:
             pal = self.card(assign_uid) if assign_uid is not None else None
             if pal is None or pal.rested or pal.owner != p or not pal.is_pal:
@@ -648,9 +751,10 @@ class Game:
             self.assign(pal, c)
             ctx["assigned"] = pal
         if a.pay_extra:
-            a.pay_extra(self, c)
-        c.act_uses[index] = c.act_uses.get(index, 0) + 1
-        self.log(f"{self.pname(p)} activates {c.name}: {a.name}")
+            a.pay_extra(self, c, ctx)
+        key = a.limit_key or index
+        c.act_uses[key] = c.act_uses.get(key, 0) + 1
+        self.log(f"{self.pname(p)} activates {c.name}: {a.name}" + (f" (X={x})" if x else ""))
         a.effect(self, c, ctx)
 
     def assign(self, pal: CardInstance, structure: CardInstance) -> None:
@@ -704,12 +808,17 @@ class Game:
                        lambda g, c=att, n=int(brave): g.add_mod(c, "power", n, "turn", "Brave"), att)
         if att.impl.overrides("on_attack"):
             self.queue(p, f"On Attack: {att.name}", lambda g, c=att: c.impl.on_attack(g, c), att)
+        for hook, name, fn, _until in att.granted_auto:
+            if hook == "on_attack":
+                self.queue(p, f"{name}: {att.name}", lambda g, c=att, fn=fn: fn(g, c), att)
         self.emit(Event("attack", p, att.uid, {"target": target_uid}))
         self.check_timing()
 
         # Block declaration step (CR 9.4)
-        if not b.nullified and att.impl.can_be_blocked(self, att) and not att.kw("stealth"):
-            blockers = [c for c in self.players[opp].pals if not c.rested and c is not b.target]
+        if (not b.nullified and att.impl.can_be_blocked(self, att)
+                and not self.has_kw(att, "stealth")):
+            blockers = [c for c in self.players[opp].pals
+                        if not c.rested and c is not b.target and self.can_block(c)]
             if blockers:
                 chosen = self.ask(Decision("block", opp, f"Block {att.name}?",
                                            [c.uid for c in blockers], min=0, max=1,
@@ -739,7 +848,8 @@ class Game:
             elif isinstance(choice, PlayCard):
                 self.play_card(opp, self.card(choice.uid), choice.mode)
             elif isinstance(choice, Activate):
-                self.activate(opp, self.card(choice.uid), choice.index, choice.assign_uid)
+                self.activate(opp, self.card(choice.uid), choice.index, choice.assign_uid,
+                              choice.x)
             self.check_timing()
 
         # Damage step (CR 9.6)
@@ -822,6 +932,12 @@ class Game:
                           [ps.life for ps in self.players], self.stats, self.history)
 
     def take_turn(self) -> None:
+        self.begin_turn()
+        self.main_phase()
+        self.end_phase()
+
+    def begin_turn(self) -> None:
+        """Stand, draw and soul phases (CR 7.2-7.4)."""
         assert self.agents is not None
         self.turn += 1
         p = self.active
@@ -862,7 +978,11 @@ class Game:
         self.log(f"  {self.pname(p)} gains {n} soul(s): {ps.souls} total")
         self.check_timing()
 
-        self.phase = "main"  # CR 7.5
+    def main_phase(self) -> None:
+        """CR 7.5: the turn player acts until they choose to end."""
+        assert self.agents is not None
+        p = self.active
+        self.phase = "main"
         self.log("  " + self._status_line())
         for _ in range(MAX_ACTIONS_PER_TURN):
             self.check_timing()
@@ -876,10 +996,17 @@ class Game:
         else:
             self.log(f"  {self.pname(p)} hit the action limit; main phase ends")
 
-        self.phase = "end"  # CR 7.6
+    def end_phase(self) -> None:
+        """CR 7.6, then the turn passes."""
+        p = self.active
+        ps = self.players[p]
+        self.phase = "end"
         for c in ps.base:
-            if c.kw("vigilance"):
+            if self.has_kw(c, "vigilance"):
                 self.queue(p, f"Vigilance: {c.name}", lambda g, c=c: g.stand(c), c)
+        for turn, t, src in [d for d in self.delayed if d[0] == self.turn]:
+            self.pending.append(t)
+        self.delayed = [d for d in self.delayed if d[0] != self.turn]
         self.emit(Event("turn_end", p))
         self.check_timing()
         for q in self.players:
@@ -887,9 +1014,16 @@ class Game:
                 c.damage = 0
                 c.mods = [m for m in c.mods if m.until not in ("turn", "battle")]
                 c.granted = [(a, u) for a, u in c.granted if u not in ("turn", "battle")]
+                c.granted_kw = [(k, u) for k, u in c.granted_kw if u not in ("turn", "battle")]
+                c.granted_auto = [g for g in c.granted_auto if g[3] not in ("turn", "battle")]
                 c.act_uses.clear()
                 c.assigned_to = None
         ps.soul_draw_used = False
+        for q in self.players:
+            q.gear_discount = 0
+        if self.night_until is not None and self.turn >= self.night_until:
+            self.night_until = None
+            self.log("  night ends")
         self.log(self._board_line(0))
         self.log(self._board_line(1))
         self.history.append({
@@ -923,12 +1057,15 @@ class Game:
         g.history = []
         g.pending = []
         g._deploy_order = dict(self._deploy_order)
+        g.delayed = list(self.delayed)
         cmap: dict[int, CardInstance] = {}
         for uid, c in self.cards.items():
             n = copy.copy(c)
             n.mods = list(c.mods)
             n.act_uses = dict(c.act_uses)
             n.granted = list(c.granted)
+            n.granted_kw = list(c.granted_kw)
+            n.granted_auto = list(c.granted_auto)
             n.stand_locks = list(c.stand_locks)
             n.skip_stand = list(c.skip_stand)
             cmap[uid] = n

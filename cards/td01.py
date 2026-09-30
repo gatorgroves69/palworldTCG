@@ -1,9 +1,9 @@
 """TD01 trial deck (Red・Blue) cards used by the M1 decks."""
 from __future__ import annotations
 
-from engine.abilities import CardImpl
+from engine.abilities import ActAbility, CardImpl
 
-from .common import choose_pal, put_on_top, rest_card
+from .common import choose_pal, plus_power, put_on_top, rest_card
 from .registry import REGISTRY
 
 reg = REGISTRY.register
@@ -72,3 +72,37 @@ class Lamball(CardImpl):
 
     def can_be_attacked_by(self, game, card, attacker):
         return attacker.defn.cost < 4
+
+
+# TD01-008 Stone Pit (Structure)
+# ACT 1/Turn [Assign 1 Pal] Get 3 Material, and draw 1 card. (You can rest your standing Pal to
+# assign it)
+def _material_and_draw(game, card, ctx):
+    game.gain_resource(card.owner, "material", 3)
+    game.draw(card.owner)
+
+
+@reg
+class StonePit(CardImpl):
+    code = "TD01-008"
+    text = ("ACT 1/Turn [Assign 1 Pal] Get 3 Material, and draw 1 card. (You can rest your "
+            "standing Pal to assign it)")
+    acts = [ActAbility("get 3 Material and draw", _material_and_draw, assign=True,
+                       once_per_turn=True)]
+
+
+# TD01-010 Single-Shot Rifle (Gear)
+# AUTO OnDeploy Choose up to 1 Pal, and deal 1500 Damage.
+# ACT [Rest this card] Choose 1 Pal, and it gets Power +200 until end of turn.
+@reg
+class SingleShotRifle(CardImpl):
+    code = "TD01-010"
+    text = ("AUTO OnDeploy Choose up to 1 Pal, and deal 1500 Damage.\nACT [Rest this card] "
+            "Choose 1 Pal, and it gets Power +200 until end of turn.")
+    acts = [ActAbility("+200 power", plus_power(200), rest_self=True)]
+
+    def on_deploy(self, game, card):
+        t = choose_pal(game, card.owner, "Single-Shot Rifle: deal 1500 to up to 1 Pal",
+                       intent="harm", amount=1500)
+        if t:
+            game.deal_card_damage(t, 1500, card)

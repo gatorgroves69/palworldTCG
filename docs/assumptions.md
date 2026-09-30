@@ -75,6 +75,54 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### C9: Chillet's revealed card counts as "drawn" for draw-impact statistics
 - It reaches the hand or the base either way. This affects analysis only, not play.
 
+## Card interpretations (M2)
+
+### C10: Shadowbeak: "your Pal's AUTO activates twice" (`OPEN`, **high impact**)
+- **Chosen:** at night, every AUTO ability of your Pals goes into standby twice (CR 5.21). That includes keyword AUTOs (Brave, Serious, Retaliate, Vigilance, Breakthrough), OnDeploy / OnAttack, "when put into the graveyard" triggers (Pengullet, Menasting, Leezpunk), and Shadowbeak's own end-of-turn butcher.
+- It doesn't apply to Structure or Gear abilities. Two Shadowbeaks still means twice, not four times (CR 5.21.2).
+- Shadowbeak has to be in your base when the ability triggers. A Pal that has just left the base still counts as "your Pal" (last-known information, CR 10.8.4.1.2).
+
+### C11: Lily's Strategy "increase your soul by 1 card in the rest state" (`OPEN`)
+- **Chosen:** move 1 soul card from your soul deck to the soul area, rested. If the soul deck is empty (usually from about turn 9 on), nothing happens. The soul deck has only 10 physical cards (CR 6.1.2).
+
+### C12: Nocturnal instances stack (`OPEN`)
+- **Chosen:** Depresso has Nocturnal printed twice, so it gets +600 at night. Lamp gives each of your Pals one more instance, so a Daedream under Lamp gets +600. Only Taunt has an explicit "regardless of instances" rule (CR 12.10.2.1).
+
+### C13: Helzephyr triggers on its own deployment (`OPEN`)
+- **Chosen:** it's a Nocturnal Pal, so deploying it at night triggers its own ability (CR 10.8.4.2). The destroyed Pal's cost limit is the cost of the Nocturnal Pal that was deployed. "If it is night" is checked when the ability triggers and again when it resolves.
+
+### C14: Mounted Machine Gun (`OPEN`, low)
+- X is at least 1 and at most your Material. The sim caps it at 8 to limit branching; 8 × 500 kills anything in BP01.
+- Each of the X shots chooses a Pal again, and it can be the same Pal. Lethal damage is only checked after the whole ability (CR 11.4.2).
+- Each 500 is a separate damage event, so with Suzaku each shot deals 700.
+
+### C15: Primitive Furnace discount (`OPEN`, low)
+- It applies to the next Gear played from hand this turn, then it's used up. Unused discount expires at end of turn.
+- It never takes a Gear below ◇1. X is only offered up to (cost of the priciest Gear in hand − 1).
+
+### C16: Jormuntide Ignis "[③] OR [Discard 2]" is one ability with one 1/Turn (`RESOLVED` by the text)
+- The sim offers it only while Ignis is rested, since standing a standing card does nothing.
+
+### C17: "Choose 1 Pal" / "Choose 1 structure or gear" with no side given can target either player's cards (`RESOLVED`, CR 4.4.3)
+- This covers Victor's Strategy (return a Pal to hand), Lily's Strategy (destroy a structure or gear), and Strike from the Darkness.
+
+### C18: Cards deployed by effects trigger their OnDeploy
+- This covers Reptyro, Lyleen, Chillet, Daedream's Necklace, Lyleen Noct and Medicine Workbench. Deploying is deploying (CR 5.15, 12.3), and nothing is paid.
+
+### C19: Axel's Strategy "cannot block" affects only the opponent's ◇5+ Pals in the base when it resolves
+
+### C20: "It becomes night until the end of the opponent's next turn" (`OPEN`, low)
+- Played on your own turn T, it's night through turn T+1. Several effects extend to the latest end.
+- Separately, Shadowbeak and Maraith make it night while they're rested.
+
+### C21: Maraith's −200 applies whenever it's night, from any source
+
+### C22: Foxparks' Harness's granted OnAttack damage comes from the Foxparks
+- The Foxparks is a red card, so Suzaku's +200 applies (700 → 900).
+
+### C23: Shoddy Bed checks for a rested Nocturnal Pal at the end of your turn
+- Lamp-granted Nocturnal counts.
+
 ## Data caveats
 
 ### D1: Calibration target has no sample size or first/second split (`OPEN`)

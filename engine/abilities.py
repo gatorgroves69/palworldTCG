@@ -38,10 +38,13 @@ class ActAbility:
     assign: bool = False
     rest_self: bool = False  # cost includes [Rest this card]
     once_per_turn: bool = False
+    limit_key: str | None = None  # abilities sharing one "1/Turn" (e.g. [③] OR [discard 2])
     quick: bool = False
     can_pay_extra: Callable[["Game", "CardInstance"], bool] | None = None
-    pay_extra: Callable[["Game", "CardInstance"], None] | None = None
+    pay_extra: Callable[["Game", "CardInstance", dict], None] | None = None
     condition: Callable[["Game", "CardInstance"], bool] | None = None
+    # For "X" costs: the X values the player may choose (empty = can't activate).
+    x_options: Callable[["Game", "CardInstance"], list[int]] | None = None
 
 
 @dataclass
@@ -122,6 +125,24 @@ class CardImpl:
     def can_be_attacked_by(self, game: "Game", card: "CardInstance",
                            attacker: "CardInstance") -> bool:
         return True
+
+    def aura_power(self, game: "Game", card: "CardInstance", target: "CardInstance") -> int:
+        """CONT power change this card (on the base) gives another Pal (e.g. Maraith)."""
+        return 0
+
+    def grant_keywords(self, game: "Game", card: "CardInstance",
+                       target: "CardInstance") -> dict[str, int]:
+        """CONT keywords this card (on the base) grants another card (e.g. Lamp)."""
+        return {}
+
+    def makes_night(self, game: "Game", card: "CardInstance") -> bool:
+        """CONT "it is night" while this card is on the base (e.g. rested Shadowbeak)."""
+        return False
+
+    def auto_multiplier(self, game: "Game", card: "CardInstance",
+                        source: "CardInstance") -> int:
+        """CR 5.21: how many times `source`'s AUTO abilities activate (Shadowbeak)."""
+        return 1
 
     def modify_effect_damage(self, game: "Game", card: "CardInstance", source: "CardInstance",
                              target: "CardInstance", amount: int) -> int:

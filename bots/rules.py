@@ -155,6 +155,14 @@ class RuleBot(Bot):
             scored = [(-card_worth(game, c), c.uid) for c in cards]
         elif intent == "recover":
             scored = [(card_worth(game, c), c.uid) for c in cards]
+        elif intent == "stand":
+            scored = [((pal_value(game, c) if c.owner == me else -pal_value(game, c)), c.uid)
+                      for c in cards]
+        elif intent == "edict":
+            # Butcher our worst Pal only if the opponent's worst Pal (their pick) is worth more.
+            theirs = [pal_value(game, c) for c in game.players[game.opponent(me)].pals]
+            gain = min(theirs) if theirs else 0.0
+            scored = [(gain - pal_value(game, c), c.uid) for c in cards]
         else:
             return list(d.options[: d.min])
         scored.sort(key=lambda x: -x[0])
@@ -169,6 +177,8 @@ class RuleBot(Bot):
         sign = -1 if c.owner == me else 1
         if amount > 0:  # damage
             hp = game.power(c) - c.damage
+            if hp <= 0:
+                return 0.01 * sign  # already lethally damaged: more damage is wasted
             v = v if amount >= hp else v * 0.3 * amount / max(hp, 1)
         elif amount == 0 and c.rested and not lock:  # resting something already rested
             v *= 0.1
