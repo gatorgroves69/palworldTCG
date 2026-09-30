@@ -1,0 +1,584 @@
+Seed 5000010. P1 = chillet-relaxaurus-bp, P2 = chillet-relaxaurus-br
+P1 goes first; P2 starts with 1 soul
+  P1 draws Zoe's Strategy, Jormuntide – Surging Sea Serpent, Pal Sphere, Relaxaurus – Hungry Gunner, Astegon – Aegis Wyvern of Death
+  P2 draws Single-Shot Rifle, Pengullet – Yearning for the Sky, Cryolinx – Arctic Ordeal, Cryolinx – Arctic Ordeal, Chillet – Dragon Whisperer
+P1 redraws
+  P1 draws Chillet – Dragon Whisperer, Blazehowl Noct – Darkflame Defender, Pengullet Rocket Launcher, Cryolinx – Arctic Ordeal, Chillet – Dragon Whisperer
+P2 keeps
+
+=== Turn 1: P1 (chillet-relaxaurus-bp) ===
+  P1 skips the draw (first turn)
+  P1 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 2/2, grave 0 | P2: life 10, hand 5, deck 45, souls 1/1, grave 0
+  P1 base: (empty)
+  P2 base: (empty)
+
+=== Turn 2: P2 (chillet-relaxaurus-br) ===
+  P2 draws Foxparks – A Toasty Hug
+  P2 gains 2 soul(s): 3 total
+  P1: life 10, hand 5, deck 45, souls 2/2, grave 0 | P2: life 10, hand 6, deck 44, souls 3/3, grave 0
+P2 rests 3 souls to draw 1
+  P2 draws Aurora Guide
+  P1 base: (empty)
+  P2 base: (empty)
+
+=== Turn 3: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Elphidran – Gentle Radiance
+  P1 gains 2 soul(s): 4 total
+  P1: life 10, hand 6, deck 44, souls 4/4, grave 0 | P2: life 10, hand 7, deck 43, souls 0/3, grave 0
+P1 plays Elphidran – Gentle Radiance [BP01-098]#35 (cost 4)
+P1: Elphidran – Gentle Radiance (600/S2) attacks P2
+  [trigger] On Attack: Elphidran – Gentle Radiance
+  P1 reveals Chillet – Dragon Whisperer
+  Elphidran – Gentle Radiance power +500 until end of turn
+  P2 takes 2 damage from Elphidran – Gentle Radiance: damage check
+    flip 1: Relaxaurus – Hungry Gunner
+    flip 2: Aurora Guide
+    P2 loses 2 life -> 8
+  P1 base: Elphidran – Gentle Radiance 600/S2 (rested)
+  P2 base: (empty)
+
+=== Turn 4: P2 (chillet-relaxaurus-br) ===
+  P2 draws Jormuntide Ignis – Savage Lava Dragon
+  P2 gains 2 soul(s): 5 total
+  P1: life 10, hand 5, deck 44, souls 0/4, grave 0 | P2: life 8, hand 8, deck 40, souls 5/5, grave 2
+P2 plays Single-Shot Rifle [TD01-010]#92 (cost 4)
+  [trigger] On Deploy: Single-Shot Rifle
+  Elphidran – Gentle Radiance takes 1500 damage (total 1500/600)
+  Elphidran – Gentle Radiance [BP01-098]#35 (P1) goes to the graveyard (defeated)
+  P1 base: (empty)
+  P2 base: Single-Shot Rifle
+
+=== Turn 5: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 2 soul(s): 6 total
+  P1: life 10, hand 6, deck 43, souls 6/6, grave 1 | P2: life 8, hand 7, deck 40, souls 1/5, grave 2
+P1 plays Chillet – Dragon Whisperer [BP01-025]#0 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P1 reveals Jormuntide – Surging Sea Serpent from the top of the deck
+  P1 deploys Jormuntide – Surging Sea Serpent with Chillet
+  [trigger] On Deploy: Jormuntide – Surging Sea Serpent
+  P1 draws Elphidran Aqua – Gentle Ripples
+  P1 base: Chillet – Dragon Whisperer 900/S2, Jormuntide – Surging Sea Serpent 1600/S3
+  P2 base: Single-Shot Rifle
+
+=== Turn 6: P2 (chillet-relaxaurus-br) ===
+  P2 draws Pump-Action Shotgun
+  P2 gains 2 soul(s): 7 total
+  P1: life 10, hand 6, deck 41, souls 1/6, grave 1 | P2: life 8, hand 8, deck 39, souls 7/7, grave 2
+P2 plays Pump-Action Shotgun [BP01-020]#57 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Chillet – Dragon Whisperer takes 1200 damage (total 1200/900)
+  Jormuntide – Surging Sea Serpent takes 1200 damage (total 1200/1600)
+  Chillet – Dragon Whisperer [BP01-025]#0 (P1) goes to the graveyard (defeated)
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3
+  P2 base: Single-Shot Rifle, Pump-Action Shotgun
+
+=== Turn 7: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Pyrin Noct – Steed of Azure Flames
+  P1 gains 2 soul(s): 8 total
+  P1: life 10, hand 7, deck 40, souls 8/8, grave 2 | P2: life 8, hand 7, deck 39, souls 0/7, grave 2
+P1 plays Chillet – Dragon Whisperer [BP01-025]#3 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P1 reveals Aurora Guide from the top of the deck
+  Aurora Guide is added to P1's hand
+P1: Chillet – Dragon Whisperer (900/S2) attacks P2
+  P2 takes 2 damage from Chillet – Dragon Whisperer: damage check
+    flip 1: Aurora Guide
+    flip 2: Relaxaurus – Hungry Gunner
+    P2 loses 2 life -> 6
+P1 plays Aurora Guide [BP01-048]#25 (cost 2)
+  P1 draws Pengullet – Yearning for the Sky
+P1: Jormuntide – Surging Sea Serpent (1600/S3) attacks P2
+P2 uses Interrupt: Foxparks – A Toasty Hug (discarding Aurora Guide)
+  the attack is nullified
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Chillet – Dragon Whisperer 900/S2 (rested)
+  P2 base: Single-Shot Rifle, Pump-Action Shotgun
+
+=== Turn 8: P2 (chillet-relaxaurus-br) ===
+  P2 draws Reptyro – Ore Gorger
+  P2 gains 2 soul(s): 9 total
+  P1: life 10, hand 7, deck 38, souls 1/8, grave 3 | P2: life 6, hand 6, deck 36, souls 9/9, grave 6
+P2 plays Jormuntide Ignis – Savage Lava Dragon [BP01-001]#50 (cost 8)
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Chillet – Dragon Whisperer 900/S2 (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4
+
+=== Turn 9: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Jormuntide – Surging Sea Serpent
+  P1 gains 2 soul(s): 10 total
+  P1: life 10, hand 8, deck 37, souls 10/10, grave 3 | P2: life 6, hand 5, deck 36, souls 1/9, grave 6
+P1 plays Jormuntide – Surging Sea Serpent [BP01-027]#6 (cost 8)
+  [trigger] On Deploy: Jormuntide – Surging Sea Serpent
+  P1 draws Pal Sphere
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Chillet – Dragon Whisperer 900/S2, Jormuntide – Surging Sea Serpent 1600/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4
+
+=== Turn 10: P2 (chillet-relaxaurus-br) ===
+  P2 draws Elphidran Aqua – Gentle Ripples
+  P2 gains 1 soul(s): 10 total
+  P1: life 10, hand 8, deck 36, souls 2/10, grave 3 | P2: life 6, hand 6, deck 35, souls 10/10, grave 6
+P2 plays Chillet – Dragon Whisperer [BP01-025]#62 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Relaxaurus – Hungry Gunner from the top of the deck
+  P2 deploys Relaxaurus – Hungry Gunner with Chillet
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+  Chillet – Dragon Whisperer is rested
+  Chillet – Dragon Whisperer does not stand while Relaxaurus – Hungry Gunner is in the base
+P2 plays Pengullet – Yearning for the Sky [BP01-028]#71 (cost 4)
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Chillet – Dragon Whisperer 900/S2 (rested), Jormuntide – Surging Sea Serpent 1600/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4, Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3, Pengullet – Yearning for the Sky 600/S2
+
+=== Turn 11: P1 (chillet-relaxaurus-bp) ===
+  Chillet – Dragon Whisperer does not stand (locked)
+  P1 draws Pyrin Noct – Steed of Azure Flames
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 9, deck 35, souls 10/10, grave 3 | P2: life 6, hand 4, deck 34, souls 1/10, grave 6
+P1 plays Elphidran Aqua – Gentle Ripples [TD01-012]#39 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P1 draws Strike from the Darkness, Jormuntide – Surging Sea Serpent
+  P1 puts Jormuntide – Surging Sea Serpent from hand on top of the deck
+P1 plays Strike from the Darkness [TD02-021]#49 (cost 4)
+  Jormuntide Ignis – Savage Lava Dragon [BP01-001]#50 (P2) goes to the graveyard (Strike from the Darkness)
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Chillet – Dragon Whisperer 900/S2 (rested), Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3, Pengullet – Yearning for the Sky 600/S2
+
+=== Turn 12: P2 (chillet-relaxaurus-br) ===
+  P2 draws Blazehowl – Hellflame Defender
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 34, souls 0/10, grave 4 | P2: life 6, hand 5, deck 33, souls 10/10, grave 7
+P2 plays Reptyro – Ore Gorger [BP01-005]#52 (cost 8)
+  [trigger] On Deploy: Reptyro – Ore Gorger
+  P2 gets 3 material (3)
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+  P2 consumes 3 material (0 left)
+P2 activates Reptyro – Ore Gorger: dig for a gear
+  P2 looks at the top 5: Chillet – Dragon Whisperer, Reptyro – Ore Gorger, Pengullet – Yearning for the Sky, Foxparks – A Toasty Hug, Elphidran Aqua – Gentle Ripples
+  P2 shuffles the deck
+P2: Reptyro – Ore Gorger (1700/S3) attacks P1
+P1 uses Interrupt: Blazehowl Noct – Darkflame Defender (discarding Pengullet Rocket Launcher)
+  the attack is nullified
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Chillet – Dragon Whisperer 900/S2 (rested), Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3, Pengullet – Yearning for the Sky 600/S2, Reptyro – Ore Gorger 1500/S3 (rested)
+
+=== Turn 13: P1 (chillet-relaxaurus-bp) ===
+  Chillet – Dragon Whisperer does not stand (locked)
+  P1 draws Jormuntide – Surging Sea Serpent
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 7, deck 33, souls 10/10, grave 6 | P2: life 6, hand 4, deck 33, souls 2/10, grave 7
+P1 plays Jormuntide – Surging Sea Serpent [BP01-027]#8 (cost 8)
+  [trigger] On Deploy: Jormuntide – Surging Sea Serpent
+  P1 draws Pyrin Noct – Steed of Azure Flames
+  Relaxaurus – Hungry Gunner is rested
+  Relaxaurus – Hungry Gunner will not stand in P2's next stand phase
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Chillet – Dragon Whisperer 900/S2 (rested), Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide – Surging Sea Serpent 1600/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3 (rested), Pengullet – Yearning for the Sky 600/S2, Reptyro – Ore Gorger 1500/S3 (rested)
+
+=== Turn 14: P2 (chillet-relaxaurus-br) ===
+  Relaxaurus – Hungry Gunner does not stand this stand phase
+  P2 draws Single-Shot Rifle
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 7, deck 32, souls 2/10, grave 6 | P2: life 6, hand 5, deck 32, souls 10/10, grave 7
+P2 plays Elphidran Aqua – Gentle Ripples [TD01-012]#94 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P2 draws Chillet – Dragon Whisperer, Elphidran – Gentle Radiance
+  P2 puts Chillet – Dragon Whisperer from hand on top of the deck
+P2 plays Single-Shot Rifle [TD01-010]#90 (cost 4)
+  [trigger] On Deploy: Single-Shot Rifle
+  Chillet – Dragon Whisperer takes 1500 damage (total 1500/900)
+  Chillet – Dragon Whisperer [BP01-025]#3 (P1) goes to the graveyard (defeated)
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide – Surging Sea Serpent 1600/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3 (rested), Pengullet – Yearning for the Sky 600/S2, Reptyro – Ore Gorger 1500/S3, Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested)
+
+=== Turn 15: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Pengullet Rocket Launcher
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 31, souls 10/10, grave 7 | P2: life 6, hand 4, deck 31, souls 0/10, grave 7
+P1 plays Pyrin Noct – Steed of Azure Flames [BP01-077]#29 (cost 7)
+P1 rests 3 souls to draw 1
+  P1 draws Astegon – Aegis Wyvern of Death
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide – Surging Sea Serpent 1600/S3, Pyrin Noct – Steed of Azure Flames 1100/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3 (rested), Pengullet – Yearning for the Sky 600/S2, Reptyro – Ore Gorger 1500/S3, Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested)
+
+=== Turn 16: P2 (chillet-relaxaurus-br) ===
+  P2 draws Chillet – Dragon Whisperer
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 30, souls 0/10, grave 7 | P2: life 6, hand 5, deck 30, souls 10/10, grave 7
+P2 plays Chillet – Dragon Whisperer [BP01-025]#61 (cost 5)
+  Pengullet – Yearning for the Sky [BP01-028]#71 (P2) goes to the graveyard (Pal limit)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Elphidran Aqua – Gentle Ripples from the top of the deck
+  Elphidran Aqua – Gentle Ripples is added to P2's hand
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P2 draws Relaxaurus – Hungry Gunner
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2: Reptyro – Ore Gorger (1900/S3) attacks P1
+P1 uses Interrupt: Cryolinx – Arctic Ordeal (discarding Pengullet – Yearning for the Sky)
+  the attack is nullified
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 rests 3 souls to draw 1
+  P2 draws Reptyro – Ore Gorger
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide – Surging Sea Serpent 1600/S3, Pyrin Noct – Steed of Azure Flames 1100/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3, Reptyro – Ore Gorger 1500/S3 (rested), Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested), Chillet – Dragon Whisperer 900/S2
+
+=== Turn 17: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Cryolinx – Arctic Ordeal
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 7, deck 29, souls 10/10, grave 9 | P2: life 6, hand 7, deck 27, souls 2/10, grave 8
+P1 plays Pal Sphere [BP01-047]#20 (cost 4)
+  P1 draws Elphidran – Gentle Radiance, Elphidran Aqua – Gentle Ripples, Pyrin Noct – Steed of Azure Flames
+P1 plays Pengullet Rocket Launcher [BP01-044]#19 (cost 4)
+P1 activates Pengullet Rocket Launcher: power up a Pal
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide – Surging Sea Serpent 1600/S3, Pyrin Noct – Steed of Azure Flames 1100/S3, Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3, Reptyro – Ore Gorger 1500/S3 (rested), Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested), Chillet – Dragon Whisperer 900/S2
+
+=== Turn 18: P2 (chillet-relaxaurus-br) ===
+  P2 draws Pengullet – Yearning for the Sky
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 26, souls 2/10, grave 10 | P2: life 6, hand 8, deck 26, souls 10/10, grave 8
+P2 plays Relaxaurus – Hungry Gunner [BP01-026]#64 (cost 7)
+  Chillet – Dragon Whisperer [BP01-025]#62 (P2) goes to the graveyard (Pal limit)
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+  Elphidran Aqua – Gentle Ripples is rested
+  Elphidran Aqua – Gentle Ripples does not stand while Relaxaurus – Hungry Gunner is in the base
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 rests 3 souls to draw 1
+  P2 draws Pump-Action Shotgun
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Elphidran Aqua – Gentle Ripples 900/S2 (rested), Jormuntide – Surging Sea Serpent 1600/S3, Pyrin Noct – Steed of Azure Flames 1100/S3, Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Relaxaurus – Hungry Gunner 1200/S3, Reptyro – Ore Gorger 1500/S3, Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3
+
+=== Turn 19: P1 (chillet-relaxaurus-bp) ===
+  Elphidran Aqua – Gentle Ripples does not stand (locked)
+  P1 draws Cryolinx – Arctic Ordeal
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 9, deck 25, souls 10/10, grave 10 | P2: life 6, hand 8, deck 25, souls 0/10, grave 9
+P1 plays Astegon – Aegis Wyvern of Death [TD02-012]#45 (cost 8)
+  Elphidran Aqua – Gentle Ripples [TD01-012]#39 (P1) goes to the graveyard (Pal limit)
+  [trigger] On Deploy: Astegon – Aegis Wyvern of Death
+  Reptyro – Ore Gorger power -1000 until end of turn
+P1 activates Pengullet Rocket Launcher: power up a Pal
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Jormuntide – Surging Sea Serpent 1600/S3, Pyrin Noct – Steed of Azure Flames 1100/S3, Pengullet Rocket Launcher (rested), Astegon – Aegis Wyvern of Death 1200/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Relaxaurus – Hungry Gunner 1200/S3, Reptyro – Ore Gorger 1500/S3, Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested), Chillet – Dragon Whisperer 900/S2, Relaxaurus – Hungry Gunner 1200/S3
+
+=== Turn 20: P2 (chillet-relaxaurus-br) ===
+  P2 draws Single-Shot Rifle
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 25, souls 2/10, grave 11 | P2: life 6, hand 9, deck 24, souls 10/10, grave 9
+P2 plays Pump-Action Shotgun [BP01-020]#59 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Jormuntide – Surging Sea Serpent takes 1200 damage (total 1200/1600)
+  Jormuntide – Surging Sea Serpent takes 1200 damage (total 1200/1600)
+  Jormuntide – Surging Sea Serpent takes 1200 damage (total 1200/1600)
+  Pyrin Noct – Steed of Azure Flames takes 1200 damage (total 1200/1100)
+  Astegon – Aegis Wyvern of Death takes 1200 damage (total 1200/1200)
+  Pyrin Noct – Steed of Azure Flames [BP01-077]#29 (P1) goes to the graveyard (defeated)
+  Astegon – Aegis Wyvern of Death [TD02-012]#45 (P1) goes to the graveyard (defeated)
+P2: Relaxaurus – Hungry Gunner (1200/S3) attacks P1
+  P1 blocks with Jormuntide – Surging Sea Serpent (1600)
+  battle: Relaxaurus – Hungry Gunner deals 1200 to Jormuntide – Surging Sea Serpent, Jormuntide – Surging Sea Serpent deals 1600 back
+  Jormuntide – Surging Sea Serpent [BP01-027]#7 (P1) goes to the graveyard (defeated)
+  Relaxaurus – Hungry Gunner [BP01-026]#67 (P2) goes to the graveyard (defeated)
+P2: Relaxaurus – Hungry Gunner (1200/S3) attacks P1
+  P1 blocks with Jormuntide – Surging Sea Serpent (1600)
+  battle: Relaxaurus – Hungry Gunner deals 1200 to Jormuntide – Surging Sea Serpent, Jormuntide – Surging Sea Serpent deals 1600 back
+  Jormuntide – Surging Sea Serpent [BP01-027]#6 (P1) goes to the graveyard (defeated)
+  Relaxaurus – Hungry Gunner [BP01-026]#64 (P2) goes to the graveyard (defeated)
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2: Reptyro – Ore Gorger (2300/S3) attacks P1
+P1 uses Interrupt: Cryolinx – Arctic Ordeal (resting 1 soul)
+  the attack is nullified
+P2 rests 3 souls to draw 1
+  P2 draws Reptyro – Ore Gorger
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Reptyro – Ore Gorger 1500/S3 (rested), Elphidran Aqua – Gentle Ripples 900/S2, Single-Shot Rifle (rested), Chillet – Dragon Whisperer 900/S2, Pump-Action Shotgun (rested)
+
+=== Turn 21: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Zoe's Strategy
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 24, souls 10/10, grave 16 | P2: life 6, hand 9, deck 23, souls 0/10, grave 11
+P1 plays Elphidran Aqua – Gentle Ripples [TD01-012]#40 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P1 draws Relaxaurus – Hungry Gunner, Reindrix – Icy Gaze
+  P1 puts Zoe's Strategy from hand on top of the deck
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#11 (cost 4)
+P1 activates Pengullet Rocket Launcher: power up a Pal
+  Pengullet – Yearning for the Sky power +500 until end of turn
+  Pengullet – Yearning for the Sky gains 〈Rocket barrage (X = power to all opposing Pals)〉 until end of turn
+P1 activates Pengullet – Yearning for the Sky: Rocket barrage (X = power to all opposing Pals)
+  Reptyro – Ore Gorger takes 1100 damage (total 1100/1500)
+  Elphidran Aqua – Gentle Ripples takes 1100 damage (total 1100/900)
+  Chillet – Dragon Whisperer takes 1100 damage (total 1100/900)
+  Pengullet – Yearning for the Sky [BP01-028]#11 (P1) goes to the graveyard (Rocket Launcher barrage)
+  Elphidran Aqua – Gentle Ripples [TD01-012]#94 (P2) goes to the graveyard (defeated)
+  Chillet – Dragon Whisperer [BP01-025]#61 (P2) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Zoe's Strategy
+P1: Elphidran Aqua – Gentle Ripples (900/S2) attacks Reptyro – Ore Gorger
+  battle: Elphidran Aqua – Gentle Ripples deals 900 to Reptyro – Ore Gorger, Reptyro – Ore Gorger deals 1500 back
+  Elphidran Aqua – Gentle Ripples [TD01-012]#40 (P1) goes to the graveyard (defeated)
+  Reptyro – Ore Gorger [BP01-005]#52 (P2) goes to the graveyard (defeated)
+P1: Jormuntide – Surging Sea Serpent (1600/S3) attacks P2
+P2 uses Interrupt: Cryolinx – Arctic Ordeal (discarding Elphidran – Gentle Radiance)
+  the attack is nullified
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested)
+
+=== Turn 22: P2 (chillet-relaxaurus-br) ===
+  P2 draws Jormuntide – Surging Sea Serpent
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 8, deck 22, souls 0/10, grave 18 | P2: life 6, hand 8, deck 22, souls 10/10, grave 16
+P2 plays Jormuntide – Surging Sea Serpent [BP01-027]#68 (cost 8)
+  [trigger] On Deploy: Jormuntide – Surging Sea Serpent
+  P2 draws Pal Sphere
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2: Jormuntide – Surging Sea Serpent (2000/S3) attacks Jormuntide – Surging Sea Serpent
+P1 uses Interrupt: Reindrix – Icy Gaze (discarding Zoe's Strategy)
+  the attack is nullified
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 23: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Elphidran – Gentle Radiance
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 7, deck 21, souls 10/10, grave 20 | P2: life 6, hand 8, deck 21, souls 2/10, grave 16
+P1 plays Relaxaurus – Hungry Gunner [BP01-026]#4 (cost 7)
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+P1 activates Pengullet Rocket Launcher: power up a Pal
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P1 rests 3 souls to draw 1
+  P1 draws Chillet – Dragon Whisperer
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Pengullet Rocket Launcher (rested), Relaxaurus – Hungry Gunner 1200/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested)
+
+=== Turn 24: P2 (chillet-relaxaurus-br) ===
+  P2 draws Blazehowl – Hellflame Defender
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 7, deck 20, souls 0/10, grave 20 | P2: life 6, hand 9, deck 20, souls 10/10, grave 16
+P2 plays Single-Shot Rifle [TD01-010]#91 (cost 4)
+  [trigger] On Deploy: Single-Shot Rifle
+  Relaxaurus – Hungry Gunner takes 1500 damage (total 1500/1200)
+  Relaxaurus – Hungry Gunner [BP01-026]#4 (P1) goes to the graveyard (defeated)
+P2 plays Elphidran Aqua – Gentle Ripples [TD01-012]#96 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P2 draws Reindrix – Icy Gaze, Jormuntide Ignis – Savage Lava Dragon
+  P2 puts Jormuntide Ignis – Savage Lava Dragon from hand on top of the deck
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2: Jormuntide – Surging Sea Serpent (2400/S3) attacks P1
+P1 uses Interrupt: Cryolinx – Arctic Ordeal (discarding Elphidran – Gentle Radiance)
+  the attack is nullified
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested), Single-Shot Rifle (rested), Elphidran Aqua – Gentle Ripples 900/S2
+
+=== Turn 25: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 6, deck 19, souls 10/10, grave 23 | P2: life 6, hand 8, deck 19, souls 0/10, grave 16
+P1 plays Chillet – Dragon Whisperer [BP01-025]#1 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P1 reveals Aurora Guide from the top of the deck
+  Aurora Guide is added to P1's hand
+P1 plays Elphidran – Gentle Radiance [BP01-098]#34 (cost 4)
+P1 activates Pengullet Rocket Launcher: power up a Pal
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Pengullet Rocket Launcher (rested), Chillet – Dragon Whisperer 900/S2, Elphidran – Gentle Radiance 600/S2
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested), Single-Shot Rifle (rested), Elphidran Aqua – Gentle Ripples 900/S2
+
+=== Turn 26: P2 (chillet-relaxaurus-br) ===
+  P2 draws Jormuntide Ignis – Savage Lava Dragon
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 5, deck 18, souls 1/10, grave 23 | P2: life 6, hand 9, deck 18, souls 10/10, grave 16
+P2 plays Jormuntide Ignis – Savage Lava Dragon [BP01-001]#51 (cost 8)
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2: Jormuntide Ignis – Savage Lava Dragon (2700/S4) attacks P1
+  P1 blocks with Elphidran – Gentle Radiance (600)
+P1 uses Interrupt: Pyrin Noct – Steed of Azure Flames (resting 1 soul)
+  the attack is nullified
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3, Pengullet Rocket Launcher (rested), Chillet – Dragon Whisperer 900/S2, Elphidran – Gentle Radiance 600/S2 (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3, Single-Shot Rifle (rested), Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested)
+
+=== Turn 27: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Elphidran – Gentle Radiance
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 5, deck 17, souls 10/10, grave 24 | P2: life 6, hand 8, deck 18, souls 2/10, grave 16
+P1 plays Pyrin Noct – Steed of Azure Flames [BP01-077]#26 (cost 7)
+P1 plays Aurora Guide [BP01-048]#22 (cost 2)
+  P1 draws Zoe's Strategy
+P1 activates Pengullet Rocket Launcher: power up a Pal
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P1: Jormuntide – Surging Sea Serpent (1800/S3) attacks P2
+P2 uses Interrupt: Reindrix – Icy Gaze (resting 1 soul)
+  the attack is nullified
+  P1 base: Jormuntide – Surging Sea Serpent 1600/S3 (rested), Pengullet Rocket Launcher (rested), Chillet – Dragon Whisperer 900/S2, Elphidran – Gentle Radiance 600/S2, Pyrin Noct – Steed of Azure Flames 1100/S3
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3, Single-Shot Rifle (rested), Elphidran Aqua – Gentle Ripples 900/S2, Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested)
+
+=== Turn 28: P2 (chillet-relaxaurus-br) ===
+  P2 draws Chillet – Dragon Whisperer
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 4, deck 16, souls 1/10, grave 25 | P2: life 6, hand 8, deck 17, souls 10/10, grave 17
+P2 plays Reptyro – Ore Gorger [BP01-005]#54 (cost 8)
+  [trigger] On Deploy: Reptyro – Ore Gorger
+  P2 gets 3 material (3)
+  P2 consumes 3 material (0 left)
+P2 activates Reptyro – Ore Gorger: dig for a gear
+  P2 looks at the top 5: Reindrix – Icy Gaze, Blazehowl – Hellflame Defender, Reptyro – Ore Gorger, Pump-Action Shotgun, Elphidran Aqua – Gentle Ripples
+  P2 deploys Pump-Action Shotgun with Reptyro
+  P2 shuffles the deck
+  [trigger] On Deploy: Pump-Action Shotgun
+  Jormuntide – Surging Sea Serpent takes 1200 damage (total 1200/1600)
+  Chillet – Dragon Whisperer takes 1200 damage (total 1200/900)
+  Elphidran – Gentle Radiance takes 1200 damage (total 1200/600)
+  Pyrin Noct – Steed of Azure Flames takes 1200 damage (total 1200/1100)
+  Chillet – Dragon Whisperer [BP01-025]#1 (P1) goes to the graveyard (defeated)
+  Elphidran – Gentle Radiance [BP01-098]#34 (P1) goes to the graveyard (defeated)
+  Pyrin Noct – Steed of Azure Flames [BP01-077]#26 (P1) goes to the graveyard (defeated)
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks Jormuntide – Surging Sea Serpent
+P1 uses Interrupt: Pyrin Noct – Steed of Azure Flames (resting 1 soul)
+  the attack is nullified
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks Jormuntide – Surging Sea Serpent
+  battle: Elphidran Aqua – Gentle Ripples deals 900 to Jormuntide – Surging Sea Serpent, Jormuntide – Surging Sea Serpent deals 1600 back
+  Jormuntide – Surging Sea Serpent [BP01-027]#8 (P1) goes to the graveyard (defeated)
+  Elphidran Aqua – Gentle Ripples [TD01-012]#96 (P2) goes to the graveyard (defeated)
+P2: Reptyro – Ore Gorger (1500/S3) attacks P1
+  P1 takes 3 damage from Reptyro – Ore Gorger: damage check
+    flip 1: Relaxaurus – Hungry Gunner
+    flip 2: Zoe's Strategy
+    flip 3: Strike from the Darkness
+    P1 loses 3 life -> 7
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks P1
+  P1 takes 3 damage from Jormuntide – Surging Sea Serpent: damage check
+    flip 1: Zoe's Strategy
+    flip 2: Reindrix – Icy Gaze
+    flip 3: Chillet – Dragon Whisperer (LUCKY): damage cancelled
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P1 base: Pengullet Rocket Launcher (rested)
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested), Single-Shot Rifle (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested), Reptyro – Ore Gorger 1500/S3 (rested), Pump-Action Shotgun (rested)
+
+=== Turn 29: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Pengullet Rocket Launcher
+  P1 gains 0 soul(s): 10 total
+  P1: life 7, hand 4, deck 9, souls 10/10, grave 36 | P2: life 6, hand 7, deck 16, souls 2/10, grave 18
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#9 (cost 4)
+P1 plays Zoe's Strategy [BP01-095]#32 (cost 3), mode: butcher your Pal, destroy an opposing Pal
+  Pengullet – Yearning for the Sky [BP01-028]#9 (P1) goes to the graveyard (butchered)
+  Jormuntide Ignis – Savage Lava Dragon [BP01-001]#51 (P2) goes to the graveyard (Zoe's Strategy)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Pengullet – Yearning for the Sky
+P1 rests 3 souls to draw 1
+  P1 draws Cryolinx – Arctic Ordeal
+  P1 base: Pengullet Rocket Launcher
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested), Single-Shot Rifle (rested), Reptyro – Ore Gorger 1500/S3 (rested), Pump-Action Shotgun (rested)
+
+=== Turn 30: P2 (chillet-relaxaurus-br) ===
+  P2 draws Pump-Action Shotgun
+  P2 gains 0 soul(s): 10 total
+  P1: life 7, hand 4, deck 7, souls 0/10, grave 38 | P2: life 6, hand 8, deck 15, souls 10/10, grave 19
+P2 plays Reptyro – Ore Gorger [BP01-005]#53 (cost 8)
+  [trigger] On Deploy: Reptyro – Ore Gorger
+  P2 gets 3 material (3)
+  P2 consumes 3 material (0 left)
+P2 activates Reptyro – Ore Gorger: dig for a gear
+  P2 looks at the top 5: Elphidran Aqua – Gentle Ripples, Aurora Guide, Elphidran Aqua – Gentle Ripples, Foxparks – A Toasty Hug, Reindrix – Icy Gaze
+  P2 shuffles the deck
+P2: Reptyro – Ore Gorger (1500/S3) attacks P1
+P1 uses Interrupt: Cryolinx – Arctic Ordeal (discarding Elphidran – Gentle Radiance)
+  the attack is nullified
+P2: Reptyro – Ore Gorger (1500/S3) attacks P1
+  P1 takes 3 damage from Reptyro – Ore Gorger: damage check
+    flip 1: Elphidran Aqua – Gentle Ripples
+    flip 2: Pal Sphere
+    flip 3: Aurora Guide
+    P1 loses 3 life -> 4
+P2: Jormuntide – Surging Sea Serpent (1600/S3) attacks P1
+  P1 takes 3 damage from Jormuntide – Surging Sea Serpent: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Blazehowl Noct – Darkflame Defender
+    flip 3: Aurora Guide
+    P1 loses 3 life -> 1
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide – Surging Sea Serpent power +200 until end of turn
+  P1 base: Pengullet Rocket Launcher
+  P2 base: Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Pump-Action Shotgun (rested), Jormuntide – Surging Sea Serpent 1600/S3 (rested), Single-Shot Rifle (rested), Reptyro – Ore Gorger 1500/S3 (rested), Pump-Action Shotgun (rested), Reptyro – Ore Gorger 1500/S3 (rested)
+
+=== Turn 31: P1 (chillet-relaxaurus-bp) ===
+  P1 draws Reindrix – Icy Gaze
+GAME OVER: P2 (chillet-relaxaurus-br) wins by deckout
