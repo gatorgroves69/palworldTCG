@@ -58,7 +58,13 @@ def _locked(game: Game, c: CardInstance, owner_next_turn: bool) -> bool:
         owner_next_turn and c.owner in c.skip_stand)
 
 
-def evaluate(game: Game, me: int) -> float:
+EXPOSURE = (0.7, 0.9)  # value kept by a rested Pal facing a bigger / no bigger enemy
+
+
+def evaluate(game: Game, me: int, leaf: bool = False,
+             exposure: tuple[float, float] = EXPOSURE) -> float:
+    """`leaf=True`: scoring at the start of our turn after simulating the opponent's
+    reply, so our rested Pals are about to stand and aren't penalized as exposed."""
     if game.winner is not None or game.reason:
         if game.winner is None:
             return 0.0
@@ -72,9 +78,9 @@ def evaluate(game: Game, me: int) -> float:
     my_turn = game.active == me
     for c in P.pals:
         v = pal_value(game, c)
-        if my_turn and c.rested:
+        if my_turn and c.rested and not leaf:
             # Rested through their turn: can't block, and can be attacked.
-            v *= 0.7 if opp_max_power >= game.power(c) else 0.9
+            v *= exposure[0] if opp_max_power >= game.power(c) else exposure[1]
         if _locked(game, c, True):
             v *= 0.5
         score += v
@@ -95,3 +101,38 @@ def evaluate(game: Game, me: int) -> float:
         if len(ps.deck) <= 4:
             score -= sign * (5 - len(ps.deck)) * 6
     return score
+
+
+# ---------------------------------------------------------------- learned evaluation
+_LEARNED: dict[str, dict] = {}
+LEARNED_SCALE = 16.0  # logit -> roughly the hand-set units (one card ~ 3.5)
+DEFAULT_WEIGHTS = "eval_weights.json"
+
+
+def load_weights(name: str = DEFAULT_WEIGHTS) -> dict:
+    if name not in _LEARNED:
+        import json
+        from pathlib import Path
+        _LEARNED[name] = json.loads((Path(__file__).resolve().parent / name)
+                                    .read_text(encoding="utf-8"))
+    return _LEARNED[name]
+
+
+def learned_evaluator(name: str = DEFAULT_WEIGHTS):
+    """Logistic model fitted on self-play (bots/train_eval.py). `leaf` = we act next.
+    `exposure` is accepted for interface compatibility and ignored."""
+    from .features import features
+    w = load_weights(name)["weights"]
+
+    def evaluate_learned(game: Game, me: int, leaf: bool = False, exposure=None) -> float:
+        if game.winner is not None or game.reason:
+            if game.winner is None:
+                return 0.0
+            return WIN if game.winner == me else -WIN
+        x = features(game, me, me_next=leaf)
+        return LEARNED_SCALE * sum(a * b for a, b in zip(w, x))
+    return evaluate_learned
+
+
+def evaluate_learned(game: Game, me: int, leaf: bool = False, exposure=None) -> float:
+    return learned_evaluator()(game, me, leaf, exposure)

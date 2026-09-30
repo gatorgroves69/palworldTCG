@@ -17,7 +17,7 @@ import random
 from engine.actions import Attack, EndMain, Pass, SoulDraw
 from engine.game import GameOver
 
-from .evaluate import evaluate
+from .evaluate import EXPOSURE, evaluate
 from .rules import RuleBot
 
 MARGIN = 0.25  # an action must beat ending the turn by this much
@@ -25,26 +25,38 @@ MARGIN = 0.25  # an action must beat ending the turn by this much
 
 def determinize(game, me: int, rng: random.Random) -> None:
     """Reshuffle what `me` can't know, in place, in a cloned game."""
+    from engine.state import Zone
     opp = game.players[game.opponent(me)]
     hidden = opp.hand + opp.deck
     rng.shuffle(hidden)
     n = len(opp.hand)
     opp.hand, opp.deck = hidden[:n], hidden[n:]
+    for c in opp.hand:  # keep each card's zone label in step with its list
+        c.zone = Zone.HAND
+    for c in opp.deck:
+        c.zone = Zone.DECK
     rng.shuffle(game.players[me].deck)
 
 
 class HeuristicBot(RuleBot):
     name = "heuristic"
 
-    def __init__(self, seed: int = 0, samples: int = 3) -> None:
+    def __init__(self, seed: int = 0, samples: int = 3, exposure=None,
+                 hidden_info: bool = True, evaluator=None) -> None:
+        """`exposure`: how much a Pal left rested is worth (see evaluate); lower is
+        more cautious about attacking. `hidden_info=False` skips determinizing,
+        for use inside simulations that are already determinized."""
         super().__init__(seed)
         self.samples = samples
+        self.exposure = exposure or EXPOSURE
+        self.hidden_info = hidden_info
+        self.evaluate = evaluator or evaluate
 
     def choose_action(self, game, player, actions):
         if any(isinstance(a, Pass) for a in actions):
             return self.quick_step(game, player, actions)
         end = next(a for a in actions if isinstance(a, EndMain))
-        base = evaluate(game, player)
+        base = self.evaluate(game, player, exposure=self.exposure)
         # Common random numbers: every action is scored on the same determinized samples,
         # so differences between actions aren't sampling noise.
         seeds = [self.rng.random() for _ in range(self.samples)]
@@ -67,15 +79,28 @@ class HeuristicBot(RuleBot):
         for seed in seeds[:n]:
             rng = random.Random(seed)
             g = game.clone([RuleBot(), RuleBot()], rng=rng)
-            determinize(g, player, rng)
+            if self.hidden_info:
+                determinize(g, player, rng)
             try:
                 g.perform(action)
             except GameOver:
                 pass
-            total += evaluate(g, player)
+            total += self.evaluate(g, player, exposure=self.exposure)
         return total / n
 
     @staticmethod
     def _random_outcome(action) -> bool:
         # Attacks on the player flip cards; everything else is close enough with one sample.
         return isinstance(action, Attack) and action.target_uid is None
+
+
+class LearnedHeuristicBot(HeuristicBot):
+    """HeuristicBot scoring positions with the learned evaluation."""
+    name = "heuristic-learned"
+
+    weights = "eval_weights.json"
+
+    def __init__(self, seed: int = 0, samples: int = 3) -> None:
+        from .evaluate import learned_evaluator
+        super().__init__(seed, samples, evaluator=learned_evaluator(self.weights))
+

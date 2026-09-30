@@ -27,7 +27,7 @@ class Mod:
     source: str = ""
 
 
-@dataclass
+@dataclass(eq=False)  # identity semantics: two cards are never "equal"
 class CardInstance:
     uid: int
     defn: CardDef

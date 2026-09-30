@@ -379,7 +379,9 @@ class Game:
     def move(self, c: CardInstance, zone: Zone, top: bool = True) -> None:
         """Move a card between zones. Leaving the base makes it a new card (CR 4.1.4)."""
         src = self._zone_list(c)
-        if src is not None and c in src:
+        if src is not None:
+            if c not in src:
+                raise RuntimeError(f"{c.label()} is not in its {c.zone.value} zone")
             src.remove(c)
         left_base = c.zone is Zone.BASE and zone is not Zone.BASE
         from_zone = c.zone

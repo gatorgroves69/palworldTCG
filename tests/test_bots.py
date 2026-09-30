@@ -76,3 +76,38 @@ def test_rulebot_puts_lucky_on_top(decks):
     lucky = put(g, 1, "BP01-027", Zone.HAND)
     d = Decision("target", 1, "", [a.uid, lucky.uid], min=0, max=1, context={"intent": "top"})
     assert RuleBot().choose(g, d) == [lucky.uid]
+
+
+def test_determinize_keeps_zone_labels(decks):
+    g, _ = real_game(decks)
+    for code in ("BP01-047", "BP01-047", "BP01-048"):
+        put(g, 1, code, Zone.HAND)
+    c = g.clone([RuleBot(), RuleBot()])
+    determinize(c, 0, random.Random(1))
+    ps = c.players[1]
+    assert all(x.zone is Zone.HAND for x in ps.hand)
+    assert all(x.zone is Zone.DECK for x in ps.deck)
+    c.draw(1, 2)  # would duplicate cards if labels were stale
+    assert len(ps.hand) == 5 and len({x.uid for x in ps.hand + ps.deck}) == len(ps.hand + ps.deck)
+
+
+@pytest.mark.parametrize("name", ["fast", "search", "plan", "heuristic-learned"])
+def test_new_bots_finish_games(decks, name):
+    from bots import BOTS
+    g = Game(decks, cards.REGISTRY, [BOTS[name](1), BOTS[name](2)], seed=11)
+    r = g.play()
+    assert r.reason in ("life", "deckout", "draw", "turn_cap")
+
+
+def test_features_match_names(decks):
+    from bots.features import FEATURES, features
+    g, _ = real_game(decks)
+    assert len(features(g, 0, True)) == len(FEATURES)
+
+
+def test_learned_eval_prefers_more_life(decks):
+    from bots.evaluate import evaluate_learned
+    g, _ = real_game(decks)
+    a = evaluate_learned(g, 0)
+    g.players[1].life = 3
+    assert evaluate_learned(g, 0) > a

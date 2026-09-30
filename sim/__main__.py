@@ -12,6 +12,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from bots import BOTS
+
 from .runner import MatchSpec, make_game, run
 
 
@@ -26,7 +28,7 @@ def main(argv=None) -> int:
     def common(p):
         p.add_argument("--deck", required=True, help="decklist for the deck under test")
         p.add_argument("--opp", required=True, help="opponent decklist")
-        p.add_argument("--bot", default="heuristic", choices=["heuristic", "rules", "random"])
+        p.add_argument("--bot", default="heuristic", choices=sorted(BOTS))
         p.add_argument("--structures", default="any", choices=["any", "rested_only"],
                        help="A2: may standing structures be attacked (docs/assumptions.md)")
         p.add_argument("--cards", default=None, help="cards.json path (default data/cards.json)")
@@ -46,7 +48,7 @@ def main(argv=None) -> int:
     m.add_argument("--seed", type=int, default=1)
     m.add_argument("--out", type=Path, default=None)
     m.add_argument("--workers", type=int, default=None)
-    m.add_argument("--bot", default="heuristic", choices=["heuristic", "rules", "random"])
+    m.add_argument("--bot", default="heuristic", choices=sorted(BOTS))
     m.add_argument("--structures", default="any", choices=["any", "rested_only"])
 
     p = sub.add_parser("replay", help="replay one game and print its full log")
