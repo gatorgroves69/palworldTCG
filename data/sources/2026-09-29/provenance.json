@@ -1,0 +1,71 @@
+{
+  "captured_at_phoenix": "2026-09-29T20:56:53.619434-07:00",
+  "source_updated_date": "2026-09-29",
+  "source_urls": [
+    "https://palworldtcg.gg/meta",
+    "https://palworldtcg.gg/meta/matchups",
+    "https://palify.org/meta"
+  ],
+  "status": "partial_blocked",
+  "browser_verification": {
+    "meta": {
+      "time_window": "30 days",
+      "game_type": "All",
+      "aria_current": "page"
+    },
+    "matchups": {
+      "time_window": "30 days",
+      "game_type": "All",
+      "matrix_size": "Top 12",
+      "aria_current": "page"
+    }
+  },
+  "filters_note": "Verified aria-current=page on 30 days and All links on both loaded browser pages; Top 12 on matchups. No filter defaults guessed.",
+  "matrix_note": "12 most played, not 12 highest win-rate. Both directed cells and 12 mirrors retained. Whole-percent display precision; games not shown, hence null.",
+  "tiers_note": "13-deck union of 12 highest-ranked tier rows and 12 most-played matrix decks. win_rate is the prominent displayed field-adjusted percentage, NOT the smaller raw or vs-meta percentage. Sorted by displayed tier-list rank.",
+  "decklist_status": "No representative lists retrieved or invented. HTTP 403 stopped further network collection. main50/soul10/code validation not performed because lists unavailable.",
+  "requested_top8": [
+    "chillet-relaxaurus-bp",
+    "chillet-relaxaurus-br",
+    "lamball-stone-pit-pr",
+    "tombat-medicine-gp",
+    "machine-gun-furnace-br",
+    "shadowbeak-menasting-bp",
+    "foxparks-harness-br",
+    "cattiva-azurobe-br"
+  ],
+  "blocks": [
+    {
+      "url": "https://palworldtcg.gg/meta",
+      "client": "Python urllib.request.urlopen (25s timeout)",
+      "exact_error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://palworldtcg.gg/meta/matchups",
+      "client": "Python urllib.request.urlopen (25s timeout)",
+      "exact_error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://palify.org/meta",
+      "client": "Python urllib.request.urlopen (25s timeout)",
+      "exact_error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "block_handling": "Browser meta and matchup navigations succeeded before direct archival fetches returned 403. No subsequent network requests, alternate identities, challenge bypass or retries. Only already-loaded matchup DOM inspected afterward.",
+  "card_catalog": {
+    "path": "/tmp/palify-cards-response",
+    "sha256": "9adb9bf071d62e0df5453a488a35c5360f5a95ef9bf3f7f2ab2117083b969cd3",
+    "cards": 184,
+    "fetched_again": false
+  },
+  "verification": {
+    "matrix_records": 144,
+    "matrix_decks": 12,
+    "tier_records": 13,
+    "slug_mappings": 13,
+    "mirror_cells": 12,
+    "reciprocity_checks": "passed",
+    "decks_retrieved": 0,
+    "decks_validated_main50_soul10": 0
+  }
+}

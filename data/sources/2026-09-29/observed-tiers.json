@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "chillet-relaxaurus-bp",
+    "displayed_win_rate_percent": 58.2,
+    "displayed_play_rate_percent": 28.3
+  },
+  {
+    "slug": "chillet-relaxaurus-br",
+    "displayed_win_rate_percent": 52.8,
+    "displayed_play_rate_percent": 10.5
+  },
+  {
+    "slug": "lamball-stone-pit-pr",
+    "displayed_win_rate_percent": 53.9,
+    "displayed_play_rate_percent": 7.9
+  },
+  {
+    "slug": "tombat-medicine-gp",
+    "displayed_win_rate_percent": 44.4,
+    "displayed_play_rate_percent": 5.5
+  },
+  {
+    "slug": "machine-gun-furnace-br",
+    "displayed_win_rate_percent": 47.1,
+    "displayed_play_rate_percent": 5.3
+  },
+  {
+    "slug": "shadowbeak-menasting-bp",
+    "displayed_win_rate_percent": 39.5,
+    "displayed_play_rate_percent": 5.2
+  },
+  {
+    "slug": "foxparks-harness-br",
+    "displayed_win_rate_percent": 51.7,
+    "displayed_play_rate_percent": 4.2
+  },
+  {
+    "slug": "cattiva-azurobe-br",
+    "displayed_win_rate_percent": 59.2,
+    "displayed_play_rate_percent": 4.0
+  },
+  {
+    "slug": "pengullet-launcher-bg",
+    "displayed_win_rate_percent": 45.8,
+    "displayed_play_rate_percent": 3.9
+  },
+  {
+    "slug": "foxparks-harness-pr",
+    "displayed_win_rate_percent": 48.0,
+    "displayed_play_rate_percent": 3.6
+  },
+  {
+    "slug": "lamball-cattiva-bg",
+    "displayed_win_rate_percent": 58.6,
+    "displayed_play_rate_percent": 3.4
+  },
+  {
+    "slug": "furnace-machine-gun-gr",
+    "displayed_win_rate_percent": 43.3,
+    "displayed_play_rate_percent": 2.3
+  },
+  {
+    "slug": "chillet-relaxaurus-bg",
+    "displayed_win_rate_percent": 47.5,
+    "displayed_play_rate_percent": 1.2
+  }
+]

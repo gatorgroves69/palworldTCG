@@ -1,0 +1,430 @@
+- complementary
+  - link "Palworld TCG Play Hub home" [ref=e1]
+  - button "Expand" [ref=e2]
+  - navigation "Menu" [ref=e3]
+    - link "Play" [ref=e15]
+    - link "Cards" [expanded=false, ref=e16]
+    - link "Collection" [expanded=false, ref=e17]
+    - link "Decks" [expanded=false, ref=e18]
+    - link "Tournaments" [expanded=false, ref=e19]
+    - link "Community" [expanded=false, ref=e20]
+    - link "Learn" [expanded=false, ref=e21]
+    - link "Deals" [ref=e22]
+    - link "Support" [ref=e23]
+  - link "Switch language to 日本語" [ref=e4]
+  - button "Sign in" [ref=e5]
+- main
+  - navigation "Breadcrumb" [ref=e6]
+    - link "Learn" [ref=e10]
+    - StaticText "›"
+    - StaticText "Meta"
+  - heading "MATCHUPS & COUNTERS" [level=1, ref=e7]
+  - paragraph
+    - StaticText "Updated "
+    - time
+      - StaticText "2026-09-29"
+    - StaticText " · ~92,933 games · 40 decks · bots never counted"
+  - combobox "Search a deck, card or event…" [expanded=false, ref=e11]
+  - generic
+    - navigation "Meta" [ref=e12]
+      - link "Tier list" [ref=e24]
+      - link "Trends" [ref=e25]
+      - link "Cards" [ref=e26]
+      - link "Matchups" [ref=e27]
+      - link "Tournaments" [ref=e28]
+      - link "For you ★" [ref=e29]
+        - StaticText "For you ★"
+      - link "How to read" [ref=e30]
+    - navigation "Time window" [ref=e13]
+      - link "7 DAYS" [ref=e31]
+      - link "30 DAYS" [ref=e32]
+      - link "ALL" [ref=e33]
+    - navigation "Game type" [ref=e14]
+      - link "ALL" [ref=e34]
+      - link "RANKED" [ref=e35]
+      - link "CASUAL" [ref=e36]
+    - tablist "Sections"
+      - tab "All matchups" [selected, ref=e37]
+      - tab "Counter pick" [ref=e38]
+      - tab "Deck matchups" [ref=e39]
+  - tabpanel "All matchups"
+    - generic
+      - heading "ALL MATCHUPS About All matchups" [level=2, ref=e40]
+        - StaticText "ALL MATCHUPS"
+        - button "About All matchups" [expanded=false, ref=e52]
+          - StaticText "About All matchups"
+      - navigation "All matchups" [ref=e41]
+        - link "TOP 8" [ref=e53]
+        - link "TOP 12" [ref=e54]
+        - link "TOP 16" [ref=e55]
+      - paragraph
+        - StaticText "Cell shading shows how many games are behind each number."
+      - paragraph
+        - StaticText "Showing the 12 most played. 28 more have too few games."
+      - table
+        - rowgroup
+          - row
+            - columnheader
+            - columnheader "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner" [ref=e212]
+            - columnheader "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner" [ref=e213]
+            - columnheader "Purple Red Lamball – My First Pal and Stone Pit" [ref=e214]
+            - columnheader "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!?" [ref=e215]
+            - columnheader "Blue Red Mounted Machine Gun and Primitive Furnace" [ref=e216]
+            - columnheader "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion" [ref=e217]
+            - columnheader "Blue Red Foxparks – Light of Courage and Foxparks' Harness" [ref=e218]
+            - columnheader "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz" [ref=e219]
+            - columnheader "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer" [ref=e220]
+            - columnheader "Purple Red Foxparks – Light of Courage and Foxparks' Harness" [ref=e221]
+            - columnheader "Blue Green Lamball – My First Pal and Cattiva – My First Pal" [ref=e222]
+            - columnheader "Green Red Primitive Furnace and Mounted Machine Gun" [ref=e223]
+        - row
+          - rowheader "1 Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner" [ref=e56]
+            - generic
+              - link "Blue Purple Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner" [ref=e224]
+          - cell "50%" [ref=e57]
+            - generic
+          - cell "52%" [ref=e58]
+            - generic
+          - cell "53%" [ref=e59]
+            - generic
+          - cell "60%" [ref=e60]
+            - generic
+          - cell "56%" [ref=e61]
+            - generic
+          - cell "64%" [ref=e62]
+            - generic
+          - cell "55%" [ref=e63]
+            - generic
+          - cell "44%" [ref=e64]
+            - generic
+          - cell "60%" [ref=e65]
+            - generic
+          - cell "62%" [ref=e66]
+            - generic
+          - cell "49%" [ref=e67]
+            - generic
+          - cell "63%" [ref=e68]
+            - generic
+        - row
+          - rowheader "2 Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner" [ref=e69]
+            - generic
+              - link "Blue Red Chillet – Dragon Whisperer and Relaxaurus – Hungry Gunner" [ref=e225]
+          - cell "48%" [ref=e70]
+            - generic
+          - cell "50%" [ref=e71]
+            - generic
+          - cell "47%" [ref=e72]
+            - generic
+          - cell "56%" [ref=e73]
+            - generic
+          - cell "54%" [ref=e74]
+            - generic
+          - cell "63%" [ref=e75]
+            - generic
+          - cell "50%" [ref=e76]
+            - generic
+          - cell "44%" [ref=e77]
+            - generic
+          - cell "52%" [ref=e78]
+            - generic
+          - cell "51%" [ref=e79]
+            - generic
+          - cell "45%" [ref=e80]
+            - generic
+          - cell "60%" [ref=e81]
+            - generic
+        - row
+          - rowheader "3 Purple Red Lamball – My First Pal and Stone Pit" [ref=e82]
+            - generic
+              - link "Purple Red Lamball – My First Pal and Stone Pit" [ref=e226]
+          - cell "47%" [ref=e83]
+            - generic
+          - cell "53%" [ref=e84]
+            - generic
+          - cell "50%" [ref=e85]
+            - generic
+          - cell "61%" [ref=e86]
+            - generic
+          - cell "65%" [ref=e87]
+            - generic
+          - cell "68%" [ref=e88]
+            - generic
+          - cell "50%" [ref=e89]
+            - generic
+          - cell "44%" [ref=e90]
+            - generic
+          - cell "58%" [ref=e91]
+            - generic
+          - cell "45%" [ref=e92]
+            - generic
+          - cell "41%" [ref=e93]
+            - generic
+          - cell "57%" [ref=e94]
+            - generic
+        - row
+          - rowheader "4 Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!?" [ref=e95]
+            - generic
+              - link "Green Purple Medieval Medicine Workbench and Tombat – Out of Nowhere!?" [ref=e227]
+          - cell "40%" [ref=e96]
+            - generic
+          - cell "44%" [ref=e97]
+            - generic
+          - cell "39%" [ref=e98]
+            - generic
+          - cell "50%" [ref=e99]
+            - generic
+          - cell "45%" [ref=e100]
+            - generic
+          - cell "57%" [ref=e101]
+            - generic
+          - cell "45%" [ref=e102]
+            - generic
+          - cell "42%" [ref=e103]
+            - generic
+          - cell "45%" [ref=e104]
+            - generic
+          - cell "43%" [ref=e105]
+            - generic
+          - cell "36%" [ref=e106]
+            - generic
+          - cell "49%" [ref=e107]
+            - generic
+        - row
+          - rowheader "5 Blue Red Mounted Machine Gun and Primitive Furnace" [ref=e108]
+            - generic
+              - link "Blue Red Mounted Machine Gun and Primitive Furnace" [ref=e228]
+          - cell "44%" [ref=e109]
+            - generic
+          - cell "46%" [ref=e110]
+            - generic
+          - cell "35%" [ref=e111]
+            - generic
+          - cell "55%" [ref=e112]
+            - generic
+          - cell "50%" [ref=e113]
+            - generic
+          - cell "56%" [ref=e114]
+            - generic
+          - cell "42%" [ref=e115]
+            - generic
+          - cell "40%" [ref=e116]
+            - generic
+          - cell "51%" [ref=e117]
+            - generic
+          - cell "42%" [ref=e118]
+            - generic
+          - cell "43%" [ref=e119]
+            - generic
+          - cell "50%" [ref=e120]
+            - generic
+        - row
+          - rowheader "6 Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion" [ref=e121]
+            - generic
+              - link "Blue Purple Shadowbeak – Seed of Despair and Menasting – Darkness-Dwelling Scorpion" [ref=e229]
+          - cell "36%" [ref=e122]
+            - generic
+          - cell "37%" [ref=e123]
+            - generic
+          - cell "32%" [ref=e124]
+            - generic
+          - cell "43%" [ref=e125]
+            - generic
+          - cell "44%" [ref=e126]
+            - generic
+          - cell "50%" [ref=e127]
+            - generic
+          - cell "38%" [ref=e128]
+            - generic
+          - cell "30%" [ref=e129]
+            - generic
+          - cell "44%" [ref=e130]
+            - generic
+          - cell "44%" [ref=e131]
+            - generic
+          - cell "28%" [ref=e132]
+            - generic
+          - cell "46%" [ref=e133]
+            - generic
+        - row
+          - rowheader "7 Blue Red Foxparks – Light of Courage and Foxparks' Harness" [ref=e134]
+            - generic
+              - link "Blue Red Foxparks – Light of Courage and Foxparks' Harness" [ref=e230]
+          - cell "45%" [ref=e135]
+            - generic
+          - cell "50%" [ref=e136]
+            - generic
+          - cell "50%" [ref=e137]
+            - generic
+          - cell "55%" [ref=e138]
+            - generic
+          - cell "58%" [ref=e139]
+            - generic
+          - cell "62%" [ref=e140]
+            - generic
+          - cell "50%" [ref=e141]
+            - generic
+          - cell "44%" [ref=e142]
+            - generic
+          - cell "60%" [ref=e143]
+            - generic
+          - cell "57%" [ref=e144]
+            - generic
+          - cell "41%" [ref=e145]
+            - generic
+          - cell "61%" [ref=e146]
+            - generic
+        - row
+          - rowheader "8 Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz" [ref=e147]
+            - generic
+              - link "Blue Red Cattiva – My First Pal and Azurobe – Water Dragon Waltz" [ref=e231]
+          - cell "56%" [ref=e148]
+            - generic
+          - cell "56%" [ref=e149]
+            - generic
+          - cell "56%" [ref=e150]
+            - generic
+          - cell "58%" [ref=e151]
+            - generic
+          - cell "60%" [ref=e152]
+            - generic
+          - cell "70%" [ref=e153]
+            - generic
+          - cell "56%" [ref=e154]
+            - generic
+          - cell "50%" [ref=e155]
+            - generic
+          - cell "67%" [ref=e156]
+            - generic
+          - cell "61%" [ref=e157]
+            - generic
+          - cell "51%" [ref=e158]
+            - generic
+          - cell "61%" [ref=e159]
+            - generic
+        - row
+          - rowheader "9 Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer" [ref=e160]
+            - generic
+              - link "Blue Green Pengullet Rocket Launcher and Pengullet – Frequent Flyer" [ref=e232]
+          - cell "40%" [ref=e161]
+            - generic
+          - cell "48%" [ref=e162]
+            - generic
+          - cell "42%" [ref=e163]
+            - generic
+          - cell "55%" [ref=e164]
+            - generic
+          - cell "49%" [ref=e165]
+            - generic
+          - cell "56%" [ref=e166]
+            - generic
+          - cell "40%" [ref=e167]
+            - generic
+          - cell "33%" [ref=e168]
+            - generic
+          - cell "50%" [ref=e169]
+            - generic
+          - cell "49%" [ref=e170]
+            - generic
+          - cell "35%" [ref=e171]
+            - generic
+          - cell "52%" [ref=e172]
+            - generic
+        - row
+          - rowheader "10 Purple Red Foxparks – Light of Courage and Foxparks' Harness" [ref=e173]
+            - generic
+              - link "Purple Red Foxparks – Light of Courage and Foxparks' Harness" [ref=e233]
+          - cell "38%" [ref=e174]
+            - generic
+          - cell "49%" [ref=e175]
+            - generic
+          - cell "55%" [ref=e176]
+            - generic
+          - cell "57%" [ref=e177]
+            - generic
+          - cell "58%" [ref=e178]
+            - generic
+          - cell "56%" [ref=e179]
+            - generic
+          - cell "43%" [ref=e180]
+            - generic
+          - cell "39%" [ref=e181]
+            - generic
+          - cell "51%" [ref=e182]
+            - generic
+          - cell "50%" [ref=e183]
+            - generic
+          - cell "39%" [ref=e184]
+            - generic
+          - cell "58%" [ref=e185]
+            - generic
+        - row
+          - rowheader "11 Blue Green Lamball – My First Pal and Cattiva – My First Pal" [ref=e186]
+            - generic
+              - link "Blue Green Lamball – My First Pal and Cattiva – My First Pal" [ref=e234]
+          - cell "51%" [ref=e187]
+            - generic
+          - cell "55%" [ref=e188]
+            - generic
+          - cell "59%" [ref=e189]
+            - generic
+          - cell "64%" [ref=e190]
+            - generic
+          - cell "57%" [ref=e191]
+            - generic
+          - cell "72%" [ref=e192]
+            - generic
+          - cell "59%" [ref=e193]
+            - generic
+          - cell "49%" [ref=e194]
+            - generic
+          - cell "65%" [ref=e195]
+            - generic
+          - cell "61%" [ref=e196]
+            - generic
+          - cell "50%" [ref=e197]
+            - generic
+          - cell "61%" [ref=e198]
+            - generic
+        - row
+          - rowheader "12 Green Red Primitive Furnace and Mounted Machine Gun" [ref=e199]
+            - generic
+              - link "Green Red Primitive Furnace and Mounted Machine Gun" [ref=e235]
+          - cell "37%" [ref=e200]
+          - cell "40%" [ref=e201]
+          - cell "43%" [ref=e202]
+          - cell "51%" [ref=e203]
+          - cell "50%" [ref=e204]
+          - cell "54%" [ref=e205]
+          - cell "39%" [ref=e206]
+          - cell "39%" [ref=e207]
+          - cell "48%" [ref=e208]
+          - cell "42%" [ref=e209]
+          - cell "39%" [ref=e210]
+          - cell "50%" [ref=e211]
+- contentinfo
+  - paragraph
+    - StaticText "An unaffiliated fan project. Palworld is © Pocketpair, Inc. Palworld Trading Card Game is © Bushiroad. All card art and game content remain the property of their respective owners."
+  - list
+    - listitem [level=1]
+      - link "Discord" [ref=e42]
+    - listitem [level=1]
+      - link "Twitter" [ref=e43]
+    - listitem [level=1]
+      - link "Trade cards: tradecards.gg" [ref=e44]
+    - listitem [level=1]
+      - link "Support us" [ref=e45]
+    - listitem [level=1]
+      - link "Contact" [ref=e46]
+    - listitem [level=1]
+      - link "Privacy" [ref=e47]
+    - listitem [level=1]
+      - link "Terms" [ref=e48]
+    - listitem [level=1]
+      - link "DMCA / takedown" [ref=e49]
+    - listitem [level=1]
+      - link "Do Not Sell or Share My Personal Information" [ref=e50]
+    - listitem [level=1]
+      - link "Cookie & consent settings" [ref=e51]
+- generic
+  - button "Open Pal AI assistant" [ref=e8]
+  - button "Hide Pal AI assistant" [ref=e9]

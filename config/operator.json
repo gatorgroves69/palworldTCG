@@ -1,0 +1,14 @@
+{
+  "default_deck": "cattiva-azurobe-br",
+  "timezone": "America/Phoenix",
+  "aliases": {
+    "cattiva-br": "cattiva-azurobe-br",
+    "cattiva-azurobe": "cattiva-azurobe-br",
+    "chillet-bp": "chillet-relaxaurus-bp"
+  },
+  "simulation": {
+    "milestone_1_approved": false,
+    "command": null,
+    "games": null
+  }
+}

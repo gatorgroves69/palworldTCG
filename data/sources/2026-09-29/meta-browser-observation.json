@@ -1,0 +1,338 @@
+{
+  "filters": [
+    {
+      "text": "7 days",
+      "href": "/meta?w=7",
+      "current": null,
+      "class": "whitespace-nowrap px-2.5 py-1 font-mono text-label font-bold uppercase tracking-label-tight md:px-3 md:py-1.5 text-text-muted hover:text-text-high"
+    },
+    {
+      "text": "30 days",
+      "href": "/meta",
+      "current": "page",
+      "class": "whitespace-nowrap px-2.5 py-1 font-mono text-label font-bold uppercase tracking-label-tight md:px-3 md:py-1.5 bg-brand-primary text-black"
+    },
+    {
+      "text": "All",
+      "href": "/meta?w=365",
+      "current": null,
+      "class": "whitespace-nowrap px-2.5 py-1 font-mono text-label font-bold uppercase tracking-label-tight md:px-3 md:py-1.5 text-text-muted hover:text-text-high"
+    },
+    {
+      "text": "All",
+      "href": "/meta",
+      "current": "page",
+      "class": "whitespace-nowrap px-2.5 py-1 font-mono text-label font-bold uppercase tracking-label-tight md:px-3 md:py-1.5 bg-brand-primary text-black"
+    },
+    {
+      "text": "Ranked",
+      "href": "/meta?scope=ranked",
+      "current": null,
+      "class": "whitespace-nowrap px-2.5 py-1 font-mono text-label font-bold uppercase tracking-label-tight md:px-3 md:py-1.5 text-text-muted hover:text-text-high"
+    },
+    {
+      "text": "Casual",
+      "href": "/meta?scope=casual",
+      "current": null,
+      "class": "whitespace-nowrap px-2.5 py-1 font-mono text-label font-bold uppercase tracking-label-tight md:px-3 md:py-1.5 text-text-muted hover:text-text-high"
+    }
+  ],
+  "links": [
+    {
+      "text": "Trends",
+      "href": "/meta/trends"
+    },
+    {
+      "text": "Cards",
+      "href": "/meta/cards"
+    },
+    {
+      "text": "Matchups",
+      "href": "/meta/matchups"
+    },
+    {
+      "text": "Tournaments",
+      "href": "/meta/tournaments"
+    },
+    {
+      "text": "For you ★",
+      "href": "/meta/for-you"
+    },
+    {
+      "text": "How to read",
+      "href": "/meta/how-to-read"
+    },
+    {
+      "text": "1Cattiva · AzurobeBlue / Red59.2%raw 58.3%57.4%vs meta▲ 0.44.0% → 0.27,4371st +7",
+      "href": "/meta/decks/blue-red-cattiva-azurobe"
+    },
+    {
+      "text": "2Lamball · CattivaBlue / Green58.6%raw 57.5%56.0%vs meta▲ 0.83.4% ▲ 0.86,3051st +4",
+      "href": "/meta/decks/blue-green-lamball-cattiva"
+    },
+    {
+      "text": "3Chillet · RelaxaurusBlue / Purple58.2%raw 55.1%54.9%vs meta→ 0.128.3% ▲▲ 5.452,6422nd +9",
+      "href": "/meta/decks/blue-purple-chillet-relaxaurus"
+    },
+    {
+      "text": "4Lamball · Stone PitPurple / Red53.9%raw 52.5%52.3%vs meta▼ 1.17.9% ▲▲ 5.714,7032nd +6",
+      "href": "/meta/decks/purple-red-lamball-stone-pit"
+    },
+    {
+      "text": "5Chillet · RelaxaurusBlue / Red52.8%raw 52.7%50.4%vs meta▼▼ 2.410.5% ▼▼ 2.119,5012nd +7",
+      "href": "/meta/decks/blue-red-chillet-relaxaurus"
+    },
+    {
+      "text": "6Foxparks · Foxparks' HarnessBlue / Red51.7%raw 51.7%49.2%vs meta▼ 1.54.2% ▲▲ 2.17,8412nd +7",
+      "href": "/meta/decks/blue-red-foxparks-foxparks-harness"
+    },
+    {
+      "text": "7Foxparks · Foxparks' HarnessPurple / Red48.0%raw 47.9%46.3%vs meta▼▼ 4.13.6% ▼ 1.16,6182nd +11",
+      "href": "/meta/decks/purple-red-foxparks-foxparks-harness"
+    },
+    {
+      "text": "8Chillet · RelaxaurusBlue / Green47.5%raw 49.5%45.7%vs meta·1.2% → 0.22,1442nd +7",
+      "href": "/meta/decks/blue-green-chillet-relaxaurus"
+    },
+    {
+      "text": "9Mounted Machine Gun · Primitive FurnaceBlue / Red47.1%raw 48.3%44.5%vs meta▼▼ 1.85.3% ▼▼ 1.59,9162nd +4",
+      "href": "/meta/decks/blue-red-mounted-machine-gun-primitive-furnace"
+    },
+    {
+      "text": "10Pengullet Rocket Launcher · PengulletBlue / Green45.8%raw 47.1%43.9%vs meta▼▼ 4.13.9% ▼▼ 1.67,2162nd +6",
+      "href": "/meta/decks/blue-green-pengullet-rocket-launcher-pengullet"
+    },
+    {
+      "text": "11Medieval Medicine Workbench · TombatGreen / Purple44.4%raw 44.8%42.6%vs meta▼▼ 2.85.5% ▼ 1.110,2942nd +10",
+      "href": "/meta/decks/green-purple-medieval-medicine-workbench-tombat"
+    },
+    {
+      "text": "12Primitive Furnace · Mounted Machine GunGreen / Red43.3%raw 45.3%41.5%vs meta▼▼ 2.02.3% ▼ 0.44,1841st +1",
+      "href": "/meta/decks/green-red-primitive-furnace-mounted-machine-gun"
+    },
+    {
+      "text": "13Helzephyr · Blazehowl NoctPurple42.1%raw 44.2%41.8%vs meta·0.9% ▼ 0.61,7592nd +5",
+      "href": "/meta/decks/purple-helzephyr-blazehowl-noct"
+    },
+    {
+      "text": "14Ragnahawk · FoxparksBlue / Red41.2%raw 44.0%40.4%vs meta▼▼ 3.11.2% → 0.02,3032nd +2",
+      "href": "/meta/decks/blue-red-ragnahawk-foxparks"
+    },
+    {
+      "text": "15Daedream · Daedream's NecklacePurple / Red39.9%raw 43.3%38.0%vs meta·1.3% ▼ 0.42,3662nd +5",
+      "href": "/meta/decks/purple-red-daedream-daedreams-necklace"
+    },
+    {
+      "text": "16Shadowbeak · MenastingBlue / Purple39.5%raw 41.1%36.7%vs meta▼▼ 6.75.2% ▼ 1.59,6212nd +4",
+      "href": "/meta/decks/blue-purple-shadowbeak-menasting"
+    },
+    {
+      "text": "17Dumud · DigtoiseGreen / Purple39.3%raw 42.1%38.2%vs meta·1.6% ▼ 0.52,9352nd +5",
+      "href": "/meta/decks/green-purple-dumud-digtoise"
+    },
+    {
+      "text": "18Flopie · Berry PlantationGreen / Red39.3%raw 41.4%37.7%vs meta·1.1% ▼ 0.42,0102nd +3",
+      "href": "/meta/decks/green-red-flopie-berry-plantation"
+    },
+    {
+      "text": "19Digtoise · RushoarGreen / Purple39.2%raw 41.7%38.2%vs meta·1.4% ▼ 0.42,6102nd +3",
+      "href": "/meta/decks/green-purple-digtoise-rushoar"
+    },
+    {
+      "text": "20DaedreamGreen / Purple37.9%raw 41.2%36.1%vs meta·1.2% ▼ 0.52,2342nd +2",
+      "href": "/meta/decks/green-purple-daedream"
+    },
+    {
+      "text": "21Ranch · DumudBlue / Green34.7%raw 37.7%34.1%vs meta·0.9% → 0.01,6862nd +1",
+      "href": "/meta/decks/blue-green-ranch-dumud"
+    },
+    {
+      "text": "22Reptyro Cryst · Cola Vending MachineBlue / Green29.8%raw 33.6%29.4%vs meta·1.0% ▼ 0.41,8751st +1",
+      "href": "/meta/decks/blue-green-reptyro-cryst-cola-vending-machine"
+    },
+    {
+      "text": "Mounted Machine Gun · Lamball52.8%—vs meta·0.0% ·72",
+      "href": "/meta/decks/mounted-machine-gun-lamball"
+    },
+    {
+      "text": "Rooby · Antique MirrorBlue / Red46.5%—vs meta·0.1% ·1422nd +4",
+      "href": "/meta/decks/blue-red-rooby-antique-mirror"
+    },
+    {
+      "text": "Reptyro · BlazehowlRed45.7%40.9%vs meta·0.1% ·1752nd +5",
+      "href": "/meta/decks/red-reptyro-blazehowl"
+    },
+    {
+      "text": "Cawgnito · RagnahawkPurple / Red40.8%raw 42.2%40.5%vs meta·0.4% → 0.17321st +9",
+      "href": "/meta/decks/purple-red-cawgnito-ragnahawk"
+    },
+    {
+      "text": "Chillet · RelaxaurusBlue38.9%—vs meta·0.1% ·95",
+      "href": "/meta/decks/blue-chillet-relaxaurus"
+    },
+    {
+      "text": "Cola Vending Machine · Reptyro CrystBlue / Green36.5%raw 37.5%37.1%vs meta·0.4% → 0.26931st +0",
+      "href": "/meta/decks/blue-green-cola-vending-machine-reptyro-cryst"
+    },
+    {
+      "text": "Foxparks · FlambellePurple / Red36.4%raw 42.0%35.6%vs meta·0.5% → 0.29582nd +7",
+      "href": "/meta/decks/purple-red-foxparks-flambelle"
+    },
+    {
+      "text": "Cattiva · LamballBlue / Red36.4%raw 36.4%36.5%vs meta·0.4% → 0.18171st +2",
+      "href": "/meta/decks/blue-red-cattiva-lamball"
+    },
+    {
+      "text": "RedRed35.5%raw 38.9%35.3%vs meta·0.4% → 0.07902nd +8",
+      "href": "/meta/decks/red"
+    },
+    {
+      "text": "Digtoise · RushoarGreen35.1%18.8%vs meta·0.1% ·1542nd +0",
+      "href": "/meta/decks/green-digtoise-rushoar"
+    },
+    {
+      "text": "Crystal Breath · PenkingBlue33.3%—vs meta·0.0% ·81",
+      "href": "/meta/decks/blue-crystal-breath-penking"
+    },
+    {
+      "text": "Black Marketeer · KatressPurple31.8%24.4%vs meta·0.1% ·2362nd +2",
+      "href": "/meta/decks/purple-black-marketeer-katress"
+    },
+    {
+      "text": "Suzaku Aqua · Stone PitBlue / Red27.6%raw 40.2%26.8%vs meta·0.7% ▼ 0.41,3742nd +6",
+      "href": "/meta/decks/blue-red-suzaku-aqua-stone-pit"
+    },
+    {
+      "text": "Elizabee · BeegardeGreen22.8%—vs meta·0.1% ·101",
+      "href": "/meta/decks/green-elizabee-beegarde"
+    },
+    {
+      "text": "Found an Egg! · ElizabeeGreen / Purple21.1%—vs meta·0.1% ·1091st +10",
+      "href": "/meta/decks/green-purple-found-an-egg-elizabee"
+    },
+    {
+      "text": "The Adventure Begins · Kelpsea IgnisRed20.7%—vs meta·0.0% ·58",
+      "href": "/meta/decks/red-the-adventure-begins-kelpsea-ignis"
+    },
+    {
+      "text": "Beegarde · MammorestGreen19.0%—vs meta·0.0% ·63",
+      "href": "/meta/decks/green-beegarde-mammorest"
+    },
+    {
+      "text": "Chikipi · Hanging TrapGreen / Purple17.7%raw 29.5%17.5%vs meta·0.4% → 0.28362nd +6",
+      "href": "/meta/decks/green-purple-chikipi-hanging-trap"
+    },
+    {
+      "text": "Deck to beatChillet · Relaxaurus28.3%of the field ▲▲ 5.4",
+      "href": "/meta/decks/blue-purple-chillet-relaxaurus"
+    },
+    {
+      "text": "Strongest deckCattiva · Azurobe59.2%vs field",
+      "href": "/meta/decks/blue-red-cattiva-azurobe"
+    },
+    {
+      "text": "Hot streakLamball · Cattiva+0.8pts win rate this week",
+      "href": "/meta/decks/blue-green-lamball-cattiva"
+    },
+    {
+      "text": "Counter pickCattiva · Azurobe56%into Chillet · Relaxaurus",
+      "href": "/meta/matchups?foe=blue-purple-chillet-dragon-whisperer-elphidran-aqua-gentle-ripples"
+    },
+    {
+      "text": "Turn preferenceGo second52.8%vs 47.2% first",
+      "href": "/meta/how-to-read"
+    },
+    {
+      "text": "Latest championHayatoChilletMasters League · Kyoto",
+      "href": "/meta/tournaments?src=official"
+    },
+    {
+      "text": "Chillet · Relaxaurus (Blue/Purple): 58.2%, 28.3%",
+      "href": "/meta/decks/blue-purple-chillet-relaxaurus"
+    },
+    {
+      "text": "Chillet · Relaxaurus (Blue/Red): 52.8%, 10.5%",
+      "href": "/meta/decks/blue-red-chillet-relaxaurus"
+    },
+    {
+      "text": "Lamball · Stone Pit (Purple/Red): 53.9%, 7.9%",
+      "href": "/meta/decks/purple-red-lamball-stone-pit"
+    },
+    {
+      "text": "Medieval Medicine Workbench · Tombat (Green/Purple): 44.4%, 5.5%",
+      "href": "/meta/decks/green-purple-medieval-medicine-workbench-tombat"
+    },
+    {
+      "text": "Mounted Machine Gun · Primitive Furnace (Blue/Red): 47.1%, 5.3%",
+      "href": "/meta/decks/blue-red-mounted-machine-gun-primitive-furnace"
+    },
+    {
+      "text": "Shadowbeak · Menasting (Blue/Purple): 39.5%, 5.2%",
+      "href": "/meta/decks/blue-purple-shadowbeak-menasting"
+    },
+    {
+      "text": "Foxparks · Foxparks' Harness (Blue/Red): 51.7%, 4.2%",
+      "href": "/meta/decks/blue-red-foxparks-foxparks-harness"
+    },
+    {
+      "text": "Cattiva · Azurobe (Blue/Red): 59.2%, 4.0%",
+      "href": "/meta/decks/blue-red-cattiva-azurobe"
+    },
+    {
+      "text": "Pengullet Rocket Launcher · Pengullet (Blue/Green): 45.8%, 3.9%",
+      "href": "/meta/decks/blue-green-pengullet-rocket-launcher-pengullet"
+    },
+    {
+      "text": "Foxparks · Foxparks' Harness (Purple/Red): 48.0%, 3.6%",
+      "href": "/meta/decks/purple-red-foxparks-foxparks-harness"
+    },
+    {
+      "text": "Lamball · Cattiva (Blue/Green): 58.6%, 3.4%",
+      "href": "/meta/decks/blue-green-lamball-cattiva"
+    },
+    {
+      "text": "Primitive Furnace · Mounted Machine Gun (Green/Red): 43.3%, 2.3%",
+      "href": "/meta/decks/green-red-primitive-furnace-mounted-machine-gun"
+    },
+    {
+      "text": "Dumud · Digtoise (Green/Purple): 39.3%, 1.6%",
+      "href": "/meta/decks/green-purple-dumud-digtoise"
+    },
+    {
+      "text": "Digtoise · Rushoar (Green/Purple): 39.2%, 1.4%",
+      "href": "/meta/decks/green-purple-digtoise-rushoar"
+    },
+    {
+      "text": "Daedream · Daedream's Necklace (Purple/Red): 39.9%, 1.3%",
+      "href": "/meta/decks/purple-red-daedream-daedreams-necklace"
+    },
+    {
+      "text": "Ragnahawk · Foxparks (Blue/Red): 41.2%, 1.2%",
+      "href": "/meta/decks/blue-red-ragnahawk-foxparks"
+    },
+    {
+      "text": "Daedream (Green/Purple): 37.9%, 1.2%",
+      "href": "/meta/decks/green-purple-daedream"
+    },
+    {
+      "text": "Chillet · Relaxaurus (Blue/Green): 47.5%, 1.2%",
+      "href": "/meta/decks/blue-green-chillet-relaxaurus"
+    },
+    {
+      "text": "Flopie · Berry Plantation (Green/Red): 39.3%, 1.1%",
+      "href": "/meta/decks/green-red-flopie-berry-plantation"
+    },
+    {
+      "text": "Reptyro Cryst · Cola Vending Machine (Blue/Green): 29.8%, 1.0%",
+      "href": "/meta/decks/blue-green-reptyro-cryst-cola-vending-machine"
+    },
+    {
+      "text": "Helzephyr · Blazehowl Noct (Purple): 42.1%, 0.9%",
+      "href": "/meta/decks/purple-helzephyr-blazehowl-noct"
+    },
+    {
+      "text": "Ranch · Dumud (Blue/Green): 34.7%, 0.9%",
+      "href": "/meta/decks/blue-green-ranch-dumud"
+    }
+  ]
+}
