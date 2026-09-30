@@ -41,6 +41,8 @@ def determinize(game, me: int, rng: random.Random) -> None:
 class HeuristicBot(RuleBot):
     name = "heuristic"
 
+    depth = 1  # actions looked ahead within our own turn
+
     def __init__(self, seed: int = 0, samples: int = 3, exposure=None,
                  hidden_info: bool = True, evaluator=None) -> None:
         """`exposure`: how much a Pal left rested is worth (see evaluate); lower is
@@ -85,8 +87,26 @@ class HeuristicBot(RuleBot):
                 g.perform(action)
             except GameOver:
                 pass
-            total += self.evaluate(g, player, exposure=self.exposure)
+            v = self.evaluate(g, player, exposure=self.exposure)
+            if self.depth >= 2 and not g.reason and not isinstance(action, EndMain):
+                v = max(v, self._best_followup(g, player))
+            total += v
         return total / n
+
+    def _best_followup(self, g, player) -> float:
+        """Best position reachable with one more action this turn (on this sample).
+        Lets setup actions (discounts, night, grants, no-block) show their payoff."""
+        best = float("-inf")
+        for b in g.legal_actions(player):
+            if isinstance(b, (EndMain, SoulDraw)):
+                continue
+            h = g.clone([RuleBot(), RuleBot()], rng=random.Random(0))
+            try:
+                h.perform(b)
+            except GameOver:
+                pass
+            best = max(best, self.evaluate(h, player, exposure=self.exposure))
+        return best
 
     @staticmethod
     def _random_outcome(action) -> bool:
@@ -104,3 +124,9 @@ class LearnedHeuristicBot(HeuristicBot):
         from .evaluate import learned_evaluator
         super().__init__(seed, samples, evaluator=learned_evaluator(self.weights))
 
+
+
+class TwoStepHeuristicBot(HeuristicBot):
+    """HeuristicBot that scores each action together with its best follow-up action."""
+    name = "heuristic2"
+    depth = 2
