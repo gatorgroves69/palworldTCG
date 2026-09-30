@@ -37,9 +37,12 @@ def structure_value(c: CardInstance) -> float:
     return HAND_CARD + GEAR_PER_COST * c.defn.cost
 
 
-def hand_value(ps) -> float:
-    return HAND_CARD * len(ps.hand) + INTERRUPT_IN_HAND * sum(1 for c in ps.hand
-                                                              if c.kw("interrupt"))
+def hand_value(ps, known: bool = True) -> float:
+    """`known=False` for the opponent's hand: only its size is public."""
+    v = HAND_CARD * len(ps.hand)
+    if known:
+        v += INTERRUPT_IN_HAND * sum(1 for c in ps.hand if c.kw("interrupt"))
+    return v
 
 
 def life_value(life: int) -> float:
@@ -63,7 +66,7 @@ def evaluate(game: Game, me: int) -> float:
     opp = game.opponent(me)
     P, O = game.players[me], game.players[opp]
     score = life_value(P.life) - life_value(O.life)
-    score += hand_value(P) - hand_value(O)
+    score += hand_value(P) - hand_value(O, known=False)
 
     opp_max_power = max((game.power(c) for c in O.pals if not _locked(game, c, True)), default=0)
     my_turn = game.active == me

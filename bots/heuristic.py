@@ -45,11 +45,14 @@ class HeuristicBot(RuleBot):
             return self.quick_step(game, player, actions)
         end = next(a for a in actions if isinstance(a, EndMain))
         base = evaluate(game, player)
+        # Common random numbers: every action is scored on the same determinized samples,
+        # so differences between actions aren't sampling noise.
+        seeds = [self.rng.random() for _ in range(self.samples)]
         best, best_val = end, base + MARGIN
         for a in actions:
             if a is end or isinstance(a, SoulDraw):
                 continue
-            v = self.score(game, player, a)
+            v = self.score(game, player, a, seeds)
             if v > best_val:
                 best, best_val = a, v
         # Rest 3 souls to draw only with souls nothing else wants (a 3-for-1 rate).
@@ -57,12 +60,14 @@ class HeuristicBot(RuleBot):
             return SoulDraw()
         return best
 
-    def score(self, game, player, action) -> float:
-        n = self.samples if self._random_outcome(action) else 1
+    def score(self, game, player, action, seeds=None) -> float:
+        seeds = seeds or [self.rng.random() for _ in range(self.samples)]
+        n = len(seeds) if self._random_outcome(action) else 1
         total = 0.0
-        for _ in range(n):
-            g = game.clone([RuleBot(), RuleBot()], rng=self.rng)
-            determinize(g, player, self.rng)
+        for seed in seeds[:n]:
+            rng = random.Random(seed)
+            g = game.clone([RuleBot(), RuleBot()], rng=rng)
+            determinize(g, player, rng)
             try:
                 g.perform(action)
             except GameOver:

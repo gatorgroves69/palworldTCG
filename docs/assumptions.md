@@ -146,6 +146,7 @@ These are the places where the rules are ambiguous or silent and I had to choose
 - The scoring weights are hand-set by card economics (a card in hand = 3.5, a life point = 4, a Pal on the board = 3 + power/150 + 1.5 × strike). **They must not be tuned toward a calibration target.** A change is allowed only when a log or card-usage audit shows a specific misplay, and it has to be recorded here.
 - Change log: after the first M1 run, Gear on the base is valued at its card value + 0.4 × cost. Before that, Pengullet Rocket Launcher was never deployed. The fix moved M1 by less than 0.1 point.
 - Known weaknesses: no combo planning (Launcher → Pengullet barrage), and too cautious about attacking into likely Interrupts. See docs/m1-calibration.md.
+- Change log (M2): the scoring function valued Interrupt cards in the **opponent's** hand, which peeked at hidden information in the real position and added noise in the reshuffled copies. Now only the opponent's hand size counts. Actions within one decision are also scored on the same reshuffled samples (common random numbers). Both are bug fixes found by reading logs (a Stone Pit game where Suzaku didn't attack an empty board), not tuning.
 
 ### S4: Overloaded Pals (CR 11.5)
 - The player keeps the newest Pals as the rule requires. When they have to choose among older Pals, the bot sends the one with the lowest power to the graveyard.
