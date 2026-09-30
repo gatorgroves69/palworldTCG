@@ -58,3 +58,30 @@ Per deck (average against the gauntlet):
 **The two misses that don't depend on the bot:** Lamball·Stone Pit and Shadowbeak·Menasting are 15–25 points too weak under *every* bot. A miss that survives a change of bot is the strongest sign of a card or rules problem (or of a strategy none of these bots can play), so these two are the next diagnosis targets.
 
 Also fixed along the way: determinize() left stale zone labels on reshuffled cards (duplicated or looping cards in simulated copies; affected HeuristicBot too).
+
+## Update: two-step bot (heuristic2)
+
+The Stone Pit and Shadowbeak logs showed **no card or rules errors**. They showed the bot never taking *setup* actions whose payoff comes one action later:
+- the Primitive Furnace discount before a Pump-Action Shotgun (the Stone Pit deck sat on 9 Material)
+- Lamp or Necklace night before a Nocturnal deploy (the Helzephyr kill)
+- Rocket Launcher before the Pengullet barrage, and Axel's "cannot block" before an attack
+
+`heuristic2` scores each action together with its best follow-up action in the same turn.
+
+- **It's stronger in every mirror tested:** 55–62% against `heuristic` across 6 decks. Furnace discounts go from 0.00 to 0.17 per game, Mounted Machine Gun fire rises about 2.6×, and Helzephyr kills about 3×.
+- **Speed:** ~0.3 s/game.
+- **Calibration** ([matrix](m2/matrix-heuristic2.md)): 3/21 pairs within ±5, but the **mean absolute error drops from 16.4 to 12.0**.
+- **Agreement with `heuristic`:** 10/28 pairs within 5 points.
+
+| Deck | 1-step | 2-step | Real |
+|---|---|---|---|
+| cattiva-azurobe-br | 62.7 | 63.2 | 59.2 |
+| chillet-relaxaurus-bg | 42.9 | 55.7 | 47.5 |
+| chillet-relaxaurus-bp | 56.8 | 52.8 | 58.2 |
+| chillet-relaxaurus-br | 74.5 | 57.8 | 52.8 |
+| foxparks-harness-br | 56.5 | 41.9 | 51.7 |
+| lamball-cattiva-bg | 52.2 | 68.8 | 58.6 |
+| lamball-stone-pit-pr | 29.1 | 31.5 | 53.9 |
+| shadowbeak-menasting-bp | 25.2 | 28.4 | 39.5 |
+
+Lamball·Stone Pit is still about 22 points too weak under every bot. It accounts for the 3 largest misses. Its engine (Material → Furnace discount → cheap Pump-Action Shotgun each turn, Mounted Machine Gun with stored Material) takes several turns, which even a two-step bot barely plans. The learned-evaluation bot never plays Structures or Gear at all (the self-play fit learned "Structures lose"), so it isn't used further.
