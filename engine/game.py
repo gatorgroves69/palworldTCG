@@ -457,10 +457,12 @@ class Game:
     def lock_standing(self, c: CardInstance, source: CardInstance) -> None:
         """`c` does not stand while `source` stays in the base."""
         c.stand_locks.append((source.uid, source.incarnation))
+        self.log(f"  {c.name} does not stand while {source.name} is in the base")
 
     def skip_next_stand(self, c: CardInstance, player: int) -> None:
         """`c` does not stand during `player`'s next stand phase."""
         c.skip_stand.append(player)
+        self.log(f"  {c.name} will not stand in {self.pname(player)}'s next stand phase")
 
     def reveal_top(self, p: int) -> CardInstance | None:
         ps = self.players[p]

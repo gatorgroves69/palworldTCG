@@ -27,7 +27,9 @@ def choose_pal(game: Game, player: int, prompt: str,
 
 
 def rest_card(game: Game, c: CardInstance) -> None:
-    if not c.rested:
+    if c.rested:
+        game.log(f"  {c.name} is chosen (already rested)")
+    else:
         game.rest(c)
         game.log(f"  {c.name} is rested")
 
@@ -38,4 +40,4 @@ def is_dragon_pal(c: CardInstance) -> bool:
 
 def put_on_top(game: Game, c: CardInstance) -> None:
     game.move(c, Zone.DECK, top=True)
-    game.log(f"  {game.pname(c.owner)} puts a card from hand on top of the deck")
+    game.log(f"  {game.pname(c.owner)} puts {c.name} from hand on top of the deck")
