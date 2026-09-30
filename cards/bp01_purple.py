@@ -293,3 +293,29 @@ class DaedreamsNecklace(CardImpl):
                                    up_to=True, intent="recover"):
             game.log(f"  {game.pname(p)} deploys {c.name} with the Necklace")
             game.deploy(c)
+
+
+# BP01-076 Tombat – Out of Nowhere!?
+# AUTO OnDeploy Reveal the top 3 cards of your deck, choose up to 1 Pal from among them and add
+# it to hand, and put the remaining cards into the graveyard.
+@reg
+class Tombat(CardImpl):
+    code = "BP01-076"
+    text = ("AUTO OnDeploy Reveal the top 3 cards of your deck, choose up to 1 Pal from among them "
+            "and add it to hand, and put the remaining cards into the graveyard.")
+
+    def on_deploy(self, game, card):
+        p = card.owner
+        top = list(game.players[p].deck[:3])
+        game.log(f"  {game.pname(p)} reveals " + ", ".join(c.name for c in top))
+        for c in game.choose_cards(p, "Tombat: add up to 1 Pal to hand",
+                                   [c for c in top if c.is_pal], 1, up_to=True,
+                                   intent="recover"):
+            top.remove(c)
+            game.move(c, Zone.HAND)
+            game.stats[p].drawn.append(c.code)
+            game.log(f"  {game.pname(p)} adds {c.name} to hand")
+        for c in top:
+            game.move(c, Zone.GRAVEYARD)
+        if top:
+            game.log(f"  {', '.join(c.name for c in top)} go to the graveyard")

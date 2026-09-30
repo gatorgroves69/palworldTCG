@@ -432,3 +432,36 @@ def test_rulebot_edict_only_when_worth_it(box):
     put(g2, 1, "BP01-032")
     d2 = Decision("target", 0, "", [big.uid], min=0, max=1, context={"intent": "edict"})
     assert RuleBot().choose(g2, d2) == []
+
+
+# ---------------------------------------------------------------- M2 additions (top-8 completion)
+def test_flambelle_material(box):
+    g, bots = G(box)
+    play(g, bots, 0, "BP01-012")
+    assert g.players[0].resources["material"] == 2
+
+
+def test_petallia_life_and_souls(box):
+    g, bots = G(box)
+    play(g, bots, 0, "BP01-051")  # pays 6 of 10 souls, then stands 2
+    ps = g.players[0]
+    assert ps.life == 11 and ps.souls_rested == 4
+
+
+def test_petallia_with_one_rested_soul(box):
+    g, bots = G(box)
+    ps = g.players[0]
+    ps.souls, ps.souls_rested = 7, 0
+    petal = put(g, 0, "BP01-051", Zone.HAND)
+    g.perform(PlayCard(petal.uid))  # 6 rested, stands 2
+    assert ps.souls_rested == 4
+
+
+def test_tombat_takes_a_pal_and_mills_the_rest(box):
+    g, bots = G(box)
+    a, b, c = (put(g, 0, code, Zone.DECK) for code in ("BP01-047", "BP01-028", "BP01-048"))
+    # deck top is now c, b, a
+    n_deck = len(g.players[0].deck)
+    play(g, bots, 0, "BP01-076", [[b.uid]])
+    assert b.zone is Zone.HAND and a.zone is Zone.GRAVEYARD and c.zone is Zone.GRAVEYARD
+    assert len(g.players[0].deck) == n_deck - 4  # Tombat itself, plus the 3 revealed

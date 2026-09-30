@@ -210,3 +210,14 @@ class AxelsStrategy(CardImpl):
                 if c.defn.cost >= 5:
                     game.add_mod(c, "no_block", 1, "turn", "Axel's Strategy")
 
+
+
+# BP01-012 Flambelle – Scorching Tears
+# AUTO OnDeploy Get 2 Material.
+@reg
+class Flambelle(CardImpl):
+    code = "BP01-012"
+    text = "AUTO OnDeploy Get 2 Material."
+
+    def on_deploy(self, game, card):
+        game.gain_resource(card.owner, "material", 2)

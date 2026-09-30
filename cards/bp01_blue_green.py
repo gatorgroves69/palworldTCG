@@ -172,3 +172,18 @@ class FoundAnEgg(CardImpl):
         shuffle_deck(game, p)
         if not picked:
             game.gain_resource(p, "ingredient", 3)
+
+
+# BP01-051 Petallia – Sweet Blessings
+# AUTO OnDeploy Gain 1 life, choose 2 souls, and stand them.
+@reg
+class Petallia(CardImpl):
+    code = "BP01-051"
+    text = "AUTO OnDeploy Gain 1 life, choose 2 souls, and stand them."
+
+    def on_deploy(self, game, card):
+        ps = game.players[card.owner]
+        game.gain_life(card.owner, 1)
+        n = min(2, ps.souls_rested)  # standing an already-standing soul does nothing
+        ps.souls_rested -= n
+        game.log(f"  {game.pname(card.owner)} stands {n} soul(s) ({ps.souls_standing} standing)")
