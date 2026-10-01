@@ -160,7 +160,7 @@ J1 pushed at d19bcfb: 6/36 calibrated pairs within ±5; weak calibration. Pair a
 J2 pushed at 502a3a0; best.txt passed validation without warnings. J3 DONE: 20000 games, seed 23, exact approved command. Runner /tmp/palworld-j3-run.py; output /tmp/palworld-j3.stdout. Stop after J3; no additional jobs or engine edits.
 
 ### J4 execution checkpoint
-J4 lines 1–3 DONE; line 4 STARTING; remaining pending. Evidence: results/runs/J4-compare/notes.md. Runner /tmp/palworld-j4-run.py, logs /tmp/palworld-j4-N.stdout. Bobby authorized only J4; no engine edits. Compare appends; inspect notes/processes before any resume.
+J4 lines 1–4 DONE; all four comparisons complete. STOPPED; no further jobs authorized. Evidence: results/runs/J4-compare/notes.md. Runner /tmp/palworld-j4-run.py, logs /tmp/palworld-j4-N.stdout. Bobby authorized only J4; no engine edits. Compare appends; inspect notes/processes before any resume.
 
 ## Claude Code
 
