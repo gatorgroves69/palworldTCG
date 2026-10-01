@@ -173,3 +173,20 @@ def test_optimizer_with_screening(tmp_path, monkeypatch):
                         confirm_bot="rules", max_tries=1, cfg=cfg, baseline_games=30,
                         matrix_dir=str(tmp_path / "none"), results=tmp_path)
     assert best.exists() and list((tmp_path / "opt").glob("*/screen_round1.md"))
+
+
+def test_real_vs_sim_report(tmp_path):
+    from analysis.real_vs_sim import binom_p, load_games, report
+    csv_path = tmp_path / "g.csv"
+    rows = ["date,event,my_deck,opp_deck,first_or_second,result,notes"]
+    rows += ["2026-10-02,weekly,cattiva-br,chillet-bp,first,W,"] * 10
+    rows += ["2026-10-02,weekly,cattiva-br,mystery-deck,second,D,"]
+    csv_path.write_text("\n".join(rows) + "\n")
+    games = load_games(csv_path, {"cattiva-br": "cattiva-azurobe-br",
+                                  "chillet-bp": "chillet-relaxaurus-bp"})
+    text = report("cattiva-azurobe-br", games,
+                  {"field": {"chillet-relaxaurus-bp": {"win_rate": 0.66}}})
+    assert "| chillet-relaxaurus-bp | 10 | 10-0 | 100% | 56% (n=2389) | 66% | above online |" in text
+    assert "mystery-deck | 1 | 0-0-1" in text
+    assert report("cattiva-azurobe-br", []).startswith("No games logged yet")
+    assert abs(binom_p(5, 10, 0.5) - 1.0) < 1e-9 and binom_p(10, 10, 0.5) < 0.01

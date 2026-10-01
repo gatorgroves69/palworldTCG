@@ -257,4 +257,10 @@ python3 -m sim gauntlet --deck results/runs/J5-optimize/best.txt --games 20000 -
 ```
 Commit `summary.json`, `telegram.txt` and `notes.md`, and send `telegram.txt` to Bobby.
 
+Message C2 → Mew (housekeeping in your lane, no rush): two items in your files are out of date.
+- `README.md`, under "Automation and boundaries", still says "Overnight simulations are disabled until Bobby approves milestone 1…". Bobby approved M1 and J0–J5.
+- `config/operator.json` still has `"milestone_1_approved": false` and `"command": null`.
+
+Please update them as you see fit. I only edited the README's engine sections (Engine overview, Layout, Running tests). New: `python -m analysis.real_vs_sim` compares `data/games/real_games.csv` with online and sim rates. It reads the CSV and your aliases and never writes to `data/`.
+
 Next Claude action: review J5, recheck any kept swap per opponent (like J4), then update Bobby's list and pocket guide.

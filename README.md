@@ -45,41 +45,56 @@ Stop on source access blocks, dirty/conflicting Git state, or schema drift. No f
 
 ## Engine overview
 
-A simulation lab for the **Palworld Official Card Game** (Bushiroad). It plays decks against each other thousands of times to measure matchups and find card swaps that improve a deck.
+A simulation lab for the **Palworld Official Card Game** (Bushiroad): it plays decks against each other thousands of times, measures matchups, and tests card swaps.
 
-Status: **M1 calibration passed** (Cattiva · Azurobe vs Chillet · Relaxaurus: sim 56.7% vs real 56%). See [docs/m1-calibration.md](docs/m1-calibration.md). Rules as implemented: [docs/rules.md](docs/rules.md). Open interpretations: [docs/assumptions.md](docs/assumptions.md).
+**Status (2026-10-01)**
+- **M1 calibration passed.** Cattiva · Azurobe vs Chillet · Relaxaurus BP: sim 56.7%, real 56% (n = 2,389). See [docs/m1-calibration.md](docs/m1-calibration.md).
+- **M2: the 10-deck gauntlet is implemented but not calibrated.** Mean absolute error is about 11 points. Decks that build an engine over several turns come out too weak in the sim, because the bots don't plan far enough ahead. See [docs/m2-status.md](docs/m2-status.md).
+- **M3: the swap optimizer works.** It uses a screening pass, a sequential test, and confirmation under a second bot. Every attempt is logged in [results/experiments.md](results/experiments.md).
+- **M4: the overnight command works.** `sim gauntlet` writes a Telegram-ready summary. Long runs go on the Optiplex (Mew); see [AGENT_HANDOFF.md](AGENT_HANDOFF.md).
+- **Cards:** every red/blue/colorless card from BP01, TD01, TD02 and PR is implemented, plus everything the 10 meta decks use. BP02 and SS01 aren't implemented (see docs/assumptions.md C29).
+
+Rules as implemented: [docs/rules.md](docs/rules.md). Interpretations and open questions: [docs/assumptions.md](docs/assumptions.md).
+
+**Commands**
 
 ```bash
-python -m sim run --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/chillet-relaxaurus-bp.txt --games 2000 --seed 1 --out results/my_run/
+# one matchup, with report.md (loss tags, draw impact, calibration check)
+python -m sim run --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/chillet-relaxaurus-bp.txt --games 2000 --seed 1
+# replay any game exactly, with a full log
 python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/chillet-relaxaurus-bp.txt --game-seed 1000000
+# every pair of decks vs real matchup data
+python -m sim matrix --decks data/decks/*.txt --games 1000 --bot heuristic2
+# one list vs the play-rate-weighted field; writes telegram.txt
+python -m sim gauntlet --deck results/runs/cattiva_chillet+blazehowl.txt --games 20000
+# two lists, per opponent, on identical seeds
+python -m sim compare --a <list A> --b <list B> --games 6000 --bot heuristic2
+# search for swaps (screen every sensible swap, then test the best)
+python -m sim optimize --deck <list> --rounds 3 --screen-games 400
+# your logged games vs online and sim expectations
+python -m analysis.real_vs_sim --summary results/runs/J3-gauntlet/summary.json
 python -m cards.validate data/decks/*.txt
 ```
 
-A run writes `summary.json` (win rate, 95% CI, first/second split, average length), `games.jsonl` (one line per game), `report.md` (loss tags, per-card draw impact, calibration check) and full logs for the first few games.
+Heavy runs (matrix, optimize, long gauntlets) take hours and use every core. They belong on the always-on Optiplex, not a laptop.
 
 ## Layout
 
 | Path | What |
 |---|---|
 | `engine/` | Game state, turns, battle, damage checks, rule actions, deck legality. Pure logic, no I/O |
-| `cards/` | One implementation per card code in `REGISTRY`, plus the decklist parser. A deck with an unimplemented card fails loudly |
-| `bots/` | AI players behind `bots.base.Bot`: `HeuristicBot` (the default: one-action lookahead on reshuffled copies of the game), `RuleBot` (fast rules), and `RandomBot` (engine fuzzing only) |
-| `sim/` | Command-line runner: parallel, seeded batches, and replay of any single game |
-| `analysis/` | Loss tags, per-card draw impact, per-run `report.md` |
-| `data/` | Card data, decklists and calibration data. **Owned by Hermes**; don't edit it by hand |
-| `docs/` | Rules and assumptions |
+| `cards/` | One implementation per card code in `REGISTRY`; decklist parser and validator. A deck with an unimplemented card fails loudly |
+| `bots/` | AI players. `heuristic2` is the default; `heuristic` is the second opinion; the rest are documented experiments (see `bots/__init__.py`) |
+| `sim/` | Runner, matrix, weighted gauntlet, A/B compare, optimizer |
+| `analysis/` | Loss tags, per-card draw impact, per-run reports, real-games vs sim |
+| `results/runs/` | Committed summaries of overnight jobs and the current recommended lists |
+| `data/` | Card data, decklists, calibration, real games. **Owned by Mew (Hermes)** |
+| `docs/` | Rules, assumptions, milestone reports |
 | `tests/` | pytest. `tests/fixtures.py` defines test-only `T-*` cards |
 
 ## Running tests
 
 Requires Python 3.11+. The engine has no runtime dependencies.
-
-```bash
-python -m pip install pytest
-python -m pytest -q
-```
-
-Or, with [uv](https://docs.astral.sh/uv/):
 
 ```bash
 uv run --with pytest python -m pytest -q
