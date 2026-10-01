@@ -1,0 +1,126 @@
+{
+  "deck": "best",
+  "games": 20001,
+  "bot": "heuristic2",
+  "seed": 23,
+  "commit": "5d9e09e",
+  "seconds": 4192,
+  "weighted_win_rate": 0.7053,
+  "ci95": [
+    0.6991,
+    0.7114
+  ],
+  "field": {
+    "chillet-relaxaurus-bp": {
+      "weight": 0.3748,
+      "games": 7497,
+      "win_rate": 0.6653,
+      "ci95": [
+        0.6546,
+        0.6759
+      ],
+      "going_first": 0.722
+    },
+    "chillet-relaxaurus-br": {
+      "weight": 0.1391,
+      "games": 2781,
+      "win_rate": 0.6041,
+      "ci95": [
+        0.5858,
+        0.6221
+      ],
+      "going_first": 0.6375
+    },
+    "lamball-stone-pit-pr": {
+      "weight": 0.1046,
+      "games": 2093,
+      "win_rate": 0.8901,
+      "ci95": [
+        0.876,
+        0.9028
+      ],
+      "going_first": 0.8891
+    },
+    "tombat-medicine-gp": {
+      "weight": 0.0728,
+      "games": 1457,
+      "win_rate": 0.8284,
+      "ci95": [
+        0.8082,
+        0.8469
+      ],
+      "going_first": 0.7772
+    },
+    "machine-gun-furnace-br": {
+      "weight": 0.0702,
+      "games": 1404,
+      "win_rate": 0.7999,
+      "ci95": [
+        0.7781,
+        0.82
+      ],
+      "going_first": 0.8
+    },
+    "shadowbeak-menasting-bp": {
+      "weight": 0.0689,
+      "games": 1377,
+      "win_rate": 0.8315,
+      "ci95": [
+        0.8108,
+        0.8504
+      ],
+      "going_first": 0.7851
+    },
+    "foxparks-harness-br": {
+      "weight": 0.0556,
+      "games": 1113,
+      "win_rate": 0.7089,
+      "ci95": [
+        0.6815,
+        0.7348
+      ],
+      "going_first": 0.693
+    },
+    "cattiva-azurobe-br": {
+      "weight": 0.053,
+      "games": 1060,
+      "win_rate": 0.5868,
+      "ci95": [
+        0.5569,
+        0.6161
+      ],
+      "going_first": 0.6723
+    },
+    "lamball-cattiva-bg": {
+      "weight": 0.045,
+      "games": 901,
+      "win_rate": 0.5272,
+      "ci95": [
+        0.4945,
+        0.5596
+      ],
+      "going_first": 0.663
+    },
+    "chillet-relaxaurus-bg": {
+      "weight": 0.0159,
+      "games": 318,
+      "win_rate": 0.673,
+      "ci95": [
+        0.6196,
+        0.7222
+      ],
+      "going_first": 0.7162
+    }
+  },
+  "loss_reasons": {
+    "behind_on_board_by_round_4-6": 0.424,
+    "ran_out_of_cards": 0.409,
+    "opponent_lucky_saves_3+": 0.327,
+    "too_slow_on_the_draw": 0.289,
+    "behind_on_board_by_round_1-3": 0.156,
+    "lost_to:BP01-025": 0.119,
+    "lost_to:BP01-027": 0.099,
+    "lost_to:BP01-001": 0.068
+  },
+  "replay": "python -m sim replay --deck results/runs/J2-optimize/best.txt --opp data/decks/<opp>.txt --bot heuristic2 --game-seed <seed from games.jsonl>"
+}
