@@ -40,6 +40,9 @@ class TestConfig:
     confirm_games: int = 3000
     confirm_z: float = 1.0    # the confirmation bot must also see a gain this clear
     copies: int = 2           # copies moved per swap
+    screen_games: int = 0     # >0: screen every sensible swap with this many games first
+    screen_bot: str = "heuristic"
+    screen_outs: int = 4      # weakest cards considered for removal when screening
 
 
 # ---------------------------------------------------------------- decklists
@@ -146,6 +149,62 @@ def propose(main: Counter, soul: Counter, stats: dict, prior: dict, db, registry
     return swaps
 
 
+def all_swaps(main: Counter, soul: Counter, stats: dict, db, registry, copies: int,
+              n_out: int) -> list[tuple[str, str]]:
+    """Every legal swap of `copies` copies: one of the `n_out` weakest cards out, any
+    implemented card in the deck's colours in (including more copies of a card already
+    in the list), for the screening pass."""
+    from engine.model import Color
+    colors = {db[c].color for c in main} - {Color.COLORLESS}
+    names = Counter()
+    for c, n in main.items():
+        names[db[c].name] += n
+    outs = sorted((c for c in main if main[c] >= copies and c in stats),
+                  key=lambda c: stats[c]["impact"] - 0.05 * stats[c]["stuck"])[:n_out]
+    swaps = []
+    for i in registry.codes():
+        d = db.get(i)
+        if d is None or d.type.value == "soul":
+            continue
+        if d.color is not Color.COLORLESS and d.color not in colors:
+            continue
+        for o in outs:
+            if o == i or db[o].name == d.name:
+                continue
+            m = Counter(main)
+            m[o] -= copies
+            m[i] += copies
+            if is_legal(+m, soul, db):
+                swaps.append((o, i))
+    return swaps
+
+
+def screen(inc_path: Path, swaps, main, soul, db, weights, seed: int, cfg: TestConfig,
+           out: Path, rnd: int) -> list[tuple[float, str, str]]:
+    """Quick paired estimate of every swap; returns (diff, out, in) sorted best first."""
+    base = play_gauntlet(str(inc_path), weights, cfg.screen_games, seed, cfg.screen_bot)
+    scored = []
+    for o, i in swaps:
+        m = Counter(main)
+        m[o] -= cfg.copies
+        m[i] += cfg.copies
+        path = out / "screen" / f"round{rnd}_{o}_to_{i}.txt"
+        write_list(path, +m, soul, db)
+        r = play_gauntlet(str(path), weights, cfg.screen_games, seed, cfg.screen_bot)
+        scored.append((r.win_rate - base.win_rate, o, i))
+    scored.sort(reverse=True)
+    lines = [f"# Round {rnd} screening: {len(scored)} swaps, {cfg.screen_games} games each, "
+             f"bot {cfg.screen_bot}, seed {seed}", "",
+             f"Incumbent {100 * base.win_rate:.1f}%. Diff is noisy (about ±4 points); only the "
+             "top candidates go on to the full sequential test.", "",
+             "| Rank | Swap | Diff |", "|---|---|---|"]
+    for k, (d, o, i) in enumerate(scored, 1):
+        lines.append(f"| {k} | -{cfg.copies} {db[o].name} / +{cfg.copies} {db[i].name} | "
+                     f"{100 * d:+.1f} |")
+    (out / f"screen_round{rnd}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return scored
+
+
 # ---------------------------------------------------------------- sequential test
 def sequential_test(inc_path: Path, var_path: Path, weights, seed: int, bot: str,
                     cfg: TestConfig, cache: dict) -> dict:
@@ -235,7 +294,14 @@ def optimize(deck: str, rounds: int = 1, seed: int = 1, bot: str = "heuristic2",
         stats = card_stats(base)
         print(f"round {rnd}: incumbent {100 * base.win_rate:.1f}% ± {100 * base.se:.1f} "
               f"({time.time() - t0:.0f}s)")
-        swaps = propose(main, soul, stats, prior, db, cards.REGISTRY, cfg.copies)[:max_tries]
+        if cfg.screen_games > 0:
+            cands = all_swaps(main, soul, stats, db, cards.REGISTRY, cfg.copies, cfg.screen_outs)
+            print(f"  screening {len(cands)} swaps x {cfg.screen_games} games", flush=True)
+            ranked = screen(inc_path, cands, main, soul, db, weights, seed + 500 + rnd, cfg,
+                            out, rnd)
+            swaps = [(o, i) for d, o, i in ranked if d > 0][:max_tries]
+        else:
+            swaps = propose(main, soul, stats, prior, db, cards.REGISTRY, cfg.copies)[:max_tries]
         accepted = None
         for o, i in swaps:
             m = Counter(main)

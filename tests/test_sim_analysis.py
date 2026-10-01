@@ -142,3 +142,34 @@ def test_compare_command(tmp_path):
                  "--games", "40", "--bot", "rules", "--workers", "2", "--out", str(out)]) == 0
     text = out.read_text()
     assert "chillet-relaxaurus-bp" in text and "diff" in text
+
+
+def test_all_swaps_covers_new_cards_and_is_legal():
+    import cards
+    from pathlib import Path
+    from cards.db import load_card_db
+    from sim.optimize import all_swaps, is_legal, read_list
+    db = load_card_db()
+    main, soul = read_list(Path("results/runs/cattiva_chillet+blazehowl.txt"))
+    stats = {c: {"impact": 0.0, "stuck": 0.0, "drawn": 10} for c in main}
+    swaps = all_swaps(main, soul, stats, db, cards.REGISTRY, 2, 4)
+    ins = {i for _, i in swaps}
+    assert {"BP01-003", "BP01-031", "TD01-007"} <= ins  # Gobfin, Penking, Blazamut
+    assert len({o for o, _ in swaps}) <= 4
+    for o, i in swaps[:50]:
+        m = main.copy()
+        m[o] -= 2
+        m[i] += 2
+        assert is_legal(+m, soul, db)
+
+
+def test_optimizer_with_screening(tmp_path, monkeypatch):
+    import sim.optimize as opt
+    real = opt.all_swaps
+    monkeypatch.setattr(opt, "all_swaps", lambda *a, **k: real(*a, **k)[:2])
+    cfg = opt.TestConfig(batch=20, max_batches=2, confirm_games=20, screen_games=20,
+                         screen_outs=1)
+    best = opt.optimize("results/runs/cattiva_chillet+blazehowl.txt", rounds=1, bot="rules",
+                        confirm_bot="rules", max_tries=1, cfg=cfg, baseline_games=30,
+                        matrix_dir=str(tmp_path / "none"), results=tmp_path)
+    assert best.exists() and list((tmp_path / "opt").glob("*/screen_round1.md"))

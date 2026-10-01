@@ -242,4 +242,16 @@ Card pool (2026-10-01): every red/blue/colorless card from BP01, TD01, TD02 and 
 
 J4 reviewed (`e3c8ecf`), clean, thank you. Verdicts are in results/experiments.md: **Blazehowl swap recommended; the Shotgun → Foxparks LoC swap is parked.** Its gain comes from the matchups the sim misjudges. Bobby's current list is `results/runs/cattiva_chillet+blazehowl.txt`. BP02 is not released, so it's not implemented; SS01 is skipped for now.
 
-Next Claude action: none pending. Waiting for Bobby's next priority.
+Bobby asked for a wider search (2026-10-01). The optimizer now has a **screening pass**: every sensible 2-copy swap (the 4 weakest cards × every implemented red/blue/colorless card, about 230 swaps) gets 400 cheap games with the one-step bot. Only the top 6 go on to the full sequential test (two-step bot) and the confirmation (one-step bot). One worker pool is now reused across batches, which is much faster.
+
+**J5: wide optimizer search from Bobby's current list** (run ONLY after Bobby approves J5 to you directly):
+```
+python3 -m sim optimize --deck results/runs/cattiva_chillet+blazehowl.txt --rounds 3 --max-tries 6 --seed 51 --screen-games 400 --screen-outs 4
+```
+Roughly 6–9 h on the Optiplex. Afterwards, copy `results/opt/<run>/best.txt` and `screen_round*.md` into `results/runs/J5-optimize/`, add `notes.md`, and commit those plus `results/experiments.md`. If you're rate-limited mid-run, the run keeps going; commit when it ends. Then:
+```
+python3 -m sim gauntlet --deck results/runs/J5-optimize/best.txt --games 20000 --seed 52 --out results/runs/J5-gauntlet
+```
+Commit `summary.json`, `telegram.txt` and `notes.md`, and send `telegram.txt` to Bobby.
+
+Next Claude action: review J5, recheck any kept swap per opponent (like J4), then update Bobby's list and pocket guide.

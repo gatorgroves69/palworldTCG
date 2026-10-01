@@ -62,6 +62,10 @@ def main(argv=None) -> int:
     o.add_argument("--max-batches", type=int, default=5)
     o.add_argument("--confirm-games", type=int, default=3000)
     o.add_argument("--baseline-games", type=int, default=3000)
+    o.add_argument("--screen-games", type=int, default=0,
+                   help="screen every sensible swap with N cheap games first (0 = off)")
+    o.add_argument("--screen-outs", type=int, default=4)
+    o.add_argument("--copies", type=int, default=2)
 
     gt = sub.add_parser("gauntlet", help="M4: one deck vs the weighted field; Telegram summary")
     gt.add_argument("--deck", required=True)
@@ -102,7 +106,9 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "optimize":
         from .optimize import TestConfig, optimize
-        cfg = TestConfig(batch=a.batch, max_batches=a.max_batches, confirm_games=a.confirm_games)
+        cfg = TestConfig(batch=a.batch, max_batches=a.max_batches, confirm_games=a.confirm_games,
+                         screen_games=a.screen_games, screen_outs=a.screen_outs,
+                         copies=a.copies)
         optimize(a.deck, a.rounds, a.seed, a.bot, a.confirm_bot, a.max_tries, cfg,
                  a.baseline_games)
         return 0

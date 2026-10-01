@@ -84,6 +84,20 @@ class GauntletResult:
             mine.records += r.records
 
 
+_POOLS: dict = {}
+
+
+def get_pool(workers: int | None = None):
+    """One reusable worker pool per process: starting workers costs seconds on macOS,
+    and the optimizer plays hundreds of small batches."""
+    if workers not in _POOLS:
+        import atexit
+        pool = Pool(workers)
+        _POOLS[workers] = pool
+        atexit.register(pool.terminate)
+    return _POOLS[workers]
+
+
 def _job(args):
     spec, seed = args
     return spec.opp, play_one((spec, seed, False))
@@ -102,12 +116,12 @@ def play_gauntlet(deck_path: str, weights: dict[str, float], games: int, seed: i
         first = round(start * alloc[opp] / max(games, 1))
         jobs += [(spec, gauntlet_seed(seed, oi, first + i)) for i in range(n)]
     res = GauntletResult(weights, {d: OppResult() for d in weights})
-    with Pool(workers) as pool:
-        for opp_path, rec in pool.imap_unordered(_job, jobs, chunksize=8):
-            opp = Path(opp_path).stem
-            r = res.per_opp[opp]
-            r.games += 1
-            r.wins += 1.0 if rec["winner"] == "deck" else 0.5 if rec["winner"] == "draw" else 0.0
-            if keep_records:
-                r.records.append(rec)
+    pool = get_pool(workers)
+    for opp_path, rec in pool.imap_unordered(_job, jobs, chunksize=8):
+        opp = Path(opp_path).stem
+        r = res.per_opp[opp]
+        r.games += 1
+        r.wins += 1.0 if rec["winner"] == "deck" else 0.5 if rec["winner"] == "draw" else 0.0
+        if keep_records:
+            r.records.append(rec)
     return res
