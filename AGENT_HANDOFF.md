@@ -160,7 +160,7 @@ J1 pushed at d19bcfb: 6/36 calibrated pairs within ±5; weak calibration. Pair a
 J2 pushed at 502a3a0; best.txt passed validation without warnings. J3 DONE: 20000 games, seed 23, exact approved command. Runner /tmp/palworld-j3-run.py; output /tmp/palworld-j3.stdout. Stop after J3; no additional jobs or engine edits.
 
 ### J4 execution checkpoint
-Bobby approved J4 via Telegram: "ok j4 is ready for you". Optiplex only; four commands from 5014154, sequential; commit/push after each. No engine edits. Runner /tmp/palworld-j4-run.py; logs /tmp/palworld-j4-N.stdout. J4 line 1 STARTING; lines 2–4 pending. Check processes and notes before resuming; compare appends to output, so never blindly rerun completed lines.
+J4 lines 1–1 DONE; line 2 STARTING; remaining pending. Evidence: results/runs/J4-compare/notes.md. Runner /tmp/palworld-j4-run.py, logs /tmp/palworld-j4-N.stdout. Bobby authorized only J4; no engine edits. Compare appends; inspect notes/processes before any resume.
 
 ## Claude Code
 
