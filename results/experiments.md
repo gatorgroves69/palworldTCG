@@ -33,3 +33,9 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 **J4: per-opponent recheck of the J2 swaps, applied one at a time to the Chillet list, 6,000 games per list (Mew, Optiplex):**
 - **−2 Pal Sphere / +2 Blazehowl – Hellflame Defender:** heuristic2 +1.6 (z 2.0), heuristic +2.5 (z 3.1). The largest weighted gain is against Chillet-BP (+2.7 / +2.2). **Recommended.**
 - **−2 Pump-Action Shotgun / +2 Foxparks – Light of Courage:** heuristic2 +1.6 (z 2.0), heuristic +2.4 (z 3.0). The gain comes from Chillet-BR (+4.1 / +4.7) and Stone Pit (+2.7 / +4.1), both matchups the sim misjudges; against Chillet-BP it's +0.3 / +1.6. **Not recommended for now:** Shotgun is the main tool against the engine decks the sim underrates.
+| 2026-10-01 21:10 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Victor's Strategy | heuristic2 | -0.2 ± 1.3 | -0.17 | 2421 | — | **not better (futility)** |
+| 2026-10-01 21:37 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Mau Cryst – Harbinger of Riches | heuristic2 | +0.7 ± 1.0 | 0.69 | 4035 | — | **not better (inconclusive)** |
+| 2026-10-01 21:57 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Elphidran – Gentle Radiance | heuristic2 | +1.4 ± 1.0 | 1.35 | 4035 | — | **not better (inconclusive)** |
+| 2026-10-01 22:17 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Celaray – Loop De Loop | heuristic2 | +1.2 ± 1.0 | 1.15 | 4035 | — | **not better (inconclusive)** |
+| 2026-10-01 22:36 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Ribbuny – Little Princess | heuristic2 | +0.7 ± 1.0 | 0.72 | 4035 | — | **not better (inconclusive)** |
+| 2026-10-01 22:48 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Suzaku – Hellfire Wings / +2 Wumpo – Frostpeak Sentinel | heuristic2 | -0.1 ± 1.3 | -0.05 | 2421 | — | **not better (futility)** |
