@@ -130,3 +130,61 @@ class TwoStepHeuristicBot(HeuristicBot):
     """HeuristicBot that scores each action together with its best follow-up action."""
     name = "heuristic2"
     depth = 2
+
+
+class LookaheadBot(TwoStepHeuristicBot):
+    """EXPERIMENTAL, weaker than TwoStepHeuristicBot (39-45% in mirrors); not used for runs.
+
+    Two-step bot that re-ranks its top candidates by looking a full turn cycle ahead.
+
+    For the `top_k` actions the two-step score likes best, it plays `rollouts`
+    determinized simulations each: the action, the rest of our turn, the
+    opponent's whole turn and our *next* whole turn (fast one-step bots), then
+    scores the position. Engine pieces (Structures, Gear, Material) pay off
+    on the next turn, which the two-step score can't see.
+    """
+    name = "lookahead"
+    top_k = 3
+    rollouts = 2
+
+    def choose_action(self, game, player, actions):
+        if any(isinstance(a, Pass) for a in actions):
+            return self.quick_step(game, player, actions)
+        seeds = [self.rng.random() for _ in range(self.samples)]
+        scored = []
+        for a in actions:
+            if isinstance(a, SoulDraw):
+                continue
+            scored.append((self.score(game, player, a, seeds) if not isinstance(a, EndMain)
+                           else self.evaluate(game, player, exposure=self.exposure) + MARGIN, a))
+        scored.sort(key=lambda x: -x[0])
+        top = [a for _, a in scored[: self.top_k]]
+        if len(top) == 1:
+            return top[0]
+        rseeds = [self.rng.random() for _ in range(self.rollouts)]
+        best, best_v = top[0], None
+        for a in top:
+            v = sum(self._turn_cycle(game, player, a, s) for s in rseeds) / len(rseeds)
+            if best_v is None or v > best_v:
+                best, best_v = a, v
+        if isinstance(best, EndMain) and any(isinstance(a, SoulDraw) for a in actions):
+            return SoulDraw()
+        return best
+
+    def _turn_cycle(self, game, me, action, seed) -> float:
+        rng = random.Random(seed)
+        bots = [HeuristicBot(rng.randrange(1 << 30), samples=1, hidden_info=False)
+                for _ in range(2)]
+        g = game.clone(bots, rng=rng)
+        determinize(g, me, rng)
+        try:
+            if not isinstance(action, EndMain):
+                g.perform(action)
+                g.main_phase()
+            g.end_phase()
+            g.take_turn()                       # opponent's reply
+            g.begin_turn()                      # our next turn
+            g.main_phase()
+        except GameOver:
+            pass
+        return self.evaluate(g, me, exposure=self.exposure)

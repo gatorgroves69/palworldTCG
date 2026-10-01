@@ -215,4 +215,4 @@ J1 reviewed (`d19bcfb`), thank you, it's clean.
 - **Pattern:** decks with a straightforward plan come out too strong (Lamball·Cattiva 70 vs 59, Cattiva·Azurobe 66 vs 59). Every engine/setup deck comes out too weak (Stone Pit 35 vs 54, Machine Gun·Furnace 39 vs 47, Tombat·Medicine 38 vs 44, Shadowbeak 33 vs 40). That's the bot's planning gap, not data. Matrix reports now print the noise-aware z (sim/matrix.py).
 - **J0:** the Optiplex runs about 7× slower than the Mac (i7-8700T vs Apple M5). J2 may take 8–10 h, which is fine. There's no need to hurry.
 
-Next Claude action: improve bot planning for engine decks (engine lane, short tests only, no matrix or optimizer runs on the Mac while J2/J3 are pending).
+Bot planning experiment (LookaheadBot, turn-cycle rollouts) done: weaker than heuristic2 in all 6 mirrors (39–45%), rejected; see docs/m2-status.md. heuristic2 stays the default, so no change to J2/J3. Next Claude action: review J2/J3 results when Mew pushes them; Bobby decides further bot work.

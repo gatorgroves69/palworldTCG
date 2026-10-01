@@ -85,3 +85,22 @@ The Stone Pit and Shadowbeak logs showed **no card or rules errors**. They showe
 | shadowbeak-menasting-bp | 25.2 | 28.4 | 39.5 |
 
 Lamball·Stone Pit is still about 22 points too weak under every bot. It accounts for the 3 largest misses. Its engine (Material → Furnace discount → cheap Pump-Action Shotgun each turn, Mounted Machine Gun with stored Material) takes several turns, which even a two-step bot barely plans. The learned-evaluation bot never plays Structures or Gear at all (the self-play fit learned "Structures lose"), so it isn't used further.
+
+## Update: full-turn-cycle lookahead (LookaheadBot), tried and rejected
+
+J1 (10 decks, `heuristic2`, 1,000 games/pair, run by Mew on the Optiplex) showed the same pattern for the whole field: every engine deck comes out too weak (Stone Pit 35 vs 54, Machine Gun·Furnace 39 vs 47, Tombat·Medicine 38 vs 44, Shadowbeak 33 vs 40), and decks with a straightforward plan come out too strong. In the logs, the Stone Pit bot keeps Mounted Machine Gun in hand all game. Engine pieces pay off on the *next* turn, which the two-step score can't see.
+
+`LookaheadBot` takes the two-step bot's top 3 actions and re-ranks them with 2 simulations each of: the rest of this turn, the opponent's turn, and our next turn (one-step bots inside). Result: it's **weaker in every mirror (39–45% vs heuristic2)** and 14× slower (~3.9 s/game). Its rollouts are played by a weaker bot and there are only 2 of them, so they are noisier and worse informed than the two-step ranking they override.
+
+Tally of the stronger-bot attempts so far:
+
+| Bot | vs predecessor in mirrors |
+|---|---|
+| SearchBot (flat Monte Carlo, FastBot rollouts) | weaker (31–42%) |
+| PlanBot (per-turn attack style from rollouts) | equal (44–52%) |
+| Learned evaluation v1 | slightly stronger (53–62%), but never plays Structures/Gear |
+| Learned evaluation v2 | broken (0–6%) |
+| **TwoStepHeuristicBot (one-action follow-up)** | **stronger in 6/6 (55–62%); current default** |
+| LookaheadBot (turn-cycle rollouts) | weaker (39–45%) |
+
+**Conclusion:** cheap search on top of hand-set scoring has stopped paying off. A real gain likely needs a much stronger rollout policy *and* far more rollouts, which this hardware can't run at matrix scale, or human-written plans for each engine deck. Until then: **absolute win rates for engine decks are unreliable** (too low), and so are the absolute numbers for decks that beat them up (too high). **Relative swap tests** (same field, same bot, confirmed under a second bot) remain the recommended use.
