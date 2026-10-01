@@ -90,3 +90,23 @@ def telegram(s: dict, db) -> str:
     lines.append(f"seed {s['seed']}, commit {s['commit']}, {s['seconds'] // 60} min")
     text = "\n".join(lines)
     return text[:MAX_TELEGRAM]
+
+
+def compare_lists(a: str, b: str, games: int, seed: int, bot: str,
+                  workers: int | None = None) -> str:
+    """Two versions of a deck against the same weighted field on the same seeds;
+    returns a per-opponent table (markdown)."""
+    weights = field_weights()
+    ra = play_gauntlet(a, weights, games, seed, bot, workers=workers)
+    rb = play_gauntlet(b, weights, games, seed, bot, workers=workers)
+    se = (ra.se ** 2 + rb.se ** 2) ** 0.5
+    diff = rb.win_rate - ra.win_rate
+    lines = [f"**{bot}**, {games} games per list, seed {seed}: A {100 * ra.win_rate:.1f}% -> "
+             f"B {100 * rb.win_rate:.1f}% (diff {100 * diff:+.1f} ± {100 * se:.1f}, "
+             f"z {diff / se if se else 0:.1f})", "",
+             "| Opponent | Weight | A | B | Diff | Games |", "|---|---|---|---|---|---|"]
+    for d, w in weights.items():
+        x, y = ra.per_opp[d], rb.per_opp[d]
+        lines.append(f"| {d} | {100 * w:.1f}% | {100 * x.rate:.1f} | {100 * y.rate:.1f} | "
+                     f"{100 * (y.rate - x.rate):+.1f} | {x.games} |")
+    return "\n".join(lines) + "\n"

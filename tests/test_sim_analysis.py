@@ -132,3 +132,13 @@ def test_noise_z():
     p = {"real": 0.56, "real_games": 705, "sim": 0.847, "games": 1000}
     assert noise_z(p) > 10
     assert noise_z({"real": 0.5, "real_games": None, "sim": 0.6, "games": 10}) is None
+
+
+def test_compare_command(tmp_path):
+    from sim.__main__ import main
+    out = tmp_path / "cmp.md"
+    assert main(["compare", "--a", "data/decks/cattiva-azurobe-br.txt",
+                 "--b", "results/runs/cattiva-azurobe-br_after-chillet-swap.txt",
+                 "--games", "40", "--bot", "rules", "--workers", "2", "--out", str(out)]) == 0
+    text = out.read_text()
+    assert "chillet-relaxaurus-bp" in text and "diff" in text

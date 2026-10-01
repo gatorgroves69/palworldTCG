@@ -218,4 +218,21 @@ J1 reviewed (`d19bcfb`), thank you, it's clean.
 - **Pattern:** decks with a straightforward plan come out too strong (Lamball·Cattiva 70 vs 59, Cattiva·Azurobe 66 vs 59). Every engine/setup deck comes out too weak (Stone Pit 35 vs 54, Machine Gun·Furnace 39 vs 47, Tombat·Medicine 38 vs 44, Shadowbeak 33 vs 40). That's the bot's planning gap, not data. Matrix reports now print the noise-aware z (sim/matrix.py).
 - **J0:** the Optiplex runs about 7× slower than the Mac (i7-8700T vs Apple M5). J2 may take 8–10 h, which is fine. There's no need to hurry.
 
-Bot planning experiment (LookaheadBot, turn-cycle rollouts) done: weaker than heuristic2 in all 6 mirrors (39–45%), rejected; see docs/m2-status.md. heuristic2 stays the default, so no change to J2/J3. Next Claude action: review J2/J3 results when Mew pushes them; Bobby decides further bot work.
+Bot planning experiment (LookaheadBot, turn-cycle rollouts) done: weaker than heuristic2 in all 6 mirrors (39–45%), rejected; see docs/m2-status.md. heuristic2 stays the default.
+
+J2/J3 reviewed (`502a3a0`, `588bed6`), thank you, clean runs. J2 kept 2 swaps:
+- **−2 Pal Sphere / +2 Blazehowl – Hellflame Defender:** +2.5, confirmed +3.2 (z 2.9). Good.
+- **−2 Pump-Action Shotgun / +2 Foxparks – Light of Courage:** +2.9, confirmed only +1.9 (z 1.7). Suspicious: Shotgun is Cattiva's main tool against engine decks, which the sim makes too weak (J1), so the sim may undervalue it.
+
+**Policy (Bobby, 2026-10-01): heavy simulation runs on the Optiplex (Mew), not the MacBook** (fan/heat). Claude uses the Mac only for code and quick tests.
+
+**J4: per-opponent check of each J2 swap on its own** (run ONLY after Bobby approves J4 to you directly). Each line compares the Chillet list (A) with that list plus one swap (B), on identical seeds, against the weighted field:
+```
+python3 -m sim compare --a results/runs/cattiva-azurobe-br_after-chillet-swap.txt --b results/runs/cattiva_chillet+blazehowl.txt --games 6000 --seed 41 --bot heuristic2 --out results/runs/J4-compare/blazehowl.md
+python3 -m sim compare --a results/runs/cattiva-azurobe-br_after-chillet-swap.txt --b results/runs/cattiva_chillet+blazehowl.txt --games 6000 --seed 42 --bot heuristic --out results/runs/J4-compare/blazehowl.md
+python3 -m sim compare --a results/runs/cattiva-azurobe-br_after-chillet-swap.txt --b results/runs/cattiva_chillet+foxparks-loc.txt --games 6000 --seed 43 --bot heuristic2 --out results/runs/J4-compare/foxparks-loc.md
+python3 -m sim compare --a results/runs/cattiva-azurobe-br_after-chillet-swap.txt --b results/runs/cattiva_chillet+foxparks-loc.txt --games 6000 --seed 44 --bot heuristic --out results/runs/J4-compare/foxparks-loc.md
+```
+Expect about 2 h on the Optiplex. Commit `results/runs/J4-compare/*.md` and `notes.md` after **each** line, so a rate limit loses at most one. Telegram Bobby the 4 headline lines (the bolded first line of each table).
+
+Next Claude action: review J4, then give Bobby a final list recommendation that rates each swap's confidence.

@@ -71,11 +71,29 @@ def main(argv=None) -> int:
     gt.add_argument("--out", type=Path, default=None)
     gt.add_argument("--workers", type=int, default=None)
 
+    cp = sub.add_parser("compare", help="two deck lists vs the same weighted field, per opponent")
+    cp.add_argument("--a", required=True, help="baseline list")
+    cp.add_argument("--b", required=True, help="changed list")
+    cp.add_argument("--games", type=int, default=4000)
+    cp.add_argument("--seed", type=int, default=1)
+    cp.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    cp.add_argument("--workers", type=int, default=None)
+    cp.add_argument("--out", type=Path, default=None, help="also append the table to this file")
+
     p = sub.add_parser("replay", help="replay one game and print its full log")
     common(p)
     p.add_argument("--game-seed", type=int, required=True)
 
     a = ap.parse_args(argv)
+    if a.cmd == "compare":
+        from .overnight import compare_lists
+        text = compare_lists(a.a, a.b, a.games, a.seed, a.bot, a.workers)
+        print(text)
+        if a.out:
+            a.out.parent.mkdir(parents=True, exist_ok=True)
+            with open(a.out, "a", encoding="utf-8") as f:
+                f.write(f"\nA = `{a.a}`, B = `{a.b}`\n\n" + text)
+        return 0
     if a.cmd == "gauntlet":
         from .overnight import run_gauntlet
         r = run_gauntlet(a.deck, a.games, a.seed, a.bot, a.out, a.workers)
