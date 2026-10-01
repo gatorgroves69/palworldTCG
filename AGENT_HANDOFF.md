@@ -156,6 +156,9 @@ wrote results/20260930-193555_cattiva-azurobe-br_vs_chillet-relaxaurus-bp/summar
 ### J2 execution checkpoint
 J1 pushed at d19bcfb: 6/36 calibrated pairs within ±5; weak calibration. Pair artifacts preserved outside repo at /home/gator/palworld-run-artifacts/J1-matrix. J2 DONE, seed 22, rounds 4, max-tries 8. See results/runs/J2-optimize/notes.md. J3 pending. Runner /tmp/palworld-j2-run.py, stdout /tmp/palworld-j2.stdout; check processes before restart. No engine edits.
 
+### J3 execution checkpoint
+J2 pushed at 502a3a0; best.txt passed validation without warnings. J3 RUNNING: 20000 games, seed 23, exact approved command. Runner /tmp/palworld-j3-run.py; output /tmp/palworld-j3.stdout. Stop after J3; no additional jobs or engine edits.
+
 ## Claude Code
 
 Status (2026-09-30): active. **M1 approved. M2 (gauntlet) and M3 (optimizer) are in progress, as Bobby authorized directly.** M4 (overnight command) is next.
