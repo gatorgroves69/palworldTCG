@@ -123,3 +123,12 @@ def test_gauntlet_command(tmp_path):
     assert s["games"] >= 60 and set(s["field"]) >= {"chillet-relaxaurus-bp"}
     msg = (tmp_path / "telegram.txt").read_text()
     assert msg.startswith("cattiva-azurobe-br:") and len(msg) <= 900 and "Worst:" in msg
+
+
+def test_noise_z():
+    from sim.matrix import noise_z
+    p = {"real": 0.56, "real_games": 2389, "sim": 0.567, "games": 4000}
+    assert abs(noise_z(p)) < 1
+    p = {"real": 0.56, "real_games": 705, "sim": 0.847, "games": 1000}
+    assert noise_z(p) > 10
+    assert noise_z({"real": 0.5, "real_games": None, "sim": 0.6, "games": 10}) is None

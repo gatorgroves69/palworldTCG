@@ -210,4 +210,9 @@ Commit `summary.json`, `telegram.txt` and `notes.md`, then send `telegram.txt` t
 
 Run J1–J3 one after another, not in parallel. Claude will not run optimizer or matrix jobs on the Mac while these are pending, so `results/experiments.md` won't conflict.
 
-Next Claude action: work on calibration scoring that accounts for noise in the real data (engine lane, no long runs), then review J1–J3 results when they're pushed.
+J1 reviewed (`d19bcfb`), thank you, it's clean.
+- **Calibration:** 6/36 pairs within ±5 (mean absolute error 11.3). Noise-aware check: 6/36 have |z| ≤ 2, so the misses aren't sampling noise.
+- **Pattern:** decks with a straightforward plan come out too strong (Lamball·Cattiva 70 vs 59, Cattiva·Azurobe 66 vs 59). Every engine/setup deck comes out too weak (Stone Pit 35 vs 54, Machine Gun·Furnace 39 vs 47, Tombat·Medicine 38 vs 44, Shadowbeak 33 vs 40). That's the bot's planning gap, not data. Matrix reports now print the noise-aware z (sim/matrix.py).
+- **J0:** the Optiplex runs about 7× slower than the Mac (i7-8700T vs Apple M5). J2 may take 8–10 h, which is fine. There's no need to hurry.
+
+Next Claude action: improve bot planning for engine decks (engine lane, short tests only, no matrix or optimizer runs on the Mac while J2/J3 are pending).

@@ -49,8 +49,12 @@ def run_matrix(decks: list[str], games: int, seed: int, out: Path, bot: str = "h
     for p in pairs:
         p["diff"] = None if p["real"] is None else round(p["sim"] - p["real"], 4)
         p["pass"] = None if p["real"] is None else abs(p["diff"]) <= PASS_BAND
+        p["z"] = noise_z(p)
+        p["consistent"] = None if p["z"] is None else abs(p["z"]) <= 2.0
     checked = [p for p in pairs if p["real"] is not None]
+    zs = [p for p in checked if p["z"] is not None]
     result = {
+        "consistent_pairs": sum(p["consistent"] for p in zs), "z_checked_pairs": len(zs),
         "decks": names, "games_per_pair": games, "seed": seed, "bot": bot,
         "rules": {"structures_attackable": structures}, "calibration_file": cal_file,
         "pairs": pairs,
@@ -62,6 +66,17 @@ def run_matrix(decks: list[str], games: int, seed: int, out: Path, bot: str = "h
     (out / "matrix.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     (out / "matrix.md").write_text(render(result), encoding="utf-8")
     return result
+
+
+def noise_z(p: dict) -> float | None:
+    """Sim minus real, in units of the combined sampling error of both win rates.
+    Needs the real game count; |z| <= 2 means the miss could be noise."""
+    import math
+    if p["real"] is None or not p.get("real_games"):
+        return None
+    r, s = p["real"], p["sim"]
+    se = math.sqrt(r * (1 - r) / p["real_games"] + s * (1 - s) / max(p["games"], 1))
+    return round((s - r) / se, 2) if se else None
 
 
 def win_rate(result: dict, a: str, b: str) -> float | None:
@@ -93,15 +108,20 @@ def render(result: dict) -> str:
         L.append("")
         L.append(f"{result['passing_pairs']}/{result['calibrated_pairs']} pairs within ±5 points; "
                  f"mean absolute difference {100 * result['mean_abs_diff']:.1f} points.")
+        if result.get("z_checked_pairs"):
+            L.append(f"{result['consistent_pairs']}/{result['z_checked_pairs']} pairs consistent "
+                     "with the real data allowing for both sample sizes (|z| ≤ 2).")
         L.append("")
-        L.append("| Matchup | Sim | 95% CI | Real | Diff | |")
-        L.append("|---|---|---|---|---|---|")
+        L.append("| Matchup | Sim | 95% CI | Real (games) | Diff | z | |")
+        L.append("|---|---|---|---|---|---|---|")
         for p in sorted(result["pairs"], key=lambda p: -abs(p["diff"] or 0)):
             if p["real"] is None:
                 continue
+            z = "—" if p.get("z") is None else f"{p['z']:+.1f}"
             L.append(f"| {p['deck']} vs {p['opp']} | {100 * p['sim']:.1f} | "
-                     f"{100 * p['ci95'][0]:.1f}–{100 * p['ci95'][1]:.1f} | {100 * p['real']:.1f} | "
-                     f"{100 * p['diff']:+.1f} | {'✅' if p['pass'] else '❌'} |")
+                     f"{100 * p['ci95'][0]:.1f}–{100 * p['ci95'][1]:.1f} | {100 * p['real']:.1f} "
+                     f"({p.get('real_games') or '?'}) | {100 * p['diff']:+.1f} | {z} | "
+                     f"{'✅' if p['pass'] else '❌'} |")
     missing = [p for p in result["pairs"] if p["real"] is None]
     if missing:
         L.append("")
