@@ -105,7 +105,7 @@ class ScriptedBot(Bot):
             a = self.actions.popleft()
             assert a in actions, f"{a} not legal; legal={actions}"
             return a
-        return next(a for a in actions if isinstance(a, (EndMain, Pass)))
+        return next((a for a in actions if isinstance(a, (EndMain, Pass))), actions[0])
 
     def choose(self, game, decision):
         if self.answers:

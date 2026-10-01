@@ -44,6 +44,7 @@ class CardInstance:
     act_uses: dict[int, int] = field(default_factory=dict)  # ACT index -> uses this turn
     granted: list = field(default_factory=list)  # [(ActAbility, until)] granted by effects (〈〉)
     granted_kw: list = field(default_factory=list)  # [(keyword, until)]
+    added_names: list = field(default_factory=list)  # [(card name, until)] (CR 2.1.5)
     granted_auto: list = field(default_factory=list)  # [(hook, name, fn(game, card), until)]
     stand_locks: list = field(default_factory=list)  # [(source uid, source incarnation)]
     skip_stand: list = field(default_factory=list)  # players whose next stand phase it skips
@@ -80,6 +81,7 @@ class CardInstance:
         self.act_uses.clear()
         self.granted.clear()
         self.granted_kw.clear()
+        self.added_names.clear()
         self.granted_auto.clear()
         self.stand_locks.clear()
         self.skip_stand.clear()
@@ -105,6 +107,8 @@ class PlayerState:
     redrew: bool = False
     soul_draw_used: bool = False
     gear_discount: int = 0  # Primitive Furnace: next gear from hand costs X less this turn
+    must_attack: bool = False  # Alarm Bell: this turn, Pals must attack as much as possible
+    no_assign: bool = False    # Alarm Bell: this turn, Pals cannot be assigned
 
     @property
     def souls_standing(self) -> int:

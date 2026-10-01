@@ -221,7 +221,27 @@ class Game:
 
     def strike(self, c: CardInstance) -> int:
         v = c.defn.strike + sum(m.amount for m in c.mods if m.stat == "strike")
-        return v + c.impl.strike_mod(self, c)
+        v += c.impl.strike_mod(self, c)
+        if c.zone is Zone.BASE:
+            for ps in self.players:
+                for x in ps.base:
+                    if x is not c:
+                        v += x.impl.aura_strike(self, x, c)
+        return v
+
+    def names(self, c: CardInstance) -> list[str]:
+        """Printed name plus names added by effects (CR 2.1.5)."""
+        return [c.defn.name] + [n for n, _ in c.added_names]
+
+    def main_names(self, c: CardInstance) -> set[str]:
+        out = set()
+        for n in self.names(c):
+            for sep in (" – ", " — "):
+                if sep in n:
+                    n = n.split(sep, 1)[0]
+                    break
+            out.add(n)
+        return out
 
     def cost(self, c: CardInstance) -> int:
         v = max(0, c.defn.cost + c.impl.cost_mod(self, c))
@@ -265,7 +285,8 @@ class Game:
             return False
         if self.players[p].souls_standing < a.souls:
             return False
-        if a.assign and not any(not x.rested for x in self.players[p].pals):
+        if a.assign and (self.players[p].no_assign
+                         or not any(not x.rested for x in self.players[p].pals)):
             return False
         if a.can_pay_extra and not a.can_pay_extra(self, c):
             return False
@@ -302,7 +323,9 @@ class Game:
                     acts.append(Attack(c.uid, t))
         if not ps.soul_draw_used and ps.souls_standing >= SOUL_DRAW_COST:
             acts.append(SoulDraw())
-        acts.append(EndMain())
+        # CR 7.5.2.1: with a Pal that must attack and can, the turn can't end yet.
+        if not (ps.must_attack and any(isinstance(a, Attack) for a in acts)):
+            acts.append(EndMain())
         return acts
 
     def _play_actions(self, c: CardInstance) -> list[Action]:
@@ -1017,12 +1040,14 @@ class Game:
                 c.mods = [m for m in c.mods if m.until not in ("turn", "battle")]
                 c.granted = [(a, u) for a, u in c.granted if u not in ("turn", "battle")]
                 c.granted_kw = [(k, u) for k, u in c.granted_kw if u not in ("turn", "battle")]
+                c.added_names = [(n, u) for n, u in c.added_names if u not in ("turn", "battle")]
                 c.granted_auto = [g for g in c.granted_auto if g[3] not in ("turn", "battle")]
                 c.act_uses.clear()
                 c.assigned_to = None
         ps.soul_draw_used = False
         for q in self.players:
             q.gear_discount = 0
+            q.must_attack = q.no_assign = False
         if self.night_until is not None and self.turn >= self.night_until:
             self.night_until = None
             self.log("  night ends")
@@ -1067,6 +1092,7 @@ class Game:
             n.act_uses = dict(c.act_uses)
             n.granted = list(c.granted)
             n.granted_kw = list(c.granted_kw)
+            n.added_names = list(c.added_names)
             n.granted_auto = list(c.granted_auto)
             n.stand_locks = list(c.stand_locks)
             n.skip_stand = list(c.skip_stand)

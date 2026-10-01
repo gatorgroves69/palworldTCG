@@ -1,11 +1,11 @@
 """BP01 red cards added for M2."""
 from __future__ import annotations
 
-from engine.abilities import ActAbility, CardImpl
-from engine.model import CardType
+from engine.abilities import ActAbility, CardImpl, Trigger
+from engine.model import CardType, Color
 
 from .common import (choose_pal, consume_cost, discard_cost, has_resources, look_top,
-                     my_gears, opp_pals, shuffle_deck)
+                     my_gears, opp_pals, plus_power, shuffle_deck)
 from .registry import REGISTRY
 from .td01 import INTERRUPT_TEXT
 
@@ -162,7 +162,7 @@ def _harness(game, card, ctx):
     if t is None:
         return
     game.add_mod(t, "power", 200, "turn", card.name)
-    if t.defn.main_name == "Foxparks":
+    if "Foxparks" in game.main_names(t):
         game.grant_auto(t, "on_attack", "OnAttack: deal 700", _harness_on_attack, "turn")
 
 
@@ -221,3 +221,184 @@ class Flambelle(CardImpl):
 
     def on_deploy(self, game, card):
         game.gain_resource(card.owner, "material", 2)
+
+
+def _is_red_pal(c) -> bool:
+    return c.is_pal and c.defn.color is Color.RED
+
+
+REGISTRY.vanilla("BP01-013")  # Pyrin – Cinder Steed (no abilities)
+
+
+# BP01-003 Gobfin Ignis – Blazing Hothead
+# CONT All of your other red Pals get Power +300.
+@reg
+class GobfinIgnis(CardImpl):
+    code = "BP01-003"
+    text = "CONT All of your other red Pals get Power +300."
+
+    def aura_power(self, game, card, target):
+        return 300 if target.owner == card.owner and _is_red_pal(target) else 0
+
+
+# BP01-004 Bushi – Ephemeral Blade
+# AUTO At the end of the battle this card attacked, you may return this card to hand.
+# ACT Interrupt (Hand Quick [①, discard this card] OR [Discard this card and 1 other card from
+# hand] Nullify the opponent's attack. Battle damage does not occur)
+@reg
+class Bushi(CardImpl):
+    code = "BP01-004"
+    text = ("AUTO At the end of the battle this card attacked, you may return this card to hand.\n"
+            + INTERRUPT_TEXT)
+    keywords = {"interrupt": True}
+
+    def triggers(self, game, card, event):
+        if event.kind == "battle_end" and event.card_uid == card.uid:
+            def fire(g, u=card.uid, inc=card.incarnation):
+                c = g.card(u)
+                if g.on_base(c, inc) and g.may(c.owner, "Bushi: return to hand?",
+                                               intent="bounce_self"):
+                    g.return_to_hand(c)
+            return [Trigger(card.owner, f"{card.name}: may return to hand", fire, card.uid)]
+        return []
+
+
+# BP01-009 Univolt – Valiant Thunderclap
+# AUTO Brave 300 (OnAttack This card gets Power +300 until end of turn)
+@reg
+class Univolt(CardImpl):
+    code = "BP01-009"
+    text = "AUTO Brave 300 (OnAttack This card gets Power +300 until end of turn)"
+    keywords = {"brave": 300}
+
+
+# BP01-010 Ragnahawk – Emberwing Striker
+# AUTO OnAttack Choose all of your red Pals, and they get Power +500/Strike +1 until end of turn.
+@reg
+class Ragnahawk(CardImpl):
+    code = "BP01-010"
+    text = ("AUTO OnAttack Choose all of your red Pals, and they get Power +500/Strike +1 until end "
+            "of turn.")
+
+    def on_attack(self, game, card):
+        for c in game.players[card.owner].pals:
+            if _is_red_pal(c):
+                game.add_mod(c, "power", 500, "turn", "Ragnahawk")
+                game.add_mod(c, "strike", 1, "turn", "Ragnahawk")
+
+
+# BP01-011 Rooby – Brave Sparks
+# AUTO Serious 400 (OnAssign Choose 1 Pal, and it gets Power +400 until end of turn)
+@reg
+class Rooby(CardImpl):
+    code = "BP01-011"
+    text = "AUTO Serious 400 (OnAssign Choose 1 Pal, and it gets Power +400 until end of turn)"
+    keywords = {"serious": 400}
+
+
+# BP01-017 Flame Cauldron (Structure)
+# CONT All of your red Pals get Power +200.
+# AUTO When your red Pal is deployed, get 1 Material.
+@reg
+class FlameCauldron(CardImpl):
+    code = "BP01-017"
+    text = ("CONT All of your red Pals get Power +200.\nAUTO When your red Pal is deployed, get 1 "
+            "Material.")
+
+    def aura_power(self, game, card, target):
+        return 200 if target.owner == card.owner and _is_red_pal(target) else 0
+
+    def triggers(self, game, card, event):
+        if event.kind == "deployed" and event.player == card.owner:
+            new = game.card(event.card_uid)
+            if _is_red_pal(new):
+                return [Trigger(card.owner, f"{card.name}: get 1 Material",
+                                lambda g, p=card.owner: g.gain_resource(p, "material", 1),
+                                card.uid)]
+        return []
+
+
+# BP01-018 Alarm Bell (Structure)
+# ACT 1/Turn [①, assign 1 Pal] Stand all Pals assigned this turn. Until end of turn, your Pals
+# cannot be assigned, and must attack as much as possible (Includes Pals deployed after
+# activating this ability).
+def _alarm(game, card, ctx):
+    ps = game.players[card.owner]
+    for c in ps.pals:
+        if c.assigned_to is not None:  # assigned this turn (cleared at end of turn)
+            game.stand(c)
+            game.log(f"  {c.name} stands (Alarm Bell)")
+    ps.no_assign = True
+    ps.must_attack = True  # CR 7.5.2.1, enforced in Game.legal_actions
+    game.log(f"  {game.pname(card.owner)}'s Pals must attack as much as possible this turn")
+
+
+@reg
+class AlarmBell(CardImpl):
+    code = "BP01-018"
+    text = ("ACT 1/Turn [①, assign 1 Pal] Stand all Pals assigned this turn. Until end of turn, "
+            "your Pals cannot be assigned, and must attack as much as possible (Includes Pals "
+            "deployed after activating this ability).")
+    acts = [ActAbility("stand assigned Pals; all-out attack", _alarm, souls=1, assign=True,
+                       once_per_turn=True)]
+
+
+# BP01-021 Makeshift Handgun (Gear)
+# AUTO OnDeploy Choose up to 1 Pal, and deal 500 Damage.
+# ACT [Rest this card] Choose 1 Pal, and it gets Power +200 until end of turn.
+@reg
+class MakeshiftHandgun(CardImpl):
+    code = "BP01-021"
+    text = ("AUTO OnDeploy Choose up to 1 Pal, and deal 500 Damage.\nACT [Rest this card] Choose "
+            "1 Pal, and it gets Power +200 until end of turn.")
+    acts = [ActAbility("+200 power", plus_power(200), rest_self=True)]
+
+    def on_deploy(self, game, card):
+        t = choose_pal(game, card.owner, "Makeshift Handgun: deal 500 to up to 1 Pal",
+                       intent="harm", amount=500)
+        if t:
+            game.deal_card_damage(t, 500, card)
+
+
+# BP01-022 Stone Pickaxe (Gear)
+# ACT [Rest this card] Choose 1 Pal, it gets Power +200 until end of turn, and you get 1
+# Material.
+def _pickaxe(game, card, ctx):
+    plus_power(200)(game, card, ctx)
+    game.gain_resource(card.owner, "material", 1)
+
+
+@reg
+class StonePickaxe(CardImpl):
+    code = "BP01-022"
+    text = ("ACT [Rest this card] Choose 1 Pal, it gets Power +200 until end of turn, and you get "
+            "1 Material.")
+    acts = [ActAbility("+200 power and 1 Material", _pickaxe, rest_self=True)]
+
+
+# BP01-024 Treasure Chest Found! (Event)
+# Look at the top 5 cards of your deck, choose up to 1 red structure or red gear from among
+# them and add it to hand, and shuffle the rest of the cards with the deck. If you chose 0 cards,
+# get 3 Material.
+@reg
+class TreasureChestFound(CardImpl):
+    code = "BP01-024"
+    text = ("Look at the top 5 cards of your deck, choose up to 1 red structure or red gear from "
+            "among them and add it to hand, and shuffle the rest of the cards with the deck. If "
+            "you chose 0 cards, get 3 Material.")
+
+    def resolve_event(self, game, card, mode):
+        from engine.state import Zone
+        p = card.owner
+        top = look_top(game, p, 5)
+        ok = [c for c in top if c.defn.color is Color.RED
+              and c.type in (CardType.STRUCTURE, CardType.GEAR)]
+        picked = game.choose_cards(p, "Treasure Chest: add up to 1 red structure/gear", ok, 1,
+                                   up_to=True, intent="recover")
+        for c in picked:
+            game.move(c, Zone.HAND)
+            game.stats[p].drawn.append(c.code)
+            game.log(f"  {game.pname(p)} adds {c.name} to hand")
+        shuffle_deck(game, p)
+        if not picked:
+            game.gain_resource(p, "material", 3)

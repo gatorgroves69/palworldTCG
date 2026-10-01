@@ -47,7 +47,7 @@ class RuleBot(Bot):
         attacks = [a for a in actions if isinstance(a, Attack) and a.target_uid is None]
         if attacks:
             return attacks[0]
-        return next(a for a in actions if isinstance(a, EndMain))
+        return next((a for a in actions if isinstance(a, EndMain)), actions[0])
 
     def quick_step(self, game, me, actions):
         """Defender's window: Aurora Guide a lucky card to the top, or Interrupt
@@ -188,7 +188,7 @@ class RuleBot(Bot):
         if c.owner != me:
             return -pal_value(game, c)
         s = pal_value(game, c) + (2 if not c.rested else 0)
-        if prompt.startswith("Rocket Launcher") and c.defn.main_name == "Pengullet":
+        if prompt.startswith("Rocket Launcher") and "Pengullet" in game.main_names(c):
             s += 20  # unlocks the barrage
         return s
 

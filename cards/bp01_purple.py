@@ -288,7 +288,7 @@ class DaedreamsNecklace(CardImpl):
     def on_deploy(self, game, card):
         p = card.owner
         options = [c for c in game.players[p].hand
-                   if c.is_pal and c.defn.main_name == "Daedream"]
+                   if c.is_pal and "Daedream" in game.main_names(c)]
         for c in game.choose_cards(p, "Necklace: deploy up to 1 Daedream from hand", options, 1,
                                    up_to=True, intent="recover"):
             game.log(f"  {game.pname(p)} deploys {c.name} with the Necklace")

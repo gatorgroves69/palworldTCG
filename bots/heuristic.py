@@ -57,12 +57,16 @@ class HeuristicBot(RuleBot):
     def choose_action(self, game, player, actions):
         if any(isinstance(a, Pass) for a in actions):
             return self.quick_step(game, player, actions)
-        end = next(a for a in actions if isinstance(a, EndMain))
+        end = next((a for a in actions if isinstance(a, EndMain)), None)
         base = self.evaluate(game, player, exposure=self.exposure)
+        if end is None:  # forced to keep attacking (CR 7.5.2.1): best non-ending action
+            base = float("-inf")
         # Common random numbers: every action is scored on the same determinized samples,
         # so differences between actions aren't sampling noise.
         seeds = [self.rng.random() for _ in range(self.samples)]
         best, best_val = end, base + MARGIN
+        if end is None:
+            best = next(a for a in actions if not isinstance(a, SoulDraw))
         for a in actions:
             if a is end or isinstance(a, SoulDraw):
                 continue

@@ -107,4 +107,4 @@ class FastBot(RuleBot):
         for a in actions:
             if isinstance(a, SoulDraw):
                 return a
-        return next(a for a in actions if isinstance(a, EndMain))
+        return next((a for a in actions if isinstance(a, EndMain)), actions[0])

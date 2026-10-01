@@ -123,6 +123,28 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### C23: Shoddy Bed checks for a rested Nocturnal Pal at the end of your turn
 - Lamp-granted Nocturnal counts.
 
+## Card interpretations (rest of BP01/TD, red/blue/colorless)
+
+### C24: Alarm Bell "must attack as much as possible" (`OPEN`)
+- **Chosen:** CR 7.5.2.1. While any of your Pals can legally attack, you can't end the main phase. "Cannot be assigned" blocks every assign cost for the rest of the turn. Both also apply to Pals deployed afterwards, as the card says.
+- "Stand all Pals assigned this turn" includes the Pal assigned to Alarm Bell's own cost.
+
+### C25: Antique Dresser "Declare 1 card name. Choose all of your cards" (`OPEN`)
+- **Chosen:** your cards **in the base** get the declared name until end of turn (CR 4.4.3: "cards" with no zone named means the base). You may declare the name of any card that exists in the game (CR 5.19).
+- Added names count for Penking (main name Pengullet), Antique Curtain (names containing "Antique") and The Adventure Begins ("My First").
+
+### C26: Mau Cryst "「Farming」 structure" uses the structure's work suitability from cards.json
+- Only Breeding Farm and Ranch (both green) are Farming. Stone Pit is Collecting.
+
+### C27: The Adventure Begins "not played any other cards during this game"
+- **Chosen:** counts cards played from hand. Cards deployed by effects (Chillet, Reptyro, Necklace and so on) don't count. "3 or more Pals with 《My First》 in their different card names" counts *distinct* names among your Pals in the base.
+
+### C28: Bushi "At the end of the battle this card attacked, you may return this card to hand"
+- **Chosen:** this also applies when the attack was nullified. It only applies if Bushi is still in the base.
+
+### C29: Format of BP02 / SS01 cards (`OPEN`, question for Bobby)
+- 13 red/blue/colorless BP02 and SS01 cards are **not implemented**. None of the 10 meta decks uses them, and the stated format is BP01 + TD01/TD02. I'll implement them if they're legal at Bobby's weeklies.
+
 ## Data caveats
 
 ### D1: Calibration target has no sample size or first/second split (`OPEN`)

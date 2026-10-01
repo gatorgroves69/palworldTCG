@@ -100,3 +100,19 @@ class Leezpunk(CardImpl):
                     g.discard(c)
             return [Trigger(card.owner, f"{card.name}: opponent discards", fire, card.uid)]
         return []
+
+
+# TD02-024 Chikipi – My First Pal
+# AUTO When this card is put into the graveyard, get 1 Ingredient.
+@reg
+class Chikipi(CardImpl):
+    code = "TD02-024"
+    text = "AUTO When this card is put into the graveyard, get 1 Ingredient."
+
+    def triggers(self, game, card, event):
+        if (event.kind == "left_base" and event.card_uid == card.uid
+                and event.data["to"] is Zone.GRAVEYARD):
+            return [Trigger(card.owner, f"{card.name}: get 1 Ingredient",
+                            lambda g, p=card.owner: g.gain_resource(p, "ingredient", 1),
+                            card.uid)]
+        return []

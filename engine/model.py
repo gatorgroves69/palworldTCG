@@ -36,6 +36,7 @@ class CardDef:
     subtype: str = ""
     text: str = ""
     elements: tuple[str, ...] = ()  # lower-case, e.g. ("water", "dragon") (CR 2.4)
+    work: tuple[str, ...] = ()  # work suitability, lower-case, e.g. ("farming",) (CR 2.5)
 
     @property
     def main_name(self) -> str:

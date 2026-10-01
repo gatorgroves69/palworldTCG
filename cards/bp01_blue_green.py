@@ -4,8 +4,8 @@ from __future__ import annotations
 from engine.abilities import ActAbility, CardImpl, Trigger
 from engine.state import Zone
 
-from .common import (choose_pal, consume_cost, has_resources, look_top, my_structures,
-                     shuffle_deck)
+from .common import (choose_pal, consume_cost, discard_cost, has_resources, look_top,
+                     my_structures, opp_pals, rest_card, shuffle_deck)
 from .registry import REGISTRY
 
 reg = REGISTRY.register
@@ -187,3 +187,210 @@ class Petallia(CardImpl):
         n = min(2, ps.souls_rested)  # standing an already-standing soul does nothing
         ps.souls_rested -= n
         game.log(f"  {game.pname(card.owner)} stands {n} soul(s) ({ps.souls_standing} standing)")
+
+
+REGISTRY.vanilla("BP01-037")  # Surfent – Swift Swimmer (no abilities)
+
+
+def _draw_then_discard(game, p, draw: int, discard: int, who: str) -> None:
+    game.draw(p, draw)
+    for c in game.choose_cards(p, f"{who}: discard {discard}", list(game.players[p].hand),
+                               discard, intent="discard"):
+        game.log(f"  {game.pname(p)} discards {c.name}")
+        game.discard(c)
+
+
+# BP01-030 Reptyro Cryst – Glacial Devourer
+# AUTO OnDeploy Draw 1 card.
+# ACT 1/Turn [Discard 1 card from hand] Look at the top 5 cards of your deck, choose up to 2 ◇6
+# or less structures from among them and deploy them, and shuffle the rest of the cards with the
+# deck.
+_DISCARD1 = discard_cost(1)
+
+
+def _cryst_dig(game, card, ctx):
+    p = card.owner
+    top = look_top(game, p, 5)
+    ok = [c for c in top if c.is_structure and c.defn.cost <= 6]
+    for c in game.choose_cards(p, "Reptyro Cryst: deploy up to 2 ◇6- structures", ok, 2,
+                               up_to=True, intent="recover"):
+        game.log(f"  {game.pname(p)} deploys {c.name} with Reptyro Cryst")
+        game.deploy(c)
+    shuffle_deck(game, p)
+
+
+@reg
+class ReptyroCryst(CardImpl):
+    code = "BP01-030"
+    text = ("AUTO OnDeploy Draw 1 card.\nACT 1/Turn [Discard 1 card from hand] Look at the top 5 "
+            "cards of your deck, choose up to 2 ◇6 or less structures from among them and deploy "
+            "them, and shuffle the rest of the cards with the deck.")
+    acts = [ActAbility("dig for structures", _cryst_dig, once_per_turn=True,
+                       can_pay_extra=_DISCARD1[0], pay_extra=_DISCARD1[1])]
+
+    def on_deploy(self, game, card):
+        game.draw(card.owner)
+
+
+# BP01-031 Penking – Mighty Warrior of the Deep
+# CONT All of your main name 《Pengullet》 Pals get Power +700.
+@reg
+class Penking(CardImpl):
+    code = "BP01-031"
+    text = "CONT All of your main name 《Pengullet》 Pals get Power +700."
+
+    def aura_power(self, game, card, target):
+        return 700 if (target.owner == card.owner and target.is_pal
+                       and "Pengullet" in game.main_names(target)) else 0
+
+
+# BP01-033 Wumpo – Frostpeak Sentinel
+# CONT If this card is in the rest state, all of your opponent's Pals get Strike -1.
+@reg
+class Wumpo(CardImpl):
+    code = "BP01-033"
+    text = "CONT If this card is in the rest state, all of your opponent's Pals get Strike -1."
+
+    def aura_strike(self, game, card, target):
+        return -1 if card.rested and target.is_pal and target.owner != card.owner else 0
+
+
+# BP01-035 Mau Cryst – Harbinger of Riches
+# AUTO When this card is assigned to a 「Farming」 structure, draw 1 card.
+@reg
+class MauCryst(CardImpl):
+    code = "BP01-035"
+    text = "AUTO When this card is assigned to a 「Farming」 structure, draw 1 card."
+
+    def triggers(self, game, card, event):
+        if event.kind == "assigned" and event.card_uid == card.uid:
+            s = game.card(event.data["structure"])
+            if "farming" in s.defn.work:  # work suitability from cards.json (C26)
+                return [Trigger(card.owner, f"{card.name}: draw 1",
+                                lambda g, p=card.owner: g.draw(p), card.uid)]
+        return []
+
+
+# BP01-036 Celaray – Loop De Loop
+# AUTO OnAttack Draw 1 card, choose 1 card from your hand, and discard it.
+@reg
+class Celaray(CardImpl):
+    code = "BP01-036"
+    text = "AUTO OnAttack Draw 1 card, choose 1 card from your hand, and discard it."
+
+    def on_attack(self, game, card):
+        _draw_then_discard(game, card.owner, 1, 1, "Celaray")
+
+
+def _antique_names(game, p) -> set[str]:
+    return {n for s in game.players[p].structures for n in game.names(s) if "Antique" in n}
+
+
+# BP01-039 Antique Curtain (Structure)
+# AUTO OnDeploy Choose up to X of your opponent's Pals, and return them to hand. X is equal to
+# the number of different card names among your structures with 《Antique》 in their card names
+# (For example, if the current state has 4 《Antique Mirror》, and 《Antique Curtain》 is deployed,
+# return up to 2 cards).
+@reg
+class AntiqueCurtain(CardImpl):
+    code = "BP01-039"
+    text = ("AUTO OnDeploy Choose up to X of your opponent's Pals, and return them to hand. X is "
+            "equal to the number of different card names among your structures with 《Antique》 in "
+            "their card names (For example, if the current state has 4 《Antique Mirror》, and "
+            "《Antique Curtain》 is deployed, return up to 2 cards).")
+
+    def on_deploy(self, game, card):
+        x = len(_antique_names(game, card.owner))
+        for c in game.choose_cards(card.owner, f"Antique Curtain: return up to {x} Pals",
+                                   opp_pals(game, card.owner), x, up_to=True, intent="harm"):
+            game.return_to_hand(c)
+
+
+# BP01-040 Antique Dresser (Structure)
+# ACT 1/Turn [Discard 1 card from hand] Declare 1 card name. Choose all of your cards, and they
+# get that declared card name in addition until end of turn.
+# ACT 1/Turn [Discard X cards from hand] Choose X of your Pals, and they get Power +1000/Strike
+# +1 until end of turn.
+def _declare(game, card, ctx):
+    from engine.actions import Decision
+    p = card.owner
+    options = sorted({c.defn.name for c in game.cards.values()})  # names that exist in the game
+    name = game.ask(Decision("declare", p, "Antique Dresser: declare a card name", options,
+                             context={"intent": "declare"}))[0]
+    game.log(f"  {game.pname(p)} declares {name}")
+    for c in game.players[p].base:  # "all of your cards" = your cards in the base (C25)
+        c.added_names.append((name, "turn"))
+
+
+def _dresser_x(game, card):
+    n = min(len(game.players[card.owner].hand), len(game.players[card.owner].pals))
+    return list(range(1, n + 1))
+
+
+def _dresser_discard_x(game, card, ctx):
+    hand = list(game.players[card.owner].hand)
+    for c in game.choose_cards(card.owner, f"Antique Dresser: discard {ctx['x']}", hand,
+                               ctx["x"], intent="discard"):
+        game.discard(c)
+
+
+def _dresser_pump(game, card, ctx):
+    pals = list(game.players[card.owner].pals)
+    for c in game.choose_cards(card.owner, f"Antique Dresser: +1000/+1 to {ctx['x']} Pals",
+                               pals, ctx["x"], intent="help", amount=1000):
+        game.add_mod(c, "power", 1000, "turn", "Antique Dresser")
+        game.add_mod(c, "strike", 1, "turn", "Antique Dresser")
+
+
+@reg
+class AntiqueDresser(CardImpl):
+    code = "BP01-040"
+    text = ("ACT 1/Turn [Discard 1 card from hand] Declare 1 card name. Choose all of your cards, "
+            "and they get that declared card name in addition until end of turn.\nACT 1/Turn "
+            "[Discard X cards from hand] Choose X of your Pals, and they get Power +1000/Strike +1 "
+            "until end of turn.")
+    acts = [ActAbility("declare a card name", _declare, once_per_turn=True,
+                       can_pay_extra=_DISCARD1[0], pay_extra=_DISCARD1[1]),
+            ActAbility("+1000/+1 to X Pals", _dresser_pump, once_per_turn=True,
+                       x_options=_dresser_x, pay_extra=_dresser_discard_x)]
+
+
+# BP01-041 Hot Spring (Structure)
+# ACT 1/Turn [Assign 1 Pal] Choose up to 2 ◇6 or less Pals, and rest them. Those cards do not
+# stand during your opponent's next stand phase.
+def _hot_spring(game, card, ctx):
+    pals = [c for ps in game.players for c in ps.pals if c.defn.cost <= 6]
+    for c in game.choose_cards(card.owner, "Hot Spring: rest and lock up to 2 ◇6- Pals", pals, 2,
+                               up_to=True, intent="lock"):
+        rest_card(game, c)
+        game.skip_next_stand(c, game.opponent(card.owner))
+
+
+@reg
+class HotSpring(CardImpl):
+    code = "BP01-041"
+    text = ("ACT 1/Turn [Assign 1 Pal] Choose up to 2 ◇6 or less Pals, and rest them. Those cards "
+            "do not stand during your opponent's next stand phase.")
+    acts = [ActAbility("rest and lock 2 Pals", _hot_spring, assign=True, once_per_turn=True)]
+
+
+# BP01-042 Antique Mirror (Structure)
+# AUTO OnDeploy Draw 1 card.
+@reg
+class AntiqueMirror(CardImpl):
+    code = "BP01-042"
+    text = "AUTO OnDeploy Draw 1 card."
+
+    def on_deploy(self, game, card):
+        game.draw(card.owner)
+
+
+# BP01-043 Sphere Workbench (Structure)
+# ACT 1/Turn [Assign 1 Pal] Draw 2 cards, choose 1 card from your hand, and discard it.
+@reg
+class SphereWorkbench(CardImpl):
+    code = "BP01-043"
+    text = "ACT 1/Turn [Assign 1 Pal] Draw 2 cards, choose 1 card from your hand, and discard it."
+    acts = [ActAbility("draw 2, discard 1",
+                       lambda g, c, ctx: _draw_then_discard(g, c.owner, 2, 1, "Sphere Workbench"),
+                       assign=True, once_per_turn=True)]

@@ -130,6 +130,10 @@ class CardImpl:
         """CONT power change this card (on the base) gives another Pal (e.g. Maraith)."""
         return 0
 
+    def aura_strike(self, game: "Game", card: "CardInstance", target: "CardInstance") -> int:
+        """CONT strike change this card (on the base) gives another Pal (e.g. Wumpo)."""
+        return 0
+
     def grant_keywords(self, game: "Game", card: "CardInstance",
                        target: "CardInstance") -> dict[str, int]:
         """CONT keywords this card (on the base) grants another card (e.g. Lamp)."""

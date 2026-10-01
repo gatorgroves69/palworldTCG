@@ -37,6 +37,7 @@ def _to_def(raw: dict) -> CardDef:
         subtype=raw.get("subtype") or "",
         text=raw.get("effect") or "",
         elements=_elements(raw),
+        work=tuple(w.lower() for w in (raw.get("workSuitability") or "").split()),
     )
 
 

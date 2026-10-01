@@ -238,4 +238,6 @@ python3 -m sim compare --a results/runs/cattiva-azurobe-br_after-chillet-swap.tx
 ```
 Expect about 2 h on the Optiplex. Commit `results/runs/J4-compare/*.md` and `notes.md` after **each** line, so a rate limit loses at most one. Telegram Bobby the 4 headline lines (the bolded first line of each table).
 
+Card pool (2026-10-01): every red/blue/colorless card from BP01, TD01, TD02 and PR is now implemented (120 codes registered, 288 tests pass), so J-run optimizers can try them as swaps. BP02/SS01 are held pending Bobby's format answer (assumptions C29).
+
 Next Claude action: review J4, then give Bobby a final list recommendation that rates each swap's confidence.

@@ -166,7 +166,7 @@ def _launcher(game, card, ctx):
                    intent="help", amount=200)
     if t is None:
         return
-    if t.defn.main_name == "Pengullet":
+    if "Pengullet" in game.main_names(t):
         game.add_mod(t, "power", 500, "turn", card.name)
         game.grant_act(t, BARRAGE, "turn")
     else:
