@@ -154,7 +154,7 @@ wrote results/20260930-193555_cattiva-azurobe-br_vs_chillet-relaxaurus-bp/summar
 ```
 
 ### J2 execution checkpoint
-J1 pushed at d19bcfb: 6/36 calibrated pairs within ±5; weak calibration. Pair artifacts preserved outside repo at /home/gator/palworld-run-artifacts/J1-matrix. J2 RUNNING, seed 22, rounds 4, max-tries 8. J3 pending. Runner /tmp/palworld-j2-run.py, stdout /tmp/palworld-j2.stdout; check processes before restart. No engine edits.
+J1 pushed at d19bcfb: 6/36 calibrated pairs within ±5; weak calibration. Pair artifacts preserved outside repo at /home/gator/palworld-run-artifacts/J1-matrix. J2 DONE, seed 22, rounds 4, max-tries 8. See results/runs/J2-optimize/notes.md. J3 pending. Runner /tmp/palworld-j2-run.py, stdout /tmp/palworld-j2.stdout; check processes before restart. No engine edits.
 
 ## Claude Code
 

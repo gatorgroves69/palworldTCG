@@ -16,3 +16,16 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 - **heuristic2:** 60.5% → 64.3% (+3.8). The gain comes from Chillet-BP (+5.8, 43.7% of the field) and Chillet-BR (+7.8, 16.2%), not from the unreliable Stone Pit matchup (+1.6).
 - **heuristic:** 63.5% → 67.6% (+4.1). It rises against every opponent.
 - **Verdict:** a robust gain under both bots. Recommended.
+| 2026-10-01 00:01 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pump-Action Shotgun / +2 Reptyro – Ore Gorger | heuristic2 | -1.6 ± 1.6 | -1.01 | 1614 | — | **not better (futility)** |
+| 2026-10-01 00:31 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pump-Action Shotgun / +2 Foxparks – Light of Courage | heuristic2 | +2.9 ± 1.0 | 2.90 | 4035 | heuristic +1.9 (z 1.7) | **KEPT** |
+| 2026-10-01 00:57 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pal Sphere / +2 Reptyro – Ore Gorger | heuristic2 | -0.9 ± 1.6 | -0.55 | 1614 | — | **not better (futility)** |
+| 2026-10-01 01:24 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pal Sphere / +2 Flambelle – Scorching Tears | heuristic2 | +1.6 ± 1.0 | 1.62 | 4035 | — | **not better (inconclusive)** |
+| 2026-10-01 01:45 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pal Sphere / +2 Blazehowl – Hellflame Defender | heuristic2 | +2.5 ± 1.0 | 2.55 | 4035 | heuristic +3.2 (z 2.9) | **KEPT** |
+| 2026-10-01 02:10 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pump-Action Shotgun / +2 Reptyro – Ore Gorger | heuristic2 | -3.0 ± 1.6 | -1.92 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:17 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pump-Action Shotgun / +2 Flambelle – Scorching Tears | heuristic2 | -0.3 ± 1.6 | -0.17 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:23 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Pump-Action Shotgun / +2 Mounted Machine Gun | heuristic2 | -3.9 ± 1.6 | -2.47 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:29 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Azurobe – Water Dragon Waltz / +2 Jormuntide Ignis – Savage Lava Dragon | heuristic2 | -1.3 ± 1.6 | -0.83 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:35 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Azurobe – Water Dragon Waltz / +2 Reptyro – Ore Gorger | heuristic2 | -8.4 ± 1.6 | -5.24 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:41 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Azurobe – Water Dragon Waltz / +2 Flambelle – Scorching Tears | heuristic2 | -4.7 ± 1.6 | -2.98 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:47 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Azurobe – Water Dragon Waltz / +2 Mounted Machine Gun | heuristic2 | -8.5 ± 1.6 | -5.29 | 1614 | — | **not better (futility)** |
+| 2026-10-01 02:53 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Sparkit – Hazardous Contact / +2 Reptyro – Ore Gorger | heuristic2 | -1.6 ± 1.6 | -1.05 | 1614 | — | **not better (futility)** |
