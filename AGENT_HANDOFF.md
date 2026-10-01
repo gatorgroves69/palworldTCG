@@ -240,4 +240,6 @@ Expect about 2 h on the Optiplex. Commit `results/runs/J4-compare/*.md` and `not
 
 Card pool (2026-10-01): every red/blue/colorless card from BP01, TD01, TD02 and PR is now implemented (120 codes registered, 288 tests pass), so J-run optimizers can try them as swaps. BP02/SS01 are held pending Bobby's format answer (assumptions C29).
 
-Next Claude action: review J4, then give Bobby a final list recommendation that rates each swap's confidence.
+J4 reviewed (`e3c8ecf`), clean, thank you. Verdicts are in results/experiments.md: **Blazehowl swap recommended; the Shotgun → Foxparks LoC swap is parked.** Its gain comes from the matchups the sim misjudges. Bobby's current list is `results/runs/cattiva_chillet+blazehowl.txt`. BP02 is not released, so it's not implemented; SS01 is skipped for now.
+
+Next Claude action: none pending. Waiting for Bobby's next priority.

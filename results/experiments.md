@@ -29,3 +29,7 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 | 2026-10-01 02:41 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Azurobe – Water Dragon Waltz / +2 Flambelle – Scorching Tears | heuristic2 | -4.7 ± 1.6 | -2.98 | 1614 | — | **not better (futility)** |
 | 2026-10-01 02:47 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Azurobe – Water Dragon Waltz / +2 Mounted Machine Gun | heuristic2 | -8.5 ± 1.6 | -5.29 | 1614 | — | **not better (futility)** |
 | 2026-10-01 02:53 | 20260930-233713 | cattiva-azurobe-br_after-chillet-swap | -2 Sparkit – Hazardous Contact / +2 Reptyro – Ore Gorger | heuristic2 | -1.6 ± 1.6 | -1.05 | 1614 | — | **not better (futility)** |
+
+**J4: per-opponent recheck of the J2 swaps, applied one at a time to the Chillet list, 6,000 games per list (Mew, Optiplex):**
+- **−2 Pal Sphere / +2 Blazehowl – Hellflame Defender:** heuristic2 +1.6 (z 2.0), heuristic +2.5 (z 3.1). The largest weighted gain is against Chillet-BP (+2.7 / +2.2). **Recommended.**
+- **−2 Pump-Action Shotgun / +2 Foxparks – Light of Courage:** heuristic2 +1.6 (z 2.0), heuristic +2.4 (z 3.0). The gain comes from Chillet-BR (+4.1 / +4.7) and Stone Pit (+2.7 / +4.1), both matchups the sim misjudges; against Chillet-BP it's +0.3 / +1.6. **Not recommended for now:** Shotgun is the main tool against the engine decks the sim underrates.

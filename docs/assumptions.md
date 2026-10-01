@@ -142,7 +142,8 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### C28: Bushi "At the end of the battle this card attacked, you may return this card to hand"
 - **Chosen:** this also applies when the attack was nullified. It only applies if Bushi is still in the base.
 
-### C29: Format of BP02 / SS01 cards (`OPEN`, question for Bobby)
+### C29: Format of BP02 / SS01 cards (`RESOLVED for now`, 2026-10-01)
+- Bobby: BP02 isn't released yet, so it's not implemented. SS01 is the "Sleeve & Card Set Vol.1" (5 cards); Bobby is unsure whether it's legal, and no meta deck uses it, so it's skipped for now. It's a quick add later.
 - 13 red/blue/colorless BP02 and SS01 cards are **not implemented**. None of the 10 meta decks uses them, and the stated format is BP01 + TD01/TD02. I'll implement them if they're legal at Bobby's weeklies.
 
 ## Data caveats
