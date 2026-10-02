@@ -1,0 +1,4 @@
+best: 68.2% vs field (67.6-68.9, 20001 games, bot heuristic2)
+Worst: lamball-cattiva-bg 52% (4% of field); chillet-relaxaurus-br 55% (14% of field); cattiva-azurobe-br 57% (5% of field)
+Losses: behind on board by round 4-6 38%; ran out of cards 38%; opponent lucky saves 3+ 33%
+seed 52, commit 179bbe6, 75 min
