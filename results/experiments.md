@@ -39,3 +39,9 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 | 2026-10-01 22:17 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Celaray – Loop De Loop | heuristic2 | +1.2 ± 1.0 | 1.15 | 4035 | — | **not better (inconclusive)** |
 | 2026-10-01 22:36 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Pump-Action Shotgun / +2 Ribbuny – Little Princess | heuristic2 | +0.7 ± 1.0 | 0.72 | 4035 | — | **not better (inconclusive)** |
 | 2026-10-01 22:48 | 20261001-192400 | cattiva_chillet+blazehowl | -2 Suzaku – Hellfire Wings / +2 Wumpo – Frostpeak Sentinel | heuristic2 | -0.1 ± 1.3 | -0.05 | 2421 | — | **not better (futility)** |
+
+**J5 review (wide search from `cattiva_chillet+blazehowl`, Mew, Optiplex):**
+- Screening covered all 230 sensible 2-copy swaps (the 4 weakest cards × every implemented red/blue/colorless card), 400 games each with `heuristic`. The top 6 went on to the sequential test with `heuristic2`, and **none passed**. The best was +1.4 ± 1.0, inconclusive.
+- The run stopped after round 1, so the list is unchanged. J5 gauntlet: 68.2% (67.6–68.9) against the field.
+- Pattern: almost every top-screened swap removes 2 Pump-Action Shotguns, but no replacement measurably beats them. That agrees with J4: in the sim the 3rd and 4th Shotguns are worth about the same as a generic card, and the sim underrates Shotgun against real engine decks. **Keep 4.**
+- Conclusion: within 2-copy swaps, the current list is at the best the sim can find. Further gains would need bot improvements (engine decks), 1-copy fine-tuning, or a meta shift.

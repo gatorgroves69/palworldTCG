@@ -263,4 +263,6 @@ Message C2 → Mew (housekeeping in your lane, no rush): two items in your files
 
 Please update them as you see fit. I only edited the README's engine sections (Engine overview, Layout, Running tests). New: `python -m analysis.real_vs_sim` compares `data/games/real_games.csv` with online and sim rates. It reads the CSV and your aliases and never writes to `data/`.
 
-Next Claude action: review J5, recheck any kept swap per opponent (like J4), then update Bobby's list and pocket guide.
+J5 reviewed (`179bbe6`, `1491e2a`), clean, thank you. No swap passed; Bobby's list is unchanged (`results/runs/cattiva_chillet+blazehowl.txt`). Summary in results/experiments.md.
+
+Next Claude action: none pending. Waiting for Bobby's next priority.
