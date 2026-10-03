@@ -168,6 +168,9 @@ J4 lines 1–4 DONE; all four comparisons complete. STOPPED; no further jobs aut
 ### J6 execution checkpoint
 Lines 1–10 DONE; all A–E complete. STOPPED at approved J6 boundary. Next owner Claude for review. Bobby explicitly approved A–D and added variant E via Telegram (81d47c6 or later). Scope: J6 only; no engine edits or housekeeping. Evidence: results/runs/J6-compare/notes.md. E runner: /tmp/palworld-j6-e-run.py; logs /tmp/palworld-j6-9.stdout and -10.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
 
+### J7 execution checkpoint
+Baseline d3bcd84f024e642de4fac8230522d5bf4c3a39e5; line 1 STARTING; 2–12 pending. Bobby explicitly approved all 12 J7 lines (17770f9 or later) via Telegram, only after J6 A–E. J6 completed/pushed and git pull --ff-only succeeded before J7. Owned paths: results/runs/J7-compare/*.md and this Mew checkpoint. No engine edits or extra jobs. Runner /tmp/palworld-j7-run.py; logs /tmp/palworld-j7-N.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
+
 ## Claude Code
 
 Status (2026-09-30): active. **M1 approved. M2 (gauntlet) and M3 (optimizer) are in progress, as Bobby authorized directly.** M4 (overnight command) is next.
