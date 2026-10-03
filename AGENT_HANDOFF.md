@@ -166,7 +166,7 @@ J2 pushed at 502a3a0; best.txt passed validation without warnings. J3 DONE: 2000
 J4 lines 1–4 DONE; all four comparisons complete. STOPPED; no further jobs authorized. Evidence: results/runs/J4-compare/notes.md. Runner /tmp/palworld-j4-run.py, logs /tmp/palworld-j4-N.stdout. Bobby authorized only J4; no engine edits. Compare appends; inspect notes/processes before any resume.
 
 ### J6 execution checkpoint
-Lines 1–6 DONE; line 7 next; remaining pending. Bobby authorized only J6. Evidence: results/runs/J6-compare/notes.md. Runner /tmp/palworld-j6-run.py; logs /tmp/palworld-j6-N.stdout. Owned paths: J6-compare/*.md and this Mew checkpoint. No engine edits or other jobs. Compare appends; inspect before resuming.
+Lines 1–7 DONE; line 8 next; remaining pending. Bobby authorized only J6. Evidence: results/runs/J6-compare/notes.md. Runner /tmp/palworld-j6-run.py; logs /tmp/palworld-j6-N.stdout. Owned paths: J6-compare/*.md and this Mew checkpoint. No engine edits or other jobs. Compare appends; inspect before resuming.
 
 ## Claude Code
 
