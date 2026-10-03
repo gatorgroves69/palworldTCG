@@ -166,7 +166,7 @@ J2 pushed at 502a3a0; best.txt passed validation without warnings. J3 DONE: 2000
 J4 lines 1–4 DONE; all four comparisons complete. STOPPED; no further jobs authorized. Evidence: results/runs/J4-compare/notes.md. Runner /tmp/palworld-j4-run.py, logs /tmp/palworld-j4-N.stdout. Bobby authorized only J4; no engine edits. Compare appends; inspect notes/processes before any resume.
 
 ### J6 execution checkpoint
-Lines 1–9 DONE; line 10 next. Bobby explicitly approved A–D and added variant E via Telegram (81d47c6 or later). Scope: J6 only; no engine edits or housekeeping. Evidence: results/runs/J6-compare/notes.md. E runner: /tmp/palworld-j6-e-run.py; logs /tmp/palworld-j6-9.stdout and -10.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
+Lines 1–10 DONE; all A–E complete. STOPPED at approved J6 boundary. Next owner Claude for review. Bobby explicitly approved A–D and added variant E via Telegram (81d47c6 or later). Scope: J6 only; no engine edits or housekeeping. Evidence: results/runs/J6-compare/notes.md. E runner: /tmp/palworld-j6-e-run.py; logs /tmp/palworld-j6-9.stdout and -10.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
 
 ## Claude Code
 
