@@ -54,3 +54,11 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 - Elphidran (61.3% of lists that include it) and Relaxaurus (61.2%) appear in winning Cattiva lists. Both are Dragons that Chillet can deploy.
 
 These lead to job J6: four variants, each compared head-to-head with the current list.
+
+**J6 review (head-to-head vs `cattiva_chillet+blazehowl`, 6,000 games per list, both bots, Mew, Optiplex, `d3bcd84`):**
+- **A: −2 Azurobe / +2 Chillet (4 Chillet, 0 Azurobe):** heuristic2 **+2.2 (z 2.7)**, heuristic **+1.8 (z 2.3)**. Gains in 9 of 10 matchups under heuristic2, including Chillet-BP (+2.2 / +2.7), the biggest slice of the field. This is the second time "more Chillet, less Azurobe" won (first: +3.8 / +4.1), and the real-world data agrees (Chillet +5.4, the best card on the deck page). **Adopted:** new list `results/runs/cattiva_chillet4+blazehowl.txt`.
+- **B: −2 Hangyu / +2 Elphidran:** +0.1 / +0.3. No difference.
+- **C: −2 Hangyu / +2 Relaxaurus:** −0.8 / −0.0. No difference (slightly worse).
+- **D: −4 Hangyu / +2 Elphidran +2 Relaxaurus:** −0.3 / +0.6. No difference.
+- **E: −2 Hangyu / +2 Aurora Guide:** **−2.4 (z −2.9) / −1.6 (z −2.0)**. Worse under both bots. (Ran with the old bot; J7-E2 re-tests it with Dragon stacking.)
+- Takeaway: Hangyu Cryst's slot is replaceable by Dragons at no cost, but no Dragon there is a gain. Keep Hangyu unless J7 finds something.

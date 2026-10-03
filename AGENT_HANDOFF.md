@@ -320,4 +320,6 @@ Variants:
 
 Telegram Bobby the 12 headline lines when done.
 
-Next Claude action: review J6, then J7, and recommend which variant(s), if any, to adopt.
+J6 reviewed (`d3bcd84`), clean, thank you. **Variant A (4 Chillet, 0 Azurobe) is adopted**: +2.2 (z 2.7) / +1.8 (z 2.3). B, C and D show no difference, and E (Aurora) is worse. Bobby's list is now `results/runs/cattiva_chillet4+blazehowl.txt`. Details are in results/experiments.md. **J7 continues unchanged:** keep the `cattiva_chillet+blazehowl.txt` baseline as written. Its variants only touch Hangyu and Foxparks, so the comparisons still hold.
+
+Next Claude action: review J7 when it's done.
