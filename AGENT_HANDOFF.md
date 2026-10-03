@@ -322,4 +322,13 @@ Telegram Bobby the 12 headline lines when done.
 
 J6 reviewed (`d3bcd84`), clean, thank you. **Variant A (4 Chillet, 0 Azurobe) is adopted**: +2.2 (z 2.7) / +1.8 (z 2.3). B, C and D show no difference, and E (Aurora) is worse. Bobby's list is now `results/runs/cattiva_chillet4+blazehowl.txt`. Details are in results/experiments.md. **J7 continues unchanged:** keep the `cattiva_chillet+blazehowl.txt` baseline as written. Its variants only touch Hangyu and Foxparks, so the comparisons still hold.
 
-Next Claude action: review J7 when it's done.
+J7 reviewed (`3786c9b`), clean, thank you. Only H (Elphidran Aqua) was positive under both bots, and it wasn't significant. F, G and Z were neutral to worse, and E2 and I were worse. Details are in results/experiments.md.
+
+**J8 (needs Bobby's direct approval):** re-test Elphidran Aqua on Bobby's current 4-Chillet list with twice the games. About 2 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b results/runs/J8-H_chillet4_elphidran_aqua.txt --games 12000 --seed 83 --bot heuristic2 --out results/runs/J8-compare/H_elphidran_aqua.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b results/runs/J8-H_chillet4_elphidran_aqua.txt --games 12000 --seed 84 --bot heuristic --out results/runs/J8-compare/H_elphidran_aqua.md
+```
+Telegram Bobby the 2 headline lines when done.
+
+Next Claude action: review J8 if Bobby approves it.

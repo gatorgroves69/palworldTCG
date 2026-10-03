@@ -62,3 +62,11 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **D: −4 Hangyu / +2 Elphidran +2 Relaxaurus:** −0.3 / +0.6. No difference.
 - **E: −2 Hangyu / +2 Aurora Guide:** **−2.4 (z −2.9) / −1.6 (z −2.0)**. Worse under both bots. (Ran with the old bot; J7-E2 re-tests it with Dragon stacking.)
 - Takeaway: Hangyu Cryst's slot is replaceable by Dragons at no cost, but no Dragon there is a gain. Keep Hangyu unless J7 finds something.
+
+**J7 review (head-to-head vs `cattiva_chillet+blazehowl`, 6,000 games per list, both bots, new defensive Quick logic, Mew, Optiplex, `3786c9b`):**
+- **F: −2 Hangyu / +2 Crystal Breath:** −1.6 (z −1.9) / −0.9. Not better.
+- **G: −2 Hangyu / +2 Ignis Breath:** −0.8 / −0.1. Neutral.
+- **H: −2 Hangyu / +2 Elphidran Aqua:** **+1.2 (z 1.5) / +0.9 (z 1.2)**. Positive under both bots, about z 1.9 pooled. Not significant yet, so it's re-tested on the 4-Chillet list in J8.
+- **I: −4 Hangyu / +2 Penking +2 Pengullet Rocket Launcher:** **−5.7 (z −6.8) / −5.4 (z −6.7)**. Clearly worse: the deck is too slow to set it up.
+- **E2: −2 Hangyu / +2 Aurora Guide (Dragon stacking):** −1.0 / −1.7 (z −2.2). Still worse; Aurora is rejected.
+- **Z: 4 Foxparks – Light of Courage instead of 4 A Toasty Hug:** −0.4 / −2.3 (z −2.8). Playing the wrong Foxparks cost roughly 1–2 points.
