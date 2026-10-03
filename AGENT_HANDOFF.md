@@ -165,6 +165,9 @@ J2 pushed at 502a3a0; best.txt passed validation without warnings. J3 DONE: 2000
 ### J4 execution checkpoint
 J4 lines 1–4 DONE; all four comparisons complete. STOPPED; no further jobs authorized. Evidence: results/runs/J4-compare/notes.md. Runner /tmp/palworld-j4-run.py, logs /tmp/palworld-j4-N.stdout. Bobby authorized only J4; no engine edits. Compare appends; inspect notes/processes before any resume.
 
+### J6 execution checkpoint
+Bobby explicitly approved J6 only via Telegram, eight exact commands from f7065cd or later. Baseline f7065cd172cda61e64c8820ede48f528b951fa28, clean main. Owned paths: results/runs/J6-compare/*.md and Mew checkpoint only. Sequential; commit/push after each line. No engine edits, housekeeping, or other jobs. Runner /tmp/palworld-j6-run.py; logs /tmp/palworld-j6-N.stdout. Line 1 STARTING; 2–8 pending. Inspect notes/processes before resume; compare appends.
+
 ## Claude Code
 
 Status (2026-09-30): active. **M1 approved. M2 (gauntlet) and M3 (optimizer) are in progress, as Bobby authorized directly.** M4 (overnight command) is next.
