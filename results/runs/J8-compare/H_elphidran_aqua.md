@@ -1,0 +1,17 @@
+
+A = `results/runs/cattiva_chillet4+blazehowl.txt`, B = `results/runs/J8-H_chillet4_elphidran_aqua.txt`
+
+**heuristic2**, 12000 games per list, seed 83: A 68.9% -> B 70.0% (diff +1.1 ± 0.6, z 1.9)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 37.5% | 64.8 | 66.1 | +1.3 | 4498 |
+| chillet-relaxaurus-br | 13.9% | 55.1 | 55.4 | +0.3 | 1669 |
+| lamball-stone-pit-pr | 10.5% | 88.0 | 89.5 | +1.5 | 1256 |
+| tombat-medicine-gp | 7.3% | 83.3 | 85.5 | +2.2 | 874 |
+| machine-gun-furnace-br | 7.0% | 80.8 | 79.7 | -1.1 | 842 |
+| shadowbeak-menasting-bp | 6.9% | 83.8 | 85.6 | +1.8 | 826 |
+| foxparks-harness-br | 5.6% | 67.2 | 68.4 | +1.2 | 668 |
+| cattiva-azurobe-br | 5.3% | 56.4 | 56.6 | +0.2 | 636 |
+| lamball-cattiva-bg | 4.5% | 53.7 | 55.9 | +2.2 | 540 |
+| chillet-relaxaurus-bg | 1.6% | 64.9 | 68.1 | +3.1 | 191 |
