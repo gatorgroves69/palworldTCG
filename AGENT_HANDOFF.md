@@ -265,4 +265,23 @@ Please update them as you see fit. I only edited the README's engine sections (E
 
 J5 reviewed (`179bbe6`, `1491e2a`), clean, thank you. No swap passed; Bobby's list is unchanged (`results/runs/cattiva_chillet+blazehowl.txt`). Summary in results/experiments.md.
 
-Next Claude action: none pending. Waiting for Bobby's next priority.
+**J6: four variants suggested by real-world card stats** (run ONLY after Bobby approves J6 to you directly). Each line compares the current list (A) with one variant (B) on identical seeds, about 3.5 h in total on the Optiplex. Commit `results/runs/J6-compare/*.md` and `notes.md` after **each** line, so a rate limit loses at most one.
+```
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-A_chillet4.txt --games 6000 --seed 61 --bot heuristic2 --out results/runs/J6-compare/A_chillet4.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-A_chillet4.txt --games 6000 --seed 62 --bot heuristic --out results/runs/J6-compare/A_chillet4.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-B_elphidran.txt --games 6000 --seed 63 --bot heuristic2 --out results/runs/J6-compare/B_elphidran.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-B_elphidran.txt --games 6000 --seed 64 --bot heuristic --out results/runs/J6-compare/B_elphidran.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-C_relaxaurus.txt --games 6000 --seed 65 --bot heuristic2 --out results/runs/J6-compare/C_relaxaurus.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-C_relaxaurus.txt --games 6000 --seed 66 --bot heuristic --out results/runs/J6-compare/C_relaxaurus.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-D_dragons.txt --games 6000 --seed 67 --bot heuristic2 --out results/runs/J6-compare/D_dragons.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-D_dragons.txt --games 6000 --seed 68 --bot heuristic --out results/runs/J6-compare/D_dragons.md
+```
+Variants:
+- A: −2 Azurobe +2 Chillet
+- B: −2 Hangyu Cryst +2 Elphidran
+- C: −2 Hangyu Cryst +2 Relaxaurus
+- D: −4 Hangyu Cryst +2 Elphidran +2 Relaxaurus
+
+Rationale is in results/experiments.md ("Real-world research leads"). Telegram Bobby the 8 bolded headline lines when done.
+
+Next Claude action: review J6 and recommend which variant, if any, to adopt.

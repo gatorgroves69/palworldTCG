@@ -45,3 +45,12 @@ Every swap the optimizer tried, newest last. Δ = weighted gauntlet win rate (va
 - The run stopped after round 1, so the list is unchanged. J5 gauntlet: 68.2% (67.6–68.9) against the field.
 - Pattern: almost every top-screened swap removes 2 Pump-Action Shotguns, but no replacement measurably beats them. That agrees with J4: in the sim the 3rd and 4th Shotguns are worth about the same as a generic card, and the sim underrates Shotgun against real engine decks. **Keep 4.**
 - Conclusion: within 2-copy swaps, the current list is at the best the sim can find. Further gains would need bot improvements (engine decks), 1-copy fine-tuning, or a meta shift.
+
+**Real-world research leads (palworldtcg.gg Cattiva · Azurobe page, 30 days, 7,198 games, read 2026-10-02).** Card usage shows "win rate when drawn minus never drawn". Almost every card is negative, because long games favor drawing more, so compare cards against each other:
+- **Chillet** (Tech) is the best on the page at **+5.4**, which supports the Chillet swap.
+- **Pal Sphere** is **−6.6**, the worst of the regular cards, which supports cutting it.
+- **Hangyu Cryst** is **−6.3**, and fewer than half of lists play it. Our optimizer never tested removing it.
+- Blazehowl is −5.6, but it's a Tech card with an unknown (likely small) sample, and the page doesn't say which Blazehowl.
+- Elphidran (61.3% of lists that include it) and Relaxaurus (61.2%) appear in winning Cattiva lists. Both are Dragons that Chillet can deploy.
+
+These lead to job J6: four variants, each compared head-to-head with the current list.
