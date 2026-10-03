@@ -40,6 +40,7 @@ def is_dragon_pal(c: CardInstance) -> bool:
 
 def put_on_top(game: Game, c: CardInstance) -> None:
     game.move(c, Zone.DECK, top=True)
+    c.known_top = True
     game.log(f"  {game.pname(c.owner)} puts {c.name} from hand on top of the deck")
 
 
@@ -53,6 +54,8 @@ def look_top(game: Game, p: int, n: int) -> list[CardInstance]:
 
 def shuffle_deck(game: Game, p: int) -> None:
     game.rng.shuffle(game.players[p].deck)
+    for c in game.players[p].deck:
+        c.known_top = False
     game.log(f"  {game.pname(p)} shuffles the deck")
 
 

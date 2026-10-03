@@ -70,3 +70,5 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **I: −4 Hangyu / +2 Penking +2 Pengullet Rocket Launcher:** **−5.7 (z −6.8) / −5.4 (z −6.7)**. Clearly worse: the deck is too slow to set it up.
 - **E2: −2 Hangyu / +2 Aurora Guide (Dragon stacking):** −1.0 / −1.7 (z −2.2). Still worse; Aurora is rejected.
 - **Z: 4 Foxparks – Light of Courage instead of 4 A Toasty Hug:** −0.4 / −2.3 (z −2.8). Playing the wrong Foxparks cost roughly 1–2 points.
+
+**Bot fix before J8:** the bot forgot cards it had put on top of its own deck when it planned (see docs/assumptions.md S5), which undersold Aurora Guide and Elphidran Aqua. J8 re-tests both on the 4-Chillet list with the fix, 12,000 games per list per bot.

@@ -48,6 +48,7 @@ class CardInstance:
     granted_auto: list = field(default_factory=list)  # [(hook, name, fn(game, card), until)]
     stand_locks: list = field(default_factory=list)  # [(source uid, source incarnation)]
     skip_stand: list = field(default_factory=list)  # players whose next stand phase it skips
+    known_top: bool = False  # owner put it on top of the deck from hand, so knows where it is
 
     @property
     def code(self) -> str:

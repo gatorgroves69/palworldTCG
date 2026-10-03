@@ -177,9 +177,12 @@ class RuleBot(Bot):
         elif intent in ("discard", "sacrifice"):
             scored = [(-self._keep_score(game, c), c.uid) for c in cards]
         elif intent == "top":
-            # Holding Chillet: stack a Dragon (◇8 or less) for its free deploy.
+            # Holding Chillet: stack a Dragon (◇8 or less) for its free deploy. Not while
+            # an attack at us is pending: then the top card must be lucky to cancel it.
             hand = game.players[me].hand
-            if any(c.code == "BP01-025" for c in hand):
+            b = game.battle
+            defending = b is not None and b.target is None and b.attacker.owner != me
+            if not defending and any(c.code == "BP01-025" for c in hand):
                 dragons = [c for c in cards if c.is_pal and c.defn.has_element("dragon")
                            and c.defn.cost <= 8 and not (c.code == "BP01-025" and sum(
                                x.code == "BP01-025" for x in hand) < 2)]

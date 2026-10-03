@@ -156,3 +156,47 @@ def test_rulebot_top_prefers_dragon_with_chillet_in_hand():
     d = Decision("target", 0, "", opts, min=0, max=1, context={"intent": "top"})
     assert RuleBot().choose(g, d) == [az.uid]
     assert su.uid in opts
+
+
+def test_rulebot_top_prefers_lucky_while_defending():
+    """With an attack at us pending, Aurora's top card must be lucky, even holding Chillet."""
+    from tests.test_cards_m2 import put
+    g, _ = _box_game()
+    put(g, 0, "BP01-025", Zone.HAND)
+    put(g, 0, "BP01-025", Zone.HAND)
+    aqua = put(g, 0, "TD01-012", Zone.HAND)  # Elphidran Aqua: Dragon, not lucky
+    su = put(g, 0, "BP01-002", Zone.HAND)    # Suzaku: lucky
+    att = put(g, 1, "BP01-029")
+    opts = [c.uid for c in g.players[0].hand]
+    d = Decision("target", 0, "", opts, min=0, max=1, context={"intent": "top"})
+    assert RuleBot().choose(g, d) == [aqua.uid]  # no attack: stack the Dragon for Chillet
+    from engine.state import Battle
+    g.battle = Battle(att, 1, None, 0)
+    pick = RuleBot().choose(g, d)                # attack at us: a lucky card
+    assert len(pick) == 1 and g.card(pick[0]).defn.lucky
+    assert su.uid in opts
+
+
+def test_determinize_keeps_cards_we_put_on_top(decks):
+    from cards.common import put_on_top, shuffle_deck
+    g, _ = real_game(decks)
+    c = put(g, 0, "BP01-047", Zone.HAND)
+    put_on_top(g, c)
+    assert c.known_top
+    for s in range(5):
+        k = g.clone([RuleBot(), RuleBot()])
+        determinize(k, 0, random.Random(s))
+        assert k.players[0].deck[0].uid == c.uid
+    # the opponent doesn't know it
+    tops = set()
+    for s in range(5):
+        k = g.clone([RuleBot(), RuleBot()])
+        determinize(k, 1, random.Random(s))
+        tops.add(k.players[0].deck[0].uid)
+    assert len(tops) > 1
+    # a shuffle or leaving the deck forgets it
+    shuffle_deck(g, 0)
+    assert not c.known_top
+    put_on_top(g, c)
+    g.draw(0)
+    assert not c.known_top

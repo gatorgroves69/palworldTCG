@@ -406,6 +406,7 @@ class Game:
             if c not in src:
                 raise RuntimeError(f"{c.label()} is not in its {c.zone.value} zone")
             src.remove(c)
+        c.known_top = False
         left_base = c.zone is Zone.BASE and zone is not Zone.BASE
         from_zone = c.zone
         if left_base:

@@ -324,11 +324,13 @@ J6 reviewed (`d3bcd84`), clean, thank you. **Variant A (4 Chillet, 0 Azurobe) is
 
 J7 reviewed (`3786c9b`), clean, thank you. Only H (Elphidran Aqua) was positive under both bots, and it wasn't significant. F, G and Z were neutral to worse, and E2 and I were worse. Details are in results/experiments.md.
 
-**J8 (needs Bobby's direct approval):** re-test Elphidran Aqua on Bobby's current 4-Chillet list with twice the games. About 2 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+**J8 (needs Bobby's direct approval; replaces the earlier 2-line J8 draft):** re-test the two top-of-deck cards on Bobby's current 4-Chillet list with twice the games, using the fixed bot (commit below: it now remembers cards it put on top of its own deck). About 3–4 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
 ```
 python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b results/runs/J8-H_chillet4_elphidran_aqua.txt --games 12000 --seed 83 --bot heuristic2 --out results/runs/J8-compare/H_elphidran_aqua.md
 python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b results/runs/J8-H_chillet4_elphidran_aqua.txt --games 12000 --seed 84 --bot heuristic --out results/runs/J8-compare/H_elphidran_aqua.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b results/runs/J8-E3_chillet4_aurora.txt --games 12000 --seed 85 --bot heuristic2 --out results/runs/J8-compare/E3_aurora.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b results/runs/J8-E3_chillet4_aurora.txt --games 12000 --seed 86 --bot heuristic --out results/runs/J8-compare/E3_aurora.md
 ```
-Telegram Bobby the 2 headline lines when done.
+Variants: H = −2 Hangyu +2 Elphidran Aqua; E3 = −2 Hangyu +2 Aurora Guide. Telegram Bobby the 4 headline lines when done.
 
 Next Claude action: review J8 if Bobby approves it.

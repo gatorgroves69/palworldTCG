@@ -35,7 +35,17 @@ def determinize(game, me: int, rng: random.Random) -> None:
         c.zone = Zone.HAND
     for c in opp.deck:
         c.zone = Zone.DECK
-    rng.shuffle(game.players[me].deck)
+    for c in hidden:  # their own knowledge isn't ours
+        c.known_top = False
+    # Our own deck stays hidden too, except the cards we put on top ourselves
+    # (Aurora Guide, Elphidran Aqua): those stay where we know they are.
+    deck = game.players[me].deck
+    k = 0
+    while k < len(deck) and deck[k].known_top:
+        k += 1
+    rest = deck[k:]
+    rng.shuffle(rest)
+    deck[k:] = rest
 
 
 class HeuristicBot(RuleBot):
