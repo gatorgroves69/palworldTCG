@@ -292,4 +292,29 @@ python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b result
 
 Rationale is in results/experiments.md ("Real-world research leads"). Telegram Bobby the 8 bolded headline lines when done.
 
-Next Claude action: review J6 and recommend which variant, if any, to adopt.
+**J7: Bobby's "sneaky blue tricks" + bot upgrade** (queued for AFTER J6; run ONLY after Bobby approves J7 to you directly). **First `git pull --ff-only` to the commit that added this spec or later**, because J7 needs the new bot code: RuleBot now casts Crystal Breath on Strike-2+ hits, casts Ignis Breath when it kills the attacker (and blocks expecting to), and stacks a Dragon on top when holding Chillet. About 6 h on the Optiplex, and the Z line is optional if time is short. Commit `results/runs/J7-compare/*.md` and `notes.md` after **each** line.
+```
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-F_crystal_breath.txt --games 6000 --seed 71 --bot heuristic2 --out results/runs/J7-compare/F_crystal_breath.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-F_crystal_breath.txt --games 6000 --seed 72 --bot heuristic --out results/runs/J7-compare/F_crystal_breath.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-G_ignis_breath.txt --games 6000 --seed 73 --bot heuristic2 --out results/runs/J7-compare/G_ignis_breath.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-G_ignis_breath.txt --games 6000 --seed 74 --bot heuristic --out results/runs/J7-compare/G_ignis_breath.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-H_elphidran_aqua.txt --games 6000 --seed 75 --bot heuristic2 --out results/runs/J7-compare/H_elphidran_aqua.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-H_elphidran_aqua.txt --games 6000 --seed 76 --bot heuristic --out results/runs/J7-compare/H_elphidran_aqua.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-I_penking_launcher.txt --games 6000 --seed 77 --bot heuristic2 --out results/runs/J7-compare/I_penking_launcher.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-I_penking_launcher.txt --games 6000 --seed 78 --bot heuristic --out results/runs/J7-compare/I_penking_launcher.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-E2_aurora.txt --games 6000 --seed 79 --bot heuristic2 --out results/runs/J7-compare/E2_aurora.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-E2_aurora.txt --games 6000 --seed 80 --bot heuristic --out results/runs/J7-compare/E2_aurora.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-Z_wrong_foxparks.txt --games 6000 --seed 81 --bot heuristic2 --out results/runs/J7-compare/Z_wrong_foxparks.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-Z_wrong_foxparks.txt --games 6000 --seed 82 --bot heuristic --out results/runs/J7-compare/Z_wrong_foxparks.md
+```
+Variants:
+- F: −2 Hangyu +2 Crystal Breath
+- G: −2 Hangyu +2 Ignis Breath
+- H: −2 Hangyu +2 Elphidran Aqua
+- I: −4 Hangyu +2 Penking +2 Pengullet Rocket Launcher
+- E2: −2 Hangyu +2 Aurora Guide, re-run under the new bot code
+- Z: Bobby's actual list so far (4 Foxparks – Light of Courage instead of 4 A Toasty Hug), to measure what the misprint cost
+
+Telegram Bobby the 12 headline lines when done.
+
+Next Claude action: review J6, then J7, and recommend which variant(s), if any, to adopt.

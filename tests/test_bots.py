@@ -111,3 +111,48 @@ def test_learned_eval_prefers_more_life(decks):
     a = evaluate_learned(g, 0)
     g.players[1].life = 3
     assert evaluate_learned(g, 0) > a
+
+
+# ---------------------------------------------------------------- quick-step tricks (J7)
+def _box_game():
+    from tests.test_cards_m2 import G
+    from cards import REGISTRY
+    from cards.db import load_card_db
+    from engine import CardType, Deck
+    db = load_card_db()
+    main = [db[c] for c in REGISTRY.codes() if db[c].type is not CardType.SOUL for _ in range(4)]
+    return G(Deck("toolbox", main, [db["SOUL-001"]] * 10))
+
+
+def test_rulebot_crystal_breath_on_big_hit():
+    from tests.test_cards_m2 import put
+    g, _ = _box_game()
+    g.agents[1] = RuleBot()
+    att = put(g, 0, "BP01-026")  # Relaxaurus S3
+    cb = put(g, 1, "TD01-022", Zone.HAND)
+    g.perform(Attack(att.uid, None))
+    assert cb.zone is Zone.GRAVEYARD and g.players[1].life == 10
+    assert 0 in att.skip_stand  # doesn't stand in the attacker's (P1's) next stand phase
+
+
+def test_rulebot_ignis_breath_finishes_blocked_attacker():
+    from tests.test_cards_m2 import put
+    g, _ = _box_game()
+    g.agents[1] = RuleBot()
+    att = put(g, 0, "BP01-025")  # Chillet 900
+    put(g, 1, "TD01-016")        # Reindrix 600, will block
+    ib = put(g, 1, "TD01-011", Zone.HAND)
+    g.perform(Attack(att.uid, None))
+    assert ib.zone is Zone.GRAVEYARD and att.zone is Zone.GRAVEYARD
+
+
+def test_rulebot_top_prefers_dragon_with_chillet_in_hand():
+    from tests.test_cards_m2 import put
+    g, _ = _box_game()
+    put(g, 0, "BP01-025", Zone.HAND)
+    az = put(g, 0, "BP01-029", Zone.HAND)   # Azurobe: Dragon, lucky
+    su = put(g, 0, "BP01-002", Zone.HAND)   # Suzaku: lucky, not a Dragon
+    opts = [c.uid for c in g.players[0].hand]
+    d = Decision("target", 0, "", opts, min=0, max=1, context={"intent": "top"})
+    assert RuleBot().choose(g, d) == [az.uid]
+    assert su.uid in opts

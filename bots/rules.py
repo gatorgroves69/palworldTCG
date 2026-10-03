@@ -16,6 +16,14 @@ from .evaluate import HAND_CARD, INTERRUPT_IN_HAND, LIFE, pal_value
 LUCKY_RATE = 0.18  # rough chance a damage check hits a lucky card (8 of ~45)
 
 
+def effect_damage(game, source: CardInstance, target: CardInstance, amount: int) -> int:
+    """Damage an effect from `source` would really deal to `target` (Suzaku etc.)."""
+    for ps in game.players:
+        for x in ps.base:
+            amount = x.impl.modify_effect_damage(game, x, source, target, amount)
+    return amount
+
+
 def card_worth(game, c: CardInstance) -> float:
     """Rough value of a card in hand, used for discards and sacrifices."""
     return c.defn.cost + (1.5 if c.kw("interrupt") else 0) + (1 if c.defn.lucky else 0)
@@ -50,16 +58,33 @@ class RuleBot(Bot):
         return next((a for a in actions if isinstance(a, EndMain)), actions[0])
 
     def quick_step(self, game, me, actions):
-        """Defender's window: Aurora Guide a lucky card to the top, or Interrupt
-        when the hit is big enough to be worth a card."""
+        """Defender's window, in order of preference:
+        - Ignis Breath (or any Quick 'deal N damage' event) if it kills the attacker,
+          alone or together with the battle damage it's about to take;
+        - Crystal Breath on a Strike-2+ hit at us (Strike -3 and a lock);
+        - Aurora Guide with a lucky card to put on top;
+        - an Interrupt when the hit costs more than the cards spent."""
         b = game.battle
         if b is None:
             return Pass()
         att = b.attacker
         loss = self.expected_loss(game, me, b)
+        hand = game.players[me].hand
+        events = {game.card(a.uid).code: a for a in actions if isinstance(a, PlayCard)}
+        ignis = events.get("TD01-011")
+        if ignis is not None:
+            dmg = effect_damage(game, game.card(ignis.uid), att, 500)
+            back = game.power(b.target) if b.target is not None and b.target.is_pal else 0
+            hp = game.power(att) - att.damage
+            kills_now = dmg >= hp
+            kills_in_battle = back > 0 and back < hp <= dmg + back
+            if (kills_now or kills_in_battle) and pal_value(game, att) + max(loss, 0) > HAND_CARD:
+                return ignis
         if loss <= 0:
             return Pass()
-        hand = game.players[me].hand
+        crystal = events.get("TD01-022")
+        if crystal is not None and b.target is None and game.strike(att) >= 2 and loss > HAND_CARD:
+            return crystal
         # Aurora Guide + a lucky card in hand guarantees the damage check is cancelled.
         if b.target is None:
             aurora = [a for a in actions if isinstance(a, PlayCard)
@@ -111,12 +136,17 @@ class RuleBot(Bot):
         tgt_uid = d.context.get("target")
         ap = game.power(att)
         life = game.players[me].life
+        # A Quick damage event we can afford adds to what our blocker deals (Ignis Breath).
+        ps = game.players[me]
+        trick = next((c for c in ps.hand if c.code == "TD01-011"
+                      and ps.souls_standing >= game.cost(c)), None)
+        extra = effect_damage(game, trick, att, 500) if trick is not None else 0
         best, best_score = None, 0.5
         for uid in d.options:
             b = game.card(uid)
             bp = game.power(b)
             b_dies = b.damage + ap >= bp or bp <= 0
-            kills = bp > 0 and att.damage + bp >= ap
+            kills = bp > 0 and att.damage + bp + extra >= ap
             score = (pal_value(game, att) if kills else 0) - (pal_value(game, b) if b_dies else 0)
             if tgt_uid is None:
                 s = game.strike(att)
@@ -140,13 +170,21 @@ class RuleBot(Bot):
         me = d.player
         cards = [game.card(u) for u in d.options]
         if intent in ("harm", "lock"):
-            scored = [(self._harm_score(game, me, c, amount, intent == "lock"), c.uid)
-                      for c in cards]
+            scored = [(self._harm_score(game, me, c, amount, intent == "lock")
+                       + self._attacker_bonus(game, me, c), c.uid) for c in cards]
         elif intent == "help":
             scored = [(self._help_score(game, me, c, d.prompt), c.uid) for c in cards]
         elif intent in ("discard", "sacrifice"):
             scored = [(-self._keep_score(game, c), c.uid) for c in cards]
         elif intent == "top":
+            # Holding Chillet: stack a Dragon (◇8 or less) for its free deploy.
+            hand = game.players[me].hand
+            if any(c.code == "BP01-025" for c in hand):
+                dragons = [c for c in cards if c.is_pal and c.defn.has_element("dragon")
+                           and c.defn.cost <= 8 and not (c.code == "BP01-025" and sum(
+                               x.code == "BP01-025" for x in hand) < 2)]
+                if dragons:
+                    return [max(dragons, key=lambda c: c.defn.cost).uid]
             lucky = [c for c in cards if c.defn.lucky]
             if lucky:
                 return [min(lucky, key=lambda c: card_worth(game, c)).uid]
@@ -171,6 +209,14 @@ class RuleBot(Bot):
         if len(picked) < d.min:
             picked = [uid for _, uid in scored[: d.min]]
         return picked
+
+    @staticmethod
+    def _attacker_bonus(game, me, c) -> float:
+        """While defending, harm/lock effects should hit the Pal attacking us."""
+        b = game.battle
+        if b is not None and b.attacker is c and c.owner != me:
+            return 50.0
+        return 0.0
 
     def _harm_score(self, game, me, c, amount, lock=False):
         v = pal_value(game, c)
