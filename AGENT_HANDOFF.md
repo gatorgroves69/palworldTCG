@@ -284,6 +284,11 @@ Variants:
 - B: −2 Hangyu Cryst +2 Elphidran
 - C: −2 Hangyu Cryst +2 Relaxaurus
 - D: −4 Hangyu Cryst +2 Elphidran +2 Relaxaurus
+- E (added 2026-10-02, needs Bobby's approval too): −2 Hangyu Cryst +2 Aurora Guide. Combo idea: Aurora puts Azurobe/Chillet (Dragons) on top, then Chillet deploys it for free.
+```
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-E_aurora.txt --games 6000 --seed 69 --bot heuristic2 --out results/runs/J6-compare/E_aurora.md
+python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J6-E_aurora.txt --games 6000 --seed 70 --bot heuristic --out results/runs/J6-compare/E_aurora.md
+```
 
 Rationale is in results/experiments.md ("Real-world research leads"). Telegram Bobby the 8 bolded headline lines when done.
 
