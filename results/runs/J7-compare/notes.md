@@ -133,3 +133,30 @@ Artifact verified: True
 
 
 ```
+
+## J7 line 6: DONE
+HEAD: f9e446f3f33c8a2face7fdc54831ec3235a4d28b
+Start UTC: 2026-10-03T09:01:37.717650+00:00
+End UTC: 2026-10-03T09:09:17.243304+00:00
+Command: `python3 -m sim compare --a results/runs/cattiva_chillet+blazehowl.txt --b results/runs/J7-H_elphidran_aqua.txt --games 6000 --seed 76 --bot heuristic --out results/runs/J7-compare/H_elphidran_aqua.md`
+Exit: 0
+Artifact verified: True
+
+```text
+**heuristic**, 6000 games per list, seed 76: A 72.2% -> B 73.1% (diff +0.9 ± 0.8, z 1.2)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 37.5% | 66.7 | 68.3 | +1.6 | 2249 |
+| chillet-relaxaurus-br | 13.9% | 60.6 | 61.0 | +0.5 | 834 |
+| lamball-stone-pit-pr | 10.5% | 91.6 | 92.2 | +0.6 | 628 |
+| tombat-medicine-gp | 7.3% | 86.5 | 85.1 | -1.4 | 437 |
+| machine-gun-furnace-br | 7.0% | 82.2 | 82.7 | +0.5 | 421 |
+| shadowbeak-menasting-bp | 6.9% | 89.3 | 91.3 | +1.9 | 413 |
+| foxparks-harness-br | 5.6% | 72.2 | 76.0 | +3.9 | 334 |
+| cattiva-azurobe-br | 5.3% | 58.2 | 56.0 | -2.2 | 318 |
+| lamball-cattiva-bg | 4.5% | 59.6 | 59.3 | -0.4 | 270 |
+| chillet-relaxaurus-bg | 1.6% | 76.8 | 77.9 | +1.1 | 95 |
+
+
+```
