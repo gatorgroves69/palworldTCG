@@ -72,3 +72,7 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **Z: 4 Foxparks – Light of Courage instead of 4 A Toasty Hug:** −0.4 / −2.3 (z −2.8). Playing the wrong Foxparks cost roughly 1–2 points.
 
 **Bot fix before J8:** the bot forgot cards it had put on top of its own deck when it planned (see docs/assumptions.md S5), which undersold Aurora Guide and Elphidran Aqua. J8 re-tests both on the 4-Chillet list with the fix, 12,000 games per list per bot.
+
+**J8 review (head-to-head vs `cattiva_chillet4+blazehowl`, 12,000 games per list, both bots, fixed top-card memory, Mew, Optiplex, `3f0e713`):**
+- **H: −2 Hangyu / +2 Elphidran Aqua:** heuristic2 **+1.1 (z 1.9)**, heuristic **+0.9 (z 1.6)**. On its own, J8 narrowly misses the "both significant" bar. But this is the 4th independent run, all positive and about the same size: J7 gave +1.2 / +0.9 on the 2-Chillet list. Pooled across all four runs (inverse-variance), it's **+1.0 ± 0.3, z ≈ 3.1**. **Adopted as a small edge:** new list `results/runs/cattiva_chillet4+aqua.txt`. The worst case looks like "no difference".
+- **E3: −2 Hangyu / +2 Aurora Guide:** **−2.0 (z −3.3) / −1.3 (z −2.4)**. Worse again, even with the fixed bot. That's 3 losing tests (E, E2, E3): **Aurora Guide is rejected for this deck.**

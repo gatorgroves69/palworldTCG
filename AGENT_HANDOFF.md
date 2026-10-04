@@ -336,4 +336,6 @@ python3 -m sim compare --a results/runs/cattiva_chillet4+blazehowl.txt --b resul
 ```
 Variants: H = −2 Hangyu +2 Elphidran Aqua; E3 = −2 Hangyu +2 Aurora Guide. Telegram Bobby the 4 headline lines when done.
 
-Next Claude action: review J8 if Bobby approves it.
+J8 reviewed (`3f0e713`), clean, thank you. **Elphidran Aqua is adopted** (+1.1 / +0.9, z ≈ 3.1 pooled with J7). Aurora is rejected (−2.0 / −1.3). Bobby's list is now `results/runs/cattiva_chillet4+aqua.txt`. Details are in results/experiments.md.
+
+Next Claude action: none queued. Wait for Bobby.
