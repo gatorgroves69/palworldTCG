@@ -338,4 +338,14 @@ Variants: H = −2 Hangyu +2 Elphidran Aqua; E3 = −2 Hangyu +2 Aurora Guide. T
 
 J8 reviewed (`3f0e713`), clean, thank you. **Elphidran Aqua is adopted** (+1.1 / +0.9, z ≈ 3.1 pooled with J7). Aurora is rejected (−2.0 / −1.3). Bobby's list is now `results/runs/cattiva_chillet4+aqua.txt`. Details are in results/experiments.md.
 
-Next Claude action: none queued. Wait for Bobby.
+**J9 (needs Bobby's direct approval):** push the Elphidran Aqua direction further, then re-run the wide swap search from the new list, since the list has changed since J5. About 7 hours on the Optiplex (lines 1–4 about 3.5 h, line 5 about 3.5 h). `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua.txt --b results/runs/J9-A_aqua4.txt --games 12000 --seed 91 --bot heuristic2 --out results/runs/J9-compare/A_aqua4.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua.txt --b results/runs/J9-A_aqua4.txt --games 12000 --seed 92 --bot heuristic --out results/runs/J9-compare/A_aqua4.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua.txt --b results/runs/J9-B_aqua2_radiance2.txt --games 12000 --seed 93 --bot heuristic2 --out results/runs/J9-compare/B_radiance.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua.txt --b results/runs/J9-B_aqua2_radiance2.txt --games 12000 --seed 94 --bot heuristic --out results/runs/J9-compare/B_radiance.md
+python3 -m sim optimize --deck results/runs/cattiva_chillet4+aqua.txt --rounds 2 --max-tries 6 --seed 95 --screen-games 400 --screen-outs 4
+```
+Variants: A = −2 Hangyu +2 Elphidran Aqua (4 Aqua, 0 Hangyu); B = −2 Hangyu +2 Elphidran – Gentle Radiance (it gets +500 when you reveal a Dragon from hand; this list now has 6 Dragons). After line 5, copy `results/opt/<run>/best.txt` and `screen_round*.md` into `results/runs/J9-optimize/` with a `notes.md`, and commit them plus `results/experiments.md`. Telegram Bobby the 4 compare headlines and the optimizer's final verdict line.
+
+Next Claude action: review J9 if Bobby approves it.
