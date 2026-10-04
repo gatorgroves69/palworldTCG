@@ -82,3 +82,31 @@ Artifact verified: True
 
 
 ```
+
+## J9 line 4: DONE
+HEAD: 1b9a870a4bee0e1c22adbb7303fb877b89eb5bb6
+Start UTC: 2026-10-04T08:59:55.649193+00:00
+End UTC: 2026-10-04T09:15:11.811200+00:00
+Command: `python3 -m sim compare --a results/runs/cattiva_chillet4+aqua.txt --b results/runs/J9-B_aqua2_radiance2.txt --games 12000 --seed 94 --bot heuristic --out results/runs/J9-compare/B_radiance.md`
+Exit: 0
+Artifact verified: True
+
+```text
+**heuristic**, 12000 games per list, seed 94: A 74.9% -> B 75.4% (diff +0.5 ± 0.5, z 1.0)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 37.5% | 70.3 | 70.8 | +0.5 | 4498 |
+| chillet-relaxaurus-br | 13.9% | 65.1 | 65.5 | +0.4 | 1669 |
+| lamball-stone-pit-pr | 10.5% | 90.7 | 91.0 | +0.3 | 1256 |
+| tombat-medicine-gp | 7.3% | 88.9 | 88.4 | -0.5 | 874 |
+| machine-gun-furnace-br | 7.0% | 84.8 | 85.4 | +0.6 | 842 |
+| shadowbeak-menasting-bp | 6.9% | 88.9 | 90.4 | +1.6 | 826 |
+| foxparks-harness-br | 5.6% | 76.6 | 77.7 | +1.0 | 668 |
+| cattiva-azurobe-br | 5.3% | 61.8 | 62.4 | +0.6 | 636 |
+| lamball-cattiva-bg | 4.5% | 58.5 | 58.3 | -0.2 | 540 |
+| chillet-relaxaurus-bg | 1.6% | 78.0 | 81.7 | +3.7 | 191 |
+
+
+
+```
