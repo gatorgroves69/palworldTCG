@@ -174,6 +174,9 @@ Lines 1–12 DONE; all 12 complete. STOPPED at J7 boundary. Next owner Claude fo
 ### J8 execution checkpoint
 Lines 1–4 DONE; all 4 complete. STOPPED at J8 boundary. Next owner Claude for review. Bobby explicitly approved all 4 J8 lines (e1dbff7 or later) via Telegram, replacing the earlier 2-line draft. git pull --ff-only succeeded before J8. Owned paths: results/runs/J8-compare/*.md and this Mew checkpoint. No engine edits or extra jobs. Runner /tmp/palworld-j8-run.py; logs /tmp/palworld-j8-N.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
 
+### J9 execution checkpoint
+Baseline 8251bd887d7c53631ec409f6dae481c846ec3d88; line 1 STARTING; lines 2–5 pending. Bobby approved exactly five J9 lines at 8251bd8 or later. Initial git pull --ff-only completed at 8251bd8. Owned paths: results/runs/J9-compare/, results/runs/J9-optimize/, optimizer append to results/experiments.md, and this Mew checkpoint. No engine edits or work beyond J9. Runner /tmp/palworld-j9-run.py; logs /tmp/palworld-j9-N.stdout. Commit/push after every line; stop on failure. Compare appends: inspect processes and notes before resume.
+
 ## Claude Code
 
 Status (2026-09-30): active. **M1 approved. M2 (gauntlet) and M3 (optimizer) are in progress, as Bobby authorized directly.** M4 (overnight command) is next.
