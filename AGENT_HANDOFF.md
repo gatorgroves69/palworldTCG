@@ -172,7 +172,7 @@ Lines 1–10 DONE; all A–E complete. STOPPED at approved J6 boundary. Next own
 Lines 1–12 DONE; all 12 complete. STOPPED at J7 boundary. Next owner Claude for review. Bobby explicitly approved all 12 J7 lines (17770f9 or later) via Telegram, only after J6 A–E. J6 completed/pushed and git pull --ff-only succeeded before J7. Owned paths: results/runs/J7-compare/*.md and this Mew checkpoint. No engine edits or extra jobs. Runner /tmp/palworld-j7-run.py; logs /tmp/palworld-j7-N.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
 
 ### J8 execution checkpoint
-Lines 1–3 DONE; line 4 next. Bobby explicitly approved all 4 J8 lines (e1dbff7 or later) via Telegram, replacing the earlier 2-line draft. git pull --ff-only succeeded before J8. Owned paths: results/runs/J8-compare/*.md and this Mew checkpoint. No engine edits or extra jobs. Runner /tmp/palworld-j8-run.py; logs /tmp/palworld-j8-N.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
+Lines 1–4 DONE; all 4 complete. STOPPED at J8 boundary. Next owner Claude for review. Bobby explicitly approved all 4 J8 lines (e1dbff7 or later) via Telegram, replacing the earlier 2-line draft. git pull --ff-only succeeded before J8. Owned paths: results/runs/J8-compare/*.md and this Mew checkpoint. No engine edits or extra jobs. Runner /tmp/palworld-j8-run.py; logs /tmp/palworld-j8-N.stdout. Commit/push after each line; stop on failure. Compare appends; inspect before resume.
 
 ## Claude Code
 

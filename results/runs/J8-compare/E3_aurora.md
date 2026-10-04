@@ -15,3 +15,20 @@ A = `results/runs/cattiva_chillet4+blazehowl.txt`, B = `results/runs/J8-E3_chill
 | cattiva-azurobe-br | 5.3% | 56.4 | 53.6 | -2.8 | 636 |
 | lamball-cattiva-bg | 4.5% | 50.7 | 50.0 | -0.7 | 540 |
 | chillet-relaxaurus-bg | 1.6% | 72.3 | 67.5 | -4.7 | 191 |
+
+A = `results/runs/cattiva_chillet4+blazehowl.txt`, B = `results/runs/J8-E3_chillet4_aurora.txt`
+
+**heuristic**, 12000 games per list, seed 86: A 73.8% -> B 72.5% (diff -1.3 ± 0.6, z -2.4)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 37.5% | 70.3 | 69.0 | -1.3 | 4498 |
+| chillet-relaxaurus-br | 13.9% | 62.0 | 59.8 | -2.2 | 1669 |
+| lamball-stone-pit-pr | 10.5% | 91.5 | 91.6 | +0.2 | 1256 |
+| tombat-medicine-gp | 7.3% | 85.8 | 85.5 | -0.3 | 874 |
+| machine-gun-furnace-br | 7.0% | 85.2 | 83.8 | -1.3 | 842 |
+| shadowbeak-menasting-bp | 6.9% | 88.9 | 87.5 | -1.3 | 826 |
+| foxparks-harness-br | 5.6% | 75.6 | 73.7 | -1.9 | 668 |
+| cattiva-azurobe-br | 5.3% | 57.5 | 55.0 | -2.5 | 636 |
+| lamball-cattiva-bg | 4.5% | 57.4 | 55.4 | -2.0 | 540 |
+| chillet-relaxaurus-bg | 1.6% | 68.6 | 68.1 | -0.5 | 191 |
