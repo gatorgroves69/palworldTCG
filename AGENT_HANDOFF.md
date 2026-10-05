@@ -392,4 +392,6 @@ Variants:
 
 Telegram Bobby the 10 headline lines when done.
 
-Next Claude action: review J10, then J11, if Bobby approves them.
+J10 reviewed (`350a3b0`), thank you. **The Jormuntide swap is adopted**: compare +1.1 / +1.4, and the optimizer independently kept it at +2.4. Relaxaurus is worse. Bobby's list is now `results/runs/cattiva_dragons.txt`, identical to J11's baseline `J10-A_jormuntide.txt`, so J11 stands as written.
+
+Next Claude action: review J11 if Bobby approves it.

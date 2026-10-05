@@ -93,3 +93,9 @@ These lead to job J6: four variants, each compared head-to-head with the current
 | 2026-10-05 10:14 | 20261005-061909 | cattiva_chillet4+aqua4 | -2 Fuack – Manic Wave Ripper / +2 Ribbuny – Little Princess | heuristic2 | +0.8 ± 1.0 | 0.82 | 4035 | — | **not better (inconclusive)** |
 | 2026-10-05 10:37 | 20261005-061909 | cattiva_chillet4+aqua4 | -2 Pump-Action Shotgun / +2 Flambelle – Scorching Tears | heuristic2 | +0.6 ± 1.0 | 0.65 | 4035 | — | **not better (inconclusive)** |
 | 2026-10-05 11:04 | 20261005-061909 | cattiva_chillet4+aqua4 | -2 Suzaku – Hellfire Wings / +2 Jormuntide – Surging Sea Serpent | heuristic2 | +2.4 ± 1.0 | 2.53 | 4035 | heuristic +1.9 (z 1.8) | **KEPT** |
+
+**J10 review (vs `cattiva_chillet4+aqua4`, 12,000 games per list, both bots, bot stacks for Chillet only when one can follow, Mew, Optiplex, `350a3b0`):**
+- **A: −2 Suzaku / +2 Jormuntide – Surging Sea Serpent:** heuristic2 **+1.1 (z 1.9)**, heuristic **+1.4 (z 2.6)**. The J10 optimizer found and **KEPT the same swap independently** (+2.4 ± 1.0, sequential test), from 449 screened swaps. Three runs agree. **Adopted:** new list `results/runs/cattiva_dragons.txt` (= `J10-A_jormuntide.txt`).
+- **B: −2 Blazehowl / +2 Relaxaurus:** −1.4 (z −2.4) / −0.9. Worse.
+- **Optimizer:** 8 removal candidates. The other top-6 swaps were inconclusive or futile: Foxparks → Kelpsea Ignis or Direhowl, Sparkit → Relaxaurus, Fuack → Ribbuny, Shotgun → Flambelle.
+- Note: Mew refreshed the tiers on 2026-10-05 (`1196995`), so field weights moved slightly (Chillet-BP 37.5 → 38.5%, Stone Pit 10.5 → 12.2%). J11 and later runs use the new weights.
