@@ -370,7 +370,7 @@ Variants:
 
 Line 5 is the J9 search, but it considers the 8 weakest cards for removal instead of 4. After line 5, copy `results/opt/<run>/best.txt` and `screen_round1.md` into `results/runs/J10-optimize/` with a `notes.md`. The optimizer prints an absolute `best list:` path, so don't compare it to a relative one. Telegram Bobby the 4 compare headlines and the optimizer's verdict.
 
-**J11 (needs Bobby's direct approval; start only after J10 is completely finished):** the newly released SS01 cards (`cards/ss01.py`, `f`-commit below), each swapped into the J10-A Jormuntide list. About 7 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+**J11 (needs Bobby's direct approval; start only after J10 is completely finished):** the newly released SS01 cards (`cards/ss01.py`, commit adcb2e5), each swapped into the J10-A Jormuntide list. About 7 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
 ```
 python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-Q_quivern.txt --games 12000 --seed 111 --bot heuristic2 --out results/runs/J11-compare/Q_quivern.md
 python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-Q_quivern.txt --games 12000 --seed 112 --bot heuristic --out results/runs/J11-compare/Q_quivern.md
