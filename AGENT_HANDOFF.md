@@ -370,4 +370,23 @@ Variants:
 
 Line 5 is the J9 search, but it considers the 8 weakest cards for removal instead of 4. After line 5, copy `results/opt/<run>/best.txt` and `screen_round1.md` into `results/runs/J10-optimize/` with a `notes.md`. The optimizer prints an absolute `best list:` path, so don't compare it to a relative one. Telegram Bobby the 4 compare headlines and the optimizer's verdict.
 
-Next Claude action: review J10 if Bobby approves it.
+**J11 (needs Bobby's direct approval; start only after J10 is completely finished):** the newly released SS01 cards (`cards/ss01.py`, `f`-commit below), each swapped into the J10-A Jormuntide list. About 7 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-Q_quivern.txt --games 12000 --seed 111 --bot heuristic2 --out results/runs/J11-compare/Q_quivern.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-Q_quivern.txt --games 12000 --seed 112 --bot heuristic --out results/runs/J11-compare/Q_quivern.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-G_grizzbolt.txt --games 12000 --seed 113 --bot heuristic2 --out results/runs/J11-compare/G_grizzbolt.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-G_grizzbolt.txt --games 12000 --seed 114 --bot heuristic --out results/runs/J11-compare/G_grizzbolt.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-I_ice_blade.txt --games 12000 --seed 115 --bot heuristic2 --out results/runs/J11-compare/I_ice_blade.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-I_ice_blade.txt --games 12000 --seed 116 --bot heuristic --out results/runs/J11-compare/I_ice_blade.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-C_cattiva_brimming.txt --games 12000 --seed 117 --bot heuristic2 --out results/runs/J11-compare/C_cattiva_brimming.md
+python3 -m sim compare --a results/runs/J10-A_jormuntide.txt --b results/runs/J11-C_cattiva_brimming.txt --games 12000 --seed 118 --bot heuristic --out results/runs/J11-compare/C_cattiva_brimming.md
+```
+Variants:
+- Q = −2 Suzaku +2 Quivern. Lucky for lucky; every lucky card is then a Dragon.
+- G = −2 Blazehowl +2 Grizzbolt (300 to all their Pals, 500 with Suzaku).
+- I = −2 Blazehowl +2 Chillet – Finishing Ice Blade (a ◇6 Dragon that draws on kills).
+- C = −2 Sparkit +2 Cattiva – Brimming with Confidence.
+
+Telegram Bobby the 8 headline lines when done.
+
+Next Claude action: review J10, then J11, if Bobby approves them.

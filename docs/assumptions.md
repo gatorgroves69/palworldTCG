@@ -145,6 +145,12 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### C29: Format of BP02 / SS01 cards (`RESOLVED for now`, 2026-10-01)
 - Bobby: BP02 isn't released yet, so it's not implemented. SS01 is the "Sleeve & Card Set Vol.1" (5 cards); Bobby is unsure whether it's legal, and no meta deck uses it, so it's skipped for now. It's a quick add later.
 - 13 red/blue/colorless BP02 and SS01 cards are **not implemented**. None of the 10 meta decks uses them, and the stated format is BP01 + TD01/TD02. I'll implement them if they're legal at Bobby's weeklies.
+- Update 2026-10-05: Bobby says the SS01 cards have just been released. The 4 red/blue/colorless SS01 cards are now implemented (`cards/ss01.py`): Grizzbolt, Chillet – Finishing Ice Blade, Cattiva – Brimming with Confidence and Quivern. Depresso is purple and isn't needed. BP02 "Legends Awaken" is still unreleased and not implemented.
+
+### C30: SS01 card readings (`OPEN`, 2026-10-05)
+- **Copy limit:** the 4-copy limit counts the full card name, so "Chillet – Finishing Ice Blade" and "Chillet – Dragon Whisperer" are different names (as with every other card here, see rules.md). If Bobby's events count by main name (《Chillet》), 4 + 4 would be illegal.
+- **Chillet – Finishing Ice Blade:** "its opposing combat Pal" is the Pal it battles (CR 9.4.3), whether it attacks or is attacked. It only draws if it's still in the base when that Pal goes to the graveyard. In a mutual kill, the order of the rule action decides, so it may not draw.
+- **Quivern:** the 700 is chosen when the attack is declared at a Pal or structure (before blocks). It can hit any Pal or structure, including the attack target, and not when attacking the player.
 
 ## Data caveats
 
