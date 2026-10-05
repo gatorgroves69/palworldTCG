@@ -353,4 +353,18 @@ Variants: A = −2 Hangyu +2 Elphidran Aqua (4 Aqua, 0 Hangyu); B = −2 Hangyu 
 
 J9 reviewed (`3a3055f`), thank you. **4 Elphidran Aqua, 0 Hangyu is adopted:** +0.9 / +0.9, z ≈ 2.4 pooled. Radiance is neutral. Optimizer: no swap passed. Bobby's list is now `results/runs/cattiva_chillet4+aqua4.txt`. Note on J9.5: the optimizer exited 0 and printed its verdict, and your wrapper's assertion failed on the `best list:` path check (it prints an absolute path), so it isn't an engine failure. If `results/opt/20261004-091514/screen_round1.md` exists on the Optiplex, please copy it into `results/runs/J9-optimize/` next time you're in the repo; it's not urgent.
 
-Next Claude action: none queued. Wait for Bobby.
+**J10 (needs Bobby's direct approval):** Big-Dragon targets for Chillet, plus a wider swap search that also considers cutting cards the earlier searches never cut. It uses a bot fix (`docs/assumptions.md` S5, J10): Dragons are stacked for Chillet only when a Chillet can follow the same turn. About 6–7 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua4.txt --b results/runs/J10-A_jormuntide.txt --games 12000 --seed 101 --bot heuristic2 --out results/runs/J10-compare/A_jormuntide.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua4.txt --b results/runs/J10-A_jormuntide.txt --games 12000 --seed 102 --bot heuristic --out results/runs/J10-compare/A_jormuntide.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua4.txt --b results/runs/J10-B_relaxaurus.txt --games 12000 --seed 103 --bot heuristic2 --out results/runs/J10-compare/B_relaxaurus.md
+python3 -m sim compare --a results/runs/cattiva_chillet4+aqua4.txt --b results/runs/J10-B_relaxaurus.txt --games 12000 --seed 104 --bot heuristic --out results/runs/J10-compare/B_relaxaurus.md
+python3 -m sim optimize --deck results/runs/cattiva_chillet4+aqua4.txt --rounds 1 --max-tries 6 --seed 105 --screen-games 400 --screen-outs 8
+```
+Variants:
+- A = −2 Suzaku +2 Jormuntide – Surging Sea Serpent. A lucky-for-lucky swap, so the deck stays at 8 lucky cards. It turns 2 lucky non-Dragons into 2 lucky ◇8 Dragons that Chillet can deploy free.
+- B = −2 Blazehowl +2 Relaxaurus. A non-lucky ◇7 Dragon target.
+
+Line 5 is the J9 search, but it considers the 8 weakest cards for removal instead of 4. After line 5, copy `results/opt/<run>/best.txt` and `screen_round1.md` into `results/runs/J10-optimize/` with a `notes.md`. The optimizer prints an absolute `best list:` path, so don't compare it to a relative one. Telegram Bobby the 4 compare headlines and the optimizer's verdict.
+
+Next Claude action: review J10 if Bobby approves it.

@@ -156,6 +156,10 @@ def test_rulebot_top_prefers_dragon_with_chillet_in_hand():
     d = Decision("target", 0, "", opts, min=0, max=1, context={"intent": "top"})
     assert RuleBot().choose(g, d) == [az.uid]
     assert su.uid in opts
+    # can't afford that Chillet this turn: the next draw takes the top card, so stack lucky
+    g.players[0].souls_rested = g.players[0].souls - 4
+    pick = RuleBot().choose(g, d)
+    assert pick != [az.uid] and g.card(pick[0]).defn.lucky
 
 
 def test_rulebot_top_prefers_lucky_while_defending():
