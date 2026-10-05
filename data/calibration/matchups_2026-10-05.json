@@ -1,0 +1,1010 @@
+[
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.5,
+    "games": 18248,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.52,
+    "games": 5595,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.52,
+    "games": 5847,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.61,
+    "games": 2937,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.55,
+    "games": 2931,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.58,
+    "games": 2276,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.65,
+    "games": 2164,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.45,
+    "games": 2431,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.48,
+    "games": 2317,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.61,
+    "games": 1737,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.62,
+    "games": 2007,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-bp",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.64,
+    "games": 957,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.48,
+    "games": 5595,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.5,
+    "games": 2094,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.48,
+    "games": 1655,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.54,
+    "games": 1054,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.48,
+    "games": 891,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.55,
+    "games": 826,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.63,
+    "games": 912,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.47,
+    "games": 711,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.46,
+    "games": 700,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.53,
+    "games": 689,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.53,
+    "games": 636,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "chillet-relaxaurus-br",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.62,
+    "games": 331,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.48,
+    "games": 5847,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.52,
+    "games": 1655,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.5,
+    "games": 1854,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.6,
+    "games": 868,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.48,
+    "games": 945,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.66,
+    "games": 701,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.69,
+    "games": 675,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.44,
+    "games": 832,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.42,
+    "games": 751,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.59,
+    "games": 535,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.45,
+    "games": 559,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-stone-pit-pr",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.58,
+    "games": 277,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.39,
+    "games": 2937,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.46,
+    "games": 1054,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.4,
+    "games": 868,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.5,
+    "games": 574,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.43,
+    "games": 451,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.46,
+    "games": 470,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.58,
+    "games": 443,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.44,
+    "games": 345,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.34,
+    "games": 302,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.44,
+    "games": 431,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.41,
+    "games": 334,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "tombat-medicine-gp",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.48,
+    "games": 188,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.45,
+    "games": 2931,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.52,
+    "games": 891,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.52,
+    "games": 945,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.57,
+    "games": 451,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.5,
+    "games": 496,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.57,
+    "games": 368,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.63,
+    "games": 366,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.47,
+    "games": 366,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.43,
+    "games": 344,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.62,
+    "games": 268,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.57,
+    "games": 313,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-br",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.6,
+    "games": 123,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.42,
+    "games": 2276,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.45,
+    "games": 826,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.34,
+    "games": 701,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.54,
+    "games": 470,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.43,
+    "games": 368,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.5,
+    "games": 528,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.55,
+    "games": 490,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.37,
+    "games": 299,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.37,
+    "games": 298,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.51,
+    "games": 348,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.46,
+    "games": 268,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "machine-gun-furnace-br",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.52,
+    "games": 222,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.35,
+    "games": 2164,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.37,
+    "games": 912,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.31,
+    "games": 675,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.42,
+    "games": 443,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.37,
+    "games": 366,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.45,
+    "games": 490,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.5,
+    "games": 506,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.29,
+    "games": 309,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.29,
+    "games": 255,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.44,
+    "games": 367,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.42,
+    "games": 270,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "shadowbeak-menasting-bp",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.47,
+    "games": 203,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.55,
+    "games": 2431,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.53,
+    "games": 711,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.56,
+    "games": 832,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.56,
+    "games": 345,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.53,
+    "games": 366,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.63,
+    "games": 299,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.71,
+    "games": 309,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.5,
+    "games": 332,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.48,
+    "games": 344,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.69,
+    "games": 213,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.6,
+    "games": 308,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "cattiva-azurobe-br",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.62,
+    "games": 118,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.52,
+    "games": 2317,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.54,
+    "games": 700,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.58,
+    "games": 751,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.66,
+    "games": 302,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.57,
+    "games": 344,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.63,
+    "games": 298,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.71,
+    "games": 255,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.52,
+    "games": 344,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.5,
+    "games": 310,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.66,
+    "games": 223,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.62,
+    "games": 277,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "lamball-cattiva-bg",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.62,
+    "games": 116,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.39,
+    "games": 1737,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.47,
+    "games": 689,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.41,
+    "games": 535,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.56,
+    "games": 431,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.38,
+    "games": 268,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.49,
+    "games": 348,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.56,
+    "games": 367,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.31,
+    "games": 213,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.34,
+    "games": 223,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.5,
+    "games": 264,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.51,
+    "games": 208,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "pengullet-launcher-bg",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.54,
+    "games": 151,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.38,
+    "games": 2007,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.47,
+    "games": 636,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.55,
+    "games": 559,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.59,
+    "games": 334,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.43,
+    "games": 313,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.54,
+    "games": 268,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.58,
+    "games": 270,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.4,
+    "games": 308,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.38,
+    "games": 277,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.49,
+    "games": 208,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.5,
+    "games": 272,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "foxparks-harness-pr",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.57,
+    "games": 115,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "chillet-relaxaurus-bp",
+    "win_rate_a": 0.36,
+    "games": 957,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "chillet-relaxaurus-br",
+    "win_rate_a": 0.38,
+    "games": 331,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "lamball-stone-pit-pr",
+    "win_rate_a": 0.42,
+    "games": 277,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "tombat-medicine-gp",
+    "win_rate_a": 0.52,
+    "games": 188,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "foxparks-harness-br",
+    "win_rate_a": 0.4,
+    "games": 123,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "machine-gun-furnace-br",
+    "win_rate_a": 0.48,
+    "games": 222,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "shadowbeak-menasting-bp",
+    "win_rate_a": 0.53,
+    "games": 203,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "cattiva-azurobe-br",
+    "win_rate_a": 0.38,
+    "games": 118,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "lamball-cattiva-bg",
+    "win_rate_a": 0.38,
+    "games": 116,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "pengullet-launcher-bg",
+    "win_rate_a": 0.46,
+    "games": 151,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "foxparks-harness-pr",
+    "win_rate_a": 0.43,
+    "games": 115,
+    "source": "palworldtcg.gg"
+  },
+  {
+    "deck_a": "furnace-machine-gun-gr",
+    "deck_b": "furnace-machine-gun-gr",
+    "win_rate_a": 0.5,
+    "games": 114,
+    "source": "palworldtcg.gg"
+  }
+]

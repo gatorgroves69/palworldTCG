@@ -1,0 +1,15 @@
+# main
+4 BP01-002 Suzaku – Hellfire Wings
+4 BP01-007 Kitsun – Wyrmbane Fangs
+4 BP01-008 Sparkit – Hazardous Contact
+4 BP01-020 Pump-Action Shotgun
+4 BP01-028 Pengullet – Yearning for the Sky
+4 BP01-029 Azurobe – Water Dragon Waltz
+4 BP01-032 Fuack – Manic Wave Ripper
+2 BP01-047 Pal Sphere
+4 TD01-004 Foxparks – A Toasty Hug
+4 TD01-015 Hangyu Cryst – Frigid Wanderer
+4 TD01-016 Reindrix – Icy Gaze
+4 TD01-023 Lamball – My First Pal
+4 TD02-023 Cattiva – My First Pal
+# soul

@@ -1,0 +1,718 @@
+[
+  {
+    "deck": "chillet-relaxaurus-bp",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/blue-purple-chillet-relaxaurus",
+    "resolutions": [
+      {
+        "quantity": 4,
+        "code": "BP01-025",
+        "name": "Chillet – Dragon Whisperer"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-026",
+        "name": "Relaxaurus – Hungry Gunner"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-027",
+        "name": "Jormuntide – Surging Sea Serpent"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-028",
+        "name": "Pengullet – Yearning for the Sky"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-038",
+        "name": "Cryolinx – Arctic Ordeal"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-044",
+        "name": "Pengullet Rocket Launcher"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-047",
+        "name": "Pal Sphere"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-048",
+        "name": "Aurora Guide"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-077",
+        "name": "Pyrin Noct – Steed of Azure Flames"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-095",
+        "name": "Zoe's Strategy"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-098",
+        "name": "Elphidran – Gentle Radiance"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-012",
+        "name": "Elphidran Aqua – Gentle Ripples"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-016",
+        "name": "Reindrix – Icy Gaze"
+      },
+      {
+        "quantity": 1,
+        "code": "TD02-012",
+        "name": "Astegon – Aegis Wyvern of Death"
+      },
+      {
+        "quantity": 2,
+        "code": "TD02-017",
+        "name": "Blazehowl Noct – Darkflame Defender"
+      },
+      {
+        "quantity": 2,
+        "code": "TD02-021",
+        "name": "Strike from the Darkness"
+      }
+    ]
+  },
+  {
+    "deck": "chillet-relaxaurus-br",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/blue-red-chillet-relaxaurus",
+    "resolutions": [
+      {
+        "quantity": 2,
+        "code": "BP01-001",
+        "name": "Jormuntide Ignis – Savage Lava Dragon"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-005",
+        "name": "Reptyro – Ore Gorger"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-020",
+        "name": "Pump-Action Shotgun"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-025",
+        "name": "Chillet – Dragon Whisperer"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-026",
+        "name": "Relaxaurus – Hungry Gunner"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-027",
+        "name": "Jormuntide – Surging Sea Serpent"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-028",
+        "name": "Pengullet – Yearning for the Sky"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-038",
+        "name": "Cryolinx – Arctic Ordeal"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-045",
+        "name": "Grappling Gun"
+      },
+      {
+        "quantity": 1,
+        "code": "BP01-047",
+        "name": "Pal Sphere"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-048",
+        "name": "Aurora Guide"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-098",
+        "name": "Elphidran – Gentle Radiance"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-014",
+        "name": "Blazehowl – Hellflame Defender"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-004",
+        "name": "Foxparks – A Toasty Hug"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-010",
+        "name": "Single-Shot Rifle"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-012",
+        "name": "Elphidran Aqua – Gentle Ripples"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-016",
+        "name": "Reindrix – Icy Gaze"
+      }
+    ]
+  },
+  {
+    "deck": "lamball-stone-pit-pr",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/purple-red-lamball-stone-pit",
+    "resolutions": [
+      {
+        "quantity": 3,
+        "code": "BP01-002",
+        "name": "Suzaku – Hellfire Wings"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-015",
+        "name": "Mounted Machine Gun"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-016",
+        "name": "Primitive Furnace"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-020",
+        "name": "Pump-Action Shotgun"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-074",
+        "name": "Shadowbeak – Seed of Despair"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-078",
+        "name": "Lyleen Noct – Providence of the Goddess"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-084",
+        "name": "Menasting – Darkness-Dwelling Scorpion"
+      },
+      {
+        "quantity": 1,
+        "code": "BP01-090",
+        "name": "Medieval Medicine Workbench"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-095",
+        "name": "Zoe's Strategy"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-004",
+        "name": "Foxparks – A Toasty Hug"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-008",
+        "name": "Stone Pit"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-010",
+        "name": "Single-Shot Rifle"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-023",
+        "name": "Lamball – My First Pal"
+      },
+      {
+        "quantity": 2,
+        "code": "TD02-014",
+        "name": "Leezpunk – Treasure Bandit"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-017",
+        "name": "Blazehowl Noct – Darkflame Defender"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-023",
+        "name": "Cattiva – My First Pal"
+      }
+    ]
+  },
+  {
+    "deck": "tombat-medicine-gp",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/green-purple-medieval-medicine-workbench-tombat",
+    "resolutions": [
+      {
+        "quantity": 3,
+        "code": "BP01-049",
+        "name": "Lyleen – Blessing of the Goddess"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-051",
+        "name": "Petallia – Sweet Blessings"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-052",
+        "name": "Rushoar – Reckless Destruction"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-070",
+        "name": "Lily's Strategy"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-074",
+        "name": "Shadowbeak – Seed of Despair"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-076",
+        "name": "Tombat – Out of Nowhere!?"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-077",
+        "name": "Pyrin Noct – Steed of Azure Flames"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-078",
+        "name": "Lyleen Noct – Providence of the Goddess"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-084",
+        "name": "Menasting – Darkness-Dwelling Scorpion"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-085",
+        "name": "Maraith – Twilight Messenger"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-090",
+        "name": "Medieval Medicine Workbench"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-095",
+        "name": "Zoe's Strategy"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-014",
+        "name": "Leezpunk – Treasure Bandit"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-017",
+        "name": "Blazehowl Noct – Darkflame Defender"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-021",
+        "name": "Strike from the Darkness"
+      }
+    ]
+  },
+  {
+    "deck": "foxparks-harness-br",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/blue-red-foxparks-foxparks-harness",
+    "resolutions": [
+      {
+        "quantity": 4,
+        "code": "BP01-001",
+        "name": "Jormuntide Ignis – Savage Lava Dragon"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-005",
+        "name": "Reptyro – Ore Gorger"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-006",
+        "name": "Foxparks – Light of Courage"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-014",
+        "name": "Blazehowl – Hellflame Defender"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-019",
+        "name": "Foxparks' Harness"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-020",
+        "name": "Pump-Action Shotgun"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-023",
+        "name": "Axel's Strategy"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-025",
+        "name": "Chillet – Dragon Whisperer"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-038",
+        "name": "Cryolinx – Arctic Ordeal"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-047",
+        "name": "Pal Sphere"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-048",
+        "name": "Aurora Guide"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-004",
+        "name": "Foxparks – A Toasty Hug"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-010",
+        "name": "Single-Shot Rifle"
+      }
+    ]
+  },
+  {
+    "deck": "machine-gun-furnace-br",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/blue-red-mounted-machine-gun-primitive-furnace",
+    "resolutions": [
+      {
+        "quantity": 4,
+        "code": "BP01-001",
+        "name": "Jormuntide Ignis – Savage Lava Dragon"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-002",
+        "name": "Suzaku – Hellfire Wings"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-005",
+        "name": "Reptyro – Ore Gorger"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-007",
+        "name": "Kitsun – Wyrmbane Fangs"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-012",
+        "name": "Flambelle – Scorching Tears"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-015",
+        "name": "Mounted Machine Gun"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-016",
+        "name": "Primitive Furnace"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-020",
+        "name": "Pump-Action Shotgun"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-038",
+        "name": "Cryolinx – Arctic Ordeal"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-045",
+        "name": "Grappling Gun"
+      },
+      {
+        "quantity": 1,
+        "code": "BP01-047",
+        "name": "Pal Sphere"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-004",
+        "name": "Foxparks – A Toasty Hug"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-010",
+        "name": "Single-Shot Rifle"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-016",
+        "name": "Reindrix – Icy Gaze"
+      },
+      {
+        "quantity": 3,
+        "code": "TD01-023",
+        "name": "Lamball – My First Pal"
+      }
+    ]
+  },
+  {
+    "deck": "shadowbeak-menasting-bp",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/blue-purple-shadowbeak-menasting",
+    "resolutions": [
+      {
+        "quantity": 2,
+        "code": "BP01-038",
+        "name": "Cryolinx – Arctic Ordeal"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-047",
+        "name": "Pal Sphere"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-073",
+        "name": "Helzephyr – Wings of the Moonless Night"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-074",
+        "name": "Shadowbeak – Seed of Despair"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-077",
+        "name": "Pyrin Noct – Steed of Azure Flames"
+      },
+      {
+        "quantity": 1,
+        "code": "BP01-078",
+        "name": "Lyleen Noct – Providence of the Goddess"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-079",
+        "name": "Depresso – Late Night Hustler"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-080",
+        "name": "Daedream – First Slumber"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-082",
+        "name": "Daedream – Deep Slumber"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-084",
+        "name": "Menasting – Darkness-Dwelling Scorpion"
+      },
+      {
+        "quantity": 1,
+        "code": "BP01-085",
+        "name": "Maraith – Twilight Messenger"
+      },
+      {
+        "quantity": 1,
+        "code": "BP01-088",
+        "name": "Lamp"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-089",
+        "name": "Shoddy Bed"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-090",
+        "name": "Medieval Medicine Workbench"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-094",
+        "name": "Daedream's Necklace"
+      },
+      {
+        "quantity": 3,
+        "code": "BP01-095",
+        "name": "Zoe's Strategy"
+      },
+      {
+        "quantity": 3,
+        "code": "TD02-014",
+        "name": "Leezpunk – Treasure Bandit"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-017",
+        "name": "Blazehowl Noct – Darkflame Defender"
+      },
+      {
+        "quantity": 2,
+        "code": "TD02-021",
+        "name": "Strike from the Darkness"
+      }
+    ]
+  },
+  {
+    "deck": "cattiva-azurobe-br",
+    "main": 50,
+    "soul": 0,
+    "errors": [
+      "expected main=50 soul=10; got {'main': 50, 'soul': 0}"
+    ],
+    "reason": "Copy list omits Souls. No missing quantities invented; last-valid engine file retained.",
+    "source": "https://palworldtcg.gg/meta/decks/blue-red-cattiva-azurobe",
+    "resolutions": [
+      {
+        "quantity": 4,
+        "code": "BP01-002",
+        "name": "Suzaku – Hellfire Wings"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-007",
+        "name": "Kitsun – Wyrmbane Fangs"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-008",
+        "name": "Sparkit – Hazardous Contact"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-020",
+        "name": "Pump-Action Shotgun"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-028",
+        "name": "Pengullet – Yearning for the Sky"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-029",
+        "name": "Azurobe – Water Dragon Waltz"
+      },
+      {
+        "quantity": 4,
+        "code": "BP01-032",
+        "name": "Fuack – Manic Wave Ripper"
+      },
+      {
+        "quantity": 2,
+        "code": "BP01-047",
+        "name": "Pal Sphere"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-004",
+        "name": "Foxparks – A Toasty Hug"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-015",
+        "name": "Hangyu Cryst – Frigid Wanderer"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-016",
+        "name": "Reindrix – Icy Gaze"
+      },
+      {
+        "quantity": 4,
+        "code": "TD01-023",
+        "name": "Lamball – My First Pal"
+      },
+      {
+        "quantity": 4,
+        "code": "TD02-023",
+        "name": "Cattiva – My First Pal"
+      }
+    ]
+  }
+]

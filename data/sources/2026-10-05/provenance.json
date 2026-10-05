@@ -1,0 +1,22 @@
+{
+  "captured_date_phoenix": "2026-10-05",
+  "source_updated_date": "2026-10-04",
+  "status": "meta_complete_requested_top12_deck_exports_partial",
+  "source": "palworldtcg.gg",
+  "filters": {"time_window": "30 days", "game_type": "All", "matrix_size": "Top 12"},
+  "filter_verification": "aria-current=page verified on loaded meta and matchup DOM and all eight deck pages. Requested values already selected; no redundant navigation.",
+  "requests": {"cards_api": 1, "index_pages": 3, "representative_deck_pages": 8, "archival_refetches": 0},
+  "blocks": [],
+  "http_note": "Cards command succeeded. Browser navigation succeeded on all pages; browser tool did not expose HTTP status codes, so none invented. No captcha/login requirement or 403/429 observed.",
+  "card_catalog": {"entries": 192, "unique_codes": 191, "changed": true, "raw_bytes_preserved": true, "duplicate_code": "SOUL-001", "command": "python3 tools/data_ops.py cards", "exit": 0},
+  "mapping": "data/sources/2026-09-29/slug-mapping.json",
+  "tiers": {"rows": 13, "definition": "Prominent field-adjusted win rate, not smaller raw or vs-meta rate; same definition as previous snapshot.", "coverage": "Same 13 normalized archetypes as September 29; includes all top12 by play rate, not full 40-deck field. Play rates are entire-field fractions, not renormalized."},
+  "matchups": {"rows": 144, "decks": 12, "definition": "Displayed direct head-to-head win-rate fractions, whole-percent cell precision retained for consistency. Exact displayed game counts extracted from title tooltips. Tooltips also retain finer rate/CI evidence.", "verification": "Row/column labels, old-slug pin mappings, tier top12 order, 144 unique directed pairs, reciprocal counts and rates verified."},
+  "deck_exports": {"copied": 8, "published": 0, "quarantined": 8, "reason": "All Copy list exports supply exactly 50 main cards but omit all Soul quantities. This run's no-invented-quantities instruction takes precedence over historical practice of adding standard Souls. Main rows mapped using exact catalog names, ambiguous names resolved using loaded page card links. Saved raw exports and normalized incomplete lists under sources/quarantine; last-valid engine lists unchanged.", "priority_order": ["cattiva-azurobe-br", "chillet-relaxaurus-bp"], "evidence": "*-dom.json and *-export.txt; quarantine-validation.json"},
+  "palify_meta": {"inspected": true, "evidence": "palify-meta-dom.json", "note": "Public top-deck page defaults to ranked win-rate ordering; broad color/strategy archetypes differ from gg normalized archetypes and no matching 30-day/All filter was verified. Not substituted or merged into calibration. No additional navigation made."},
+  "validation": {"command": "python3 tools/data_ops.py validate", "exit": 0, "evidence": "validation.json", "scope": "Existing ten engine decklists; newly captured incomplete exports separately fail soul=10 and remain quarantined."},
+  "comparison": {"previous": "data/calibration/tiers_2026-09-29.json", "current": "data/calibration/tiers_2026-10-05.json", "evidence": "comparison.json", "scope": "Largest movements among same 13 tracked archetypes; top5 by play rate, not tier rank."},
+  "offline_parser": "normalize_observed.py (this dated capture only; no network; not a live fetcher)",
+  "engine_changes": false,
+  "simulations_run": false
+}

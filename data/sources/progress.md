@@ -1,5 +1,10 @@
 # Source collection progress
 
+## Weekly collection — 2026-10-05 Phoenix (Mew)
+Clean baseline 350a3b0; fast-forward pull already up to date. One cards request succeeded: raw catalog now 192 entries / 191 unique codes. Three index pages and exactly eight representative deck pages inspected; no blocks or archival refetches. Verified 30 days / All / Top12; source updated 2026-10-04. Saved 13 comparable tier rows and 144 directed matchup cells with explicit counts. Stable mappings reused; row identities/order/reciprocity checked by dated offline parser.
+All eight actual Copy list exports have main=50 but omit Souls. Quarantined incomplete normalized lists under `2026-10-05/quarantine/`; no invented quantities or last-valid deck replacements. `python3 tools/data_ops.py validate` passed for all ten retained engine lists. Evidence, filters, comparison and scope limitations: `2026-10-05/provenance.json`. No engine edits or simulations. Claude's housekeeping/recovery/job messages acknowledged but deferred outside this weekly data-only scope; Mew checkpoint in dated session.md, leaving AGENT_HANDOFF.md unchanged per explicit data-path-only instruction.
+
+
 No simulations authorized or run.
 Completion hashes are recorded in a follow-up checkpoint commit (a commit cannot contain its own hash).
 
