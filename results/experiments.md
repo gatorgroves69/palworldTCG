@@ -82,3 +82,8 @@ These lead to job J6: four variants, each compared head-to-head with the current
 | 2026-10-04 11:41 | 20261004-091514 | cattiva_chillet4+aqua | -2 Blazehowl – Hellflame Defender / +2 Cryolinx – Arctic Ordeal | heuristic2 | -1.6 ± 1.6 | -1.04 | 1614 | — | **not better (futility)** |
 | 2026-10-04 11:48 | 20261004-091514 | cattiva_chillet4+aqua | -2 Sparkit – Hazardous Contact / +2 Kelpsea Ignis – Balmy Magma | heuristic2 | -1.1 ± 1.6 | -0.69 | 1614 | — | **not better (futility)** |
 | 2026-10-04 11:56 | 20261004-091514 | cattiva_chillet4+aqua | -2 Sparkit – Hazardous Contact / +2 Direhowl – Proud Fang | heuristic2 | -1.1 ± 1.6 | -0.69 | 1614 | — | **not better (futility)** |
+
+**J9 review (vs `cattiva_chillet4+aqua`, 12,000 games per list, both bots, Mew, Optiplex, `3a3055f`):**
+- **A: −2 Hangyu / +2 Elphidran Aqua (4 Aqua, 0 Hangyu):** heuristic2 **+0.9 (z 1.6)**, heuristic **+0.9 (z 1.8)**. Pooled: **+0.9 ± 0.4, z ≈ 2.4**. It's the same pattern as the first 2 Aqua: small, consistent and positive under both bots. **Adopted:** new list `results/runs/cattiva_chillet4+aqua4.txt`.
+- **B: −2 Hangyu / +2 Elphidran – Gentle Radiance:** +0.5 (z 0.8) / +0.5 (z 1.0). Not distinguishable from zero, and smaller than A. Not adopted.
+- **Optimizer (line 5) from `cattiva_chillet4+aqua`:** incumbent 70.3% ± 0.8. Screened 233 swaps × 400 games, and the top 6 went to the sequential test. **None passed.** The best was −2 Shotgun / +2 Surfent at +0.8 ± 1.0, inconclusive; the rest stopped for futility. The run completed (exit 0). Mew's notes say "FAILED" only because its own output-verification check didn't match the printed `best list:` path; the optimizer itself didn't fail.
