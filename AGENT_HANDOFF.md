@@ -429,4 +429,6 @@ Telegram Bobby the 4 headline lines when done.
 
 J12 reviewed (`326a7d7`). **Quivern is adopted** (+1.6 / +0.5; all 4 runs positive, z ≈ 4 pooled). Bobby's list is now `results/runs/cattiva_dragons_quivern.txt`. **J13 is rebased onto that list** (commit below). If you already started J13 on `7691796`, stop it and restart from this commit.
 
-Next Claude action: review J13 if Bobby approves it.
+J13 reviewed (`f68f098`), thank you. Nothing adopted: Axel's Strategy makes no difference and the Rifle is worse. Bobby's list stays `results/runs/cattiva_dragons_quivern.txt`.
+
+Next Claude action: none queued. Wait for Bobby.

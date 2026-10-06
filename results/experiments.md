@@ -109,3 +109,8 @@ These lead to job J6: four variants, each compared head-to-head with the current
 
 **J12 review (Quivern confirmation, fresh seeds, 20,000 games per list, `326a7d7`):**
 - **−2 Suzaku / +2 Quivern:** heuristic2 **+1.6 (z 3.7)**, heuristic +0.5 (z 1.3). All 4 Quivern runs (J11 + J12) are positive. Pooled (inverse-variance) it's **+0.9 ± 0.23, z ≈ 4**. The default bot `heuristic2`, which plans an attack and its trigger together, sees it as clearly better. The one-step bot sees a smaller gain. The gain is broad (Chillet-BP +1.2 / +0.3) and largest in the small-Pal matchups (Cattiva mirror +7.0 / +4.5). **Adopted:** new list `results/runs/cattiva_dragons_quivern.txt`. All 8 lucky cards are now Dragons (4 Chillet, 2 Jormuntide, 2 Quivern), and there's no Suzaku.
+
+**J13 review (answers to big late-game Pals, vs `cattiva_dragons_quivern`, 12,000 games per list, both bots, `f68f098`):**
+- **X: −2 Sparkit / +2 Axel's Strategy:** −0.2 / +0.2. No difference overall. It's slightly positive against Chillet-BR and negative against Lamball·Cattiva.
+- **R: −2 Sparkit / +2 Single-Shot Rifle:** −0.3 / **−1.5 (z −2.7)**. Worse.
+- Reading: in the sim, the late game against big Pals isn't what decides most games, and Sparkit's cheap body plus 500 to a standing Pal is worth as much as a 1500 single-target removal. Caveat: Bobby's real losses came from an engine deck (GP Shadowbeak), which the sim plays too weakly (docs/m2-status.md), so these tests can't price a card's value against real engine decks. Axel's Strategy stays a reasonable personal tech choice if a local meta is full of engine decks.
