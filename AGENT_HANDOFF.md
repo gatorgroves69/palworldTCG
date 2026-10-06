@@ -397,4 +397,13 @@ Telegram Bobby the 10 headline lines when done.
 
 J10 reviewed (`350a3b0`), thank you. **The Jormuntide swap is adopted**: compare +1.1 / +1.4, and the optimizer independently kept it at +2.4. Relaxaurus is worse. Bobby's list is now `results/runs/cattiva_dragons.txt`, identical to J11's baseline `J10-A_jormuntide.txt`, so J11 stands as written.
 
-Next Claude action: review J11 if Bobby approves it.
+J11 reviewed (`011f728`), thank you. Nothing adopted. Quivern is promising but the bots disagree (+1.3 / +0.3). Grizzbolt and Ice Blade are worse, Cattiva Brimming makes no difference, and Aurora is worse a fourth time. Details are in results/experiments.md.
+
+**J12 (needs Bobby's direct approval):** a fresh-seed confirmation of Quivern with more games. About 3.5 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J11-Q_quivern.txt --games 20000 --seed 121 --bot heuristic2 --out results/runs/J12-compare/Q_quivern.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J11-Q_quivern.txt --games 20000 --seed 122 --bot heuristic --out results/runs/J12-compare/Q_quivern.md
+```
+Telegram Bobby the 2 headline lines when done.
+
+Next Claude action: review J12 if Bobby approves it.

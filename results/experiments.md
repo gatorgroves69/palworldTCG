@@ -99,3 +99,10 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **B: −2 Blazehowl / +2 Relaxaurus:** −1.4 (z −2.4) / −0.9. Worse.
 - **Optimizer:** 8 removal candidates. The other top-6 swaps were inconclusive or futile: Foxparks → Kelpsea Ignis or Direhowl, Sparkit → Relaxaurus, Fuack → Ribbuny, Shotgun → Flambelle.
 - Note: Mew refreshed the tiers on 2026-10-05 (`1196995`), so field weights moved slightly (Chillet-BP 37.5 → 38.5%, Stone Pit 10.5 → 12.2%). J11 and later runs use the new weights.
+
+**J11 review (SS01 cards and the Aurora re-test, vs `cattiva_dragons` = `J10-A_jormuntide`, 12,000 games per list, both bots, Mew, Optiplex, `011f728`):**
+- **Q: −2 Suzaku / +2 Quivern:** heuristic2 **+1.3 (z 2.4)**, heuristic +0.3 (z 0.6). The bots disagree. Pooled it's +0.7 ± 0.4 (z ≈ 1.9), so **not proven**. The gain comes from the small-Pal decks (Cattiva mirror +6.7 / +4.7, Lamball·Cattiva, Machine Gun, Shadowbeak). Against Chillet-BP, 38.5% of the field, it's flat (+0.2 / −0.1). Confirmation run proposed as J12.
+- **G: −2 Blazehowl / +2 Grizzbolt:** **−1.4 (z −2.4) / −2.2 (z −4.1)**. Worse.
+- **I: −2 Blazehowl / +2 Chillet – Finishing Ice Blade:** **−1.5 (z −2.7) / −1.8 (z −3.4)**. Worse. Blazehowl's Interrupt mode keeps proving its worth.
+- **C: −2 Sparkit / +2 Cattiva – Brimming with Confidence:** −0.1 / −0.0. No difference.
+- **A: −2 Sparkit / +2 Aurora Guide (Jormuntide as a stack target):** −0.6 / **−1.3 (z −2.5)**. Fourth loss. **Aurora Guide is closed for this deck.**
