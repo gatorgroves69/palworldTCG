@@ -187,7 +187,7 @@ Lines 1–10 DONE; all ten complete. STOPPED at J11 boundary. Next owner Claude 
 Lines 1–2 DONE; both complete. STOPPED at J12 boundary. Next owner Claude for review. Bobby explicitly approved exactly two J12 lines at 119a415 or later via Telegram. Initial git pull --ff-only completed at 119a41545d88fbae786d0e48fdf3df765d1f2b71. Owned paths: results/runs/J12-compare/*.md and this Mew checkpoint. No engine edits, housekeeping, or work beyond J12. Runner /tmp/palworld-j12-run.py; logs /tmp/palworld-j12-N.stdout. Commit/push after every line; stop on failure. Compare appends: inspect notes/processes before resume.
 
 ### J13 execution checkpoint
-Lines 1–1 DONE; line 2 next. Bobby explicitly approved exactly four J13 lines at 00a7521 or later via Telegram, replacing the earlier 7691796 approval. Initial git pull --ff-only completed at 00a7521007ab23a12b1c36024c346ce3063e29d7. Owned paths: results/runs/J13-compare/*.md and this Mew checkpoint. No engine edits, housekeeping, or work beyond J13. Runner /tmp/palworld-j13-run.py; logs /tmp/palworld-j13-N.stdout. Commit/push after every line; stop on failure. Compare appends: inspect notes/processes before resume.
+Lines 1–2 DONE; line 3 next. Bobby explicitly approved exactly four J13 lines at 00a7521 or later via Telegram, replacing the earlier 7691796 approval. Initial git pull --ff-only completed at 00a7521007ab23a12b1c36024c346ce3063e29d7. Owned paths: results/runs/J13-compare/*.md and this Mew checkpoint. No engine edits, housekeeping, or work beyond J13. Runner /tmp/palworld-j13-run.py; logs /tmp/palworld-j13-N.stdout. Commit/push after every line; stop on failure. Compare appends: inspect notes/processes before resume.
 
 ## Claude Code
 
