@@ -26,3 +26,31 @@ Artifact verified: True
 
 
 ```
+
+## J12 line 2: DONE
+HEAD: 5c6eab9c965fa4ca98ebd142d865d5b531bbdd14
+Start UTC: 2026-10-06T09:46:26.884641+00:00
+End UTC: 2026-10-06T10:15:06.362049+00:00
+Command: `python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J11-Q_quivern.txt --games 20000 --seed 122 --bot heuristic --out results/runs/J12-compare/Q_quivern.md`
+Exit: 0
+Artifact verified: True
+
+```text
+**heuristic**, 20000 games per list, seed 122: A 76.9% -> B 77.4% (diff +0.5 ± 0.4, z 1.3)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.5% | 73.7 | 74.0 | +0.3 | 7702 |
+| chillet-relaxaurus-br | 13.0% | 67.9 | 68.2 | +0.3 | 2593 |
+| lamball-stone-pit-pr | 12.2% | 92.5 | 93.0 | +0.6 | 2439 |
+| tombat-medicine-gp | 6.8% | 87.5 | 86.6 | -0.9 | 1361 |
+| foxparks-harness-br | 6.2% | 77.5 | 76.9 | -0.6 | 1232 |
+| machine-gun-furnace-br | 6.0% | 86.0 | 87.5 | +1.5 | 1207 |
+| shadowbeak-menasting-bp | 5.9% | 89.8 | 90.3 | +0.5 | 1181 |
+| cattiva-azurobe-br | 5.1% | 62.9 | 67.4 | +4.5 | 1027 |
+| lamball-cattiva-bg | 4.7% | 58.1 | 59.4 | +1.3 | 950 |
+| chillet-relaxaurus-bg | 1.5% | 78.2 | 76.6 | -1.6 | 308 |
+
+
+
+```
