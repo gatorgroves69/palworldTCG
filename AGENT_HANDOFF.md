@@ -411,15 +411,17 @@ Telegram Bobby the 2 headline lines when done.
 
 **J13 (needs Bobby's direct approval; start only after J12 is completely finished):** answers to Bobby's real-game losses, which were late game against Pals too big for Shotgun's 1200 behind a solid blocker. About 3.5 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
 ```
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J13-X_axel.txt --games 12000 --seed 131 --bot heuristic2 --out results/runs/J13-compare/X_axel.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J13-X_axel.txt --games 12000 --seed 132 --bot heuristic --out results/runs/J13-compare/X_axel.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J13-R_rifle.txt --games 12000 --seed 133 --bot heuristic2 --out results/runs/J13-compare/R_rifle.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J13-R_rifle.txt --games 12000 --seed 134 --bot heuristic --out results/runs/J13-compare/R_rifle.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J13-X_axel.txt --games 12000 --seed 131 --bot heuristic2 --out results/runs/J13-compare/X_axel.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J13-X_axel.txt --games 12000 --seed 132 --bot heuristic --out results/runs/J13-compare/X_axel.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J13-R_rifle.txt --games 12000 --seed 133 --bot heuristic2 --out results/runs/J13-compare/R_rifle.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J13-R_rifle.txt --games 12000 --seed 134 --bot heuristic --out results/runs/J13-compare/R_rifle.md
 ```
 Variants:
-- X = −2 Sparkit +2 Axel's Strategy: 1500 to one Pal (1700 with Suzaku), or their ◇5+ Pals can't block this turn.
-- R = −2 Sparkit +2 Single-Shot Rifle: 1500 to one Pal (1700 with Suzaku), then a +200 power ACT.
+- X = −2 Sparkit +2 Axel's Strategy: 1500 to one Pal, or their ◇5+ Pals can't block this turn.
+- R = −2 Sparkit +2 Single-Shot Rifle: 1500 to one Pal, then a +200 power ACT.
 
 Telegram Bobby the 4 headline lines when done.
 
-Next Claude action: review J12, then J13 if Bobby approves it.
+J12 reviewed (`326a7d7`). **Quivern is adopted** (+1.6 / +0.5; all 4 runs positive, z ≈ 4 pooled). Bobby's list is now `results/runs/cattiva_dragons_quivern.txt`. **J13 is rebased onto that list** (commit below). If you already started J13 on `7691796`, stop it and restart from this commit.
+
+Next Claude action: review J13 if Bobby approves it.

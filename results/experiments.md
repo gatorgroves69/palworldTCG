@@ -106,3 +106,6 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **I: −2 Blazehowl / +2 Chillet – Finishing Ice Blade:** **−1.5 (z −2.7) / −1.8 (z −3.4)**. Worse. Blazehowl's Interrupt mode keeps proving its worth.
 - **C: −2 Sparkit / +2 Cattiva – Brimming with Confidence:** −0.1 / −0.0. No difference.
 - **A: −2 Sparkit / +2 Aurora Guide (Jormuntide as a stack target):** −0.6 / **−1.3 (z −2.5)**. Fourth loss. **Aurora Guide is closed for this deck.**
+
+**J12 review (Quivern confirmation, fresh seeds, 20,000 games per list, `326a7d7`):**
+- **−2 Suzaku / +2 Quivern:** heuristic2 **+1.6 (z 3.7)**, heuristic +0.5 (z 1.3). All 4 Quivern runs (J11 + J12) are positive. Pooled (inverse-variance) it's **+0.9 ± 0.23, z ≈ 4**. The default bot `heuristic2`, which plans an attack and its trigger together, sees it as clearly better. The one-step bot sees a smaller gain. The gain is broad (Chillet-BP +1.2 / +0.3) and largest in the small-Pal matchups (Cattiva mirror +7.0 / +4.5). **Adopted:** new list `results/runs/cattiva_dragons_quivern.txt`. All 8 lucky cards are now Dragons (4 Chillet, 2 Jormuntide, 2 Quivern), and there's no Suzaku.

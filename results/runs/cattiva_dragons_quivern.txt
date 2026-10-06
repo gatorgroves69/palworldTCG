@@ -2,8 +2,7 @@
 2 SS01-005 Quivern – Wyvern's Breath
 2 BP01-027 Jormuntide – Surging Sea Serpent
 4 BP01-007 Kitsun – Wyrmbane Fangs
-2 BP01-008 Sparkit – Hazardous Contact
-2 TD01-010 Single-Shot Rifle
+4 BP01-008 Sparkit – Hazardous Contact
 2 BP01-014 Blazehowl – Hellflame Defender
 4 BP01-020 Pump-Action Shotgun
 4 BP01-025 Chillet – Dragon Whisperer
