@@ -187,6 +187,8 @@ Lines 1–10 DONE; all ten complete. STOPPED at J11 boundary. Next owner Claude 
 Lines 1–2 DONE; both complete. STOPPED at J12 boundary. Next owner Claude for review. Bobby explicitly approved exactly two J12 lines at 119a415 or later via Telegram. Initial git pull --ff-only completed at 119a41545d88fbae786d0e48fdf3df765d1f2b71. Owned paths: results/runs/J12-compare/*.md and this Mew checkpoint. No engine edits, housekeeping, or work beyond J12. Runner /tmp/palworld-j12-run.py; logs /tmp/palworld-j12-N.stdout. Commit/push after every line; stop on failure. Compare appends: inspect notes/processes before resume.
 
 ### J13 execution checkpoint
+Post-limit verification by Mew: all four saved headlines match approved seeds 131–134 and 12,000 games/list; notes record four successful exits. Local and live GitHub main matched a3f6ede24cad7b0fc6c77a48ecda7f4b79d61b2e; checkout clean, no J-run process found. No rerun or engine changes. Axel: −0.2 / +0.2 points; Rifle: −0.3 / −1.5 points versus Quivern baseline (heuristic2 / heuristic). Claude review remains next; no further simulations authorized.
+
 Lines 1–4 DONE; all four complete. STOPPED at J13 boundary. Next owner Claude for review. Bobby explicitly approved exactly four J13 lines at 00a7521 or later via Telegram, replacing the earlier 7691796 approval. Initial git pull --ff-only completed at 00a7521007ab23a12b1c36024c346ce3063e29d7. Owned paths: results/runs/J13-compare/*.md and this Mew checkpoint. No engine edits, housekeeping, or work beyond J13. Runner /tmp/palworld-j13-run.py; logs /tmp/palworld-j13-N.stdout. Commit/push after every line; stop on failure. Compare appends: inspect notes/processes before resume.
 
 ## Claude Code
