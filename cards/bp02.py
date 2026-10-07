@@ -54,9 +54,9 @@ def _orserk_stand(game, card, ctx):
 @reg
 class Orserk(CardImpl):
     code = "BP02-001"
-    text = ("ACT [Consume 2 Material] Choose 1 of the following that was not chosen this turn. "
-            "・Choose 1 of your Pals, and it gets Power +500/Strike +1 until end of turn. "
-            "・Choose 1 of your opponent's Pals, and deal 900 Damage. "
+    text = ("ACT [Consume 2 Material] Choose 1 of the following that was not chosen this turn.\n"
+            "・Choose 1 of your Pals, and it gets Power +500/Strike +1 until end of turn.\n"
+            "・Choose 1 of your opponent's Pals, and deal 900 Damage.\n"
             "・Choose 1 ◇3 or less Pal, and stand it.")
     acts = [ActAbility(n, f, once_per_turn=True, can_pay_extra=has_resources("material", 2),
                        pay_extra=consume_cost("material", 2))

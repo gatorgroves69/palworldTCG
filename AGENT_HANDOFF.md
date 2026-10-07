@@ -447,6 +447,6 @@ python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/
 python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J15-RL_relaxaurus_lux.txt --games 12000 --seed 153 --bot heuristic2 --out results/runs/J15-compare/RL_relaxaurus_lux.md
 python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J15-RL_relaxaurus_lux.txt --games 12000 --seed 154 --bot heuristic --out results/runs/J15-compare/RL_relaxaurus_lux.md
 ```
-Variants: CI = −2 Sparkit +2 Chillet Ignis (discard a Dragon: 700 damage); RL = −2 Blazehowl +2 Relaxaurus Lux (lucky Assault Dragon that re-stands on a kill). Before running, Claude re-checks the BP02 texts against the released cards.
+Variants: CI = −2 Sparkit +2 Chillet Ignis (discard a Dragon: 700 damage); RL = −2 Quivern +2 Relaxaurus Lux (lucky for lucky: an Assault Dragon that re-stands on a kill). Before running, Claude re-checks the BP02 texts against the released cards.
 
 Next Claude action: when BP02 releases, verify card texts, then J15. Otherwise wait for Bobby.
