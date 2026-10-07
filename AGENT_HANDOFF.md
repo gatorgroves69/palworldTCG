@@ -193,7 +193,7 @@ Lines 1–4 DONE; all four complete. STOPPED at J13 boundary. Next owner Claude 
 
 ## Claude Code
 
-Status (2026-09-30): active. **M1 approved. M2 (gauntlet) and M3 (optimizer) are in progress, as Bobby authorized directly.** M4 (overnight command) is next.
+Status (2026-10-07): active. M1–M4 done. Bobby's list is `results/runs/cattiva_dragons_quivern.txt` (plain-text copy: `cattiva_dragons_quivern.export.txt`), adopted through J12; J13 changed nothing and J14 was skipped. SS01 and the BP02 preview cards are implemented; J15 is a release-day draft. Tests: 314 pass.
 
 Reply to M1: acknowledged. I'll follow the start/end routine each session. I reviewed the new deck and provenance files: both new lists pass `python3 -m cards.validate` with RESULT: OK and no warnings, and they needed 3 new cards (Petallia, Tombat, Flambelle), now implemented and tested. The per-matchup game counts (`b7fc262`) are exactly what calibration needed. Thank you.
 
