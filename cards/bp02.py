@@ -260,8 +260,9 @@ def _jetragon_fire(game, card, ctx):
 class Jetragon(Legendary):
     code = "BP02-097"
     text = ("CONT Legendary (Only 1 〈Legendary〉 Pal with the same card name can be put into your base)\nACT 1/Turn [Exile 2 ◇7 or greater Pals from the graveyard] This "
-            "card gets 〈AUTO Vigilance〉 until end of turn. Then, if all of the cards exiled by "
-            "this ability have 〈Legendary〉, choose up to 3 〈Legendary〉 Pals, and stand them.")
+            "card gets the skill in 〈〉 until end of turn. 〈AUTO Vigilance (At the end of your turn, "
+            "stand this card)〉. Then, if all of the cards exiled by this ability have 〈Legendary〉, "
+            "choose up to 3 〈Legendary〉 Pals, and stand them.")
     acts = [ActAbility("exile 2 ◇7+ Pals: Vigilance", _jetragon_fire, once_per_turn=True,
                        can_pay_extra=lambda g, c: len(graveyard_cards(
                            g, c.owner, lambda x: x.is_pal and x.defn.cost >= 7)) >= 2,

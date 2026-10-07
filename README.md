@@ -52,7 +52,7 @@ A simulation lab for the **Palworld Official Card Game** (Bushiroad): it plays d
 - **M2: the 10-deck gauntlet is implemented but not calibrated.** Mean absolute error is about 11 points. Decks that build an engine over several turns come out too weak in the sim, because the bots don't plan far enough ahead. See [docs/m2-status.md](docs/m2-status.md).
 - **M3: the swap optimizer works.** It uses a screening pass, a sequential test, and confirmation under a second bot. Every attempt is logged in [results/experiments.md](results/experiments.md).
 - **M4: the overnight command works.** `sim gauntlet` writes a Telegram-ready summary. Long runs go on the Optiplex (Mew); see [AGENT_HANDOFF.md](AGENT_HANDOFF.md).
-- **Cards:** every red/blue/colorless card from BP01, TD01, TD02 and PR is implemented, plus everything the 10 meta decks use. BP02 and SS01 aren't implemented (see docs/assumptions.md C29).
+- **Cards:** every red/blue/colorless card from BP01, TD01, TD02 and PR is implemented, plus everything the 10 meta decks use. SS01 (Sleeve & Card Set Vol.1) is implemented. The 11 red/blue/colorless BP02 preview cards are implemented but untested until the set releases (docs/assumptions.md C29, C31).
 
 Rules as implemented: [docs/rules.md](docs/rules.md). Interpretations and open questions: [docs/assumptions.md](docs/assumptions.md).
 
