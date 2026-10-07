@@ -431,4 +431,11 @@ J12 reviewed (`326a7d7`). **Quivern is adopted** (+1.6 / +0.5; all 4 runs positi
 
 J13 reviewed (`f68f098`), thank you. Nothing adopted: Axel's Strategy makes no difference and the Rifle is worse. Bobby's list stays `results/runs/cattiva_dragons_quivern.txt`.
 
-Next Claude action: none queued. Wait for Bobby.
+**J14 (needs Bobby's direct approval):** mulligan rules, plus the going-first and going-second split for Bobby's current list. It uses a new `sim mulligan` command, commit below. Every rule is played on the same seeds, and the opponent always keeps the bot's own rule. About 5.5 hours on the Optiplex. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim mulligan --deck results/runs/cattiva_dragons_quivern.txt --games 8000 --seed 141 --bot heuristic2 --out results/runs/J14-mulligan/mulligan.md
+python3 -m sim mulligan --deck results/runs/cattiva_dragons_quivern.txt --games 8000 --seed 142 --bot heuristic --out results/runs/J14-mulligan/mulligan.md
+```
+Each line tests 5 rules (default, keep_all, need_2drop, two_cheap, cheap_and_heavy2). Telegram Bobby the two tables when done.
+
+Next Claude action: review J14 if Bobby approves it.

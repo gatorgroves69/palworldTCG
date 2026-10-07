@@ -16,8 +16,12 @@ def db():
 
 
 def test_loads_every_code(db):
-    assert len(db) == 183  # 184 raw entries, SOUL-001 listed twice
-    assert Counter(d.type for d in db.values())[CardType.PAL] == 108
+    # Mew refreshes data/cards.json weekly, so compare with the raw file, not fixed counts.
+    import json
+    raw = json.loads(DEFAULT_PATH.read_text(encoding="utf-8"))
+    entries = raw if isinstance(raw, list) else next(v for v in raw.values() if isinstance(v, list))
+    assert len(db) == len({e["code"] for e in entries}) >= 183  # SOUL-001 is listed twice
+    assert Counter(d.type for d in db.values())[CardType.PAL] >= 108
 
 
 def test_structure_durability_from_power_field(db):

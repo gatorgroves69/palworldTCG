@@ -73,7 +73,9 @@ def test_matrix_small(tmp_path):
     decks = ["data/decks/cattiva-azurobe-br.txt", "data/decks/chillet-relaxaurus-bp.txt"]
     r = run_matrix(decks, games=4, seed=2, out=tmp_path, workers=1)
     (p,) = r["pairs"]
-    assert p["real"] == 0.56 and r["calibrated_pairs"] == 1
+    from analysis.real_vs_sim import online_rates
+    real = online_rates("cattiva-azurobe-br")["chillet-relaxaurus-bp"][0]  # latest data
+    assert abs(p["real"] - real) < 1e-9 and r["calibrated_pairs"] == 1
     assert win_rate(r, "chillet-relaxaurus-bp", "cattiva-azurobe-br") == 1 - p["sim"]
     assert "Calibration" in (tmp_path / "matrix.md").read_text()
 
@@ -176,7 +178,7 @@ def test_optimizer_with_screening(tmp_path, monkeypatch):
 
 
 def test_real_vs_sim_report(tmp_path):
-    from analysis.real_vs_sim import binom_p, load_games, report
+    from analysis.real_vs_sim import binom_p, load_games, online_rates, report
     csv_path = tmp_path / "g.csv"
     rows = ["date,event,my_deck,opp_deck,first_or_second,result,notes"]
     rows += ["2026-10-02,weekly,cattiva-br,chillet-bp,first,W,"] * 10
@@ -186,7 +188,33 @@ def test_real_vs_sim_report(tmp_path):
                                   "chillet-bp": "chillet-relaxaurus-bp"})
     text = report("cattiva-azurobe-br", games,
                   {"field": {"chillet-relaxaurus-bp": {"win_rate": 0.66}}})
-    assert "| chillet-relaxaurus-bp | 10 | 10-0 | 100% | 56% (n=2389) | 66% | above online |" in text
+    rate, n = online_rates("cattiva-azurobe-br")["chillet-relaxaurus-bp"]  # latest data
+    assert (f"| chillet-relaxaurus-bp | 10 | 10-0 | 100% | {100 * rate:.0f}% (n={n}) | 66% | "
+            "above online |") in text
     assert "mystery-deck | 1 | 0-0-1" in text
     assert report("cattiva-azurobe-br", []).startswith("No games logged yet")
     assert abs(binom_p(5, 10, 0.5) - 1.0) < 1e-9 and binom_p(10, 10, 0.5) < 0.01
+
+
+def test_mulligan_rule_applies_to_deck_side_only():
+    from dataclasses import replace
+    from sim.runner import play_one
+    keep = replace(SPEC, bot="rules", mulligan="keep_all")
+    picky = replace(SPEC, bot="rules", mulligan="two_cheap")
+    k = [play_one((keep, s, False))["redrew"] for s in range(30)]
+    p = [play_one((picky, s, False))["redrew"] for s in range(30)]
+    assert not any(r[0] for r in k)          # deck side never redraws
+    assert any(r[1] for r in k)              # opponent keeps the bot's own rule
+    assert sum(r[0] for r in p) > sum(r[0] for r in k)
+
+
+def test_mulligan_rules_decide_from_hand():
+    from types import SimpleNamespace as NS
+    from sim.mulligan import RULES
+
+    def card(cost, pal=True):
+        return NS(is_pal=pal, defn=NS(cost=cost))
+    two = [card(2), card(7), card(7), card(5, False), card(6)]
+    assert not RULES["default"][1](two) and not RULES["need_2drop"][1](two)
+    assert RULES["two_cheap"][1](two) and RULES["cheap_and_heavy2"][1](two)
+    assert RULES["need_2drop"][1]([card(4)] * 5) and not RULES["default"][1]([card(4)] * 5)

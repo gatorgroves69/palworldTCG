@@ -84,11 +84,30 @@ def main(argv=None) -> int:
     cp.add_argument("--workers", type=int, default=None)
     cp.add_argument("--out", type=Path, default=None, help="also append the table to this file")
 
+    mu = sub.add_parser("mulligan", help="keep-or-redraw rules vs the weighted field")
+    mu.add_argument("--deck", required=True)
+    mu.add_argument("--games", type=int, default=12000)
+    mu.add_argument("--seed", type=int, default=1)
+    mu.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    mu.add_argument("--rules", default=None, help="comma-separated (default: all)")
+    mu.add_argument("--workers", type=int, default=None)
+    mu.add_argument("--out", type=Path, default=None, help="also append the table to this file")
+
     p = sub.add_parser("replay", help="replay one game and print its full log")
     common(p)
     p.add_argument("--game-seed", type=int, required=True)
 
     a = ap.parse_args(argv)
+    if a.cmd == "mulligan":
+        from .mulligan import RULES, mulligan_report
+        rules = a.rules.split(",") if a.rules else list(RULES)
+        text = mulligan_report(a.deck, a.games, a.seed, a.bot, rules, a.workers)
+        print(text)
+        if a.out:
+            a.out.parent.mkdir(parents=True, exist_ok=True)
+            with open(a.out, "a", encoding="utf-8") as f:
+                f.write("\n" + text)
+        return 0
     if a.cmd == "compare":
         from .overnight import compare_lists
         text = compare_lists(a.a, a.b, a.games, a.seed, a.bot, a.workers)

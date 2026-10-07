@@ -31,6 +31,7 @@ class MatchSpec:
     bot: str = "heuristic"
     structures_attackable: str = "any"
     cards: str | None = None
+    mulligan: str = "default"  # keep-or-redraw rule for the deck under test (sim/mulligan.py)
 
 
 _CACHE: dict = {}
@@ -57,6 +58,9 @@ def _setup(spec: MatchSpec):
 def make_game(spec: MatchSpec, seed: int, log: bool = False) -> Game:
     decks, registry, bot_cls = _setup(spec)
     bots = [bot_cls(seed * 2 + 1), bot_cls(seed * 2 + 2)]
+    if spec.mulligan != "default":
+        from .mulligan import redraw_fn
+        bots[DECK_SIDE].choose_redraw = redraw_fn(spec.mulligan)
     return Game(decks, registry, bots, seed=seed, log=log,
                 rules=RulesConfig(structures_attackable=spec.structures_attackable))
 
