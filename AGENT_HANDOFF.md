@@ -449,13 +449,17 @@ python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/
 ```
 Variants: CI = −2 Sparkit +2 Chillet Ignis (discard a Dragon: 700 damage); RL = −2 Quivern +2 Relaxaurus Lux (lucky for lucky: an Assault Dragon that re-stands on a kill). Before running, Claude re-checks the BP02 texts against the released cards.
 
-**J16 (needs Bobby's direct approval):** Jormuntide Ignis on the Cup list (no SS01). It was rejected twice on the old 2-Chillet list; the deck now has 12 Dragons and Chillet can deploy it free. About 3.5 hours. `git pull --ff-only` first, then commit and push after each line:
+**J16 (needs Bobby's direct approval):** Jormuntide Ignis and Crystal Breath on the Cup list (no SS01). Ignis was rejected twice on the old 2-Chillet list; the deck now has 12 Dragons and Chillet can deploy it free. Crystal Breath was rejected once (J7) as a Hangyu replacement; Bobby asks whether it beats an Interrupt slot. `git pull --ff-only` first, then commit and push after each line:
 ```
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-A_ignis_for_suzaku.txt --games 12000 --seed 161 --bot heuristic2 --out results/runs/J16-compare/A_ignis_for_suzaku.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-A_ignis_for_suzaku.txt --games 12000 --seed 162 --bot heuristic --out results/runs/J16-compare/A_ignis_for_suzaku.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-B_ignis_for_surging.txt --games 12000 --seed 163 --bot heuristic2 --out results/runs/J16-compare/B_ignis_for_surging.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-B_ignis_for_surging.txt --games 12000 --seed 164 --bot heuristic --out results/runs/J16-compare/B_ignis_for_surging.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-C_crystal_for_reindrix.txt --games 12000 --seed 165 --bot heuristic2 --out results/runs/J16-compare/C_crystal_for_reindrix.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-C_crystal_for_reindrix.txt --games 12000 --seed 166 --bot heuristic --out results/runs/J16-compare/C_crystal_for_reindrix.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-D_crystal_for_sparkit.txt --games 12000 --seed 167 --bot heuristic2 --out results/runs/J16-compare/D_crystal_for_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16-D_crystal_for_sparkit.txt --games 12000 --seed 168 --bot heuristic --out results/runs/J16-compare/D_crystal_for_sparkit.md
 ```
-Variants (both lucky for lucky): A = −2 Suzaku +2 Jormuntide Ignis; B = −2 Jormuntide Surging +2 Jormuntide Ignis. Telegram Bobby the 4 headline lines when done.
+Variants: A = −2 Suzaku +2 Jormuntide Ignis; B = −2 Jormuntide Surging +2 Jormuntide Ignis (both lucky for lucky); C = −2 Reindrix +2 Crystal Breath (a Quick lock instead of an Interrupt); D = −2 Sparkit +2 Crystal Breath. 8 lines, about 7 hours. All J16+ tests use the Cup list `cattiva_dragons.txt` (no SS01) until the Challengers Cup is over. Telegram Bobby the 8 headline lines when done.
 
 Next Claude action: review J16 if Bobby approves it. When BP02 releases, verify card texts, then J15.
