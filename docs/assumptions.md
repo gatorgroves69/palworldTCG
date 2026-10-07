@@ -145,7 +145,16 @@ These are the places where the rules are ambiguous or silent and I had to choose
 ### C29: Format of BP02 / SS01 cards (`RESOLVED for now`, 2026-10-01)
 - Bobby: BP02 isn't released yet, so it's not implemented. SS01 is the "Sleeve & Card Set Vol.1" (5 cards); Bobby is unsure whether it's legal, and no meta deck uses it, so it's skipped for now. It's a quick add later.
 - 13 red/blue/colorless BP02 and SS01 cards are **not implemented**. None of the 10 meta decks uses them, and the stated format is BP01 + TD01/TD02. I'll implement them if they're legal at Bobby's weeklies.
-- Update 2026-10-05: Bobby says the SS01 cards have just been released. The 4 red/blue/colorless SS01 cards are now implemented (`cards/ss01.py`): Grizzbolt, Chillet – Finishing Ice Blade, Cattiva – Brimming with Confidence and Quivern. Depresso is purple and isn't needed. BP02 "Legends Awaken" is still unreleased and not implemented.
+- Update 2026-10-05: Bobby says the SS01 cards have just been released. The 4 red/blue/colorless SS01 cards are now implemented (`cards/ss01.py`): Grizzbolt, Chillet – Finishing Ice Blade, Cattiva – Brimming with Confidence and Quivern. Depresso is purple and isn't needed. BP02 "Legends Awaken" is still unreleased; its red/blue/colorless preview cards are implemented (C31) but not tested or recommended until release.
+
+### C31: BP02 "Legends Awaken" preview cards (`OPEN`, 2026-10-07)
+- The set is **not released**. The 11 red/blue/colorless cards in the preview data are implemented in `cards/bp02.py` so lists can be tested on release day. **Re-check every text against the printed cards at release**, since preview wording can change.
+- **Legendary** is implemented as a play restriction: you can't play a Legendary Pal from hand while a Pal with the same name is in your base. A free deploy through Chillet isn't checked yet (no Legendary Dragon costs ◇8 or less, so it can't come up).
+- **Cost auras** (Frostallion −2 for Pals, Foxcicle −1 for Legendary Pals) apply to cards in the owner's hand and never take a cost below 1. Each Frostallion in the base is its own −2, which the text seems to allow; confirm with a judge if 2 are ever in play.
+- **Orserk**: "not chosen this turn" is read as each of the 3 modes once per turn, each costing 2 Material.
+- **Faleris**: there are no ◇8+ gears in BP01/TD/SS01, so its deploy ability does nothing in the current pool.
+- **Overloaded with Love**: the cards put on the bottom keep their order (the player may choose any order; it doesn't matter to the sim).
+- **Jetragon**: the exiled Pals are chosen as part of the cost. If both are Legendary, up to 3 Legendary Pals in either base may be stood (the text says "Pals", not "your Pals").
 
 ### C30: SS01 card readings (`OPEN`, 2026-10-05)
 - **Copy limit:** the 4-copy limit counts the full card name, so "Chillet – Finishing Ice Blade" and "Chillet – Dragon Whisperer" are different names (as with every other card here, see rules.md). If Bobby's events count by main name (《Chillet》), 4 + 4 would be illegal.

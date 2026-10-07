@@ -245,6 +245,10 @@ class Game:
 
     def cost(self, c: CardInstance) -> int:
         v = max(0, c.defn.cost + c.impl.cost_mod(self, c))
+        if c.zone is Zone.HAND:
+            aura = sum(x.impl.aura_cost(self, x, c) for x in self.players[c.owner].base)
+            if aura:
+                v = max(1, v + aura)  # "does not become ◇0 or less"
         disc = self.players[c.owner].gear_discount
         if disc and c.type is CardType.GEAR and c.zone is Zone.HAND:
             v = max(1, v - disc)  # Primitive Furnace: "does not become ◇0 or less"

@@ -126,6 +126,13 @@ class CardImpl:
                            attacker: "CardInstance") -> bool:
         return True
 
+    legendary = False  # CR Legendary: only 1 Pal of this name in your base (BP02)
+
+    def aura_cost(self, game: "Game", card: "CardInstance", target: "CardInstance") -> int:
+        """CONT cost change this card (on the base) gives a card in its owner's hand
+        (e.g. Frostallion). The total never takes a cost below 1."""
+        return 0
+
     def aura_power(self, game: "Game", card: "CardInstance", target: "CardInstance") -> int:
         """CONT power change this card (on the base) gives another Pal (e.g. Maraith)."""
         return 0

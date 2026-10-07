@@ -438,4 +438,15 @@ python3 -m sim mulligan --deck results/runs/cattiva_dragons_quivern.txt --games 
 ```
 Each line tests 5 rules (default, keep_all, need_2drop, two_cheap, cheap_and_heavy2). Telegram Bobby the two tables when done.
 
-Next Claude action: review J14 if Bobby approves it.
+Bobby skipped J14 (not worth the Optiplex time). The `sim mulligan` command stays available.
+
+**J15 (DRAFT: do not run until BP02 is released and Bobby approves it):** the first BP02 cards in Bobby's list. About 3.5 hours. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J15-CI_chillet_ignis.txt --games 12000 --seed 151 --bot heuristic2 --out results/runs/J15-compare/CI_chillet_ignis.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J15-CI_chillet_ignis.txt --games 12000 --seed 152 --bot heuristic --out results/runs/J15-compare/CI_chillet_ignis.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J15-RL_relaxaurus_lux.txt --games 12000 --seed 153 --bot heuristic2 --out results/runs/J15-compare/RL_relaxaurus_lux.md
+python3 -m sim compare --a results/runs/cattiva_dragons_quivern.txt --b results/runs/J15-RL_relaxaurus_lux.txt --games 12000 --seed 154 --bot heuristic --out results/runs/J15-compare/RL_relaxaurus_lux.md
+```
+Variants: CI = −2 Sparkit +2 Chillet Ignis (discard a Dragon: 700 damage); RL = −2 Blazehowl +2 Relaxaurus Lux (lucky Assault Dragon that re-stands on a kill). Before running, Claude re-checks the BP02 texts against the released cards.
+
+Next Claude action: when BP02 releases, verify card texts, then J15. Otherwise wait for Bobby.
