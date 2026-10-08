@@ -85,3 +85,32 @@ Raw log: /home/gator/palworld-run-artifacts/J17/line-8.stdout
 
 
 ```
+
+## J17 line 9: DONE
+HEAD: ba1aa052f075036c81d64ebb42741ea428e87bd0
+Start UTC: 2026-10-08T10:32:10.935428+00:00
+End UTC: 2026-10-08T10:49:21.458398+00:00
+Command: `python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K2_axel_for_kitsun.txt --games 12000 --seed 175 --bot heuristic --out results/runs/J17-compare/K2_axel_for_kitsun.md`
+Exit: 0
+Artifact verified: True
+Raw log: /home/gator/palworld-run-artifacts/J17/line-9.stdout
+
+```text
+**heuristic**, 12000 games per list, seed 175: A 77.0% -> B 75.7% (diff -1.3 ± 0.5, z -2.4)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.5% | 74.0 | 71.9 | -2.1 | 4621 |
+| chillet-relaxaurus-br | 13.0% | 66.9 | 66.4 | -0.5 | 1556 |
+| lamball-stone-pit-pr | 12.2% | 92.2 | 92.1 | -0.1 | 1463 |
+| tombat-medicine-gp | 6.8% | 88.0 | 86.6 | -1.3 | 816 |
+| foxparks-harness-br | 6.2% | 75.9 | 75.0 | -0.9 | 739 |
+| machine-gun-furnace-br | 6.0% | 86.3 | 85.5 | -0.8 | 724 |
+| shadowbeak-menasting-bp | 5.9% | 89.8 | 90.6 | +0.7 | 709 |
+| cattiva-azurobe-br | 5.1% | 67.9 | 65.4 | -2.4 | 616 |
+| lamball-cattiva-bg | 4.7% | 58.6 | 57.4 | -1.2 | 570 |
+| chillet-relaxaurus-bg | 1.5% | 74.1 | 71.9 | -2.2 | 185 |
+
+
+
+```
