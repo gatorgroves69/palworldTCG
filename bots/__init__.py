@@ -35,13 +35,24 @@ BOTS = {
 }
 
 def bot_class(name: str):
-    """BOTS[name], or "name@xK": that bot with its defence exchange rate set to K
-    (e.g. "heuristic2@x1.5" Interrupts only when the expected loss is 1.5x the cards spent)."""
-    if "@x" in name:
-        base, k = name.split("@x", 1)
-        cls = BOTS[base]
-        return type(f"{cls.__name__}_x{k}", (cls,), {"name": name, "defend_cost": float(k)})
-    return BOTS[name]
+    """BOTS[name], optionally with defence variants after "@":
+    "@xK"    Interrupt only when the expected loss is K times the cards spent (default 1).
+    "@exact" value hits as Strike*(1-p)^Strike with the deck's real lucky odds (default: the
+             legacy linear estimate, which is what the M1 calibration passed with).
+    e.g. "heuristic2@exact@x0.8"."""
+    base, *opts = name.split("@")
+    cls = BOTS[base]
+    if not opts:
+        return cls
+    attrs = {"name": name}
+    for o in opts:
+        if o == "exact":
+            attrs["exact_odds"] = True
+        elif o.startswith("x"):
+            attrs["defend_cost"] = float(o[1:])
+        else:
+            raise KeyError(f"unknown bot option {o!r} in {name!r}")
+    return type(f"{cls.__name__}_{'_'.join(opts)}", (cls,), attrs)
 
 
 __all__ = ["BOTS", "bot_class", "Bot", "FastBot", "HeuristicBot", "LearnedHeuristicBot", "LookaheadBot",

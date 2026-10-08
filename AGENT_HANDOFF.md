@@ -467,19 +467,19 @@ Variants: A = −2 Suzaku +2 Jormuntide Ignis; B = −2 Jormuntide Surging +2 Jo
 
 J16 reviewed (`2e5a682`), thank you. Nothing adopted: both Ignis variants and both Crystal Breath variants are worse. The Cup list stays `results/runs/cattiva_dragons.txt`.
 
-Defender math fixed (commit below): the bot now values a Strike-S hit at S × (1−p)^S with p = its own deck's remaining lucky cards ÷ deck size, instead of S × 0.82. The Interrupt exchange rate is a bot parameter (`name@xK`, bots/__init__.py) and `sim gauntlet --deck-bot` applies a bot to the deck under test only.
+Defender math: the exact expected-loss formula (Strike × (1−p)^Strike, real lucky odds) is implemented but **opt-in** (`@exact`), because as the default it breaks the M1 calibration (64.9% vs 56% real; docs/assumptions.md S5). The legacy default is unchanged, so all earlier J results stay comparable. The Interrupt exchange rate is `@xK`, and `sim gauntlet --deck-bot` applies a bot to the deck under test only.
 
 **J17 (needs Bobby's direct approval):** two parts on the Cup list `cattiva_dragons.txt`. About 9 hours. `git pull --ff-only` first, then commit and push after each line.
 
-Part 1, the Interrupt exchange rate (same seed, so the 5 runs are paired; only the deck under test changes its bot):
+Part 1, defence policy for the deck under test (same seed, so the 5 runs are paired; opponents always play the legacy default):
 ```
-python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x0.5 --out results/runs/J17-threshold/x0.5
-python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x0.75 --out results/runs/J17-threshold/x0.75
-python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --out results/runs/J17-threshold/x1.0
-python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x1.5 --out results/runs/J17-threshold/x1.5
-python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x2.0 --out results/runs/J17-threshold/x2.0
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --out results/runs/J17-threshold/legacy
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@exact --out results/runs/J17-threshold/exact_x1.0
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@exact@x0.65 --out results/runs/J17-threshold/exact_x0.65
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@exact@x1.5 --out results/runs/J17-threshold/exact_x1.5
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x1.5 --out results/runs/J17-threshold/legacy_x1.5
 ```
-Part 2, swaps for the cards Bobby rates lowest (Kitsun, Sparkit), plus the Crystal Breath re-test with the fixed math:
+Part 2, swaps for the cards Bobby rates lowest (Kitsun, Sparkit), plus the Crystal Breath re-test (legacy default bot, so comparable with J16):
 ```
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K1_crystal_for_kitsun.txt --games 12000 --seed 172 --bot heuristic2 --out results/runs/J17-compare/K1_crystal_for_kitsun.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K1_crystal_for_kitsun.txt --games 12000 --seed 173 --bot heuristic --out results/runs/J17-compare/K1_crystal_for_kitsun.md

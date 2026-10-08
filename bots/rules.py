@@ -25,11 +25,17 @@ def lucky_rate(game, p: int) -> float:
     return sum(1 for c in deck if c.defn.lucky) / len(deck)
 
 
-def expected_hit(game, p: int, strike: int) -> float:
-    """Expected life `p` loses to a Strike-`strike` hit: every flip must miss, so the
-    hit lands with probability (1-p)^strike (CR 11.2: one lucky card cancels it all)."""
+def expected_hit(game, p: int, strike: int, exact: bool = False) -> float:
+    """Expected life `p` loses to a Strike-`strike` hit.
+
+    exact=True: every flip must miss, so the hit lands with probability (1-p)^strike
+    (CR 11.2) using the deck's real lucky odds. exact=False (the default): the legacy
+    linear estimate strike * (1 - 0.18). The exact form is right, but it breaks the M1
+    calibration (64.9% vs 56% real; docs/assumptions.md S5, J17), so it stays opt-in."""
     if strike <= 0:
         return 0.0
+    if not exact:
+        return strike * LIFE * (1 - LUCKY_RATE)
     return strike * LIFE * (1 - lucky_rate(game, p)) ** strike
 
 
@@ -51,6 +57,7 @@ class RuleBot(Bot):
     # Exchange rate for defence: Interrupt when the expected loss exceeds this many times
     # the cards spent. 1.0 = one expected life point is worth one card. Swept in J17.
     defend_cost = 1.0
+    exact_odds = False  # True: expected_hit uses (1-p)^Strike with real lucky odds ("@exact")
 
     # ------------------------------------------------------------ mulligan
     def choose_redraw(self, game, player):
@@ -130,7 +137,7 @@ class RuleBot(Bot):
         att = b.attacker
         if b.target is None:
             s = game.strike(att)
-            return expected_hit(game, me, s)
+            return expected_hit(game, me, s, self.exact_odds)
         t = b.target
         if t.owner != me:
             return 0.0
@@ -170,7 +177,7 @@ class RuleBot(Bot):
             score = (pal_value(game, att) if kills else 0) - (pal_value(game, b) if b_dies else 0)
             if tgt_uid is None:
                 s = game.strike(att)
-                score += expected_hit(game, me, s)
+                score += expected_hit(game, me, s, self.exact_odds)
                 if s >= life:
                     score += 100  # otherwise this hit is probably lethal
             else:
