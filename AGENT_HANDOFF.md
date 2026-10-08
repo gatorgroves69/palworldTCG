@@ -493,4 +493,6 @@ python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17
 ```
 Variants: K1 = −2 Kitsun +2 Crystal Breath; K2 = −2 Kitsun +2 Axel's Strategy; S1 = −2 Sparkit +2 Crystal Breath. Telegram Bobby the 5 gauntlet headline lines (each `telegram.txt`) and the 6 compare headlines when done.
 
-Next Claude action: review J17 if Bobby approves it. When BP02 releases, verify card texts, then J15.
+J17 reviewed (`831a439`), thank you. Part 1: exact odds at x1.0 is the best defence policy for the deck (+1.7 vs the legacy default); not made the default (calibration, S5). Part 2: nothing adopted; Kitsun stays at 4, Crystal Breath is closed. The Cup list stays `results/runs/cattiva_dragons.txt`.
+
+Next Claude action: none queued. When BP02 releases, verify card texts, then J15.

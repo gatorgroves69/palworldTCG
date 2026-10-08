@@ -121,3 +121,20 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **C: −2 Reindrix / +2 Crystal Breath:** **−1.9 (z −3.4) / −2.2 (z −4.1)**. Worse. The Interrupt is better than the Quick lock.
 - **D: −2 Sparkit / +2 Crystal Breath:** −0.5 / −0.7. Not better.
 - Caveat: these ran before the defensive expected-damage fix (the bot values a Strike-S hit as S×(1−p) rather than S×(1−p)^S, and uses a fixed p). Both lists in each comparison use the same bot, so the direction is reliable; the size of C and D could shift a little once Crystal Breath is cast with correct odds.
+
+**J17 review (Cup list `cattiva_dragons`, `831a439`):**
+- **Part 1, defence policy for the deck under test** (12,000 games each, seed 171, paired; opponents = legacy default heuristic2):
+
+  | Deck bot | Win vs field | vs legacy |
+  |---|---|---|
+  | legacy (current default) | 71.9% | — |
+  | **exact odds, x1.0** | **73.6%** | **+1.7 (z ≈ 2.8)** |
+  | exact odds, x1.5 (stingier) | 72.7% | +0.8 |
+  | legacy, x1.5 (stingier) | 73.0% | +1.1 |
+  | exact odds, x0.65 (trigger-happy) | 71.1% | −0.8 |
+
+  Reading: for this deck, valuing hits by the real odds and Interrupting only when the expected loss is worth about one card wins the most. Defending more eagerly than that loses. Both "stingier" settings also beat the legacy default. Caveat: the opponents are the uncalibrated legacy bots (see S5, J17), so this measures the best policy against bot-like opponents; real players defend more and may punish a passive defender differently. Not adopted as the default (M1 calibration, S5); recorded as the evidence behind the pocket guide's rule 1.
+- **Part 2** (12,000 games per list, both bots, legacy default):
+  - K1: −2 Kitsun / +2 Crystal Breath: **−2.3 (z −4.0) / −1.7 (z −3.2)**. Worse.
+  - K2: −2 Kitsun / +2 Axel's Strategy: **−1.9 (z −3.4) / −1.3 (z −2.4)**. Worse. Kitsun stays at 4.
+  - S1: −2 Sparkit / +2 Crystal Breath: −0.4 / −0.4. Not better; third and final Crystal Breath test. **Closed.**
