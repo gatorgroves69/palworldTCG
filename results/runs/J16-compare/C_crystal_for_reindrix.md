@@ -15,3 +15,20 @@ A = `results/runs/cattiva_dragons.txt`, B = `results/runs/J16-C_crystal_for_rein
 | cattiva-azurobe-br | 5.1% | 66.1 | 61.7 | -4.4 | 616 |
 | lamball-cattiva-bg | 4.7% | 55.1 | 50.7 | -4.4 | 570 |
 | chillet-relaxaurus-bg | 1.5% | 65.9 | 64.3 | -1.6 | 185 |
+
+A = `results/runs/cattiva_dragons.txt`, B = `results/runs/J16-C_crystal_for_reindrix.txt`
+
+**heuristic**, 12000 games per list, seed 166: A 76.6% -> B 74.4% (diff -2.2 ± 0.5, z -4.1)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.5% | 73.3 | 71.2 | -2.1 | 4621 |
+| chillet-relaxaurus-br | 13.0% | 65.1 | 64.5 | -0.6 | 1556 |
+| lamball-stone-pit-pr | 12.2% | 93.4 | 91.5 | -2.0 | 1463 |
+| tombat-medicine-gp | 6.8% | 86.8 | 84.8 | -2.0 | 816 |
+| foxparks-harness-br | 6.2% | 77.1 | 74.2 | -3.0 | 739 |
+| machine-gun-furnace-br | 6.0% | 87.0 | 84.4 | -2.6 | 724 |
+| shadowbeak-menasting-bp | 5.9% | 91.0 | 87.3 | -3.7 | 709 |
+| cattiva-azurobe-br | 5.1% | 66.2 | 61.9 | -4.4 | 616 |
+| lamball-cattiva-bg | 4.7% | 56.1 | 53.0 | -3.2 | 570 |
+| chillet-relaxaurus-bg | 1.5% | 76.8 | 75.1 | -1.6 | 185 |
