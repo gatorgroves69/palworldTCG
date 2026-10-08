@@ -11,7 +11,7 @@ from engine.actions import Activate, Attack, EndMain, Pass, PlayCard, SoulDraw
 from engine.model import CardType
 
 from .evaluate import LIFE, pal_value
-from .rules import LUCKY_RATE, RuleBot
+from .rules import RuleBot, expected_hit
 
 
 class FastBot(RuleBot):
@@ -74,7 +74,7 @@ class FastBot(RuleBot):
             if a.target_uid is None:
                 bad_block = any(game.power(b) >= ap - att.damage and game.power(b) > b.damage
                                 for b in blockers) and not game.has_kw(att, "stealth")
-                s = game.strike(att) * LIFE * (1 - LUCKY_RATE)
+                s = expected_hit(game, game.opponent(p), game.strike(att))
                 if opp.life <= sum(game.strike(x) for x in game.players[p].pals if not x.rested):
                     s += 20  # push for lethal
                 elif bad_block:

@@ -32,6 +32,7 @@ class MatchSpec:
     structures_attackable: str = "any"
     cards: str | None = None
     mulligan: str = "default"  # keep-or-redraw rule for the deck under test (sim/mulligan.py)
+    deck_bot: str | None = None  # a different bot for the deck under test only (J17 sweeps)
 
 
 _CACHE: dict = {}
@@ -42,7 +43,7 @@ def _setup(spec: MatchSpec):
     key = spec
     if key not in _CACHE:
         import cards  # noqa: F401  (registers implementations)
-        from bots import BOTS
+        from bots import bot_class
         from cards import REGISTRY
         from cards.db import DEFAULT_PATH, load_card_db
         from cards.decklist import load_deck
@@ -51,13 +52,15 @@ def _setup(spec: MatchSpec):
         decks = [load_deck(spec.deck, db), load_deck(spec.opp, db)]
         for d in decks:
             validate_deck(d)
-        _CACHE[key] = (decks, REGISTRY, BOTS[spec.bot])
+        _CACHE[key] = (decks, REGISTRY, bot_class(spec.bot))
     return _CACHE[key]
 
 
 def make_game(spec: MatchSpec, seed: int, log: bool = False) -> Game:
     decks, registry, bot_cls = _setup(spec)
-    bots = [bot_cls(seed * 2 + 1), bot_cls(seed * 2 + 2)]
+    from bots import bot_class
+    deck_cls = bot_class(spec.deck_bot) if spec.deck_bot else bot_cls
+    bots = [deck_cls(seed * 2 + 1), bot_cls(seed * 2 + 2)]
     if spec.mulligan != "default":
         from .mulligan import redraw_fn
         bots[DECK_SIDE].choose_redraw = redraw_fn(spec.mulligan)

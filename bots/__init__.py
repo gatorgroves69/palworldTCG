@@ -34,5 +34,15 @@ BOTS = {
     "random": RandomBot,
 }
 
-__all__ = ["BOTS", "Bot", "FastBot", "HeuristicBot", "LearnedHeuristicBot", "LookaheadBot",
+def bot_class(name: str):
+    """BOTS[name], or "name@xK": that bot with its defence exchange rate set to K
+    (e.g. "heuristic2@x1.5" Interrupts only when the expected loss is 1.5x the cards spent)."""
+    if "@x" in name:
+        base, k = name.split("@x", 1)
+        cls = BOTS[base]
+        return type(f"{cls.__name__}_x{k}", (cls,), {"name": name, "defend_cost": float(k)})
+    return BOTS[name]
+
+
+__all__ = ["BOTS", "bot_class", "Bot", "FastBot", "HeuristicBot", "LearnedHeuristicBot", "LookaheadBot",
            "PlanBot", "RandomBot", "RuleBot", "SearchBot", "TwoStepHeuristicBot"]

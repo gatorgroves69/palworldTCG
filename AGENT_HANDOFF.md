@@ -467,4 +467,27 @@ Variants: A = −2 Suzaku +2 Jormuntide Ignis; B = −2 Jormuntide Surging +2 Jo
 
 J16 reviewed (`2e5a682`), thank you. Nothing adopted: both Ignis variants and both Crystal Breath variants are worse. The Cup list stays `results/runs/cattiva_dragons.txt`.
 
-Next Claude action: fix the defender's expected-damage math in bots/rules.py (bug, see experiments.md J16 note), then propose J17 (Interrupt-threshold sweep). When BP02 releases, verify card texts, then J15.
+Defender math fixed (commit below): the bot now values a Strike-S hit at S × (1−p)^S with p = its own deck's remaining lucky cards ÷ deck size, instead of S × 0.82. The Interrupt exchange rate is a bot parameter (`name@xK`, bots/__init__.py) and `sim gauntlet --deck-bot` applies a bot to the deck under test only.
+
+**J17 (needs Bobby's direct approval):** two parts on the Cup list `cattiva_dragons.txt`. About 9 hours. `git pull --ff-only` first, then commit and push after each line.
+
+Part 1, the Interrupt exchange rate (same seed, so the 5 runs are paired; only the deck under test changes its bot):
+```
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x0.5 --out results/runs/J17-threshold/x0.5
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x0.75 --out results/runs/J17-threshold/x0.75
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --out results/runs/J17-threshold/x1.0
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x1.5 --out results/runs/J17-threshold/x1.5
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 171 --bot heuristic2 --deck-bot heuristic2@x2.0 --out results/runs/J17-threshold/x2.0
+```
+Part 2, swaps for the cards Bobby rates lowest (Kitsun, Sparkit), plus the Crystal Breath re-test with the fixed math:
+```
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K1_crystal_for_kitsun.txt --games 12000 --seed 172 --bot heuristic2 --out results/runs/J17-compare/K1_crystal_for_kitsun.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K1_crystal_for_kitsun.txt --games 12000 --seed 173 --bot heuristic --out results/runs/J17-compare/K1_crystal_for_kitsun.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K2_axel_for_kitsun.txt --games 12000 --seed 174 --bot heuristic2 --out results/runs/J17-compare/K2_axel_for_kitsun.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-K2_axel_for_kitsun.txt --games 12000 --seed 175 --bot heuristic --out results/runs/J17-compare/K2_axel_for_kitsun.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-S1_crystal_for_sparkit.txt --games 12000 --seed 176 --bot heuristic2 --out results/runs/J17-compare/S1_crystal_for_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J17-S1_crystal_for_sparkit.txt --games 12000 --seed 177 --bot heuristic --out results/runs/J17-compare/S1_crystal_for_sparkit.md
+```
+Variants: K1 = −2 Kitsun +2 Crystal Breath; K2 = −2 Kitsun +2 Axel's Strategy; S1 = −2 Sparkit +2 Crystal Breath. Telegram Bobby the 5 gauntlet headline lines (each `telegram.txt`) and the 6 compare headlines when done.
+
+Next Claude action: review J17 if Bobby approves it. When BP02 releases, verify card texts, then J15.

@@ -13,7 +13,24 @@ from engine.state import CardInstance
 from .base import Bot
 from .evaluate import HAND_CARD, INTERRUPT_IN_HAND, LIFE, pal_value
 
-LUCKY_RATE = 0.18  # rough chance a damage check hits a lucky card (8 of ~45)
+LUCKY_RATE = 0.18  # fallback when a deck is empty (8 of ~45)
+
+
+def lucky_rate(game, p: int) -> float:
+    """Chance one damage-check flip from `p`'s deck is lucky: the deck's remaining lucky
+    cards over its size. Open information (the graveyard is public), so no peeking."""
+    deck = game.players[p].deck
+    if not deck:
+        return LUCKY_RATE
+    return sum(1 for c in deck if c.defn.lucky) / len(deck)
+
+
+def expected_hit(game, p: int, strike: int) -> float:
+    """Expected life `p` loses to a Strike-`strike` hit: every flip must miss, so the
+    hit lands with probability (1-p)^strike (CR 11.2: one lucky card cancels it all)."""
+    if strike <= 0:
+        return 0.0
+    return strike * LIFE * (1 - lucky_rate(game, p)) ** strike
 
 
 def effect_damage(game, source: CardInstance, target: CardInstance, amount: int) -> int:
@@ -31,6 +48,9 @@ def card_worth(game, c: CardInstance) -> float:
 
 class RuleBot(Bot):
     name = "rules"
+    # Exchange rate for defence: Interrupt when the expected loss exceeds this many times
+    # the cards spent. 1.0 = one expected life point is worth one card. Swept in J17.
+    defend_cost = 1.0
 
     # ------------------------------------------------------------ mulligan
     def choose_redraw(self, game, player):
@@ -104,13 +124,13 @@ class RuleBot(Bot):
         cost = HAND_CARD + INTERRUPT_IN_HAND + (0.5 if pick.discard_uid is None else HAND_CARD)
         life = game.players[me].life
         lethal = b.target is None and game.strike(att) >= life
-        return pick if loss > cost or lethal else Pass()
+        return pick if loss > cost * self.defend_cost or lethal else Pass()
 
     def expected_loss(self, game, me, b) -> float:
         att = b.attacker
         if b.target is None:
             s = game.strike(att)
-            return s * LIFE * (1 - LUCKY_RATE) if s > 0 else 0.0
+            return expected_hit(game, me, s)
         t = b.target
         if t.owner != me:
             return 0.0
@@ -150,7 +170,7 @@ class RuleBot(Bot):
             score = (pal_value(game, att) if kills else 0) - (pal_value(game, b) if b_dies else 0)
             if tgt_uid is None:
                 s = game.strike(att)
-                score += s * LIFE * (1 - LUCKY_RATE)
+                score += expected_hit(game, me, s)
                 if s >= life:
                     score += 100  # otherwise this hit is probably lethal
             else:

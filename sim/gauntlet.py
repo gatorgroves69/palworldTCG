@@ -105,13 +105,15 @@ def _job(args):
 
 def play_gauntlet(deck_path: str, weights: dict[str, float], games: int, seed: int,
                   bot: str = "heuristic2", start: int = 0, workers: int | None = None,
-                  keep_records: bool = False, mulligan: str = "default") -> GauntletResult:
+                  keep_records: bool = False, mulligan: str = "default",
+                  deck_bot: str | None = None) -> GauntletResult:
     """Play `games` games spread over the field; game indices start at `start`
     (so batch k of a sequential test uses fresh, but reproducible, seeds)."""
     alloc = allocate(weights, games)
     jobs = []
     for oi, opp in enumerate(weights):
-        spec = MatchSpec(deck_path, str(DECK_DIR / f"{opp}.txt"), bot, mulligan=mulligan)
+        spec = MatchSpec(deck_path, str(DECK_DIR / f"{opp}.txt"), bot, mulligan=mulligan,
+                         deck_bot=deck_bot)
         n = alloc[opp]
         first = round(start * alloc[opp] / max(games, 1))
         jobs += [(spec, gauntlet_seed(seed, oi, first + i)) for i in range(n)]

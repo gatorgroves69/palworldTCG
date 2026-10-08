@@ -23,7 +23,7 @@ MAX_TELEGRAM = 900
 
 
 def run_gauntlet(deck: str, games: int, seed: int, bot: str, out: Path | None = None,
-                 workers: int | None = None) -> dict:
+                 workers: int | None = None, deck_bot: str | None = None) -> dict:
     from analysis.tags import loss_tags
     from cards.db import load_card_db
     db = load_card_db()
@@ -33,7 +33,8 @@ def run_gauntlet(deck: str, games: int, seed: int, bot: str, out: Path | None = 
     out.mkdir(parents=True, exist_ok=True)
     weights = field_weights()
     t0 = time.time()
-    res = play_gauntlet(deck, weights, games, seed, bot, workers=workers, keep_records=True)
+    res = play_gauntlet(deck, weights, games, seed, bot, workers=workers, keep_records=True,
+                        deck_bot=deck_bot)
     elapsed = time.time() - t0
 
     per_opp = {}
@@ -56,6 +57,7 @@ def run_gauntlet(deck: str, games: int, seed: int, bot: str, out: Path | None = 
     wr, se = res.win_rate, res.se
     summary = {
         "deck": name, "games": sum(r.games for r in res.per_opp.values()), "bot": bot,
+        "deck_bot": deck_bot,
         "seed": seed, "commit": git_commit(), "seconds": round(elapsed),
         "weighted_win_rate": round(wr, 4), "ci95": [round(wr - 1.96 * se, 4),
                                                     round(wr + 1.96 * se, 4)],
@@ -80,7 +82,8 @@ def telegram(s: dict, db) -> str:
     """Short plain-text report: headline, weakest matchups, top loss reasons."""
     lo, hi = s["ci95"]
     lines = [f"{s['deck']}: {100 * s['weighted_win_rate']:.1f}% vs field "
-             f"({100 * lo:.1f}-{100 * hi:.1f}, {s['games']} games, bot {s['bot']})"]
+             f"({100 * lo:.1f}-{100 * hi:.1f}, {s['games']} games, bot {s['bot']}"
+             + (f", deck bot {s['deck_bot']}" if s.get("deck_bot") else "") + ")"]
     worst = sorted(s["field"].items(), key=lambda kv: kv[1]["win_rate"])[:3]
     lines.append("Worst: " + "; ".join(
         f"{opp} {100 * r['win_rate']:.0f}% ({100 * r['weight']:.0f}% of field)"

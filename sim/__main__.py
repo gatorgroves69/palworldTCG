@@ -12,7 +12,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from bots import BOTS
+from bots import BOTS  # noqa: F401  (help text references it)
 
 from .runner import MatchSpec, make_game, run
 
@@ -28,7 +28,7 @@ def main(argv=None) -> int:
     def common(p):
         p.add_argument("--deck", required=True, help="decklist for the deck under test")
         p.add_argument("--opp", required=True, help="opponent decklist")
-        p.add_argument("--bot", default="heuristic", choices=sorted(BOTS))
+        p.add_argument("--bot", default="heuristic", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
         p.add_argument("--structures", default="any", choices=["any", "rested_only"],
                        help="A2: may standing structures be attacked (docs/assumptions.md)")
         p.add_argument("--cards", default=None, help="cards.json path (default data/cards.json)")
@@ -48,15 +48,15 @@ def main(argv=None) -> int:
     m.add_argument("--seed", type=int, default=1)
     m.add_argument("--out", type=Path, default=None)
     m.add_argument("--workers", type=int, default=None)
-    m.add_argument("--bot", default="heuristic", choices=sorted(BOTS))
+    m.add_argument("--bot", default="heuristic", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
     m.add_argument("--structures", default="any", choices=["any", "rested_only"])
 
     o = sub.add_parser("optimize", help="M3: propose and test card swaps vs the weighted field")
     o.add_argument("--deck", required=True)
     o.add_argument("--rounds", type=int, default=1)
     o.add_argument("--seed", type=int, default=1)
-    o.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
-    o.add_argument("--confirm-bot", default="heuristic", choices=sorted(BOTS))
+    o.add_argument("--bot", default="heuristic2", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
+    o.add_argument("--confirm-bot", default="heuristic", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
     o.add_argument("--max-tries", type=int, default=6, help="swaps tested per round")
     o.add_argument("--batch", type=int, default=800, help="games per batch per version")
     o.add_argument("--max-batches", type=int, default=5)
@@ -71,16 +71,17 @@ def main(argv=None) -> int:
     gt.add_argument("--deck", required=True)
     gt.add_argument("--games", type=int, default=20000)
     gt.add_argument("--seed", type=int, default=1)
-    gt.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    gt.add_argument("--bot", default="heuristic2", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
     gt.add_argument("--out", type=Path, default=None)
     gt.add_argument("--workers", type=int, default=None)
+    gt.add_argument("--deck-bot", default=None, help="bot for the deck under test only")
 
     cp = sub.add_parser("compare", help="two deck lists vs the same weighted field, per opponent")
     cp.add_argument("--a", required=True, help="baseline list")
     cp.add_argument("--b", required=True, help="changed list")
     cp.add_argument("--games", type=int, default=4000)
     cp.add_argument("--seed", type=int, default=1)
-    cp.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    cp.add_argument("--bot", default="heuristic2", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
     cp.add_argument("--workers", type=int, default=None)
     cp.add_argument("--out", type=Path, default=None, help="also append the table to this file")
 
@@ -88,7 +89,7 @@ def main(argv=None) -> int:
     mu.add_argument("--deck", required=True)
     mu.add_argument("--games", type=int, default=12000)
     mu.add_argument("--seed", type=int, default=1)
-    mu.add_argument("--bot", default="heuristic2", choices=sorted(BOTS))
+    mu.add_argument("--bot", default="heuristic2", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
     mu.add_argument("--rules", default=None, help="comma-separated (default: all)")
     mu.add_argument("--workers", type=int, default=None)
     mu.add_argument("--out", type=Path, default=None, help="also append the table to this file")
@@ -119,7 +120,7 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "gauntlet":
         from .overnight import run_gauntlet
-        r = run_gauntlet(a.deck, a.games, a.seed, a.bot, a.out, a.workers)
+        r = run_gauntlet(a.deck, a.games, a.seed, a.bot, a.out, a.workers, a.deck_bot)
         print((Path(r["out"]) / "telegram.txt").read_text(encoding="utf-8"))
         print(f"\nwrote {r['out']}/summary.json, telegram.txt, games.jsonl")
         return 0
