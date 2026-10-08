@@ -1,0 +1,4 @@
+cattiva_dragons: 73.6% vs field (72.8-74.3, 11999 games, bot heuristic2, deck bot heuristic2@exact)
+Worst: lamball-cattiva-bg 52% (5% of field); cattiva-azurobe-br 59% (5% of field); chillet-relaxaurus-br 61% (13% of field)
+Losses: behind on board by round 4-6 32%; opponent lucky saves 3+ 32%; too slow on the draw 27%
+seed 171, commit dafac3e, 45 min
