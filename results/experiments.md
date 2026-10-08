@@ -114,3 +114,10 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **X: −2 Sparkit / +2 Axel's Strategy:** −0.2 / +0.2. No difference overall. It's slightly positive against Chillet-BR and negative against Lamball·Cattiva.
 - **R: −2 Sparkit / +2 Single-Shot Rifle:** −0.3 / **−1.5 (z −2.7)**. Worse.
 - Reading: in the sim, the late game against big Pals isn't what decides most games, and Sparkit's cheap body plus 500 to a standing Pal is worth as much as a 1500 single-target removal. Caveat: Bobby's real losses came from an engine deck (GP Shadowbeak), which the sim plays too weakly (docs/m2-status.md), so these tests can't price a card's value against real engine decks. Axel's Strategy stays a reasonable personal tech choice if a local meta is full of engine decks.
+
+**J16 review (Cup list `cattiva_dragons`, no SS01; 12,000 games per list, both bots, `2e5a682`):**
+- **A: −2 Suzaku / +2 Jormuntide Ignis:** **−2.3 (z −4.0) / −2.3 (z −4.2)**. Worse. Third rejection of Ignis, now on the 12-Dragon list.
+- **B: −2 Jormuntide Surging / +2 Jormuntide Ignis:** **−2.9 (z −5.1) / −2.7 (z −5.0)**. Worse. Surging (draw + lock) beats Ignis (re-stand) in this deck.
+- **C: −2 Reindrix / +2 Crystal Breath:** **−1.9 (z −3.4) / −2.2 (z −4.1)**. Worse. The Interrupt is better than the Quick lock.
+- **D: −2 Sparkit / +2 Crystal Breath:** −0.5 / −0.7. Not better.
+- Caveat: these ran before the defensive expected-damage fix (the bot values a Strike-S hit as S×(1−p) rather than S×(1−p)^S, and uses a fixed p). Both lists in each comparison use the same bot, so the direction is reliable; the size of C and D could shift a little once Crystal Breath is cast with correct odds.

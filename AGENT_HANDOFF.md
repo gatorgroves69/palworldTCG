@@ -465,4 +465,6 @@ python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J16
 ```
 Variants: A = −2 Suzaku +2 Jormuntide Ignis; B = −2 Jormuntide Surging +2 Jormuntide Ignis (both lucky for lucky); C = −2 Reindrix +2 Crystal Breath (a Quick lock instead of an Interrupt); D = −2 Sparkit +2 Crystal Breath. 8 lines, about 7 hours. All J16+ tests use the Cup list `cattiva_dragons.txt` (no SS01) until the Challengers Cup is over. Telegram Bobby the 8 headline lines when done.
 
-Next Claude action: review J16 if Bobby approves it. When BP02 releases, verify card texts, then J15.
+J16 reviewed (`2e5a682`), thank you. Nothing adopted: both Ignis variants and both Crystal Breath variants are worse. The Cup list stays `results/runs/cattiva_dragons.txt`.
+
+Next Claude action: fix the defender's expected-damage math in bots/rules.py (bug, see experiments.md J16 note), then propose J17 (Interrupt-threshold sweep). When BP02 releases, verify card texts, then J15.
