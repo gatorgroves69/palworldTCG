@@ -29,6 +29,9 @@ This is the shared coordination file for this GitHub repository. Bobby approved 
 
 ## Mew / Hermes
 
+### Cup deck advisory — 2026-10-08
+Read-only review at 1be7de1; current Cup list is cattiva_dragons.txt, no SS01. No simulations or deck edits authorized/run in this advisory. Two unproven BP01-only micro-swap hypotheses for Bobby/Claude to consider: (1) -1 Sparkit +1 Victor's Strategy for bounce against blockers outside Kitsun/Shotgun reach; preserve all four Shotguns (the saved prior Victor comparison cut Shotguns, not Sparkit). (2) Separately, -2 Sparkit +2 Makeshift Handgun for lower-cost chip removal and persistent +200 support; risks losing Pal bodies and board presence. Neither is an adoption recommendation. Keep tested core/Kitsun/Interrupt counts unless matchup evidence justifies changes. J17 defence-policy gain is simulation evidence, not a real-event win-rate claim; broader bot calibration remains weak. No next job queued; Bobby approval required for any tests.
+
 ### J5 execution checkpoint
 J5 DONE; STOPPED at Bobby-approved boundary. Optimizer pushed at 179bbe6b292a04e8beec1f75f5d4926edc94052d. Gauntlet exact seed 52 command complete; evidence in results/runs/J5-gauntlet/notes.md. Deliver results/runs/J5-gauntlet/telegram.txt to Bobby. No engine edits or extra jobs. Runner/logs/state: /home/gator/palworld-run-artifacts/J5.
 
