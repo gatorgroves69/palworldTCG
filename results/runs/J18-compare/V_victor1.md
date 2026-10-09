@@ -15,3 +15,20 @@ A = `results/runs/cattiva_dragons.txt`, B = `results/runs/J18-V_victor1.txt`
 | cattiva-azurobe-br | 5.1% | 62.0 | 63.3 | +1.3 | 616 |
 | lamball-cattiva-bg | 4.7% | 56.0 | 52.3 | -3.7 | 570 |
 | chillet-relaxaurus-bg | 1.5% | 77.3 | 75.7 | -1.6 | 185 |
+
+A = `results/runs/cattiva_dragons.txt`, B = `results/runs/J18-V_victor1.txt`
+
+**heuristic**, 12000 games per list, seed 182: A 76.7% -> B 76.6% (diff -0.0 ± 0.5, z -0.1)
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.5% | 74.0 | 73.8 | -0.3 | 4621 |
+| chillet-relaxaurus-br | 13.0% | 65.6 | 67.4 | +1.9 | 1556 |
+| lamball-stone-pit-pr | 12.2% | 91.9 | 92.1 | +0.2 | 1463 |
+| tombat-medicine-gp | 6.8% | 85.4 | 85.0 | -0.4 | 816 |
+| foxparks-harness-br | 6.2% | 77.0 | 77.4 | +0.4 | 739 |
+| machine-gun-furnace-br | 6.0% | 84.8 | 84.8 | +0.0 | 724 |
+| shadowbeak-menasting-bp | 5.9% | 89.4 | 89.4 | +0.0 | 709 |
+| cattiva-azurobe-br | 5.1% | 68.8 | 67.9 | -1.0 | 616 |
+| lamball-cattiva-bg | 4.7% | 58.4 | 55.8 | -2.6 | 570 |
+| chillet-relaxaurus-bg | 1.5% | 77.3 | 75.7 | -1.6 | 185 |
