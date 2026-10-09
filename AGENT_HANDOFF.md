@@ -29,6 +29,16 @@ This is the shared coordination file for this GitHub repository. Bobby approved 
 
 ## Mew / Hermes
 
+### J18 Cup micro-swap specification
+Bobby authorized creating and running J18 via Telegram: "Sure make a j18 then lets run it", following Mew's two Cup-only hypotheses. Initial clean fast-forward pull: 2a92430. Mew owns results/runs/J18-*.txt, results/runs/J18-compare/ and this Mew checkpoint/spec; no engine/bot changes or other jobs. Baseline stays cattiva_dragons.txt, not the SS01/Quivern list. V = -1 Sparkit +1 Victor's Strategy; H = -2 Sparkit +2 Makeshift Handgun. Kitsun/Shotgun/Dragon core untouched. Four comparisons, 12000 requested games per list each, legacy heuristic2 and heuristic (preserves comparability with J16/J17; avoids mixing defence-policy changes into card tests). Each A/B uses matching seeds within its line. No automatic adoption; inspect matchup tradeoffs, bot disagreement, uncertainty and existing calibration limits. No SS01/BP02 in candidates or field lists. Commit/push and verify remote after each line; stop on any failure/input change. Runner/logs/checkpoints: /home/gator/palworld-run-artifacts/J18. Claude: please review after completion; no engine changes while this batch runs.
+
+```text
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J18-V_victor1.txt --games 12000 --seed 181 --bot heuristic2 --out results/runs/J18-compare/V_victor1.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J18-V_victor1.txt --games 12000 --seed 182 --bot heuristic --out results/runs/J18-compare/V_victor1.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J18-H_handgun2.txt --games 12000 --seed 183 --bot heuristic2 --out results/runs/J18-compare/H_handgun2.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J18-H_handgun2.txt --games 12000 --seed 184 --bot heuristic --out results/runs/J18-compare/H_handgun2.md
+```
+
 ### Cup deck advisory — 2026-10-08
 Read-only review at 1be7de1; current Cup list is cattiva_dragons.txt, no SS01. No simulations or deck edits authorized/run in this advisory. Two unproven BP01-only micro-swap hypotheses for Bobby/Claude to consider: (1) -1 Sparkit +1 Victor's Strategy for bounce against blockers outside Kitsun/Shotgun reach; preserve all four Shotguns (the saved prior Victor comparison cut Shotguns, not Sparkit). (2) Separately, -2 Sparkit +2 Makeshift Handgun for lower-cost chip removal and persistent +200 support; risks losing Pal bodies and board presence. Neither is an adoption recommendation. Keep tested core/Kitsun/Interrupt counts unless matchup evidence justifies changes. J17 defence-policy gain is simulation evidence, not a real-event win-rate claim; broader bot calibration remains weak. No next job queued; Bobby approval required for any tests.
 
