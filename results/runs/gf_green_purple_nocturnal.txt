@@ -1,0 +1,16 @@
+# main
+4 TD02-011 Stone Blast
+4 TD02-004 Dinossom – Radiant Fragrance
+4 BP01-098 Elphidran – Gentle Radiance
+4 BP01-088 Lamp
+4 BP01-090 Medieval Medicine Workbench
+4 BP01-076 Tombat – Out of Nowhere!?
+4 TD02-017 Blazehowl Noct – Darkflame Defender
+4 BP01-085 Maraith – Twilight Messenger
+4 SS01-005 Quivern – Wyvern's Breath
+4 BP01-049 Lyleen – Blessing of the Goddess
+4 BP01-077 Pyrin Noct – Steed of Azure Flames
+2 BP01-062 Wumpo Botan – Tropical Sentinel
+4 BP01-054 Warsect – Iron Fortress
+# soul
+10 SOUL-001 Soul

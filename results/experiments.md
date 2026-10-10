@@ -143,3 +143,9 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - **V: −1 Sparkit / +1 Victor's Strategy:** −0.1 / −0.0. No difference. A 1-card change is below what 12,000 games can resolve (±0.6), so "flat" is the expected reading either way; the bounce mode didn't show up as a gain.
 - **H: −2 Sparkit / +2 Makeshift Handgun:** −0.8 / **−1.2 (z −2.3)**. Not better. 500 for 2 souls loses to Sparkit's body + 500 on a standing Pal.
 - Process: clean. Mew wrote its own spec, kept to its owned paths, used the Cup list as the baseline and ran the exact lines. Nothing adopted.
+
+**gf deck candidates (Mac, 2,000 games each, bot `heuristic`, vs the Cup list `cattiva_dragons`, 2026-10-09):**
+- Meta Tombat·Medicine (GP Shadowbeak): Bobby wins **87.6%** (real data says 58%; the sim misplays engine decks).
+- Meta Shadowbeak·Menasting (BP): Bobby wins 90.1% (real 70%).
+- **Green/Purple Nocturnal** (a list Bobby was shown: Stone Blast, Dinossom, Elphidran Radiance, Lamp, Medicine Workbench, Tombat, Blazehowl Noct, Maraith, Quivern, Lyleen, Pyrin Noct ×4 each; Wumpo Botan ×2; Warsect ×4): Bobby wins **59.5%** (GP 44.4% going first, 36.6% second). The sim handles this deck better than the Shadowbeak lists: its plan is 14 Interrupts, Taunt walls and night pumps, not a multi-turn engine. New cards for it: Warsect, Wumpo Botan, Stone Blast (`cards/bp01_green.py`, `cards/td02.py`); the bot casts Stone Blast in the Quick step when it saves a Pal or kills the attacker.
+- Same list with **4 Astegon for 4 Quivern** (no SS01): Bobby wins 65.8%. Quivern is worth about 6 points to it.

@@ -116,3 +116,21 @@ class Chikipi(CardImpl):
                             lambda g, p=card.owner: g.gain_resource(p, "ingredient", 1),
                             card.uid)]
         return []
+
+
+# TD02-011 Stone Blast (Event)
+# Quick Choose 1 Pal, and it gets Power +500 until end of turn.
+@reg
+class StoneBlast(CardImpl):
+    code = "TD02-011"
+    text = "Quick Choose 1 Pal, and it gets Power +500 until end of turn."
+
+    @property
+    def quick(self):
+        return True
+
+    def resolve_event(self, game, card, mode):
+        t = choose_pal(game, card.owner, "Stone Blast: +500 Power to 1 Pal", up_to=False,
+                       intent="help")
+        if t:
+            game.add_mod(t, "power", 500, "turn", "Stone Blast")

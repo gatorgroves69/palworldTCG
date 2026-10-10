@@ -107,6 +107,14 @@ class RuleBot(Bot):
             kills_in_battle = back > 0 and back < hp <= dmg + back
             if (kills_now or kills_in_battle) and pal_value(game, att) + max(loss, 0) > HAND_CARD:
                 return ignis
+        pump = events.get("TD02-011")  # Stone Blast: +500 to one of our Pals this turn
+        if pump is not None and b.target is not None and b.target.owner == me and b.target.is_pal:
+            t = b.target
+            tp, ap = game.power(t), game.power(att)
+            saves = t.damage + ap >= tp and t.damage + ap < tp + 500
+            kills = att.damage + tp < ap <= att.damage + tp + 500
+            if (saves and pal_value(game, t) > HAND_CARD) or (kills and pal_value(game, att) > HAND_CARD):
+                return pump
         if loss <= 0:
             return Pass()
         crystal = events.get("TD01-022")

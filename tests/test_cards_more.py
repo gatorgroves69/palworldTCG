@@ -309,3 +309,28 @@ def test_ribbuny_and_chikipi(box):
     g.check_timing()
     res = g.players[0].resources
     assert res["material"] == 1 and res["ingredient"] == 1
+
+
+# ---------------------------------------------------------------- green (gf deck)
+def test_warsect_taunt_and_wumpo_interrupt(box):
+    g, bots = G(box)
+    att = put(g, 0, "BP01-028")
+    w = put(g, 1, "BP01-054", rested=True)   # Warsect, rested so it's attackable
+    other = put(g, 1, "BP01-028", rested=True)
+    assert g.attack_targets(att) == [w.uid]  # Taunt: only Warsect
+    wb = put(g, 1, "BP01-062", Zone.HAND)
+    bots[1].actions.append(UseInterrupt(wb.uid, None))
+    g.perform(Attack(att.uid, w.uid))
+    assert w.damage == 0 and wb.zone is Zone.GRAVEYARD
+
+
+def test_stone_blast_quick_saves_blocker(box):
+    from bots import RuleBot
+    g, bots = G(box)
+    g.agents[1] = RuleBot()
+    att = put(g, 0, "BP01-025")                 # Chillet 900
+    v = put(g, 1, "BP01-028", rested=True)      # Pengullet 600, attacked; no blocker available
+    sb = put(g, 1, "TD02-011", Zone.HAND)
+    g.perform(Attack(att.uid, v.uid))
+    # Pengullet 600 vs 900: Stone Blast (+500 -> 1100) saves it and kills Chillet
+    assert sb.zone is Zone.GRAVEYARD and v.zone is Zone.BASE and att.zone is Zone.GRAVEYARD
