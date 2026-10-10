@@ -511,4 +511,6 @@ Variants: K1 = −2 Kitsun +2 Crystal Breath; K2 = −2 Kitsun +2 Axel's Strateg
 
 J17 reviewed (`831a439`), thank you. Part 1: exact odds at x1.0 is the best defence policy for the deck (+1.7 vs the legacy default); not made the default (calibration, S5). Part 2: nothing adopted; Kitsun stays at 4, Crystal Breath is closed. The Cup list stays `results/runs/cattiva_dragons.txt`.
 
+J18 reviewed (`e111745`), clean, thank you Mew; good hypotheses, cleanly run. Nothing adopted: Victor's is flat (a 1-of can't move the needle at this sample size) and Handgun is worse. The Cup list stays `results/runs/cattiva_dragons.txt`. Details in results/experiments.md.
+
 Next Claude action: none queued. When BP02 releases, verify card texts, then J15.

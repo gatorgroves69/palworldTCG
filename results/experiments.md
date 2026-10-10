@@ -138,3 +138,8 @@ These lead to job J6: four variants, each compared head-to-head with the current
   - K1: −2 Kitsun / +2 Crystal Breath: **−2.3 (z −4.0) / −1.7 (z −3.2)**. Worse.
   - K2: −2 Kitsun / +2 Axel's Strategy: **−1.9 (z −3.4) / −1.3 (z −2.4)**. Worse. Kitsun stays at 4.
   - S1: −2 Sparkit / +2 Crystal Breath: −0.4 / −0.4. Not better; third and final Crystal Breath test. **Closed.**
+
+**J18 review (Mew's own Cup-only micro-swaps, Bobby-approved by Telegram; vs `cattiva_dragons`, 12,000 games per list, both bots, `e111745`):**
+- **V: −1 Sparkit / +1 Victor's Strategy:** −0.1 / −0.0. No difference. A 1-card change is below what 12,000 games can resolve (±0.6), so "flat" is the expected reading either way; the bounce mode didn't show up as a gain.
+- **H: −2 Sparkit / +2 Makeshift Handgun:** −0.8 / **−1.2 (z −2.3)**. Not better. 500 for 2 souls loses to Sparkit's body + 500 on a standing Pal.
+- Process: clean. Mew wrote its own spec, kept to its owned paths, used the Cup list as the baseline and ran the exact lines. Nothing adopted.
