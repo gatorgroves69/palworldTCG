@@ -532,4 +532,18 @@ python3 -m sim gauntlet --deck results/runs/J19-X_axel_for_sparkit.txt --games 1
 ```
 X = −2 Sparkit +2 Axel's Strategy. Lines 3–4 re-baseline the field numbers under the new evaluation (same seed, paired). Telegram Bobby the 2 compare headlines and the 2 gauntlet headlines.
 
-Next Claude action: review J19 if Bobby approves it. When BP02 releases, verify card texts, then J15.
+**J20 (needs Bobby's direct approval; separate from J19, run after it): engine diagnostics.** About 20 hours total. `git pull --ff-only` first, then commit and push after each line.
+
+Part 1, is the deeper planner stronger? Mirrors, deeper bot on the deck side only, 1,000 games each (~6 h):
+```
+for d in cattiva-azurobe-br chillet-relaxaurus-bp chillet-relaxaurus-br chillet-relaxaurus-bg foxparks-harness-br lamball-cattiva-bg lamball-stone-pit-pr machine-gun-furnace-br shadowbeak-menasting-bp tombat-medicine-gp; do python3 -m sim run --deck data/decks/$d.txt --opp data/decks/$d.txt --games 1000 --seed 201 --bot heuristic2 --deck-bot heuristic3 --no-report --logs 0 --out results/runs/J20-mirrors/$d; done
+```
+Record each `summary.json` win_rate in `results/runs/J20-mirrors/notes.md` (10 lines: deck, heuristic3's mirror win rate).
+
+Part 2, the re-calibration matrix under the current bot (~14 h):
+```
+python3 -m sim matrix --decks data/decks/*.txt --games 1000 --seed 202 --bot heuristic2 --out results/runs/J20-matrix
+```
+Commit `results/runs/J20-matrix/matrix.md` and `matrix.json`. Telegram Bobby the 10 mirror lines and the matrix's calibration summary line (pairs within ±5, mean absolute difference).
+
+Next Claude action: review J19, then J20, if Bobby approves them. When BP02 releases, verify card texts, then J15.
