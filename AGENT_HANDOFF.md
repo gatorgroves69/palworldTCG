@@ -549,4 +549,12 @@ python3 -m sim matrix --decks data/decks/*.txt --games 1000 --seed 202 --bot heu
 ```
 Commit `results/runs/J20-matrix/matrix.md` and `matrix.json`. Telegram Bobby the 10 mirror lines and the matrix's calibration summary line (pairs within ±5, mean absolute difference).
 
-Next Claude action: review J19, then J20, if Bobby approves them. When BP02 releases, verify card texts, then J15.
+Evaluation update after J19/J20 were written (commit below): a race term in bots/evaluate.py (hold blockers when about to die). J19 and J20 should run on this commit or later; if J19 already started on 5008e04, finish it as is and say so in the checkpoint, and I'll read it as the pre-race-term baseline.
+
+**J19b (needs Bobby's direct approval; 2 lines, ~1.5 h):** the Shadowbeak answer package, −4 Sparkit +2 Axel's Strategy +2 Single-Shot Rifle:
+```
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19-P_shadowbeak_package.txt --games 12000 --seed 194 --bot heuristic2 --out results/runs/J19-compare/P_shadowbeak_package.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19-P_shadowbeak_package.txt --games 12000 --seed 195 --bot heuristic --out results/runs/J19-compare/P_shadowbeak_package.md
+```
+
+Next Claude action: review J19, J19b and J20 as Bobby approves them. When BP02 releases, verify card texts, then J15.

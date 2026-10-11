@@ -102,6 +102,42 @@ def _locked(game: Game, c: CardInstance, owner_next_turn: bool) -> bool:
 
 
 EXPOSURE = (0.7, 0.9)  # value kept by a rested Pal facing a bigger / no bigger enemy
+LUCKY_FLIP = 0.18      # rough per-flip lucky chance for the race estimate
+
+
+def incoming(game: Game, attackers, life: int) -> float:
+    """Expected life lost next turn to `attackers` hitting the player, before blocks."""
+    total = 0.0
+    for c in attackers:
+        s = game.strike(c)
+        if s > 0:
+            total += s * (1 - LUCKY_FLIP) ** s
+    return min(total, float(life))
+
+
+def race_term(game: Game, me: int, leaf: bool) -> float:
+    """The race: who is closer to lethal, and are my standing Pals needed as blockers?
+
+    A standing Pal of mine absorbs their biggest attacker next turn. That is worth a
+    lot when their expected damage would put me within two turns of dead, and little
+    when I am safely ahead, which is when attacking with it is right. Scored at the
+    end of my turn (not at a leaf, where my rested Pals are about to stand)."""
+    opp = game.opponent(me)
+    P, O = game.players[me], game.players[opp]
+    their_attackers = [c for c in O.pals if not _locked(game, c, True)]
+    threat = incoming(game, their_attackers, P.life)
+    if threat <= 0:
+        return 0.0
+    urgency = min(1.0, (2 * threat) / max(P.life, 1))  # 1.0 when two such turns kill me
+    blockers = [c for c in P.pals if not c.rested] if (game.active == me and not leaf) \
+        else list(P.pals)
+    if not blockers:
+        return 0.0
+    # Each blocker can stop one attacker; the first stops the biggest hit.
+    hits = sorted((game.strike(c) * (1 - LUCKY_FLIP) ** game.strike(c)
+                   for c in their_attackers if game.strike(c) > 0), reverse=True)
+    saved = sum(hits[: len(blockers)])
+    return urgency * LIFE * saved
 
 
 def evaluate(game: Game, me: int, leaf: bool = False,
@@ -141,6 +177,7 @@ def evaluate(game: Game, me: int, leaf: bool = False,
         score -= resource_rate(game, O, kind) * min(O.resources[kind], 9)
     if any(c.kw("interrupt") for c in P.hand) and my_turn:
         score += SOUL_FOR_INTERRUPT * min(P.souls_standing, 1)
+    score += race_term(game, me, leaf) - race_term(game, opp, leaf)
     for ps, sign in ((P, 1), (O, -1)):
         if len(ps.deck) <= 4:
             score -= sign * (5 - len(ps.deck)) * 6
