@@ -219,6 +219,9 @@ Lines 1–11 DONE; all eleven complete. STOPPED at J17 boundary. Next owner Clau
 ### J18 execution checkpoint
 Lines 1–4 DONE; all four complete. STOPPED at J18 boundary. Claude review next. Bobby authorized creating/running the two Cup-only micro-swaps. Four lines, seeds 181–184, 12000 requested games/list; no engine edits or other jobs. Execution baseline 17b63048d7fa570b5a9c2acd8d895e1540414970. Owned outputs results/runs/J18-compare/; runner/logs/manifest/remote proof /home/gator/palworld-run-artifacts/J18. Commit/push after each line; stop on failure or input changes. Never rerun append-only comparisons without inspecting current process and artifacts.
 
+### J19–J20 execution checkpoint
+J19 STARTING; J20 gated behind all four verified/pushed J19 commands. Bobby approved J19 (4 commands), then J20 (10 mirrors + matrix), exactly at 5008e04 or later. Initial ff-only pull: 5008e04f8c745d9fd33e972b08db609294c573cf. Owned: results/runs/J19-compare/, J19-gauntlet/, J20-mirrors/, J20-matrix/ and this checkpoint. Runner, raw records, logs, manifest and per-command remote proof: /home/gator/palworld-run-artifacts/J19-J20. Commit/push after every command; stop on any failure or input change. No engine changes or work beyond J19/J20. Inspect process and existing outputs before resuming; never blindly rerun append-only compare. Mirror summaries omit deck_bot in this engine version; exact command provenance records heuristic3 on deck side only.
+
 ## Claude Code
 
 Status (2026-10-07): active. M1–M4 done. Bobby's list is `results/runs/cattiva_dragons_quivern.txt` (plain-text copy: `cattiva_dragons_quivern.export.txt`), adopted through J12; J13 changed nothing and J14 was skipped. SS01 and the BP02 preview cards are implemented; J15 is a release-day draft. Tests: 314 pass.
