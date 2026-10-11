@@ -60,7 +60,7 @@ class HeuristicBot(RuleBot):
         for use inside simulations that are already determinized."""
         super().__init__(seed)
         self.samples = samples
-        self.exposure = exposure or EXPOSURE
+        self.exposure = exposure or getattr(self, "exposure_default", EXPOSURE)
         self.hidden_info = hidden_info
         self.evaluate = evaluator or evaluate
 
@@ -107,10 +107,16 @@ class HeuristicBot(RuleBot):
             total += v
         return total / n
 
-    def _best_followup(self, g, player) -> float:
-        """Best position reachable with one more action this turn (on this sample).
-        Lets setup actions (discounts, night, grants, no-block) show their payoff."""
-        best = float("-inf")
+    beam = 4  # follow-ups explored further when depth >= 3
+
+    def _best_followup(self, g, player, depth_left: int | None = None) -> float:
+        """Best position reachable with more actions this turn (on this sample).
+        Lets setup actions (discounts, night, grants, no-block) show their payoff.
+        With depth >= 3 the `beam` most promising follow-ups are searched one step
+        further, so three-step plans (Furnace -> Shotgun -> attack) are visible."""
+        if depth_left is None:
+            depth_left = self.depth - 1
+        scored = []
         for b in g.legal_actions(player):
             if isinstance(b, (EndMain, SoulDraw)):
                 continue
@@ -119,7 +125,15 @@ class HeuristicBot(RuleBot):
                 h.perform(b)
             except GameOver:
                 pass
-            best = max(best, self.evaluate(h, player, exposure=self.exposure))
+            scored.append((self.evaluate(h, player, exposure=self.exposure), h))
+        if not scored:
+            return float("-inf")
+        best = max(v for v, _ in scored)
+        if depth_left >= 2:
+            scored.sort(key=lambda x: -x[0])
+            for v, h in scored[: self.beam]:
+                if not h.reason:
+                    best = max(best, self._best_followup(h, player, depth_left - 1))
         return best
 
     @staticmethod
@@ -144,6 +158,13 @@ class TwoStepHeuristicBot(HeuristicBot):
     """HeuristicBot that scores each action together with its best follow-up action."""
     name = "heuristic2"
     depth = 2
+
+
+class ThreeStepHeuristicBot(TwoStepHeuristicBot):
+    """TwoStepHeuristicBot with a pruned third step: three-action plans within the
+    turn become visible (setup -> payoff -> attack). About 2-3x slower."""
+    name = "heuristic3"
+    depth = 3
 
 
 class LookaheadBot(TwoStepHeuristicBot):

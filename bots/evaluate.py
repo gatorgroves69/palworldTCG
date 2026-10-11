@@ -18,6 +18,7 @@ PAL_BODY = 3.0  # a Pal on the base is worth more than the same card in hand
 GEAR_BASE = HAND_CARD  # a Gear on the base is at least the card it cost ...
 GEAR_PER_COST = 0.4    # ... plus its lasting ACT value, which scales with cost
 RESOURCE = 0.5         # per Material/Ingredient (spent 3 at a time on ~1-card effects)
+RESOURCE_SPENDABLE = 1.0  # ... when a card that consumes that resource is on the base or in hand
 SOUL_FOR_INTERRUPT = 0.5  # a standing soul lets you pay an Interrupt's ① on their turn
 
 
@@ -26,15 +27,37 @@ def pal_value(game: Game, c: CardInstance) -> float:
     return PAL_BODY + max(game.power(c), 0) / 150 + 1.5 * game.strike(c)
 
 
+# Repeatable-ability pieces, valued by what one activation produces, in card units
+# (a card = 3.5, 3 Material/Ingredient ~ 1.5-3, 500 damage to a Pal ~ 2), times the
+# ~1.5 further activations a piece typically gets. Cost is a poor proxy for this: Stone
+# Pit costs 1 and makes a card plus 3 Material every turn. Hand-set by card economics,
+# not fitted (docs/assumptions.md S5).
+ENGINE_BONUS = {
+    "TD01-008": 6.0,  # Stone Pit: assign -> 3 Material + draw 1
+    "BP01-016": 6.0,  # Primitive Furnace: assign -> 3 Material + draw 1; gear discount
+    "TD02-008": 5.0,  # Berry Plantation: assign -> 3 Ingredient + draw 1
+    "BP01-063": 5.0,  # Breeding Farm: reveal/deploy a Pal for Ingredient
+    "TD01-009": 5.0,  # Weapon Workbench: 800 damage + Strike +1 for 1 Material
+    "BP01-090": 4.0,  # Medieval Medicine Workbench: recur a Pal for 3 souls
+    "TD01-020": 3.0,  # Primitive Workbench: reveal/deploy structures or gear
+    "BP01-088": 3.0,  # Lamp: night on demand + Nocturnal for all
+    "BP01-089": 2.5,  # Shoddy Bed: night on demand + a draw
+    "BP01-015": 4.0,  # Mounted Machine Gun (gear): 500 damage per Material
+    "BP01-044": 2.0,  # Pengullet Rocket Launcher (gear): pump / barrage
+    "BP01-045": 2.0,  # Grappling Gun (gear)
+}
+
+
 def gear_value(c: CardInstance) -> float:
     """Gear stays on the base and keeps activating; a one-step lookahead can't
     see those future uses, so value it above the card in hand."""
-    return GEAR_BASE + GEAR_PER_COST * c.defn.cost
+    return GEAR_BASE + GEAR_PER_COST * c.defn.cost + ENGINE_BONUS.get(c.code, 0.0)
 
 
 def structure_value(c: CardInstance) -> float:
-    """Like gear: the card, plus its repeatable ability, scaled by cost."""
-    return HAND_CARD + GEAR_PER_COST * c.defn.cost
+    """Like gear: the card, plus its repeatable ability. Engine pieces get the bonus
+    their per-turn output earns (ENGINE_BONUS); otherwise scaled by cost."""
+    return HAND_CARD + GEAR_PER_COST * c.defn.cost + ENGINE_BONUS.get(c.code, 0.0)
 
 
 def hand_value(ps, known: bool = True) -> float:
@@ -43,6 +66,26 @@ def hand_value(ps, known: bool = True) -> float:
     if known:
         v += INTERRUPT_IN_HAND * sum(1 for c in ps.hand if c.kw("interrupt"))
     return v
+
+
+_CONSUMES: dict[tuple[str, str], bool] = {}
+
+
+def consumes(c: CardInstance, kind: str) -> bool:
+    """Does this card have a cost or effect that spends `kind` (Material/Ingredient)?"""
+    key = (c.code, kind)
+    if key not in _CONSUMES:
+        t = c.impl.text.lower()
+        _CONSUMES[key] = "consume" in t and kind in t
+    return _CONSUMES[key]
+
+
+def resource_rate(game: Game, ps, kind: str) -> float:
+    """Material is only worth what it can buy: full value with a spender in play or in
+    hand (Machine Gun, Furnace, Breeding Farm, Lyleen), half otherwise."""
+    if any(consumes(c, kind) for c in ps.base) or any(consumes(c, kind) for c in ps.hand):
+        return RESOURCE_SPENDABLE
+    return RESOURCE
 
 
 def life_value(life: int) -> float:
@@ -94,7 +137,8 @@ def evaluate(game: Game, me: int, leaf: bool = False,
     score += sum(structure_value(c) for c in P.structures)
     score -= sum(structure_value(c) for c in O.structures)
     for kind in ("material", "ingredient"):
-        score += RESOURCE * (min(P.resources[kind], 9) - min(O.resources[kind], 9))
+        score += resource_rate(game, P, kind) * min(P.resources[kind], 9)
+        score -= resource_rate(game, O, kind) * min(O.resources[kind], 9)
     if any(c.kw("interrupt") for c in P.hand) and my_turn:
         score += SOUL_FOR_INTERRUPT * min(P.souls_standing, 1)
     for ps, sign in ((P, 1), (O, -1)):

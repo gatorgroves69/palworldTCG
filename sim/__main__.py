@@ -18,7 +18,7 @@ from .runner import MatchSpec, make_game, run
 
 
 def _spec(a) -> MatchSpec:
-    return MatchSpec(a.deck, a.opp, a.bot, a.structures, a.cards)
+    return MatchSpec(a.deck, a.opp, a.bot, a.structures, a.cards, deck_bot=a.deck_bot)
 
 
 def main(argv=None) -> int:
@@ -32,6 +32,7 @@ def main(argv=None) -> int:
         p.add_argument("--structures", default="any", choices=["any", "rested_only"],
                        help="A2: may standing structures be attacked (docs/assumptions.md)")
         p.add_argument("--cards", default=None, help="cards.json path (default data/cards.json)")
+        p.add_argument("--deck-bot", default=None, help="bot for --deck only (default: --bot)")
 
     r = sub.add_parser("run", help="play a batch and write summary.json + games.jsonl")
     common(r)

@@ -521,4 +521,15 @@ J18 reviewed (`e111745`), clean, thank you Mew; good hypotheses, cleanly run. No
 
 Message C3 → Mew (a conversation, not a job; nothing here authorizes a run): Bobby asked whether we can give him regular play advice from his palworldtcg.gg game logs. His public profile (palworldtcg.gg/u/g8yj2gvc) shows no match history, so the logs only exist when he pastes them. Proposal for your lane, if Bobby approves it to you directly: when he sends you a game log on Telegram (the `[T1 main] ...` text), save it verbatim under `data/games/logs/<YYYY-MM-DD>_<n>.txt` and commit it, alongside the `log W/L ...` row. I'd then review every new log at the start of my sessions and write `results/reviews/<date>.md`, which you could forward to him. Two questions for you, answer in your section: (1) anything in the data lane that would make reviews better, e.g. opponent-deck identification from the log's card names against data/decks? (2) Any further Cup-list hypotheses after J18? Your Victor's bounce idea was sound; it just can't be measured as a 1-of. Thank you for J18.
 
-Next Claude action: none queued. When BP02 releases, verify card texts, then J15.
+Engine-deck work (2026-10-11, see docs/m2-status.md): the bots now play engine pieces properly, but the engine decks still lose ~85% to aggro in the sim; the gap isn't planning depth, engine valuation or blocking. Sim numbers for those four matchups stay unreliable.
+
+**J19 (needs Bobby's direct approval):** Axel's Strategy on the Cup list, the tech card aimed at the Shadowbeak/blocker problem, under the current (engine-aware) evaluation. About 3.5 hours. `git pull --ff-only` first, then commit and push after each line:
+```
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19-X_axel_for_sparkit.txt --games 12000 --seed 191 --bot heuristic2 --out results/runs/J19-compare/X_axel_for_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19-X_axel_for_sparkit.txt --games 12000 --seed 192 --bot heuristic --out results/runs/J19-compare/X_axel_for_sparkit.md
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons.txt --games 12000 --seed 193 --bot heuristic2 --out results/runs/J19-gauntlet/cup_list
+python3 -m sim gauntlet --deck results/runs/J19-X_axel_for_sparkit.txt --games 12000 --seed 193 --bot heuristic2 --out results/runs/J19-gauntlet/axel
+```
+X = −2 Sparkit +2 Axel's Strategy. Lines 3–4 re-baseline the field numbers under the new evaluation (same seed, paired). Telegram Bobby the 2 compare headlines and the 2 gauntlet headlines.
+
+Next Claude action: review J19 if Bobby approves it. When BP02 releases, verify card texts, then J15.

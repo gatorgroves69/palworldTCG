@@ -14,7 +14,8 @@ Experiments, kept for reference and not used for results (see docs/m2-status.md)
 """
 from .base import Bot
 from .fast import FastBot
-from .heuristic import HeuristicBot, LearnedHeuristicBot, LookaheadBot, TwoStepHeuristicBot
+from .heuristic import (HeuristicBot, LearnedHeuristicBot, LookaheadBot, ThreeStepHeuristicBot,
+                        TwoStepHeuristicBot)
 from .plan import PlanBot
 from .random_bot import RandomBot
 from .rules import RuleBot
@@ -23,6 +24,7 @@ from .search import SearchBot
 BOTS = {
     # in use
     "heuristic2": TwoStepHeuristicBot,
+    "heuristic3": ThreeStepHeuristicBot,
     "heuristic": HeuristicBot,
     "rules": RuleBot,
     # experiments
@@ -37,6 +39,8 @@ BOTS = {
 def bot_class(name: str):
     """BOTS[name], optionally with defence variants after "@":
     "@xK"    Interrupt only when the expected loss is K times the cards spent (default 1).
+    "@cautious" rested Pals keep 40/60% of their value instead of 70/90%: attacks less,
+             holds blockers (an experiment on why engine decks lose too much).
     "@exact" value hits as Strike*(1-p)^Strike with the deck's real lucky odds (default: the
              legacy linear estimate, which is what the M1 calibration passed with).
     e.g. "heuristic2@exact@x0.8"."""
@@ -50,10 +54,13 @@ def bot_class(name: str):
             attrs["exact_odds"] = True
         elif o.startswith("x"):
             attrs["defend_cost"] = float(o[1:])
+        elif o == "cautious":  # a rested Pal keeps less value: hold blockers back more
+            attrs["exposure_default"] = (0.4, 0.6)
         else:
             raise KeyError(f"unknown bot option {o!r} in {name!r}")
     return type(f"{cls.__name__}_{'_'.join(opts)}", (cls,), attrs)
 
 
 __all__ = ["BOTS", "bot_class", "Bot", "FastBot", "HeuristicBot", "LearnedHeuristicBot", "LookaheadBot",
-           "PlanBot", "RandomBot", "RuleBot", "SearchBot", "TwoStepHeuristicBot"]
+           "PlanBot", "RandomBot", "RuleBot", "SearchBot", "ThreeStepHeuristicBot",
+           "TwoStepHeuristicBot"]

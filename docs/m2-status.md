@@ -104,3 +104,19 @@ Tally of the stronger-bot attempts so far:
 | LookaheadBot (turn-cycle rollouts) | weaker (39–45%) |
 
 **Conclusion:** cheap search on top of hand-set scoring has stopped paying off. A real gain likely needs a much stronger rollout policy *and* far more rollouts, which this hardware can't run at matrix scale, or human-written plans for each engine deck. Until then: **absolute win rates for engine decks are unreliable** (too low), and so are the absolute numbers for decks that beat them up (too high). **Relative swap tests** (same field, same bot, confirmed under a second bot) remain the recommended use.
+
+## Update 2026-10-11: engine-deck gap, three hypotheses tested on the Mac
+
+Bobby's Cup list (`results/runs/cattiva_dragons.txt`) vs the four engine decks, 400 games each, seed 21/31, bot `heuristic2`. Real-world: Cattiva wins 56 / 60 / 58 / 70 against Stone Pit / Machine Gun / Tombat / Shadowbeak.
+
+| Change | Stone Pit | Machine Gun | Tombat | Shadowbeak |
+|---|---|---|---|---|
+| Before (old eval) | 88 | 80 | 87 | 84 |
+| Resources valued by spendability | 88 | 82 | 86 | 85 |
+| + engine structures/gear valued by per-turn output (`ENGINE_BONUS`) | 86 | 83 | 86 | 85 |
+| `heuristic3` (pruned third step) | 88 | 83 | 84 | 83 |
+| Engine deck plays `@cautious` (rested Pals worth 40/60%) | 93 | 84 | 92 | 89 |
+
+- The engine valuation fixes a real misplay: in the same seed the Stone Pit bot went from deploying Stone Pit on turn 8 to turn 4, firing the Machine Gun, running the Furnace and reviving with Lyleen Noct. It is kept (S5). It does not change the result: the engine decks still lose about 85% of games to the aggro bot.
+- A deeper within-turn planner does not help either, and a more defensive posture makes them **worse** (holding blockers loses to aggro).
+- Reading: the remaining 25–30 point gap is not engine sequencing, planning depth or blocking. What's left: (a) the real-world population plays aggro far less sharply than the bot, so "Cattiva 56%" partly measures human error; (b) a mid-game strategy for grindy decks the bots don't have at all (when to trade, when to race, keeping a soul for Interrupts). Neither is a cheap fix. Until then, treat the sim's engine-deck matchups as unreliable (they read 20–30 points too high for aggro) and use real data for them.
