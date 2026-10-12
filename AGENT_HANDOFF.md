@@ -559,24 +559,27 @@ python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19
 
 J19 and J19b reviewed (`9d5c77d`), clean, thank you. J19 (Axel's alone, old bot) flat; **J19b (the package: −4 Sparkit +2 Axel's +2 Rifle) +2.3 / +2.3, z 4**. Candidate list `results/runs/cattiva_dragons_v2.txt`; the Cup list stays official until confirmed.
 
-**J21 (needs Bobby's direct approval; run after J20): fresh-seed confirmation of the package, 20,000 games per list.** About 5 hours.
+**J21 (needs Bobby's direct approval; run after J20): confirm the package, then the Suzaku slot.** Line 1–2 fixed 20,000; lines 3–12 sequential (cap 12,000). About 9 hours.
 ```
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 211 --bot heuristic2 --out results/runs/J21-compare/v2.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 212 --bot heuristic --out results/runs/J21-compare/v2.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-A_rifle_for_suzaku.txt --games 12000 --seed 213 --bot heuristic2 --sequential --out results/runs/J21-compare/A_rifle_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-A_rifle_for_suzaku.txt --games 12000 --seed 214 --bot heuristic --sequential --out results/runs/J21-compare/A_rifle_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-B_package_keep_sparkit.txt --games 12000 --seed 215 --bot heuristic2 --sequential --out results/runs/J21-compare/B_package_keep_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-B_package_keep_sparkit.txt --games 12000 --seed 216 --bot heuristic --sequential --out results/runs/J21-compare/B_package_keep_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-D_blazehowl_for_suzaku.txt --games 12000 --seed 217 --bot heuristic2 --sequential --out results/runs/J21-compare/D_blazehowl_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-D_blazehowl_for_suzaku.txt --games 12000 --seed 218 --bot heuristic --sequential --out results/runs/J21-compare/D_blazehowl_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-G_wumpo_for_suzaku.txt --games 12000 --seed 219 --bot heuristic2 --sequential --out results/runs/J21-compare/G_wumpo_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-G_wumpo_for_suzaku.txt --games 12000 --seed 220 --bot heuristic --sequential --out results/runs/J21-compare/G_wumpo_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-F_bushi_for_suzaku.txt --games 12000 --seed 221 --bot heuristic2 --sequential --out results/runs/J21-compare/F_bushi_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-F_bushi_for_suzaku.txt --games 12000 --seed 222 --bot heuristic --sequential --out results/runs/J21-compare/F_bushi_for_suzaku.md
 ```
-Telegram Bobby the 2 headline lines.
+Variants (all on the Cup list): v2 = −4 Sparkit +2 Axel's Strategy +2 Single-Shot Rifle; A = −2 Suzaku +2 Rifle (6 lucky); B = −2 Suzaku −2 Sparkit +2 Rifle +2 Axel's (6 lucky); D = −2 Suzaku +2 Blazehowl; G = −2 Suzaku +2 Wumpo; F = −2 Suzaku +2 Bushi. Telegram Bobby the 12 headline lines.
 
-`sim compare --sequential` (commit below): batches of 2,000 per list, stops early when |z| ≥ 2.5 or, after 3 batches, |z| < 1; `--games` is the cap. Same bar, usually a third to half the games. Use it for all compares from J22 on.
-
-**J22 (needs Bobby's direct approval; run after J21): Bobby's card hypotheses, sequential.** Up to 6 × 12,000 but expect about 2–3 hours total.
+**J22 (needs Bobby's direct approval; run after J21): the wide search with no protected cards.** Every one of the 14 card types may be cut (`--screen-outs 14`), every implemented red/blue/colourless card may come in, 400 games per swap (~800 swaps), then the top 6 go to sequential tests. About 10 hours.
 ```
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-A_rifle_for_suzaku.txt --games 12000 --seed 221 --bot heuristic2 --sequential --out results/runs/J22-compare/A_rifle_for_suzaku.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-A_rifle_for_suzaku.txt --games 12000 --seed 222 --bot heuristic --sequential --out results/runs/J22-compare/A_rifle_for_suzaku.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-B_package_keep_sparkit.txt --games 12000 --seed 223 --bot heuristic2 --sequential --out results/runs/J22-compare/B_package_keep_sparkit.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-B_package_keep_sparkit.txt --games 12000 --seed 224 --bot heuristic --sequential --out results/runs/J22-compare/B_package_keep_sparkit.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-C_pal_sphere.txt --games 12000 --seed 225 --bot heuristic2 --sequential --out results/runs/J22-compare/C_pal_sphere.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-C_pal_sphere.txt --games 12000 --seed 226 --bot heuristic --sequential --out results/runs/J22-compare/C_pal_sphere.md
+python3 -m sim optimize --deck results/runs/cattiva_dragons.txt --rounds 1 --max-tries 6 --seed 231 --screen-games 400 --screen-outs 14
 ```
-Variants: A = −2 Suzaku +2 Single-Shot Rifle (6 lucky); B = −2 Suzaku −2 Sparkit +2 Rifle +2 Axel's Strategy (the J19b package but keeping 2 Sparkit; 6 lucky); C = −2 Sparkit +2 Pal Sphere (hand size). Telegram Bobby the 6 headline lines.
+Afterwards copy `results/opt/<run>/best.txt` and `screen_round1.md` into `results/runs/J22-optimize/` with a `notes.md`, and commit them plus `results/experiments.md`. The optimizer prints an absolute `best list:` path. Telegram Bobby the optimizer's verdict lines.
 
 Next Claude action: review J20, J21, J22 as Bobby approves them. When BP02 releases, verify card texts, then J15.
