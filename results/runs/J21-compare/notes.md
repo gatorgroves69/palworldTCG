@@ -138,3 +138,31 @@ Stdout tail:
 | chillet-relaxaurus-bg | 1.5% | 56.5 | 51.6 | -4.8 | 62 |
 
 ```
+
+## J21.6: DONE
+HEAD: a48931c62143c12a36b29d158f16b3d40046a52d
+Start UTC: 2026-10-12T11:08:58.999424+00:00
+End UTC: 2026-10-12T11:17:51.350199+00:00
+Command: `python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-B_package_keep_sparkit.txt --games 12000 --seed 216 --bot heuristic --sequential --out results/runs/J21-compare/B_package_keep_sparkit.md`
+Exit: 0; artifact gate: PASS
+Evidence: /home/gator/palworld-run-artifacts/J20-J22-reordered
+**heuristic**, 4000 games per list, seed 216: A 67.5% -> B 63.5% (diff -4.0 ± 1.0, z -3.8) [sequential: stopped early, clear after 4000 games]
+
+Stdout tail:
+```text
+**heuristic**, 4000 games per list, seed 216: A 67.5% -> B 63.5% (diff -4.0 ± 1.0, z -3.8) [sequential: stopped early, clear after 4000 games]
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.5% | 64.4 | 57.9 | -6.6 | 1540 |
+| chillet-relaxaurus-br | 13.0% | 51.9 | 54.8 | +2.9 | 518 |
+| lamball-stone-pit-pr | 12.2% | 80.7 | 79.9 | -0.8 | 488 |
+| tombat-medicine-gp | 6.8% | 79.8 | 74.3 | -5.5 | 272 |
+| foxparks-harness-br | 6.2% | 62.2 | 63.8 | +1.6 | 246 |
+| machine-gun-furnace-br | 6.0% | 74.0 | 71.1 | -2.9 | 242 |
+| shadowbeak-menasting-bp | 5.9% | 83.1 | 85.2 | +2.1 | 236 |
+| cattiva-azurobe-br | 5.1% | 64.6 | 52.4 | -12.1 | 206 |
+| lamball-cattiva-bg | 4.7% | 67.9 | 51.6 | -16.3 | 190 |
+| chillet-relaxaurus-bg | 1.5% | 64.5 | 62.9 | -1.6 | 62 |
+
+```
