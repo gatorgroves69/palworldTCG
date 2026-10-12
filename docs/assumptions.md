@@ -12,6 +12,7 @@ These are the places where the rules are ambiguous or silent and I had to choose
 - CR 9.2.3 is ambiguous: "the non-turn player, or 1 of the structures or Pals in the resting state".
 - The user asked for this to be a flag rather than a guess, so it's `RulesConfig.structures_attackable`, set to `any` (the default) or `rested_only`.
 - M1 calibration runs both settings and reports which one lands closer to the real-world 56%.
+- Bobby, 2026-10-12: structures never get rested in play. So `rested_only` would make structures unattackable, which contradicts cards that reward attacking structures (Rushoar – Reckless Destruction: +800 when it attacks a structure). `any` stays the default; still unconfirmed by a judge.
 
 ### A3: Gear (`CONFIRMED`)
 - Gear is deployed to its controller's own base as a card in its own right (CR 4.4.1, 10.6.2.4.1).
