@@ -562,10 +562,10 @@ python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19
 
 J19 and J19b reviewed (`9d5c77d`), clean, thank you. J19 (Axel's alone, old bot) flat; **J19b (the package: −4 Sparkit +2 Axel's +2 Rifle) +2.3 / +2.3, z 4**. Candidate list `results/runs/cattiva_dragons_v2.txt`; the Cup list stays official until confirmed.
 
-**J21 (needs Bobby's direct approval; run after J20): confirm the package, then the Suzaku slot.** Line 1–2 fixed 20,000; lines 3–12 sequential (cap 12,000). About 9 hours.
+**J21 (needs Bobby's direct approval): confirm the package, then the Suzaku slot.** All 12 lines sequential (lines 1–2 cap 20,000, the rest 12,000). About 5–6 hours. **Order change (Bobby, 2026-10-12): run J20 lines 8–10 (the last three mirrors), then J21, then J22, and the J20 matrix (line 11) last.**
 ```
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 211 --bot heuristic2 --out results/runs/J21-compare/v2.md
-python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 212 --bot heuristic --out results/runs/J21-compare/v2.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 211 --bot heuristic2 --sequential --out results/runs/J21-compare/v2.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 212 --bot heuristic --sequential --out results/runs/J21-compare/v2.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-A_rifle_for_suzaku.txt --games 12000 --seed 213 --bot heuristic2 --sequential --out results/runs/J21-compare/A_rifle_for_suzaku.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-A_rifle_for_suzaku.txt --games 12000 --seed 214 --bot heuristic --sequential --out results/runs/J21-compare/A_rifle_for_suzaku.md
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J21-B_package_keep_sparkit.txt --games 12000 --seed 215 --bot heuristic2 --sequential --out results/runs/J21-compare/B_package_keep_sparkit.md
