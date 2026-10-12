@@ -7,3 +7,4 @@ chillet-relaxaurus-bg: heuristic3 mirror win rate 53.9%
 foxparks-harness-br: heuristic3 mirror win rate 54.8%
 lamball-cattiva-bg: heuristic3 mirror win rate 53.8%
 lamball-stone-pit-pr: heuristic3 mirror win rate 55.4%
+machine-gun-furnace-br: heuristic3 mirror win rate 52.5%
