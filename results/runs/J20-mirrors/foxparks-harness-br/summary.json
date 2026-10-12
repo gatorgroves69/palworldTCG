@@ -1,0 +1,48 @@
+{
+  "deck": "foxparks-harness-br",
+  "opp": "foxparks-harness-br",
+  "bot": "heuristic2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 201,
+  "commit": "0e1d89a",
+  "games": 1000,
+  "wins": 548,
+  "losses": 452,
+  "draws": 0,
+  "win_rate": 0.548,
+  "ci95": [
+    0.517,
+    0.5786
+  ],
+  "going_first": {
+    "games": 500,
+    "wins": 254,
+    "losses": 246,
+    "draws": 0,
+    "win_rate": 0.508,
+    "ci95": [
+      0.4643,
+      0.5516
+    ]
+  },
+  "going_second": {
+    "games": 500,
+    "wins": 294,
+    "losses": 206,
+    "draws": 0,
+    "win_rate": 0.588,
+    "ci95": [
+      0.5443,
+      0.6303
+    ]
+  },
+  "avg_turns": 15.7,
+  "end_reasons": {
+    "deckout": 19,
+    "life": 981
+  },
+  "seconds": 537.7,
+  "replay": "python -m sim replay --deck data/decks/foxparks-harness-br.txt --opp data/decks/foxparks-harness-br.txt --bot heuristic2 --structures any --game-seed <seed>"
+}
