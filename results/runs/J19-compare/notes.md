@@ -28,3 +28,13 @@ Command: `python3 -m sim compare --a results/runs/cattiva_dragons.txt --b result
 Exit: 0 (observed direct child exit); artifact gate: True
 Evidence: /home/gator/palworld-run-artifacts/J19-J20
 Headline: **heuristic2**, 12000 games per list, seed 194: A 66.1% -> B 68.5% (diff +2.3 ± 0.6, z 4.0)
+
+## J19b.2: DONE
+Execution HEAD: 7155d4db0322a0aa4bb764e8a89f2a039e5775e6
+Execution cwd: /home/gator/palworldTCG
+Start: 2026-10-12T03:34:13.333523+00:00
+End: 2026-10-12T04:00:00.017996+00:00
+Command: `python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19-P_shadowbeak_package.txt --games 12000 --seed 195 --bot heuristic --out results/runs/J19-compare/P_shadowbeak_package.md`
+Exit: 0 (observed direct child exit); artifact gate: True
+Evidence: /home/gator/palworld-run-artifacts/J19-J20
+Headline: **heuristic**, 12000 games per list, seed 195: A 67.5% -> B 69.7% (diff +2.3 ± 0.6, z 3.9)
