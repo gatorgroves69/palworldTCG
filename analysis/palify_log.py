@@ -27,6 +27,10 @@ def main(arg):
             if e["id"] not in seen:
                 seen.add(e["id"]); out.append(f"  [{e.get('kind','')}] {e['text']}")
     last = d["frames"][-1]["view"]
-    out.append(f"\nResult: winner {last.get('winner')} ({last.get('endReason')})")
+    hands = d["frames"][-1].get("hands") or {}
+    side = {k: h["name"] for k, h in hands.items()}  # "you"/"bot" -> player name in this replay's view
+    w = last.get("winner")
+    w = side.get({"opp": "bot", "me": "you"}.get(w, w), w)
+    out.append(f"\nResult: {w} wins ({last.get('endReason')})")
     print("\n".join(out))
 if __name__ == "__main__": main(sys.argv[1])
