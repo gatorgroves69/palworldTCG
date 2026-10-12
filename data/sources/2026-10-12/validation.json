@@ -1,0 +1,62 @@
+[
+  {
+    "deck": "cattiva-azurobe-br",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "chillet-relaxaurus-bg",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "chillet-relaxaurus-bp",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "chillet-relaxaurus-br",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "foxparks-harness-br",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "lamball-cattiva-bg",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "lamball-stone-pit-pr",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "machine-gun-furnace-br",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "shadowbeak-menasting-bp",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  },
+  {
+    "deck": "tombat-medicine-gp",
+    "main": 50,
+    "soul": 10,
+    "errors": []
+  }
+]

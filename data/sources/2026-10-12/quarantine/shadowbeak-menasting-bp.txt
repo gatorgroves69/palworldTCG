@@ -1,0 +1,21 @@
+# main
+2 BP01-038 Cryolinx – Arctic Ordeal
+2 BP01-047 Pal Sphere
+3 BP01-073 Helzephyr – Wings of the Moonless Night
+2 BP01-074 Shadowbeak – Seed of Despair
+4 BP01-077 Pyrin Noct – Steed of Azure Flames
+1 BP01-078 Lyleen Noct – Providence of the Goddess
+2 BP01-079 Depresso – Late Night Hustler
+4 BP01-080 Daedream – First Slumber
+4 BP01-082 Daedream – Deep Slumber
+3 BP01-084 Menasting – Darkness-Dwelling Scorpion
+1 BP01-085 Maraith – Twilight Messenger
+1 BP01-088 Lamp
+3 BP01-089 Shoddy Bed
+2 BP01-090 Medieval Medicine Workbench
+4 BP01-094 Daedream's Necklace
+3 BP01-095 Zoe's Strategy
+3 TD02-014 Leezpunk – Treasure Bandit
+4 TD02-017 Blazehowl Noct – Darkflame Defender
+2 TD02-021 Strike from the Darkness
+# soul

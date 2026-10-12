@@ -1,0 +1,22 @@
+{
+  "captured_date_phoenix": "2026-10-12",
+  "source_updated_date": "2026-10-11",
+  "status": "requested_top12_meta_complete_deck_exports_incomplete",
+  "source": "palworldtcg.gg",
+  "filters": {"time_window": "30 days", "game_type": "All", "matrix_size": "Top 12"},
+  "filter_verification": "Requested filters already selected; verified aria-current=page in loaded DOM of both indices and eight deck pages. No redundant navigation.",
+  "requests": {"cards_api": 1, "index_pages": 3, "representative_deck_pages": 8, "archival_refetches": 0},
+  "blocks": [],
+  "http_note": "Cards command succeeded, no retries or redirects. Browser navigations succeeded with no 403/429/captcha/login requirement observed; browser tools did not expose response status codes. Optional sign-in buttons are not access requirements.",
+  "card_catalog": {"entries": 213, "unique_codes": 212, "changed": true, "raw_bytes_preserved": true, "duplicate_code": "SOUL-001", "command": "python3 tools/data_ops.py cards", "exit": 0},
+  "mapping": "data/sources/2026-09-29/slug-mapping.json",
+  "tiers": {"rows": 13, "definition": "Prominent VS FIELD tier score (field-adjusted), first percentage before raw label; not smaller raw win rate or VS META rate. Same definition as prior snapshot.", "coverage": "Same 13 mapped archetypes as previous snapshot, including all top12 by play rate; not complete 35-deck field. Whole-field play rates are not renormalized.", "tie_handling": "Pengullet Launcher BG and Foxparks Harness PR both display 3.3%. Matrix ranks Pengullet 10 and Foxparks 11; retain that order. Initial offline order assertion identified rounded tie, corrected without network."},
+  "matchups": {"rows": 144, "decks": 12, "definition": "Displayed direct head-to-head win rates as fractions at whole-percent precision; games from loaded cell title tooltips.", "verification": "144 unique directed pairs, row and column identities, top12 play-rate membership, descending rates, reciprocal counts and rounded reciprocal rates checked. All 144 game counts are displayed positive integers; no guessed counts."},
+  "deck_exports": {"copied": 8, "published": 0, "quarantined": 8, "reason": "Each actual Copy list export has 50 main cards but omits Souls. No missing quantities invented. Saved normalized incomplete lists under quarantine, retained all last-valid engine lists.", "selection": "Top8 by play rate, includes Lamball Cattiva BG instead of previous week's Machine Gun Furnace BR. Cattiva Azurobe BR and Chillet Relaxaurus BP inspected first.", "mapping": "Exact catalog name matching; ambiguous names resolved using card-code links from same loaded DOM.", "copy_capture": "Invoked each page's Copy list button once, captured its clipboard.writeText argument locally; no deck-page refetch."},
+  "palify_meta": {"inspected": true, "evidence": "palify-meta-dom.json", "note": "Ranked public deck win-rate listing and broad archetype board differ from gg population; no matching 30-day/All filters verified. Not mixed into calibration or top8 selection. No further requests."},
+  "validation": {"command": "python3 tools/data_ops.py validate", "exit": 0, "evidence": "validation.json", "scope": "Ten retained engine lists pass 50 main / 10 soul / code membership. Eight new incomplete exports separately fail soul=10; see quarantine-validation.json."},
+  "comparison": {"previous": "data/calibration/tiers_2026-10-05.json", "current": "data/calibration/tiers_2026-10-12.json", "evidence": "comparison.json", "scope": "Largest changes among 13 comparable tracked archetypes. Top5 by play rate unchanged in membership."},
+  "offline_parser": "normalize_observed.py: this dated evidence only, no network",
+  "engine_changes": false,
+  "simulations_run": false
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "deck": "chillet-relaxaurus-bp",
+    "win_rate": 0.575,
+    "play_rate": 0.312
+  },
+  {
+    "deck": "lamball-stone-pit-pr",
+    "win_rate": 0.532,
+    "play_rate": 0.11
+  },
+  {
+    "deck": "chillet-relaxaurus-br",
+    "win_rate": 0.516,
+    "play_rate": 0.095
+  },
+  {
+    "deck": "foxparks-harness-br",
+    "win_rate": 0.523,
+    "play_rate": 0.058
+  },
+  {
+    "deck": "tombat-medicine-gp",
+    "win_rate": 0.433,
+    "play_rate": 0.05
+  },
+  {
+    "deck": "lamball-cattiva-bg",
+    "win_rate": 0.581,
+    "play_rate": 0.045
+  },
+  {
+    "deck": "cattiva-azurobe-br",
+    "win_rate": 0.568,
+    "play_rate": 0.042
+  },
+  {
+    "deck": "shadowbeak-menasting-bp",
+    "win_rate": 0.365,
+    "play_rate": 0.04
+  },
+  {
+    "deck": "machine-gun-furnace-br",
+    "win_rate": 0.436,
+    "play_rate": 0.038
+  },
+  {
+    "deck": "pengullet-launcher-bg",
+    "win_rate": 0.445,
+    "play_rate": 0.033
+  },
+  {
+    "deck": "foxparks-harness-pr",
+    "win_rate": 0.463,
+    "play_rate": 0.033
+  },
+  {
+    "deck": "furnace-machine-gun-gr",
+    "win_rate": 0.398,
+    "play_rate": 0.018
+  },
+  {
+    "deck": "chillet-relaxaurus-bg",
+    "win_rate": 0.495,
+    "play_rate": 0.013
+  }
+]

@@ -1,0 +1,19 @@
+# main
+2 BP01-001 Jormuntide Ignis – Savage Lava Dragon
+4 BP01-005 Reptyro – Ore Gorger
+4 BP01-020 Pump-Action Shotgun
+4 BP01-025 Chillet – Dragon Whisperer
+4 BP01-026 Relaxaurus – Hungry Gunner
+2 BP01-027 Jormuntide – Surging Sea Serpent
+2 BP01-028 Pengullet – Yearning for the Sky
+3 BP01-038 Cryolinx – Arctic Ordeal
+2 BP01-045 Grappling Gun
+1 BP01-047 Pal Sphere
+4 BP01-048 Aurora Guide
+2 BP01-098 Elphidran – Gentle Radiance
+3 BP01-014 Blazehowl – Hellflame Defender
+3 TD01-004 Foxparks – A Toasty Hug
+3 TD01-010 Single-Shot Rifle
+4 TD01-012 Elphidran Aqua – Gentle Ripples
+3 TD01-016 Reindrix – Icy Gaze
+# soul
