@@ -1,0 +1,48 @@
+{
+  "deck": "lamball-stone-pit-pr",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 201,
+  "commit": "e7cf50c",
+  "games": 1000,
+  "wins": 554,
+  "losses": 446,
+  "draws": 0,
+  "win_rate": 0.554,
+  "ci95": [
+    0.523,
+    0.5845
+  ],
+  "going_first": {
+    "games": 500,
+    "wins": 269,
+    "losses": 231,
+    "draws": 0,
+    "win_rate": 0.538,
+    "ci95": [
+      0.4942,
+      0.5812
+    ]
+  },
+  "going_second": {
+    "games": 500,
+    "wins": 285,
+    "losses": 215,
+    "draws": 0,
+    "win_rate": 0.57,
+    "ci95": [
+      0.5262,
+      0.6127
+    ]
+  },
+  "avg_turns": 21.05,
+  "end_reasons": {
+    "deckout": 27,
+    "life": 973
+  },
+  "seconds": 2641.9,
+  "replay": "python -m sim replay --deck data/decks/lamball-stone-pit-pr.txt --opp data/decks/lamball-stone-pit-pr.txt --bot heuristic2 --structures any --game-seed <seed>"
+}
