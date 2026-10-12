@@ -1,0 +1,127 @@
+{
+  "deck": "cattiva_dragons",
+  "games": 11999,
+  "bot": "heuristic2",
+  "deck_bot": null,
+  "seed": 193,
+  "commit": "ceea7c7",
+  "seconds": 3222,
+  "weighted_win_rate": 0.7256,
+  "ci95": [
+    0.7179,
+    0.7334
+  ],
+  "field": {
+    "chillet-relaxaurus-bp": {
+      "weight": 0.3851,
+      "games": 4621,
+      "win_rate": 0.6856,
+      "ci95": [
+        0.672,
+        0.6988
+      ],
+      "going_first": 0.7268
+    },
+    "chillet-relaxaurus-br": {
+      "weight": 0.1297,
+      "games": 1556,
+      "win_rate": 0.6272,
+      "ci95": [
+        0.6029,
+        0.6509
+      ],
+      "going_first": 0.642
+    },
+    "lamball-stone-pit-pr": {
+      "weight": 0.122,
+      "games": 1463,
+      "win_rate": 0.8859,
+      "ci95": [
+        0.8685,
+        0.9011
+      ],
+      "going_first": 0.878
+    },
+    "tombat-medicine-gp": {
+      "weight": 0.068,
+      "games": 816,
+      "win_rate": 0.8701,
+      "ci95": [
+        0.8453,
+        0.8914
+      ],
+      "going_first": 0.8537
+    },
+    "foxparks-harness-br": {
+      "weight": 0.0616,
+      "games": 739,
+      "win_rate": 0.7104,
+      "ci95": [
+        0.6767,
+        0.742
+      ],
+      "going_first": 0.6919
+    },
+    "machine-gun-furnace-br": {
+      "weight": 0.0603,
+      "games": 724,
+      "win_rate": 0.8039,
+      "ci95": [
+        0.7734,
+        0.8312
+      ],
+      "going_first": 0.8037
+    },
+    "shadowbeak-menasting-bp": {
+      "weight": 0.0591,
+      "games": 709,
+      "win_rate": 0.8787,
+      "ci95": [
+        0.8526,
+        0.9007
+      ],
+      "going_first": 0.8665
+    },
+    "cattiva-azurobe-br": {
+      "weight": 0.0513,
+      "games": 616,
+      "win_rate": 0.6607,
+      "ci95": [
+        0.6224,
+        0.697
+      ],
+      "going_first": 0.7415
+    },
+    "lamball-cattiva-bg": {
+      "weight": 0.0475,
+      "games": 570,
+      "win_rate": 0.5123,
+      "ci95": [
+        0.4713,
+        0.5531
+      ],
+      "going_first": 0.6109
+    },
+    "chillet-relaxaurus-bg": {
+      "weight": 0.0154,
+      "games": 185,
+      "win_rate": 0.6919,
+      "ci95": [
+        0.622,
+        0.754
+      ],
+      "going_first": 0.6882
+    }
+  },
+  "loss_reasons": {
+    "behind_on_board_by_round_4-6": 0.363,
+    "opponent_lucky_saves_3+": 0.316,
+    "ran_out_of_cards": 0.285,
+    "too_slow_on_the_draw": 0.23,
+    "behind_on_board_by_round_1-3": 0.134,
+    "lost_to:BP01-027": 0.123,
+    "lost_to:BP01-025": 0.102,
+    "behind_on_board_by_round_7+": 0.079
+  },
+  "replay": "python -m sim replay --deck results/runs/cattiva_dragons.txt --opp data/decks/<opp>.txt --bot heuristic2 --game-seed <seed from games.jsonl>"
+}
