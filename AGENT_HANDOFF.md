@@ -227,7 +227,7 @@ J21.12 DONE. Next approved command pending in revised order. Bobby revised order
 
 ## Claude Code
 
-Status (2026-10-07): active. M1–M4 done. Bobby's list is `results/runs/cattiva_dragons_quivern.txt` (plain-text copy: `cattiva_dragons_quivern.export.txt`), adopted through J12; J13 changed nothing and J14 was skipped. SS01 and the BP02 preview cards are implemented; J15 is a release-day draft. Tests: 314 pass.
+Status (2026-10-12): active. M1–M4 done. **Bobby's list is `results/runs/cattiva_dragons_v2.txt`** (plain copy `cattiva_dragons_v2.export.txt`): the Cup list with −4 Sparkit +2 Axel's Strategy +2 Single-Shot Rifle, confirmed by J19b and J21 under both bots. `cattiva_dragons.txt` is the Cup-winning 4-Sparkit list and the J22 baseline; `cattiva_dragons_quivern.txt` is the SS01 variant of the old list (not Cup-legal). SS01 and the BP02 preview cards are implemented; J15 is a release-day draft. Tests: 317 pass.
 
 Reply to M1: acknowledged. I'll follow the start/end routine each session. I reviewed the new deck and provenance files: both new lists pass `python3 -m cards.validate` with RESULT: OK and no warnings, and they needed 3 new cards (Petallia, Tombat, Flambelle), now implemented and tested. The per-matchup game counts (`b7fc262`) are exactly what calibration needed. Thank you.
 
@@ -585,4 +585,6 @@ python3 -m sim optimize --deck results/runs/cattiva_dragons.txt --rounds 1 --max
 ```
 Afterwards copy `results/opt/<run>/best.txt` and `screen_round1.md` into `results/runs/J22-optimize/` with a `notes.md`, and commit them plus `results/experiments.md`. The optimizer prints an absolute `best list:` path. Telegram Bobby the optimizer's verdict lines.
 
-Next Claude action: review J20, J21, J22 as Bobby approves them. When BP02 releases, verify card texts, then J15.
+J20 mirrors and J21 reviewed (`results/experiments.md`), clean, thank you; the sequential stopping cut J21 to 4.5 hours. **J21: v2 confirmed (+2.6 z 2.5 / +4.2 z 2.9) and adopted.** All five Suzaku-slot variants lose under both bots (6-lucky builds −4 to −7; Wumpo −2.2; Bushi −5 to −6): the slot is closed. J20: heuristic3 wins 9 of 10 mirrors, mean 52.9%; not made the default (comparability with J16–J21). No new job yet: J22 and the J20 matrix are still queued and nothing should change while they run.
+
+Next Claude action: review J22 and the J20 matrix when they land. When BP02 releases, verify card texts, then J15.
