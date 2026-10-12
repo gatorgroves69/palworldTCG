@@ -95,18 +95,57 @@ def telegram(s: dict, db) -> str:
     return text[:MAX_TELEGRAM]
 
 
+SEQ_BATCH = 2000     # games per list per batch in sequential mode
+SEQ_STOP_Z = 2.5     # stop early once the difference is this clear either way
+SEQ_FUTILE_Z = 1.0   # after SEQ_MIN_BATCHES, stop if the difference is this unclear
+SEQ_MIN_BATCHES = 3
+
+
 def compare_lists(a: str, b: str, games: int, seed: int, bot: str,
-                  workers: int | None = None) -> str:
+                  workers: int | None = None, sequential: bool = False) -> str:
     """Two versions of a deck against the same weighted field on the same seeds;
-    returns a per-opponent table (markdown)."""
+    returns a per-opponent table (markdown).
+
+    sequential=True: play in batches of SEQ_BATCH games per list and stop as soon as
+    the difference is clearly significant (|z| >= SEQ_STOP_Z) or, after
+    SEQ_MIN_BATCHES, clearly not (|z| < SEQ_FUTILE_Z). `games` is the cap. Same
+    statistical bar as a fixed run, usually in a third to half of the games."""
     weights = field_weights()
-    ra = play_gauntlet(a, weights, games, seed, bot, workers=workers)
-    rb = play_gauntlet(b, weights, games, seed, bot, workers=workers)
+    if not sequential:
+        ra = play_gauntlet(a, weights, games, seed, bot, workers=workers)
+        rb = play_gauntlet(b, weights, games, seed, bot, workers=workers)
+        played, note = games, ""
+    else:
+        ra = rb = None
+        played = 0
+        note = ""
+        batches = 0
+        while played < games:
+            n = min(SEQ_BATCH, games - played)
+            xa = play_gauntlet(a, weights, n, seed, bot, start=played, workers=workers)
+            xb = play_gauntlet(b, weights, n, seed, bot, start=played, workers=workers)
+            if ra is None:
+                ra, rb = xa, xb
+            else:
+                ra.merge(xa)
+                rb.merge(xb)
+            played += n
+            batches += 1
+            se_ = (ra.se ** 2 + rb.se ** 2) ** 0.5
+            z = (rb.win_rate - ra.win_rate) / se_ if se_ else 0.0
+            if abs(z) >= SEQ_STOP_Z:
+                note = f" [sequential: stopped early, clear after {played} games]"
+                break
+            if batches >= SEQ_MIN_BATCHES and abs(z) < SEQ_FUTILE_Z:
+                note = f" [sequential: stopped early, no difference after {played} games]"
+                break
+        if not note:
+            note = f" [sequential: ran to the cap of {played} games]"
     se = (ra.se ** 2 + rb.se ** 2) ** 0.5
     diff = rb.win_rate - ra.win_rate
-    lines = [f"**{bot}**, {games} games per list, seed {seed}: A {100 * ra.win_rate:.1f}% -> "
+    lines = [f"**{bot}**, {played} games per list, seed {seed}: A {100 * ra.win_rate:.1f}% -> "
              f"B {100 * rb.win_rate:.1f}% (diff {100 * diff:+.1f} ± {100 * se:.1f}, "
-             f"z {diff / se if se else 0:.1f})", "",
+             f"z {diff / se if se else 0:.1f}){note}", "",
              "| Opponent | Weight | A | B | Diff | Games |", "|---|---|---|---|---|---|"]
     for d, w in weights.items():
         x, y = ra.per_opp[d], rb.per_opp[d]

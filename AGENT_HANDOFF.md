@@ -566,4 +566,17 @@ python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cat
 ```
 Telegram Bobby the 2 headline lines.
 
-Next Claude action: review J20, then J21 if Bobby approves it. When BP02 releases, verify card texts, then J15.
+`sim compare --sequential` (commit below): batches of 2,000 per list, stops early when |z| ≥ 2.5 or, after 3 batches, |z| < 1; `--games` is the cap. Same bar, usually a third to half the games. Use it for all compares from J22 on.
+
+**J22 (needs Bobby's direct approval; run after J21): Bobby's card hypotheses, sequential.** Up to 6 × 12,000 but expect about 2–3 hours total.
+```
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-A_rifle_for_suzaku.txt --games 12000 --seed 221 --bot heuristic2 --sequential --out results/runs/J22-compare/A_rifle_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-A_rifle_for_suzaku.txt --games 12000 --seed 222 --bot heuristic --sequential --out results/runs/J22-compare/A_rifle_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-B_package_keep_sparkit.txt --games 12000 --seed 223 --bot heuristic2 --sequential --out results/runs/J22-compare/B_package_keep_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-B_package_keep_sparkit.txt --games 12000 --seed 224 --bot heuristic --sequential --out results/runs/J22-compare/B_package_keep_sparkit.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-C_pal_sphere.txt --games 12000 --seed 225 --bot heuristic2 --sequential --out results/runs/J22-compare/C_pal_sphere.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J22-C_pal_sphere.txt --games 12000 --seed 226 --bot heuristic --sequential --out results/runs/J22-compare/C_pal_sphere.md
+```
+Variants: A = −2 Suzaku +2 Single-Shot Rifle (6 lucky); B = −2 Suzaku −2 Sparkit +2 Rifle +2 Axel's Strategy (the J19b package but keeping 2 Sparkit; 6 lucky); C = −2 Sparkit +2 Pal Sphere (hand size). Telegram Bobby the 6 headline lines.
+
+Next Claude action: review J20, J21, J22 as Bobby approves them. When BP02 releases, verify card texts, then J15.

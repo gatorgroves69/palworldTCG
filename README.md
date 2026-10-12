@@ -69,6 +69,8 @@ python -m sim matrix --decks data/decks/*.txt --games 1000 --bot heuristic2
 python -m sim gauntlet --deck results/runs/cattiva_chillet+blazehowl.txt --games 20000
 # two lists, per opponent, on identical seeds
 python -m sim compare --a <list A> --b <list B> --games 6000 --bot heuristic2
+# same, stopping early when the answer is clear (--games is the cap)
+python -m sim compare --a <list A> --b <list B> --games 12000 --bot heuristic2 --sequential
 # keep-or-redraw rules for a list, plus going first vs second
 python -m sim mulligan --deck <list> --games 8000 --bot heuristic2
 # search for swaps (screen every sensible swap, then test the best)

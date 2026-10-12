@@ -85,6 +85,8 @@ def main(argv=None) -> int:
     cp.add_argument("--bot", default="heuristic2", help="a BOTS name, or name@xK for a defence exchange rate (bots/__init__.py)")
     cp.add_argument("--workers", type=int, default=None)
     cp.add_argument("--out", type=Path, default=None, help="also append the table to this file")
+    cp.add_argument("--sequential", action="store_true",
+                    help="batches of 2000, stop early when the answer is clear; --games is the cap")
 
     mu = sub.add_parser("mulligan", help="keep-or-redraw rules vs the weighted field")
     mu.add_argument("--deck", required=True)
@@ -112,7 +114,7 @@ def main(argv=None) -> int:
         return 0
     if a.cmd == "compare":
         from .overnight import compare_lists
-        text = compare_lists(a.a, a.b, a.games, a.seed, a.bot, a.workers)
+        text = compare_lists(a.a, a.b, a.games, a.seed, a.bot, a.workers, a.sequential)
         print(text)
         if a.out:
             a.out.parent.mkdir(parents=True, exist_ok=True)

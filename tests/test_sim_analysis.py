@@ -218,3 +218,15 @@ def test_mulligan_rules_decide_from_hand():
     assert not RULES["default"][1](two) and not RULES["need_2drop"][1](two)
     assert RULES["two_cheap"][1](two) and RULES["cheap_and_heavy2"][1](two)
     assert RULES["need_2drop"][1]([card(4)] * 5) and not RULES["default"][1]([card(4)] * 5)
+
+
+def test_compare_sequential_stops_early_on_identical_lists(tmp_path):
+    from sim import overnight
+    deck = "results/runs/cattiva_dragons.txt"
+    old = (overnight.SEQ_BATCH, overnight.SEQ_MIN_BATCHES)
+    overnight.SEQ_BATCH, overnight.SEQ_MIN_BATCHES = 40, 1
+    try:
+        text = overnight.compare_lists(deck, deck, 400, 5, "rules", workers=2, sequential=True)
+    finally:
+        overnight.SEQ_BATCH, overnight.SEQ_MIN_BATCHES = old
+    assert "no difference after 40 games" in text and "diff +0.0" in text
