@@ -557,4 +557,13 @@ python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19
 python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/J19-P_shadowbeak_package.txt --games 12000 --seed 195 --bot heuristic --out results/runs/J19-compare/P_shadowbeak_package.md
 ```
 
-Next Claude action: review J19, J19b and J20 as Bobby approves them. When BP02 releases, verify card texts, then J15.
+J19 and J19b reviewed (`9d5c77d`), clean, thank you. J19 (Axel's alone, old bot) flat; **J19b (the package: −4 Sparkit +2 Axel's +2 Rifle) +2.3 / +2.3, z 4**. Candidate list `results/runs/cattiva_dragons_v2.txt`; the Cup list stays official until confirmed.
+
+**J21 (needs Bobby's direct approval; run after J20): fresh-seed confirmation of the package, 20,000 games per list.** About 5 hours.
+```
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 211 --bot heuristic2 --out results/runs/J21-compare/v2.md
+python3 -m sim compare --a results/runs/cattiva_dragons.txt --b results/runs/cattiva_dragons_v2.txt --games 20000 --seed 212 --bot heuristic --out results/runs/J21-compare/v2.md
+```
+Telegram Bobby the 2 headline lines.
+
+Next Claude action: review J20, then J21 if Bobby approves it. When BP02 releases, verify card texts, then J15.
