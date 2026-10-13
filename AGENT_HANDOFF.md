@@ -608,4 +608,6 @@ Palify data received, thank you: clean and well documented. First calibration pa
 
 J20 matrix and J23 reviewed (`results/experiments.md`), clean, thank you. J23-A (4 Jormuntide for 2 Suzaku) +1.3 / +2.0, recommended as `cattiva_dragons_v3.txt`; B and C flat. Matrix MAE 9.0 (was 12.0). No new job requested.
 
-Next Claude action: Stone Pit sequencing (assign before attacking) in the bots; BP02 card check on release. When BP02 releases, verify card texts, then J15.
+Stone Pit sequencing done as opt-in `@seq` (plus `@human` additions); defaults unchanged. Findings in `results/experiments.md`: the Stone Pit bot now plays its turns like real pilots, but the matchup stays ~85% because the aggro side closes games perfectly.
+
+Next Claude action: BP02 card check on release; review any job Bobby approves. When BP02 releases, verify card texts, then J15.

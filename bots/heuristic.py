@@ -14,10 +14,10 @@ from __future__ import annotations
 
 import random
 
-from engine.actions import Attack, EndMain, Pass, SoulDraw
+from engine.actions import Activate, Attack, EndMain, Pass, SoulDraw
 from engine.game import GameOver
 
-from .evaluate import EXPOSURE, evaluate
+from .evaluate import EXPOSURE, HAND_CARD, evaluate, pal_value
 from .rules import RuleBot
 
 MARGIN = 0.25  # an action must beat ending the turn by this much
@@ -48,7 +48,14 @@ def determinize(game, me: int, rng: random.Random) -> None:
     deck[k:] = rest
 
 
+# Structures whose assign ability builds an engine (cards, resources, souls, revives, damage).
+ENGINE_ASSIGN = {"TD01-008", "BP01-016", "BP01-066", "TD02-008", "BP01-043", "TD01-020",
+                 "BP01-090", "BP01-064", "BP01-015", "TD01-009"}
+
+
 class HeuristicBot(RuleBot):
+    soul_draw_eager = False  # "@human": see choose_action
+    engine_first = False  # "@seq": assign engine structures before attacking (see _engine_first)
     name = "heuristic"
 
     depth = 1  # actions looked ahead within our own turn
@@ -63,13 +70,22 @@ class HeuristicBot(RuleBot):
         self.exposure = exposure or getattr(self, "exposure_default", EXPOSURE)
         self.hidden_info = hidden_info
         self.evaluate = evaluator or evaluate
-        if evaluator is None and getattr(self, "resource_scale", 1.0) != 1.0:
+        opts = {}
+        if getattr(self, "resource_scale", 1.0) != 1.0:
+            opts["resource_scale"] = self.resource_scale
+        if getattr(self, "open_soul_by_life", False):
+            opts["open_soul_by_life"] = True
+        if getattr(self, "death_value", False):
+            opts["death_value"] = True
+        if evaluator is None and opts:
             import functools
-            self.evaluate = functools.partial(evaluate, resource_scale=self.resource_scale)
+            self.evaluate = functools.partial(evaluate, **opts)
 
     def choose_action(self, game, player, actions):
         if any(isinstance(a, Pass) for a in actions):
             return self.quick_step(game, player, actions)
+        if self.engine_first:
+            actions = self._prune_activations(game, actions)
         end = next((a for a in actions if isinstance(a, EndMain)), None)
         base = self.evaluate(game, player, exposure=self.exposure)
         if end is None:  # forced to keep attacking (CR 7.5.2.1): best non-ending action
@@ -86,10 +102,63 @@ class HeuristicBot(RuleBot):
             v = self.score(game, player, a, seeds)
             if v > best_val:
                 best, best_val = a, v
+        if self.engine_first:
+            alt = self._engine_first(game, player, actions, best, seeds)
+            if alt is not None:
+                return alt
         # Rest 3 souls to draw only with souls nothing else wants (a 3-for-1 rate).
         if best is end and any(isinstance(a, SoulDraw) for a in actions):
             return SoulDraw()
+        # "@human": real players soul-draw ~3x a game (Stone Pit pilots 2.9, the bot 0.7):
+        # draw first when the best play gains less than most of a card.
+        if (self.soul_draw_eager and best is not end
+                and any(isinstance(a, SoulDraw) for a in actions)
+                and best_val - base < 0.6 * HAND_CARD):
+            return SoulDraw()
         return best
+
+    @staticmethod
+    def _prune_activations(game, actions):
+        """Engine decks see one Activate per (structure, ability, X, assigned Pal): 70+
+        near-duplicates and 30 s games. Keep, per ability, X in {1, max} and two assign
+        choices: the least valuable standing Pal and the most expensive one (for
+        cost-scaled abilities like Medicine Workbench)."""
+        groups, out = {}, []
+        for a in actions:
+            if isinstance(a, Activate) and (a.assign_uid is not None or a.x is not None):
+                groups.setdefault((a.uid, a.index), []).append(a)
+            else:
+                out.append(a)
+        for acts in groups.values():
+            xs = sorted({a.x for a in acts if a.x is not None})
+            keep_x = {xs[0], xs[-1]} if xs else {None}
+            acts = [a for a in acts if a.x in keep_x]
+            pals = {a.assign_uid for a in acts if a.assign_uid is not None}
+            if pals:
+                cheap = min(pals, key=lambda u: pal_value(game, game.card(u)))
+                dear = max(pals, key=lambda u: game.card(u).defn.cost)
+                acts = [a for a in acts if a.assign_uid in (cheap, dear)]
+            out.extend(acts)
+        return out
+
+    def _engine_first(self, game, player, actions, best, seeds):
+        """Palify calibration (2026-10-13): real Stone Pit pilots activate Stone Pit ~3.7
+        times a game, this bot ~0.8, because it attacks with every Pal (or ends the turn)
+        before assigning one. Before an attack or the end of the main phase, run the best
+        engine structure that assigns a Pal, unless the attacks this turn are lethal."""
+        if not (best is None or isinstance(best, (EndMain, Attack))):
+            return None
+        engine = [a for a in actions if isinstance(a, Activate) and a.assign_uid is not None
+                  and game.card(a.uid).code in ENGINE_ASSIGN]
+        if not engine:
+            return None
+        if isinstance(best, Attack):
+            opp = game.players[game.opponent(player)]
+            ready = sum(game.strike(c) for c in game.players[player].pals
+                        if game.can_attack(c))
+            if ready >= opp.life:
+                return None
+        return max(engine, key=lambda a: self.score(game, player, a, seeds))
 
     def score(self, game, player, action, seeds=None) -> float:
         seeds = seeds or [self.rng.random() for _ in range(self.samples)]

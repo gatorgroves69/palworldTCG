@@ -56,10 +56,16 @@ def bot_class(name: str):
             attrs["exact_odds"] = True
         elif o.startswith("x"):
             attrs["defend_cost"] = float(o[1:])
+        elif o == "bold":  # rested Pals keep 85/95% of their value: attacks more (Palify:
+            attrs["exposure_default"] = (0.85, 0.95)  # real Stone Pit deals 5.0/game, bot 2.9)
+        elif o == "seq":  # assign engine structures before attacking (Palify calibration)
+            attrs["engine_first"] = True
         elif o.startswith("engine"):  # Material/Ingredient worth K times more (experiment)
             attrs["resource_scale"] = float(o[6:] or 2.0)
         elif o == "human":  # Palify top-50 defence profile, see RuleBot
-            attrs.update(life_scaled=True, pal_protect=1.8, block_threshold=3.0)
+            attrs.update(life_scaled=True, pal_protect=1.8, block_threshold=3.0,
+                         open_soul_by_life=True, death_value=True, soul_draw_eager=True,
+                         structure_defence=True)
         elif o == "cautious":  # a rested Pal keeps less value: hold blockers back more
             attrs["exposure_default"] = (0.4, 0.6)
         else:

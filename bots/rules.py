@@ -11,7 +11,7 @@ from engine.actions import Attack, EndMain, Pass, PlayCard, UseInterrupt
 from engine.state import CardInstance
 
 from .base import Bot
-from .evaluate import HAND_CARD, INTERRUPT_IN_HAND, LIFE, pal_value
+from .evaluate import HAND_CARD, INTERRUPT_IN_HAND, LIFE, pal_value, structure_value
 
 LUCKY_RATE = 0.18  # fallback when a deck is empty (8 of ~45)
 
@@ -64,6 +64,7 @@ class RuleBot(Bot):
     life_scaled = False   # weight a face hit by how low our life is
     pal_protect = 1.0     # multiplier on the value of a Pal an Interrupt would save
     block_threshold = 0.5 # minimum block score
+    structure_defence = False  # value a structure under attack by structure_value
 
     @staticmethod
     def life_weight(life: int) -> float:
@@ -165,6 +166,11 @@ class RuleBot(Bot):
         if t.owner != me:
             return 0.0
         dies = t.damage + game.power(att) >= game.power(t) > 0 or game.power(t) <= 0
+        if t.is_structure and self.structure_defence:
+            # A structure doesn't hit back. Value it as a structure (engine pieces carry
+            # ENGINE_BONUS), not by its durability as if it were a Pal: real players
+            # Interrupt 44% of attacks on their structures (Palify, 2026-10-13).
+            return structure_value(t) if dies else 0.0
         kills = att.damage + game.power(t) >= game.power(att) and game.power(t) > 0
         return (pal_value(game, t) if dies else 0.0) - (pal_value(game, att) if kills else 0.0)
 

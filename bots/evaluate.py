@@ -19,6 +19,12 @@ GEAR_BASE = HAND_CARD  # a Gear on the base is at least the card it cost ...
 GEAR_PER_COST = 0.4    # ... plus its lasting ACT value, which scales with cost
 RESOURCE = 0.5         # per Material/Ingredient (spent 3 at a time on ~1-card effects)
 RESOURCE_SPENDABLE = 1.0  # ... when a card that consumes that resource is on the base or in hand
+# "@human": value of a Pal's own on-death payoff, so the bot deploys and trades these
+# like real players (Palify: Stone Pit pilots deploy 2.6 Leezpunk a game, the bot 1.0).
+# Counted while the Pal is on the base; when it dies the payoff shows up in hands instead.
+DEATH_VALUE = {"TD02-014": HAND_CARD,        # Leezpunk: the opponent discards 1
+               "BP01-084": HAND_CARD,        # Menasting: return a normal Pal to hand
+               "BP01-028": 0.8 * HAND_CARD}  # Pengullet: draw 1
 SOUL_FOR_INTERRUPT = 0.5  # a standing soul lets you pay an Interrupt's ① on their turn
 
 
@@ -141,7 +147,8 @@ def race_term(game: Game, me: int, leaf: bool) -> float:
 
 
 def evaluate(game: Game, me: int, leaf: bool = False,
-             exposure: tuple[float, float] = EXPOSURE, resource_scale: float = 1.0) -> float:
+             exposure: tuple[float, float] = EXPOSURE, resource_scale: float = 1.0,
+             open_soul_by_life: bool = False, death_value: bool = False) -> float:
     """`leaf=True`: scoring at the start of our turn after simulating the opponent's
     reply, so our rested Pals are about to stand and aren't penalized as exposed."""
     if game.winner is not None or game.reason:
@@ -156,7 +163,7 @@ def evaluate(game: Game, me: int, leaf: bool = False,
     opp_max_power = max((game.power(c) for c in O.pals if not _locked(game, c, True)), default=0)
     my_turn = game.active == me
     for c in P.pals:
-        v = pal_value(game, c)
+        v = pal_value(game, c) + (DEATH_VALUE.get(c.code, 0.0) if death_value else 0.0)
         if my_turn and c.rested and not leaf:
             # Rested through their turn: can't block, and can be attacked.
             v *= exposure[0] if opp_max_power >= game.power(c) else exposure[1]
@@ -176,7 +183,10 @@ def evaluate(game: Game, me: int, leaf: bool = False,
         score += resource_scale * resource_rate(game, P, kind) * min(P.resources[kind], 9)
         score -= resource_scale * resource_rate(game, O, kind) * min(O.resources[kind], 9)
     if any(c.kw("interrupt") for c in P.hand) and my_turn:
-        score += SOUL_FOR_INTERRUPT * min(P.souls_standing, 1)
+        open_soul = SOUL_FOR_INTERRUPT
+        if open_soul_by_life:  # "@human": a soul kept for ① saves a discard, likelier when low
+            open_soul = HAND_CARD * (0.15 if P.life >= 7 else 0.4 if P.life >= 4 else 0.7)
+        score += open_soul * min(P.souls_standing, 1)
     score += race_term(game, me, leaf) - race_term(game, opp, leaf)
     for ps, sign in ((P, 1), (O, -1)):
         if len(ps.deck) <= 4:
