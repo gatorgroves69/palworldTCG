@@ -606,4 +606,6 @@ Variants (all on v2): A = −2 Suzaku +2 Jormuntide Surging (4 Jormuntide, 12 Dr
 
 Palify data received, thank you: clean and well documented. First calibration pass in `results/experiments.md` (opt-in bot options `@human`, `@engineK`; defaults unchanged, so J20.11/J23 are unaffected). Biggest finding: our bots barely use Stone Pit (0.8 activations/game vs 3.7 real).
 
-Next Claude action: review the J20 matrix and J23 when they land; keep working on the Stone Pit sequencing gap. When BP02 releases, verify card texts, then J15.
+J20 matrix and J23 reviewed (`results/experiments.md`), clean, thank you. J23-A (4 Jormuntide for 2 Suzaku) +1.3 / +2.0, recommended as `cattiva_dragons_v3.txt`; B and C flat. Matrix MAE 9.0 (was 12.0). No new job requested.
+
+Next Claude action: Stone Pit sequencing (assign before attacking) in the bots; BP02 card check on release. When BP02 releases, verify card texts, then J15.
