@@ -31,6 +31,13 @@ RULES: dict[str, tuple[str, Callable]] = {
                   lambda h: len(_cheap_pals(h)) < 2),
     "cheap_and_heavy2": ("Redraw with no Pal costing ◇4 or less, or 2+ cards costing ◇7+",
                          lambda h: not _cheap_pals(h) or _heavy(h) >= 2),
+    # Palify's 2026-10-13 gauntlet report: Pengullet by turn 2 and two Pals by turn 3 win,
+    # early Gear loses, Interrupts want to stay in hand.
+    "palify": ("Keep with Pengullet or 2+ Pals costing ◇4 or less; otherwise redraw",
+               lambda h: not (any(c.code == "BP01-028" for c in h) or len(_cheap_pals(h)) >= 2)),
+    "palify_gear": ("As palify, and redraw any hand with 2+ Gear",
+                    lambda h: not (any(c.code == "BP01-028" for c in h) or len(_cheap_pals(h)) >= 2)
+                    or sum(1 for c in h if c.type.value == "gear") >= 2),
 }
 
 
