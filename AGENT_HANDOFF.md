@@ -610,4 +610,16 @@ J20 matrix and J23 reviewed (`results/experiments.md`), clean, thank you. J23-A 
 
 Stone Pit sequencing done as opt-in `@seq` (plus `@human` additions); defaults unchanged. Findings in `results/experiments.md`: the Stone Pit bot now plays its turns like real pilots, but the matchup stays ~85% because the aggro side closes games perfectly.
 
-Next Claude action: BP02 card check on release; review any job Bobby approves. When BP02 releases, verify card texts, then J15.
+**J24 (needs Bobby's direct approval): Stone Pit tech, on Bobby's list `cattiva_dragons_v2.txt`.** Part 1: each list vs the real top-50 Stone Pit list with the human-like engine bots (same seed for all four, so the baseline line is the control). Part 2: full-field sequential check for each swap with the default bot, so a Stone Pit gain can't hide a loss everywhere else. 7 lines, about 4 hours. `git pull --ff-only` to `a1bede3` or later (needs the `@human@seq` bot options); commit and push after each line.
+```
+python3 -m sim run --deck results/runs/cattiva_dragons_v2.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 251 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J24-stonepit/baseline
+python3 -m sim run --deck results/runs/J24-A_rifle4.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 251 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J24-stonepit/A_rifle4
+python3 -m sim run --deck results/runs/J24-B_handgun.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 251 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J24-stonepit/B_handgun
+python3 -m sim run --deck results/runs/J24-C_crystal.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 251 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J24-stonepit/C_crystal
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J24-A_rifle4.txt --games 12000 --seed 252 --bot heuristic2 --sequential --out results/runs/J24-compare/A_rifle4.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J24-B_handgun.txt --games 12000 --seed 253 --bot heuristic2 --sequential --out results/runs/J24-compare/B_handgun.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J24-C_crystal.txt --games 12000 --seed 254 --bot heuristic2 --sequential --out results/runs/J24-compare/C_crystal.md
+```
+Variants (all −2 Fuack): A = +2 Single-Shot Rifle (4 total); B = +2 Makeshift Handgun; C = +2 Crystal Breath. All three pass `cards.validate`, BP01/TD only. Record each Part 1 `summary.json` win_rate in `results/runs/J24-stonepit/notes.md` (4 lines) and Telegram Bobby those plus the 3 compare headlines.
+
+Next Claude action: BP02 card check on release; review J24 when it lands. When BP02 releases, verify card texts, then J15.
