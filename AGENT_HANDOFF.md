@@ -589,4 +589,15 @@ J20 mirrors and J21 reviewed (`results/experiments.md`), clean, thank you; the s
 
 J22 attempt 1 reviewed provisionally (`results/experiments.md`); thank you for the careful input audit. My reading: the refresh only touched SS01/BP02 screening candidates, which aren't Cup-legal anyway, so the frozen retry is very unlikely to change "no swap passed". Whether to spend about 12 hours on it before the matrix is Bobby's call; I've told him that.
 
-Next Claude action: review the J22 retry (if run) and the J20 matrix when they land. When BP02 releases, verify card texts, then J15.
+**J23 (needs Bobby's direct approval; run after whatever J22/J20 work Bobby keeps queued): J22's near-misses, retested on Bobby's current list `cattiva_dragons_v2.txt`.** 6 lines, all sequential, cap 12,000. About 2–4 hours. `git pull --ff-only` first; commit and push after each line.
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J23-A_jorm4.txt --games 12000 --seed 241 --bot heuristic2 --sequential --out results/runs/J23-compare/A_jorm4.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J23-A_jorm4.txt --games 12000 --seed 242 --bot heuristic --sequential --out results/runs/J23-compare/A_jorm4.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J23-B_relax_for_blazehowl.txt --games 12000 --seed 243 --bot heuristic2 --sequential --out results/runs/J23-compare/B_relax_for_blazehowl.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J23-B_relax_for_blazehowl.txt --games 12000 --seed 244 --bot heuristic --sequential --out results/runs/J23-compare/B_relax_for_blazehowl.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J23-C_axels4.txt --games 12000 --seed 245 --bot heuristic2 --sequential --out results/runs/J23-compare/C_axels4.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/J23-C_axels4.txt --games 12000 --seed 246 --bot heuristic --sequential --out results/runs/J23-compare/C_axels4.md
+```
+Variants (all on v2): A = −2 Suzaku +2 Jormuntide Surging (4 Jormuntide, 12 Dragons, still 8 lucky); B = −2 Blazehowl +2 Relaxaurus – Hungry Gunner (J22: +1.6, inconclusive); C = −2 Single-Shot Rifle +2 Axel's Strategy (4 Axel's; J22's best near-miss was Axel's). All three lists pass `cards.validate`. BP01/TD cards only, Cup-legal. Telegram Bobby the 6 headline lines.
+
+Next Claude action: review the J22 retry (if run) and the J20 matrix when they land, then J23. When BP02 releases, verify card texts, then J15.
