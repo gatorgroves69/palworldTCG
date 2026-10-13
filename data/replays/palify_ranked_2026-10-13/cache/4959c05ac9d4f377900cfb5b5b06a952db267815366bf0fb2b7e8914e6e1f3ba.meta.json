@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/suzuki",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:09:25.713400+00:00",
+  "status": 200,
+  "bytes": 238856,
+  "sha256": "8749ce4ae879c86bd74de7d0944ab4b25de07b07e2d11167016881dde5a793fb",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

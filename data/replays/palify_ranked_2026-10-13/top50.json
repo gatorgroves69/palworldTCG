@@ -1,0 +1,707 @@
+{
+  "captured_utc": "2026-10-13T03:01:07.416277+00:00",
+  "source": {
+    "url": "https://palify.org/api/pvp/ladder",
+    "cache_body": "cache/386357cd927b04dc8c4e319d52373f2226924cd0c72313c4e0ddf313795fcdc2.body.gz",
+    "cache_meta": "cache/386357cd927b04dc8c4e319d52373f2226924cd0c72313c4e0ddf313795fcdc2.meta.json"
+  },
+  "players": [
+    {
+      "rank": 1,
+      "name": "atto",
+      "handle": "keitosato2015",
+      "rating": 1924,
+      "wins": 119,
+      "losses": 24,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 2,
+      "name": "Audino0821",
+      "handle": "is-pcg",
+      "rating": 1879,
+      "wins": 144,
+      "losses": 16,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 3,
+      "name": "Mr P",
+      "handle": "leocadiodejesus65",
+      "rating": 1862,
+      "wins": 62,
+      "losses": 13,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 4,
+      "name": "TATSUROU.K",
+      "handle": "zendaman3gou",
+      "rating": 1862,
+      "wins": 103,
+      "losses": 35,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 5,
+      "name": "True_end",
+      "handle": "true-end",
+      "rating": 1859,
+      "wins": 199,
+      "losses": 87,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef3",
+          "detail": "8 decks · 42 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 6,
+      "name": "@Eight_alby",
+      "handle": "eight-alby",
+      "rating": 1858,
+      "wins": 150,
+      "losses": 68,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 7,
+      "name": "Zoe pits Gooner",
+      "handle": "ban-ivansantos2",
+      "rating": 1858,
+      "wins": 233,
+      "losses": 111,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "12 decks · 1 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 8,
+      "name": "PinoPal",
+      "handle": "44f45bmh2k",
+      "rating": 1854,
+      "wins": 30,
+      "losses": 7,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 9,
+      "name": "MellowSmith",
+      "handle": "lordcedricantondy",
+      "rating": 1844,
+      "wins": 36,
+      "losses": 9,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 10,
+      "name": "EmberPilot3712",
+      "handle": "ika556936",
+      "rating": 1844,
+      "wins": 220,
+      "losses": 92,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "4 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 11,
+      "name": "sami",
+      "handle": "sqmi-1234",
+      "rating": 1840,
+      "wins": 236,
+      "losses": 90,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 12,
+      "name": "Mako",
+      "handle": "mako",
+      "rating": 1840,
+      "wins": 957,
+      "losses": 307,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef2",
+          "detail": "3 decks · 44 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 13,
+      "name": "ap",
+      "handle": "3310fujita",
+      "rating": 1839,
+      "wins": 143,
+      "losses": 49,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 14,
+      "name": "宝鐘考察ch",
+      "handle": "kaostamate",
+      "rating": 1835,
+      "wins": 160,
+      "losses": 66,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "value",
+          "detail": "70% at $33"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 15,
+      "name": "chi-kun",
+      "handle": "atto192837465",
+      "rating": 1835,
+      "wins": 66,
+      "losses": 18,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 16,
+      "name": "IronPilot",
+      "handle": "namidanoonndo0920",
+      "rating": 1830,
+      "wins": 36,
+      "losses": 12,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 17,
+      "name": "thermal37646",
+      "handle": "a57847341",
+      "rating": 1826,
+      "wins": 260,
+      "losses": 152,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 18,
+      "name": "Avi Brahmbhatt",
+      "handle": "tam-le-official92",
+      "rating": 1826,
+      "wins": 77,
+      "losses": 21,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 19,
+      "name": "singaporelah",
+      "handle": "sean-sentinelgames",
+      "rating": 1822,
+      "wins": 37,
+      "losses": 12,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "5 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 20,
+      "name": "Gutzies",
+      "handle": "lvlrshampoo",
+      "rating": 1816,
+      "wins": 107,
+      "losses": 52,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef2",
+          "detail": "10 decks · 24 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 21,
+      "name": "tenjikuyumi",
+      "handle": "yumative1",
+      "rating": 1815,
+      "wins": 34,
+      "losses": 10,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 22,
+      "name": "suzuki_TCG",
+      "handle": "suzuki",
+      "rating": 1809,
+      "wins": 602,
+      "losses": 250,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef3",
+          "detail": "9 decks · 63 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 23,
+      "name": "minko",
+      "handle": "keyforge-ma1107",
+      "rating": 1807,
+      "wins": 23,
+      "losses": 10,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 24,
+      "name": "Pomchi💩",
+      "handle": "pomchi810",
+      "rating": 1803,
+      "wins": 193,
+      "losses": 78,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "4 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 25,
+      "name": "BIG GUCCI SOSA",
+      "handle": "bigguccisosa",
+      "rating": 1798,
+      "wins": 154,
+      "losses": 73,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 26,
+      "name": "@129🧅ズッパニャン🧅",
+      "handle": "cgfzfm6f6h",
+      "rating": 1798,
+      "wins": 218,
+      "losses": 107,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "15 decks · 2 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 27,
+      "name": "mogu",
+      "handle": "tsuppanyan",
+      "rating": 1797,
+      "wins": 155,
+      "losses": 99,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 28,
+      "name": "syonen",
+      "handle": "zaregotukai0",
+      "rating": 1796,
+      "wins": 159,
+      "losses": 90,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "4 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 29,
+      "name": "kyan pal",
+      "handle": "kyanyuugi",
+      "rating": 1795,
+      "wins": 381,
+      "losses": 193,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 30,
+      "name": "next222",
+      "handle": "5fd2pf6v92",
+      "rating": 1788,
+      "wins": 118,
+      "losses": 50,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 31,
+      "name": "IronSmith",
+      "handle": "wooodberryscentre391",
+      "rating": 1786,
+      "wins": 70,
+      "losses": 36,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "6 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 32,
+      "name": "bako",
+      "handle": "bako",
+      "rating": 1786,
+      "wins": 25,
+      "losses": 9,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "3 decks · 3 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 33,
+      "name": "ninja",
+      "handle": "hacchang",
+      "rating": 1784,
+      "wins": 160,
+      "losses": 64,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "3 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 34,
+      "name": "Yta1018",
+      "handle": "yoyoyo-w-829",
+      "rating": 1782,
+      "wins": 251,
+      "losses": 105,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 35,
+      "name": "NimbleBaron2000",
+      "handle": "nagatakotomo8888",
+      "rating": 1782,
+      "wins": 115,
+      "losses": 54,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 36,
+      "name": "Aza",
+      "handle": "aza",
+      "rating": 1781,
+      "wins": 122,
+      "losses": 51,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 37,
+      "name": "CasualTCG",
+      "handle": "casualtcg",
+      "rating": 1780,
+      "wins": 138,
+      "losses": 59,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef3",
+          "detail": "12 decks · 52 copied"
+        }
+      ],
+      "tags": [
+        "caster"
+      ],
+      "nameColor": "#7d7d7d"
+    },
+    {
+      "rank": 38,
+      "name": "teki-ra",
+      "handle": "paruparu",
+      "rating": 1780,
+      "wins": 199,
+      "losses": 96,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 39,
+      "name": "GildedWarden4379",
+      "handle": "alphaomega1201",
+      "rating": 1779,
+      "wins": 122,
+      "losses": 66,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "4 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 40,
+      "name": "Cardboard Goat",
+      "handle": "cardboardgoat",
+      "rating": 1773,
+      "wins": 149,
+      "losses": 68,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "5 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 41,
+      "name": "@RhaegarVT",
+      "handle": "rhaegar",
+      "rating": 1772,
+      "wins": 890,
+      "losses": 402,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 42,
+      "name": "TCGの死神",
+      "handle": "kakerushun160810",
+      "rating": 1772,
+      "wins": 169,
+      "losses": 78,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "8 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 43,
+      "name": "Rino",
+      "handle": "chan",
+      "rating": 1771,
+      "wins": 99,
+      "losses": 49,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 44,
+      "name": "SINJITSU-NO-OWARI",
+      "handle": "g5m62rzbvf",
+      "rating": 1770,
+      "wins": 304,
+      "losses": 168,
+      "provisional": false,
+      "badges": [
+        {
+          "id": "chef1",
+          "detail": "3 decks · 0 copied"
+        }
+      ],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 45,
+      "name": "Morfeo134",
+      "handle": "morfeo134",
+      "rating": 1770,
+      "wins": 20,
+      "losses": 4,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 46,
+      "name": "XMG",
+      "handle": "tengma0410",
+      "rating": 1769,
+      "wins": 43,
+      "losses": 11,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 47,
+      "name": "OneScoopMan",
+      "handle": "onescoopman",
+      "rating": 1767,
+      "wins": 112,
+      "losses": 57,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 48,
+      "name": "grr",
+      "handle": "yusuke-010024",
+      "rating": 1766,
+      "wins": 50,
+      "losses": 24,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 49,
+      "name": "WatchinWill",
+      "handle": "williamhawks94",
+      "rating": 1762,
+      "wins": 16,
+      "losses": 6,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    },
+    {
+      "rank": 50,
+      "name": "SolarScout3563",
+      "handle": "hello",
+      "rating": 1760,
+      "wins": 32,
+      "losses": 15,
+      "provisional": false,
+      "badges": [],
+      "tags": [],
+      "nameColor": null
+    }
+  ]
+}

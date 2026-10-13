@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/api/pvp/ladder",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:01:07.416277+00:00",
+  "status": 200,
+  "bytes": 8384,
+  "sha256": "fb33de85743b2e5f0eafed52debe2ea5e6cf20061d761f53381ef64dd2bdc891",
+  "content_type": "application/json",
+  "retry_after": null
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/robots.txt",
+  "method": "GET",
+  "captured_utc": "2026-10-13T02:59:57.677067+00:00",
+  "status": 200,
+  "bytes": 313,
+  "sha256": "af4f865e251b004e1d7f8eb9064d15dad08334a351e0379744894984db3df22a",
+  "content_type": "text/plain",
+  "retry_after": null
+}

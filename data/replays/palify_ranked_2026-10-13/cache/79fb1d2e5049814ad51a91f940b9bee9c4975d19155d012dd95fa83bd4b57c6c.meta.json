@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/is-pcg",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:05:37.370163+00:00",
+  "status": 200,
+  "bytes": 144731,
+  "sha256": "e253955508c7df51476190b24ff2dc5bea5530e237b2ed7a5a6de4da4172ef19",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

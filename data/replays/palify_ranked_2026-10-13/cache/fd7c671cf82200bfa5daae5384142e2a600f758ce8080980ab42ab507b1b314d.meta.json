@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/api/pvp/match/352e8279-b01b-4f56-a31f-31ccb89da42c/decks",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:15:49.435043+00:00",
+  "status": 200,
+  "bytes": 5117,
+  "sha256": "01b86277574624777a65c14bea9845c4051ed214363db9bce1c80d5e9b7b3b79",
+  "content_type": "application/json",
+  "retry_after": null
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/api/pvp/match/18968c5d-81b4-4477-b44f-3af904860b7c/replay",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:28:28.941342+00:00",
+  "status": 200,
+  "bytes": 1601737,
+  "sha256": "b33d2c08df59b451efb96f6e08ac7e5e6f360627b6859f6ebafaecc9ed797c87",
+  "content_type": "application/json",
+  "retry_after": null
+}

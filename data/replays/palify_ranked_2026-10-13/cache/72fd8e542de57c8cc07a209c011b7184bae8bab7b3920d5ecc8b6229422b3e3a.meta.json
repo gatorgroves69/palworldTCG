@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/hello",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:49.653970+00:00",
+  "status": 200,
+  "bytes": 108828,
+  "sha256": "a051524380b664478a2e3822a4eaf1fb1b521c890175e22aff098e59db88e0d8",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

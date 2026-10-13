@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/cardboardgoat",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:19.741530+00:00",
+  "status": 200,
+  "bytes": 191123,
+  "sha256": "3a516f6a311003525b3376fb5c221e4e86dbb9b42c7885547301b71f911c016f",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

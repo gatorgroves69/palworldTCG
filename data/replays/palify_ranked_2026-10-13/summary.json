@@ -1,0 +1,51 @@
+{
+  "games": 238,
+  "current_top50_players": 50,
+  "private_profiles_skipped": [
+    4,
+    6,
+    13,
+    17,
+    18,
+    36,
+    38,
+    41,
+    50
+  ],
+  "selected_unique_ids": 238,
+  "acquisition_status_counts": {
+    "acquired": 238
+  },
+  "first_player_known": 237,
+  "winner_known": 238,
+  "quality_flag_counts": {
+    "profile_first_player_disagrees_with_replay": 118,
+    "very_short_game": 6,
+    "timeout_or_disconnect": 2,
+    "first_player_unknown": 1
+  },
+  "archetype_counts": {
+    "chillet-relaxaurus-bp": 178,
+    "chillet-relaxaurus-br": 17,
+    "mixed": 26,
+    "lamball-stone-pit-pr": 69,
+    "unknown": 68,
+    "lamball-cattiva-bg": 10,
+    "pengullet-launcher": 1,
+    "foxparks-harness-br": 15,
+    "foxparks-harness-pr": 6,
+    "cattiva-azurobe-br": 13,
+    "chillet-relaxaurus-bg": 24,
+    "machine-gun-furnace-pr": 6,
+    "lamball-stone-pit-br": 7,
+    "pengullet-launcher-bp": 11,
+    "pengullet-launcher-bg": 9,
+    "cattiva-azurobe-bp": 1,
+    "machine-gun-furnace-br": 1,
+    "tombat-medicine-gp": 12,
+    "machine-gun-furnace": 1,
+    "shadowbeak-menasting-bp": 1
+  },
+  "archetype_classifier": "palify-offline-archetypes-v1",
+  "normalized_utc": "2026-10-13T03:38:08.389936+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/casualtcg",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:10.841965+00:00",
+  "status": 200,
+  "bytes": 266862,
+  "sha256": "43164ff8fb3c9d9e078627dfe0ce06e8db21dd8ec2bc7a4b410eff95a33d38a7",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

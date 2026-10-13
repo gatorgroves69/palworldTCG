@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/kaostamate",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:09:01.728726+00:00",
+  "status": 200,
+  "bytes": 147559,
+  "sha256": "7966d44c65ae587fcbf345aa47ede1253cc7dcf49b91f314e721591656fc10bf",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

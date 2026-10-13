@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/onescoopman",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:40.723545+00:00",
+  "status": 200,
+  "bytes": 158533,
+  "sha256": "2d09a346a4b2f51889562e88245f9d02a3670fa970f87536f22c84ce16bf98b7",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/true-end",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:08:35.265292+00:00",
+  "status": 200,
+  "bytes": 229010,
+  "sha256": "c2281e19d7f52a409ee61def084408162b31620e0feec32c7a17607c82a8882a",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

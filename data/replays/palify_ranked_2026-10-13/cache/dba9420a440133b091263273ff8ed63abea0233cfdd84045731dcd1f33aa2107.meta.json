@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/chan",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:28.741042+00:00",
+  "status": 200,
+  "bytes": 169294,
+  "sha256": "7e8378d48af4aa64d47966715c4203d60abeef40822569e2d0aa6affc031d8c9",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

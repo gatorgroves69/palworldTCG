@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "unique_ranked_games": 238,
+  "selected_ids": 238,
+  "all_top50_profiles_accounted_for": true,
+  "private_profiles_skipped": 9,
+  "network_requests": 540,
+  "replay_endpoint_requests": 238,
+  "cache_hits_not_refetched": true,
+  "GET_only": true,
+  "raw_cache_hashes_verified": true,
+  "first_player_known": 237,
+  "winner_known": 238,
+  "oldest_game_utc": "2026-08-21T19:29:28.257000+00:00",
+  "newest_game_utc": "2026-10-12T06:52:33.975000+00:00",
+  "quality_flag_counts": {
+    "profile_first_player_disagrees_with_replay": 118,
+    "very_short_game": 6,
+    "timeout_or_disconnect": 2,
+    "first_player_unknown": 1
+  },
+  "no_calibration_analysis_performed": true
+}

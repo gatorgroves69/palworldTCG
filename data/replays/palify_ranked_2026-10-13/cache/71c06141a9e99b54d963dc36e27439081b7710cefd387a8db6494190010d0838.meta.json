@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/sqmi-1234",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:08:52.684606+00:00",
+  "status": 200,
+  "bytes": 145102,
+  "sha256": "aa5ac0456422c35fbc10b3c4379153c3af7cf1ab9bfd3a4aa0c6a37755b9bdd2",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

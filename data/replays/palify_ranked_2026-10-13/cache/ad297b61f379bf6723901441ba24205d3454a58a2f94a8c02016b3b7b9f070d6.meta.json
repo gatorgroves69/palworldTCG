@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/rhaegar",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:22.744423+00:00",
+  "status": 200,
+  "bytes": 121842,
+  "sha256": "c674a6aa5e2f871e94114b1f72a456d7b6c6974d7a443dc56caa8d1686e025a2",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

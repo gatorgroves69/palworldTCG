@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/bako",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:09:55.756250+00:00",
+  "status": 200,
+  "bytes": 181502,
+  "sha256": "711979926e153b2f210288aa53ce865082c6437e6616577bb9fca73f26ebb343",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

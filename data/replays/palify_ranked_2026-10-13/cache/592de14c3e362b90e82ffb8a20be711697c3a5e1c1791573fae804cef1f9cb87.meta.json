@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/play/pvp",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:00:21.723624+00:00",
+  "status": 200,
+  "bytes": 1864893,
+  "sha256": "106fd710a35811bf4bea0072134ccf8c32a92bd60ed7abc11c3b5f9def89d6be",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

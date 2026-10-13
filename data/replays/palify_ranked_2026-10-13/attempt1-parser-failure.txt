@@ -1,0 +1,15 @@
+2026-10-13T03:05:43.219877+00:00
+Traceback (most recent call last):
+  File "/home/gator/palworldTCG/data/replays/palify_ranked_2026-10-13/collect.py", line 79, in <module>
+    try:run()
+        ^^^^^
+  File "/home/gator/palworldTCG/data/replays/palify_ranked_2026-10-13/collect.py", line 52, in run
+    selection=freeze_selection();result=ROOT/'acquired.jsonl';done={}
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/gator/palworldTCG/data/replays/palify_ranked_2026-10-13/collect.py", line 35, in freeze_selection
+    games=history(get(url).decode());eligible=[g for g in games if g.get('format')=='standard' and g.get('mode')=='standard' and g.get('endedAt')]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gator/palworldTCG/data/replays/palify_ranked_2026-10-13/collect.py", line 18, in history
+    if not candidates:raise ValueError('Profile has no parseable public games property; not assumed empty')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Profile has no parseable public games property; not assumed empty

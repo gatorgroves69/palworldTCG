@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/3310fujita",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:08:58.603566+00:00",
+  "status": 200,
+  "bytes": 110490,
+  "sha256": "569f2aab62388408fdd7f25fbc127d80f8e2178b32970117f5b09f94ab8e889f",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

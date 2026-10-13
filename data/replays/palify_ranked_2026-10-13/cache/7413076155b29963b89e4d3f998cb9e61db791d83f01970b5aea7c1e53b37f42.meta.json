@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/paruparu",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:10:13.642873+00:00",
+  "status": 200,
+  "bytes": 95974,
+  "sha256": "801fe69e1685b6583eb576f224427c3a24bfc0f072609537375091e97752ffb5",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

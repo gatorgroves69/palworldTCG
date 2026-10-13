@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/kyanyuugi",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:09:46.706815+00:00",
+  "status": 200,
+  "bytes": 160261,
+  "sha256": "16b3eb3fe7389488c5e09d0fd8841090c64165f9af02affe5dfaa5bc335d975f",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}

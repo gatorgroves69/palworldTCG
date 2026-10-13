@@ -1,0 +1,10 @@
+{
+  "url": "https://palify.org/u/sean-sentinelgames",
+  "method": "GET",
+  "captured_utc": "2026-10-13T03:09:16.745016+00:00",
+  "status": 200,
+  "bytes": 193501,
+  "sha256": "11aed07b6e22bff06de461e1a5c3b2649feb4ec280bc4cbdf7b46e9d120ef60e",
+  "content_type": "text/html; charset=utf-8",
+  "retry_after": null
+}
