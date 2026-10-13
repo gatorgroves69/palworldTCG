@@ -43,6 +43,8 @@ def bot_class(name: str):
              holds blockers (an experiment on why engine decks lose too much).
     "@exact" value hits as Strike*(1-p)^Strike with the deck's real lucky odds (default: the
              legacy linear estimate, which is what the M1 calibration passed with).
+    "@human" defend like Palify's top-50 players: hoard Interrupts at high life, protect
+             Pals more, block less (2026-10-13 calibration).
     e.g. "heuristic2@exact@x0.8"."""
     base, *opts = name.split("@")
     cls = BOTS[base]
@@ -54,6 +56,10 @@ def bot_class(name: str):
             attrs["exact_odds"] = True
         elif o.startswith("x"):
             attrs["defend_cost"] = float(o[1:])
+        elif o.startswith("engine"):  # Material/Ingredient worth K times more (experiment)
+            attrs["resource_scale"] = float(o[6:] or 2.0)
+        elif o == "human":  # Palify top-50 defence profile, see RuleBot
+            attrs.update(life_scaled=True, pal_protect=1.8, block_threshold=3.0)
         elif o == "cautious":  # a rested Pal keeps less value: hold blockers back more
             attrs["exposure_default"] = (0.4, 0.6)
         else:

@@ -63,6 +63,9 @@ class HeuristicBot(RuleBot):
         self.exposure = exposure or getattr(self, "exposure_default", EXPOSURE)
         self.hidden_info = hidden_info
         self.evaluate = evaluator or evaluate
+        if evaluator is None and getattr(self, "resource_scale", 1.0) != 1.0:
+            import functools
+            self.evaluate = functools.partial(evaluate, resource_scale=self.resource_scale)
 
     def choose_action(self, game, player, actions):
         if any(isinstance(a, Pass) for a in actions):

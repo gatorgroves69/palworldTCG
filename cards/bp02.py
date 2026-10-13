@@ -88,14 +88,15 @@ class Faleris(CardImpl):
                 game.deploy(c)
 
 
-# BP02-004 Chillet Ignis – Spark-Clad Dragon
-# AUTO OnDeploy You may discard 1 Dragon Pal from your hand. If you did, choose 1 Pal and
-# deal 700 Damage.
+# BP02-004 Chillet Ignis – Ember-Clad Dragon (renamed and reworded in the 2026-10-12 data
+# refresh; same effect)
+# AUTO OnDeploy You may discard 1 Dragon Pal from hand. If you discarded a card this way,
+# choose 1 Pal, and deal 700 Damage.
 @reg
 class ChilletIgnis(CardImpl):
     code = "BP02-004"
-    text = ("AUTO OnDeploy You may discard 1 Dragon Pal from your hand. If you discarded this "
-            "way, choose 1 Pal, and deal 700 Damage.")
+    text = ("AUTO OnDeploy You may discard 1 Dragon Pal from hand. If you discarded a card "
+            "this way, choose 1 Pal, and deal 700 Damage.")
 
     def on_deploy(self, game, card):
         p = card.owner

@@ -1,0 +1,20 @@
+# main
+4 BP01-015 Mounted Machine Gun
+4 BP01-016 Primitive Furnace
+4 BP01-020 Pump-Action Shotgun
+4 BP01-084 Menasting – Darkness-Dwelling Scorpion
+4 BP01-095 Zoe's Strategy
+4 TD01-004 Foxparks – A Toasty Hug
+4 TD01-008 Stone Pit
+4 TD01-023 Lamball – My First Pal
+4 TD02-014 Leezpunk – Treasure Bandit
+4 TD02-017 Blazehowl Noct – Darkflame Defender
+3 TD02-023 Cattiva – My First Pal
+2 BP01-074 Shadowbeak – Seed of Despair
+1 BP01-002 Suzaku – Hellfire Wings
+1 BP01-004 Bushi – Ephemeral Blade
+1 BP01-078 Lyleen Noct – Providence of the Goddess
+1 TD01-010 Single-Shot Rifle
+1 TD01-024 Ribbuny – Little Princess
+# soul
+10 SOUL-001 Soul

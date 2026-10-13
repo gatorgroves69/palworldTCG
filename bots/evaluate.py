@@ -141,7 +141,7 @@ def race_term(game: Game, me: int, leaf: bool) -> float:
 
 
 def evaluate(game: Game, me: int, leaf: bool = False,
-             exposure: tuple[float, float] = EXPOSURE) -> float:
+             exposure: tuple[float, float] = EXPOSURE, resource_scale: float = 1.0) -> float:
     """`leaf=True`: scoring at the start of our turn after simulating the opponent's
     reply, so our rested Pals are about to stand and aren't penalized as exposed."""
     if game.winner is not None or game.reason:
@@ -173,8 +173,8 @@ def evaluate(game: Game, me: int, leaf: bool = False,
     score += sum(structure_value(c) for c in P.structures)
     score -= sum(structure_value(c) for c in O.structures)
     for kind in ("material", "ingredient"):
-        score += resource_rate(game, P, kind) * min(P.resources[kind], 9)
-        score -= resource_rate(game, O, kind) * min(O.resources[kind], 9)
+        score += resource_scale * resource_rate(game, P, kind) * min(P.resources[kind], 9)
+        score -= resource_scale * resource_rate(game, O, kind) * min(O.resources[kind], 9)
     if any(c.kw("interrupt") for c in P.hand) and my_turn:
         score += SOUL_FOR_INTERRUPT * min(P.souls_standing, 1)
     score += race_term(game, me, leaf) - race_term(game, opp, leaf)

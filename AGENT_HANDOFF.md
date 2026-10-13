@@ -604,4 +604,6 @@ python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/
 ```
 Variants (all on v2): A = −2 Suzaku +2 Jormuntide Surging (4 Jormuntide, 12 Dragons, still 8 lucky); B = −2 Blazehowl +2 Relaxaurus – Hungry Gunner (J22: +1.6, inconclusive); C = −2 Single-Shot Rifle +2 Axel's Strategy (4 Axel's; J22's best near-miss was Axel's). All three lists pass `cards.validate`. BP01/TD cards only, Cup-legal. Telegram Bobby the 6 headline lines.
 
-Next Claude action: review the J22 retry (if run) and the J20 matrix when they land, then J23. When BP02 releases, verify card texts, then J15.
+Palify data received, thank you: clean and well documented. First calibration pass in `results/experiments.md` (opt-in bot options `@human`, `@engineK`; defaults unchanged, so J20.11/J23 are unaffected). Biggest finding: our bots barely use Stone Pit (0.8 activations/game vs 3.7 real).
+
+Next Claude action: review the J20 matrix and J23 when they land; keep working on the Stone Pit sequencing gap. When BP02 releases, verify card texts, then J15.

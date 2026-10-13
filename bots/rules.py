@@ -58,6 +58,17 @@ class RuleBot(Bot):
     # the cards spent. 1.0 = one expected life point is worth one card. Swept in J17.
     defend_cost = 1.0
     exact_odds = False  # True: expected_hit uses (1-p)^Strike with real lucky odds ("@exact")
+    # "@human" (Palify top-50 calibration, 2026-10-13): real players Interrupt face hits
+    # 17% / 26% / 39% of the time at 7-10 / 4-6 / 1-3 life, protect their Pals more and
+    # block about a third as often as these bots. Defaults keep the legacy behaviour.
+    life_scaled = False   # weight a face hit by how low our life is
+    pal_protect = 1.0     # multiplier on the value of a Pal an Interrupt would save
+    block_threshold = 0.5 # minimum block score
+
+    @staticmethod
+    def life_weight(life: int) -> float:
+        """1 life is worth less at 10 than at 2: 0.4 at 10, about 0.85 at 7, 1.6 at 2."""
+        return max(0.4, min(1.9, 0.4 + 0.15 * (10 - life)))
 
     # ------------------------------------------------------------ mulligan
     def choose_redraw(self, game, player):
@@ -117,6 +128,10 @@ class RuleBot(Bot):
                 return pump
         if loss <= 0:
             return Pass()
+        if b.target is None and self.life_scaled:
+            loss *= self.life_weight(game.players[me].life)
+        elif b.target is not None:
+            loss *= self.pal_protect
         crystal = events.get("TD01-022")
         if crystal is not None and b.target is None and game.strike(att) >= 2 and loss > HAND_CARD:
             return crystal
@@ -176,7 +191,7 @@ class RuleBot(Bot):
         trick = next((c for c in ps.hand if c.code == "TD01-011"
                       and ps.souls_standing >= game.cost(c)), None)
         extra = effect_damage(game, trick, att, 500) if trick is not None else 0
-        best, best_score = None, 0.5
+        best, best_score = None, self.block_threshold
         for uid in d.options:
             b = game.card(uid)
             bp = game.power(b)
@@ -185,7 +200,8 @@ class RuleBot(Bot):
             score = (pal_value(game, att) if kills else 0) - (pal_value(game, b) if b_dies else 0)
             if tgt_uid is None:
                 s = game.strike(att)
-                score += expected_hit(game, me, s, self.exact_odds)
+                hit = expected_hit(game, me, s, self.exact_odds)
+                score += hit * (self.life_weight(life) if self.life_scaled else 1.0)
                 if s >= life:
                     score += 100  # otherwise this hit is probably lethal
             else:

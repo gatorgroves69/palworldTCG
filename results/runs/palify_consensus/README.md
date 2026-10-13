@@ -1,0 +1,1 @@
+Consensus main decks from Mew's Palify top-50 snapshot (2026-10-13): average copies per card across the distinct top-50 lists of each archetype, rounded to 50 cards (22 Stone Pit lists, 72 Chillet BP lists). Built by Claude with an inline script; see results/experiments.md.
