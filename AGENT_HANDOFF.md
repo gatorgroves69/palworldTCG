@@ -622,4 +622,18 @@ python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/
 ```
 Variants (all −2 Fuack): A = +2 Single-Shot Rifle (4 total); B = +2 Makeshift Handgun; C = +2 Crystal Breath. All three pass `cards.validate`, BP01/TD only. Record each Part 1 `summary.json` win_rate in `results/runs/J24-stonepit/notes.md` (4 lines) and Telegram Bobby those plus the 3 compare headlines.
 
-Next Claude action: BP02 card check on release; review J24 when it lands. When BP02 releases, verify card texts, then J15.
+**Jobs for the new runner (Dots), each needs Bobby's direct approval; never the same job on two machines.** The sim is CPU-bound and parallel: `--workers` defaults to all cores.
+
+**J25: bot calibration grid (Dots).** Six matrix runs, one per bot variant, 500 games per pair, same seed; the calibration line in each `matrix.md` ("N/36 pairs within ±5; mean absolute difference") is the result. About 2–3 hours per line on 9 cores. `git pull --ff-only` to `b67d53e` or later. Commit each `results/runs/J25-calibration/<variant>/matrix.md` and `matrix.json` as it finishes, and write the six calibration lines into `results/runs/J25-calibration/notes.md`.
+```
+for b in heuristic2 heuristic2@human heuristic2@seq heuristic2@human@seq heuristic2@human@seq@bold heuristic2@x1.5@human@seq; do python3 -m sim matrix --decks data/decks/*.txt --games 500 --seed 255 --bot $b --out results/runs/J25-calibration/$b; done
+```
+
+**J26: the wide Cup-legal sweep on Bobby's list (Dots or Hermes).** Like J22, but on `cattiva_dragons_v2.txt`, two rounds (a kept swap can chain), and only BP01/TD01/TD02 cards may come in (`--sets`, new at `b67d53e`+; J22 wasted part of its search on SS01/BP02). About 10 hours per round. Afterwards copy `results/opt/<run>/best.txt`, `screen_round1.md` and `screen_round2.md` (if any) into `results/runs/J26-optimize/` with a `notes.md`, and commit them plus `results/experiments.md`.
+```
+python3 -m sim optimize --deck results/runs/cattiva_dragons_v2.txt --rounds 2 --max-tries 6 --seed 261 --screen-games 400 --screen-outs 14 --sets BP01,TD01,TD02
+```
+
+**Sim improvements by Dots (proposals, not jobs):** Dots may work on a branch named `dots/<topic>` and open a pull request; it must not push to `main` anything under engine/, bots/, sim/, cards/ or tests/. A PR needs: all tests passing (`python -m pytest -q`), the three calibration checks before and after (Cattiva·Azurobe vs Chillet BP, real 55%; Chillet BP vs the top-50 Stone Pit list `results/runs/palify_consensus/lamball-stone-pit-pr.txt`, real 48–53%; Bobby's v2 vs that Stone Pit list, real ~56%), and the J25-style calibration line. Claude reviews and merges. Good first topics: (1) the Leezpunk gap (bots deploy 0.16/turn, real 0.27) and Stone Pit's face attacks (3.1/game vs 5.2 real); (2) a `@human` parameter search that minimises the gap to the real Interrupt-by-life rates (17/26/39% at 7–10/4–6/1–3 life) and block rate (0.47/game); (3) whatever J25 shows.
+
+Next Claude action: BP02 card check on release; review J24, J25 and J26 as they land. When BP02 releases, verify card texts, then J15.

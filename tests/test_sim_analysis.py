@@ -230,3 +230,12 @@ def test_compare_sequential_stops_early_on_identical_lists(tmp_path):
     finally:
         overnight.SEQ_BATCH, overnight.SEQ_MIN_BATCHES = old
     assert "no difference after 40 games" in text and "diff +0.0" in text
+
+
+def test_legal_sets_filters_incoming_card():
+    from sim.optimize import legal_sets
+    swaps = [("BP01-032", "SS01-004"), ("BP01-032", "BP02-004"), ("BP01-032", "TD01-010"),
+             ("TD01-023", "BP01-021")]
+    assert legal_sets(swaps, ()) == swaps
+    assert legal_sets(swaps, ("BP01", "TD01", "TD02")) == [("BP01-032", "TD01-010"),
+                                                          ("TD01-023", "BP01-021")]

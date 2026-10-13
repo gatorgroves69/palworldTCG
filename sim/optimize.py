@@ -43,6 +43,7 @@ class TestConfig:
     screen_games: int = 0     # >0: screen every sensible swap with this many games first
     screen_bot: str = "heuristic"
     screen_outs: int = 4      # weakest cards considered for removal when screening
+    sets: tuple[str, ...] = ()  # only cards from these set codes may come in (() = any)
 
 
 # ---------------------------------------------------------------- decklists
@@ -147,6 +148,14 @@ def propose(main: Counter, soul: Counter, stats: dict, prior: dict, db, registry
                 swaps.append((o, i))
     swaps.sort(key=lambda s: -(prior.get(s[1], 0.0) - stats[s[0]]["impact"]))
     return swaps
+
+
+def legal_sets(swaps: list[tuple[str, str]], sets: tuple[str, ...]) -> list[tuple[str, str]]:
+    """Keep swaps whose incoming card is from one of `sets` (e.g. ("BP01", "TD01", "TD02")
+    for a Cup-legal search). An empty `sets` allows everything."""
+    if not sets:
+        return swaps
+    return [(o, i) for o, i in swaps if i.split("-")[0] in sets]
 
 
 def all_swaps(main: Counter, soul: Counter, stats: dict, db, registry, copies: int,
@@ -296,12 +305,14 @@ def optimize(deck: str, rounds: int = 1, seed: int = 1, bot: str = "heuristic2",
               f"({time.time() - t0:.0f}s)")
         if cfg.screen_games > 0:
             cands = all_swaps(main, soul, stats, db, cards.REGISTRY, cfg.copies, cfg.screen_outs)
+            cands = legal_sets(cands, cfg.sets)
             print(f"  screening {len(cands)} swaps x {cfg.screen_games} games", flush=True)
             ranked = screen(inc_path, cands, main, soul, db, weights, seed + 500 + rnd, cfg,
                             out, rnd)
             swaps = [(o, i) for d, o, i in ranked if d > 0][:max_tries]
         else:
-            swaps = propose(main, soul, stats, prior, db, cards.REGISTRY, cfg.copies)[:max_tries]
+            swaps = legal_sets(propose(main, soul, stats, prior, db, cards.REGISTRY, cfg.copies),
+                               cfg.sets)[:max_tries]
         accepted = None
         for o, i in swaps:
             m = Counter(main)

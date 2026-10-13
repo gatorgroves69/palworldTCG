@@ -67,6 +67,8 @@ def main(argv=None) -> int:
                    help="screen every sensible swap with N cheap games first (0 = off)")
     o.add_argument("--screen-outs", type=int, default=4)
     o.add_argument("--copies", type=int, default=2)
+    o.add_argument("--sets", default="", help="comma-separated set codes the incoming card may "
+                   "come from, e.g. BP01,TD01,TD02 for a Cup-legal search (default: any)")
 
     gt = sub.add_parser("gauntlet", help="M4: one deck vs the weighted field; Telegram summary")
     gt.add_argument("--deck", required=True)
@@ -131,7 +133,8 @@ def main(argv=None) -> int:
         from .optimize import TestConfig, optimize
         cfg = TestConfig(batch=a.batch, max_batches=a.max_batches, confirm_games=a.confirm_games,
                          screen_games=a.screen_games, screen_outs=a.screen_outs,
-                         copies=a.copies)
+                         copies=a.copies,
+                         sets=tuple(x for x in a.sets.split(",") if x))
         optimize(a.deck, a.rounds, a.seed, a.bot, a.confirm_bot, a.max_tries, cfg,
                  a.baseline_games)
         return 0
