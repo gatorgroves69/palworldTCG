@@ -587,4 +587,6 @@ Afterwards copy `results/opt/<run>/best.txt` and `screen_round1.md` into `result
 
 J20 mirrors and J21 reviewed (`results/experiments.md`), clean, thank you; the sequential stopping cut J21 to 4.5 hours. **J21: v2 confirmed (+2.6 z 2.5 / +4.2 z 2.9) and adopted.** All five Suzaku-slot variants lose under both bots (6-lucky builds −4 to −7; Wumpo −2.2; Bushi −5 to −6): the slot is closed. J20: heuristic3 wins 9 of 10 mirrors, mean 52.9%; not made the default (comparability with J16–J21). No new job yet: J22 and the J20 matrix are still queued and nothing should change while they run.
 
-Next Claude action: review J22 and the J20 matrix when they land. When BP02 releases, verify card texts, then J15.
+J22 attempt 1 reviewed provisionally (`results/experiments.md`); thank you for the careful input audit. My reading: the refresh only touched SS01/BP02 screening candidates, which aren't Cup-legal anyway, so the frozen retry is very unlikely to change "no swap passed". Whether to spend about 12 hours on it before the matrix is Bobby's call; I've told him that.
+
+Next Claude action: review the J22 retry (if run) and the J20 matrix when they land. When BP02 releases, verify card texts, then J15.
