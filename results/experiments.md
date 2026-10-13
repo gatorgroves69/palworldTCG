@@ -163,3 +163,15 @@ These lead to job J6: four variants, each compared head-to-head with the current
 - Sequential stopping worked: 10 of 12 lines stopped at 2,000–4,000 games, the Wumpo lines ran to 6,000–8,000 because the effect was small. J21 took 4.5 hours instead of about 12.
 
 **Real games with v2 (Bobby, online, 2026-10-12): 0–5.** Opponents: GP Shadowbeak, Chillet·Relaxaurus BR, GP Tombat·Medicine, red Ignis/Blazamut Machine Gun, Chillet·Relaxaurus BP. Axel's Strategy was never cast in the five logs: it was discarded or held until discarded, including one turn where Axel's + Suzaku (1700) would have killed the Jormuntide that then took 4 of Bobby's Pals. Single-Shot Rifle was cast and used well. Recurring play patterns, which aren't about the list: paying 3 souls to draw with an empty or one-Pal board, attacking with every Pal so the rested Pals get picked off, and unused blocks or Interrupts at low life. Reading: the sim's v2 gain assumes Axel's is played well; in Bobby's hands it has been a blank card so far. Recommended Bobby return to the Cup list (`cattiva_dragons.txt`) while the habits settle.
+
+## J22 original attempt — input-refresh caveat; frozen retry pending
+The following observed rows are preserved, not certified as a consistent-input search. See `runs/J22-optimize/input-reconciliation.md`.
+
+| When | Run | Deck | Swap | Bot | Diff | z | Games | Confirmation | Result |
+|---|---|---|---|---|---|---|---|---|---|
+| 2026-10-12 23:55 | 20261012-135254 | cattiva_dragons | -2 Cattiva – My First Pal / +2 Reptyro Cryst – Glacial Devourer | heuristic2 | -0.5 ± 1.6 | -0.30 | 1614 | — | **not better (futility)** |
+| 2026-10-13 00:12 | 20261012-135254 | cattiva_dragons | -2 Lamball – My First Pal / +2 Reptyro Cryst – Glacial Devourer | heuristic2 | -0.9 ± 1.6 | -0.54 | 1614 | — | **not better (futility)** |
+| 2026-10-13 01:11 | 20261012-135254 | cattiva_dragons | -2 Blazehowl – Hellflame Defender / +2 Relaxaurus – Hungry Gunner | heuristic2 | +1.6 ± 1.0 | 1.60 | 4035 | — | **not better (inconclusive)** |
+| 2026-10-13 01:26 | 20261012-135254 | cattiva_dragons | -2 Reindrix – Icy Gaze / +2 Flambelle – Feverish Tears | heuristic2 | -2.1 ± 1.6 | -1.27 | 1614 | — | **not better (futility)** |
+| 2026-10-13 01:42 | 20261012-135254 | cattiva_dragons | -2 Elphidran Aqua – Gentle Ripples / +2 Jolthog – Shocking Yet Innocent | heuristic2 | -1.5 ± 1.6 | -0.93 | 1614 | — | **not better (futility)** |
+| 2026-10-13 02:24 | 20261012-135254 | cattiva_dragons | -2 Sparkit – Hazardous Contact / +2 Axel's Strategy | heuristic2 | +2.9 ± 1.0 | 2.83 | 4035 | heuristic +1.1 (z 0.9) | **rejected (confirmation bot disagrees)** |
