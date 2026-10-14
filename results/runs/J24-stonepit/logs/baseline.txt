@@ -1,0 +1,42 @@
+2000 games: cattiva_dragons_v2 vs lamball-stone-pit-pr -> results/runs/J24-stonepit/baseline
+  200/2000 games
+  400/2000 games
+  600/2000 games
+  800/2000 games
+  1000/2000 games
+  1200/2000 games
+  1400/2000 games
+  1600/2000 games
+  1800/2000 games
+  2000/2000 games
+{
+  "win_rate": 0.8735,
+  "ci95": [
+    0.8582,
+    0.8874
+  ],
+  "going_first": {
+    "games": 991,
+    "wins": 882,
+    "losses": 109,
+    "draws": 0,
+    "win_rate": 0.89,
+    "ci95": [
+      0.869,
+      0.908
+    ]
+  },
+  "going_second": {
+    "games": 1009,
+    "wins": 865,
+    "losses": 144,
+    "draws": 0,
+    "win_rate": 0.8573,
+    "ci95": [
+      0.8343,
+      0.8775
+    ]
+  },
+  "avg_turns": 16.45
+}
+wrote results/runs/J24-stonepit/baseline/summary.json, games.jsonl
