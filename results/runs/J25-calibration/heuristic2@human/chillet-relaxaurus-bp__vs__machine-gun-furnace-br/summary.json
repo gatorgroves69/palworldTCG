@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-bp",
+  "opp": "machine-gun-furnace-br",
+  "bot": "heuristic2@human",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 276,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 269,
+  "losses": 231,
+  "draws": 0,
+  "win_rate": 0.538,
+  "ci95": [
+    0.4942,
+    0.5812
+  ],
+  "going_first": {
+    "games": 257,
+    "wins": 139,
+    "losses": 118,
+    "draws": 0,
+    "win_rate": 0.5409,
+    "ci95": [
+      0.4798,
+      0.6007
+    ]
+  },
+  "going_second": {
+    "games": 243,
+    "wins": 130,
+    "losses": 113,
+    "draws": 0,
+    "win_rate": 0.535,
+    "ci95": [
+      0.4722,
+      0.5967
+    ]
+  },
+  "avg_turns": 17.75,
+  "end_reasons": {
+    "deckout": 14,
+    "life": 486
+  },
+  "seconds": 307.9,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-bp.txt --opp data/decks/machine-gun-furnace-br.txt --bot heuristic2@human --structures any --game-seed <seed>"
+}
