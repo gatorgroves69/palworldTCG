@@ -1,0 +1,48 @@
+{
+  "deck": "J24-A_rifle4",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 251,
+  "commit": "2c7ba53",
+  "games": 2000,
+  "wins": 1716,
+  "losses": 284,
+  "draws": 0,
+  "win_rate": 0.858,
+  "ci95": [
+    0.842,
+    0.8726
+  ],
+  "going_first": {
+    "games": 991,
+    "wins": 858,
+    "losses": 133,
+    "draws": 0,
+    "win_rate": 0.8658,
+    "ci95": [
+      0.8432,
+      0.8856
+    ]
+  },
+  "going_second": {
+    "games": 1009,
+    "wins": 858,
+    "losses": 151,
+    "draws": 0,
+    "win_rate": 0.8503,
+    "ci95": [
+      0.827,
+      0.871
+    ]
+  },
+  "avg_turns": 16.93,
+  "end_reasons": {
+    "deckout": 88,
+    "life": 1912
+  },
+  "seconds": 1592.6,
+  "replay": "python -m sim replay --deck results/runs/J24-A_rifle4.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --bot heuristic2@human@seq --structures any --game-seed <seed>"
+}

@@ -1,0 +1,42 @@
+2000 games: J24-A_rifle4 vs lamball-stone-pit-pr -> results/runs/J24-stonepit/A_rifle4
+  200/2000 games
+  400/2000 games
+  600/2000 games
+  800/2000 games
+  1000/2000 games
+  1200/2000 games
+  1400/2000 games
+  1600/2000 games
+  1800/2000 games
+  2000/2000 games
+{
+  "win_rate": 0.858,
+  "ci95": [
+    0.842,
+    0.8726
+  ],
+  "going_first": {
+    "games": 991,
+    "wins": 858,
+    "losses": 133,
+    "draws": 0,
+    "win_rate": 0.8658,
+    "ci95": [
+      0.8432,
+      0.8856
+    ]
+  },
+  "going_second": {
+    "games": 1009,
+    "wins": 858,
+    "losses": 151,
+    "draws": 0,
+    "win_rate": 0.8503,
+    "ci95": [
+      0.827,
+      0.871
+    ]
+  },
+  "avg_turns": 16.93
+}
+wrote results/runs/J24-stonepit/A_rifle4/summary.json, games.jsonl
