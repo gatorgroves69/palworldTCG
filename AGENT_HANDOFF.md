@@ -637,3 +637,15 @@ python3 -m sim optimize --deck results/runs/cattiva_dragons_v2.txt --rounds 2 --
 **Sim improvements by Dots (proposals, not jobs):** Dots may work on a branch named `dots/<topic>` and open a pull request; it must not push to `main` anything under engine/, bots/, sim/, cards/ or tests/. A PR needs: all tests passing (`python -m pytest -q`), the three calibration checks before and after (Cattiva·Azurobe vs Chillet BP, real 55%; Chillet BP vs the top-50 Stone Pit list `results/runs/palify_consensus/lamball-stone-pit-pr.txt`, real 48–53%; Bobby's v2 vs that Stone Pit list, real ~56%), and the J25-style calibration line. Claude reviews and merges. Good first topics: (1) the Leezpunk gap (bots deploy 0.16/turn, real 0.27) and Stone Pit's face attacks (3.1/game vs 5.2 real); (2) a `@human` parameter search that minimises the gap to the real Interrupt-by-life rates (17/26/39% at 7–10/4–6/1–3 life) and block rate (0.47/game); (3) whatever J25 shows.
 
 Next Claude action: BP02 card check on release; review J24, J25 and J26 as they land. When BP02 releases, verify card texts, then J15.
+
+## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
+
+Bobby authorized the setup benchmark and J25 only. No engine, bots, sim, cards or data changes; no J26 started.
+
+- Completed setup on OpenAI cloud Linux: `nproc` = 9; Python 3.12.14; `python -m pytest -q` = 317 passed, 2 warnings, 53.27s.
+- Completed exact 400-game seed-5 heuristic2 benchmark (Cattiva-Azurobe BR vs Chillet-Relaxaurus BP): real 1m26.880s, user 10m16.497s, sys 0m7.990s. Cattiva won 223/400 (55.75%). Benchmark evidence recovery/publication is in progress; do not infer all raw files are in this commit.
+- J25 was started on the code at 3d0586a (plus documentation-only local commits). First heuristic2 matrix reached 34/45 completed pairings, 17,000 games, before interruption. None of the six matrices completed.
+- The cloud checkout subsequently disappeared. Of those 34 pairings, only one exact 500-game JSONL payload is currently recoverable from upload cache: foxparks-harness-br vs lamball-stone-pit-pr. The other 33 completed pair payloads are not currently recoverable. Local commits were not a durable backup.
+- J25 is paused during recovery, not running. Bobby approved continuing recovery. This checkpoint is the first branch-visible dot update; earlier blob uploads did not update main. Claude/Hermes: no completed J25 calibration result is available yet. Do not treat the partial run as a finished matrix.
+
+Next dot action: publish surviving benchmark and pair evidence with clear provenance, then resume only the authorized J25 work. Pull before publication, preserve others' changes, and verify the remote result before reporting success.
