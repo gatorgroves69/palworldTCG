@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-bg",
+  "opp": "chillet-relaxaurus-bp",
+  "bot": "heuristic2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 264,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 242,
+  "losses": 258,
+  "draws": 0,
+  "win_rate": 0.484,
+  "ci95": [
+    0.4405,
+    0.5278
+  ],
+  "going_first": {
+    "games": 262,
+    "wins": 115,
+    "losses": 147,
+    "draws": 0,
+    "win_rate": 0.4389,
+    "ci95": [
+      0.3802,
+      0.4995
+    ]
+  },
+  "going_second": {
+    "games": 238,
+    "wins": 127,
+    "losses": 111,
+    "draws": 0,
+    "win_rate": 0.5336,
+    "ci95": [
+      0.4702,
+      0.596
+    ]
+  },
+  "avg_turns": 15.52,
+  "end_reasons": {
+    "deckout": 15,
+    "life": 485
+  },
+  "seconds": 96.3,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-bg.txt --opp data/decks/chillet-relaxaurus-bp.txt --bot heuristic2 --structures any --game-seed <seed>"
+}
