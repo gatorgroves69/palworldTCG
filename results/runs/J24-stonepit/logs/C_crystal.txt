@@ -1,0 +1,42 @@
+2000 games: J24-C_crystal vs lamball-stone-pit-pr -> results/runs/J24-stonepit/C_crystal
+  200/2000 games
+  400/2000 games
+  600/2000 games
+  800/2000 games
+  1000/2000 games
+  1200/2000 games
+  1400/2000 games
+  1600/2000 games
+  1800/2000 games
+  2000/2000 games
+{
+  "win_rate": 0.8515,
+  "ci95": [
+    0.8352,
+    0.8664
+  ],
+  "going_first": {
+    "games": 991,
+    "wins": 851,
+    "losses": 140,
+    "draws": 0,
+    "win_rate": 0.8587,
+    "ci95": [
+      0.8357,
+      0.879
+    ]
+  },
+  "going_second": {
+    "games": 1009,
+    "wins": 852,
+    "losses": 157,
+    "draws": 0,
+    "win_rate": 0.8444,
+    "ci95": [
+      0.8207,
+      0.8655
+    ]
+  },
+  "avg_turns": 17.05
+}
+wrote results/runs/J24-stonepit/C_crystal/summary.json, games.jsonl

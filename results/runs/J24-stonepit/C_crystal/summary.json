@@ -1,0 +1,48 @@
+{
+  "deck": "J24-C_crystal",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 251,
+  "commit": "2c7ba53",
+  "games": 2000,
+  "wins": 1703,
+  "losses": 297,
+  "draws": 0,
+  "win_rate": 0.8515,
+  "ci95": [
+    0.8352,
+    0.8664
+  ],
+  "going_first": {
+    "games": 991,
+    "wins": 851,
+    "losses": 140,
+    "draws": 0,
+    "win_rate": 0.8587,
+    "ci95": [
+      0.8357,
+      0.879
+    ]
+  },
+  "going_second": {
+    "games": 1009,
+    "wins": 852,
+    "losses": 157,
+    "draws": 0,
+    "win_rate": 0.8444,
+    "ci95": [
+      0.8207,
+      0.8655
+    ]
+  },
+  "avg_turns": 17.05,
+  "end_reasons": {
+    "deckout": 97,
+    "life": 1903
+  },
+  "seconds": 1889.3,
+  "replay": "python -m sim replay --deck results/runs/J24-C_crystal.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --bot heuristic2@human@seq --structures any --game-seed <seed>"
+}

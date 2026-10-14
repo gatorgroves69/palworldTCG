@@ -9,3 +9,7 @@ Line 2 command: `python3 -m sim run --deck results/runs/J24-A_rifle4.txt --opp r
 B_handgun: 1751/2000 wins (87.55%; 95% CI 86.03–88.93%), seed 251, heuristic2@human@seq. Going first 868/991 (87.59%), second 883/1009 (87.51%). Average 16.83 turns. Execution code 2c7ba53; verified all 2000 unique JSONL records, seeds, outcome counts, first/second splits, end reasons and average turns against summary.json.
 
 Line 3 command: `python3 -m sim run --deck results/runs/J24-B_handgun.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 251 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J24-stonepit/B_handgun`. Started 2026-10-14T05:05:52Z, ended 2026-10-14T05:34:53Z, exit 0; raw stdout and timing/exit markers are in `logs/B_handgun.*`.
+
+C_crystal: 1703/2000 wins (85.15%; 95% CI 83.52–86.64%), seed 251, heuristic2@human@seq. Going first 851/991 (85.87%), second 852/1009 (84.44%). Average 17.05 turns. Execution code 2c7ba53; verified all 2000 unique JSONL records, seeds, outcome counts, first/second splits, end reasons and average turns against summary.json.
+
+Line 4 command: `python3 -m sim run --deck results/runs/J24-C_crystal.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 251 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J24-stonepit/C_crystal`. Started 2026-10-14T05:40:24Z, ended 2026-10-14T06:11:53Z, exit 0; raw stdout and timing/exit markers are in `logs/C_crystal.*`.

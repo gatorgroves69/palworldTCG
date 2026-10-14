@@ -661,3 +661,10 @@ Bobby changed the order: pull main at 2c7ba53 or later, run all seven J24 lines 
 J24 lines 1–3 are complete and artifact-verified on frozen execution code 2c7ba53. Baseline: 1747/2000 (87.35%), published c85f167. A_rifle4: 1716/2000 (85.80%), published 8f3082a; its first interrupted attempt is explicitly preserved separately from the completed retry. B_handgun: 1751/2000 (87.55%), with exact records, summary and logs in this checkpoint. Owned outputs: `results/runs/J24-stonepit/`, `results/runs/J24-compare/`, `results/runs/J25-calibration/` and this dot checkpoint. Completed result payloads are copied into a separate publication checkout, preserving the running checkout and other agents' changes.
 
 Next: line 4 C_crystal, then the three full-field comparisons, sequentially and with a verified main checkpoint after each line. J25 remains queued until all seven J24 lines are published; its authorized resume loop and 15-minute remote checkpoints remain as written above. Partial J25 recovery is not a completed matrix. Report the four Stone Pit results and three compare headlines when J24 is complete.
+
+
+### J24 execution checkpoint — 2026-10-14 06:12 UTC
+
+J24 lines 1–4 are complete and artifact-verified on frozen code 2c7ba53. Line 3 B_handgun was published at 583b6c9. Line 4 C_crystal completed 2026-10-14T06:11:53Z, exit 0: 1703/2000 wins (85.15%), with all 2000 exact records, summary and execution logs in this checkpoint. Stone Pit rates: baseline 87.35%, A_rifle4 85.80%, B_handgun 87.55%, C_crystal 85.15%. These are simulation results, not a real-event win-rate claim or an adoption decision.
+
+Next: J24 lines 5–7, the three full-field sequential comparisons, with commit and verified publication after each. J25 remains queued until all seven J24 lines are published. Same owned paths and append-only/no-rebase/no-force publication constraints as above; no engine, bot, sim, card, test or data changes.
