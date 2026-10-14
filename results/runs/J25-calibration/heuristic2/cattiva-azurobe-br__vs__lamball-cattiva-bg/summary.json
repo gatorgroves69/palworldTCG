@@ -1,0 +1,47 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "lamball-cattiva-bg",
+  "bot": "heuristic2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 259,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 232,
+  "losses": 268,
+  "draws": 0,
+  "win_rate": 0.464,
+  "ci95": [
+    0.4207,
+    0.5078
+  ],
+  "going_first": {
+    "games": 245,
+    "wins": 140,
+    "losses": 105,
+    "draws": 0,
+    "win_rate": 0.5714,
+    "ci95": [
+      0.5088,
+      0.6318
+    ]
+  },
+  "going_second": {
+    "games": 255,
+    "wins": 92,
+    "losses": 163,
+    "draws": 0,
+    "win_rate": 0.3608,
+    "ci95": [
+      0.3043,
+      0.4214
+    ]
+  },
+  "avg_turns": 12.34,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 81.0,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/lamball-cattiva-bg.txt --bot heuristic2 --structures any --game-seed <seed>"
+}

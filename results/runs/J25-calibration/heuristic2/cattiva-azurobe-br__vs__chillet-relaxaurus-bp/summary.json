@@ -1,0 +1,48 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "chillet-relaxaurus-bp",
+  "bot": "heuristic2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 256,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 255,
+  "losses": 245,
+  "draws": 0,
+  "win_rate": 0.51,
+  "ci95": [
+    0.4663,
+    0.5536
+  ],
+  "going_first": {
+    "games": 219,
+    "wins": 131,
+    "losses": 88,
+    "draws": 0,
+    "win_rate": 0.5982,
+    "ci95": [
+      0.5321,
+      0.6609
+    ]
+  },
+  "going_second": {
+    "games": 281,
+    "wins": 124,
+    "losses": 157,
+    "draws": 0,
+    "win_rate": 0.4413,
+    "ci95": [
+      0.3844,
+      0.4997
+    ]
+  },
+  "avg_turns": 14.95,
+  "end_reasons": {
+    "deckout": 2,
+    "life": 498
+  },
+  "seconds": 93.9,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/chillet-relaxaurus-bp.txt --bot heuristic2 --structures any --game-seed <seed>"
+}
