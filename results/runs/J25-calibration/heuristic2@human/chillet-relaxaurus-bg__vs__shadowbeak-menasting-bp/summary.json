@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-bg",
+  "opp": "shadowbeak-menasting-bp",
+  "bot": "heuristic2@human",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 270,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 327,
+  "losses": 173,
+  "draws": 0,
+  "win_rate": 0.654,
+  "ci95": [
+    0.6113,
+    0.6944
+  ],
+  "going_first": {
+    "games": 246,
+    "wins": 152,
+    "losses": 94,
+    "draws": 0,
+    "win_rate": 0.6179,
+    "ci95": [
+      0.5558,
+      0.6764
+    ]
+  },
+  "going_second": {
+    "games": 254,
+    "wins": 175,
+    "losses": 79,
+    "draws": 0,
+    "win_rate": 0.689,
+    "ci95": [
+      0.6296,
+      0.7427
+    ]
+  },
+  "avg_turns": 13.93,
+  "end_reasons": {
+    "deckout": 30,
+    "life": 470
+  },
+  "seconds": 187.5,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-bg.txt --opp data/decks/shadowbeak-menasting-bp.txt --bot heuristic2@human --structures any --game-seed <seed>"
+}
