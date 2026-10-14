@@ -1,0 +1,48 @@
+{
+  "deck": "lamball-stone-pit-pr",
+  "opp": "machine-gun-furnace-br",
+  "bot": "heuristic2@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 294,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 257,
+  "losses": 243,
+  "draws": 0,
+  "win_rate": 0.514,
+  "ci95": [
+    0.4703,
+    0.5575
+  ],
+  "going_first": {
+    "games": 254,
+    "wins": 118,
+    "losses": 136,
+    "draws": 0,
+    "win_rate": 0.4646,
+    "ci95": [
+      0.4042,
+      0.526
+    ]
+  },
+  "going_second": {
+    "games": 246,
+    "wins": 139,
+    "losses": 107,
+    "draws": 0,
+    "win_rate": 0.565,
+    "ci95": [
+      0.5026,
+      0.6255
+    ]
+  },
+  "avg_turns": 25.26,
+  "end_reasons": {
+    "deckout": 142,
+    "life": 358
+  },
+  "seconds": 1096.5,
+  "replay": "python -m sim replay --deck data/decks/lamball-stone-pit-pr.txt --opp data/decks/machine-gun-furnace-br.txt --bot heuristic2@seq --structures any --game-seed <seed>"
+}
