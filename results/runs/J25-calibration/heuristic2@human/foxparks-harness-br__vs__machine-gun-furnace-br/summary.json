@@ -1,0 +1,48 @@
+{
+  "deck": "foxparks-harness-br",
+  "opp": "machine-gun-furnace-br",
+  "bot": "heuristic2@human",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 287,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 298,
+  "losses": 202,
+  "draws": 0,
+  "win_rate": 0.596,
+  "ci95": [
+    0.5524,
+    0.6381
+  ],
+  "going_first": {
+    "games": 243,
+    "wins": 137,
+    "losses": 106,
+    "draws": 0,
+    "win_rate": 0.5638,
+    "ci95": [
+      0.5009,
+      0.6247
+    ]
+  },
+  "going_second": {
+    "games": 257,
+    "wins": 161,
+    "losses": 96,
+    "draws": 0,
+    "win_rate": 0.6265,
+    "ci95": [
+      0.5659,
+      0.6833
+    ]
+  },
+  "avg_turns": 17.51,
+  "end_reasons": {
+    "deckout": 18,
+    "life": 482
+  },
+  "seconds": 217.6,
+  "replay": "python -m sim replay --deck data/decks/foxparks-harness-br.txt --opp data/decks/machine-gun-furnace-br.txt --bot heuristic2@human --structures any --game-seed <seed>"
+}
