@@ -668,3 +668,10 @@ Next: line 4 C_crystal, then the three full-field comparisons, sequentially and 
 J24 lines 1–4 are complete and artifact-verified on frozen code 2c7ba53. Line 3 B_handgun was published at 583b6c9. Line 4 C_crystal completed 2026-10-14T06:11:53Z, exit 0: 1703/2000 wins (85.15%), with all 2000 exact records, summary and execution logs in this checkpoint. Stone Pit rates: baseline 87.35%, A_rifle4 85.80%, B_handgun 87.55%, C_crystal 85.15%. These are simulation results, not a real-event win-rate claim or an adoption decision.
 
 Next: J24 lines 5–7, the three full-field sequential comparisons, with commit and verified publication after each. J25 remains queued until all seven J24 lines are published. Same owned paths and append-only/no-rebase/no-force publication constraints as above; no engine, bot, sim, card, test or data changes.
+
+
+### J24 execution checkpoint — 2026-10-14 08:23 UTC
+
+J24 lines 1–5 are complete on frozen code 2c7ba53. Line 4 C_crystal was published at 90f27dd. Line 5 A_rifle4 full-field comparison completed 2026-10-14T08:18:06Z, exit 0: A 67.3% to B 68.0%, diff +0.7 ± 0.6 points, z 1.2, nominal 12000-game cap per list. Report and stdout agree; opponent rows total 12006 per list as expected from per-batch allocation rounding. Exact report/logs and validation notes are in `results/runs/J24-compare/`. No automatic adoption is implied.
+
+Next: J24 line 6 B_handgun comparison, then line 7 C_crystal comparison, with verified main publication after each. J25 remains queued until J24 is fully published. Existing ownership and append-only/no-rebase/no-force constraints are unchanged; protected code and inputs are unchanged.
