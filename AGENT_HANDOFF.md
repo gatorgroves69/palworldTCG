@@ -675,3 +675,10 @@ Next: J24 lines 5–7, the three full-field sequential comparisons, with commit 
 J24 lines 1–5 are complete on frozen code 2c7ba53. Line 4 C_crystal was published at 90f27dd. Line 5 A_rifle4 full-field comparison completed 2026-10-14T08:18:06Z, exit 0: A 67.3% to B 68.0%, diff +0.7 ± 0.6 points, z 1.2, nominal 12000-game cap per list. Report and stdout agree; opponent rows total 12006 per list as expected from per-batch allocation rounding. Exact report/logs and validation notes are in `results/runs/J24-compare/`. No automatic adoption is implied.
 
 Next: J24 line 6 B_handgun comparison, then line 7 C_crystal comparison, with verified main publication after each. J25 remains queued until J24 is fully published. Existing ownership and append-only/no-rebase/no-force constraints are unchanged; protected code and inputs are unchanged.
+
+
+### J24 execution checkpoint — 2026-10-14 10:08 UTC
+
+J24 lines 1–6 are complete on frozen code 2c7ba53. Line 5 A_rifle4 comparison was published at a18ccca. Line 6 B_handgun completed 2026-10-14T10:08:12Z, exit 0: A 68.2% to B 66.5%, diff -1.7 ± 0.6 points, z -2.7. The existing sequential criterion stopped early at nominal 10000 games/list; opponent counts total 10005/list as expected from per-batch rounding. Report/stdout agree; exact report/logs and validation notes are in `results/runs/J24-compare/`.
+
+Next: J24 line 7 C_crystal comparison, followed by verified main publication and Bobby's seven-line result summary. J25 remains queued until that publication. Existing ownership and append-only/no-rebase/no-force constraints are unchanged; protected code and inputs are unchanged.
