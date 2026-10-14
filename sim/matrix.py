@@ -37,8 +37,12 @@ def run_matrix(decks: list[str], games: int, seed: int, out: Path, bot: str = "h
         spec = MatchSpec(decks[i], decks[j], bot, structures)
         print(f"[{k + 1}/{len(decks) * (len(decks) - 1) // 2}] {names[i]} vs {names[j]}",
               flush=True)
-        s = run(spec, games, seed + k, out / f"{names[i]}__vs__{names[j]}", workers,
-                logs=1, progress=False)
+        pair_dir = out / f"{names[i]}__vs__{names[j]}"
+        s = _finished(pair_dir, games)
+        if s is not None:
+            print("  resumed from summary.json", flush=True)
+        else:
+            s = run(spec, games, seed + k, pair_dir, workers, logs=1, progress=False)
         r = real.get((names[i], names[j]))
         pairs.append({
             "deck": names[i], "opp": names[j], "sim": s["win_rate"], "ci95": s["ci95"],
@@ -66,6 +70,23 @@ def run_matrix(decks: list[str], games: int, seed: int, out: Path, bot: str = "h
     (out / "matrix.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
     (out / "matrix.md").write_text(render(result), encoding="utf-8")
     return result
+
+
+def _finished(pair_dir: Path, games: int) -> dict | None:
+    """A completed pair's summary.json, so an interrupted matrix resumes where it stopped
+    (a cloud runner lost 34 finished pairs of a 45-pair matrix, 2026-10-14). Each pair is
+    seeded independently, so results are identical to an uninterrupted run."""
+    f = pair_dir / "summary.json"
+    if not f.exists():
+        return None
+    try:
+        s = json.loads(f.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    need = ("win_rate", "ci95", "games", "going_first", "going_second")
+    if all(k in s for k in need) and s["games"] == games:
+        return s
+    return None
 
 
 def noise_z(p: dict) -> float | None:

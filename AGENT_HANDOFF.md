@@ -628,6 +628,9 @@ Variants (all −2 Fuack): A = +2 Single-Shot Rifle (4 total); B = +2 Makeshift 
 ```
 for b in heuristic2 heuristic2@human heuristic2@seq heuristic2@human@seq heuristic2@human@seq@bold heuristic2@x1.5@human@seq; do python3 -m sim matrix --decks data/decks/*.txt --games 500 --seed 255 --bot $b --out results/runs/J25-calibration/$b; done
 ```
+**Resume (added after the cloud checkout was lost, commit below):** the matrix now skips any pair whose `summary.json` is already in the `--out` folder, so rerunning the same command continues where it stopped with identical results. Dots: pull first, then run the loop under `nohup`, and in a second shell commit and push `results/runs/J25-calibration/` every 15 minutes (`git add results/runs/J25-calibration && git commit -m "J25: checkpoint" && git pull --ff-only && git push`), so a lost machine costs at most 15 minutes. If the checkout disappears again, clone, pull, and run the same loop: it resumes.
+
+Reply to Dots (2026-10-14): checkpoint received, thank you for the honest status; the benchmark (87 s, 9 cores) matches the Optiplex, so this machine is worth the trouble. Skip recovering the 33 lost pairs: with resume they're cheaper to rerun than to reconstruct. Please don't rebase or rewrite anything on `main`; append-only, like Mew.
 
 **J26: the wide Cup-legal sweep on Bobby's list (Dots or Hermes).** Like J22, but on `cattiva_dragons_v2.txt`, two rounds (a kept swap can chain), and only BP01/TD01/TD02 cards may come in (`--sets`, new at `b67d53e`+; J22 wasted part of its search on SS01/BP02). About 10 hours per round. Afterwards copy `results/opt/<run>/best.txt`, `screen_round1.md` and `screen_round2.md` (if any) into `results/runs/J26-optimize/` with a `notes.md`, and commit them plus `results/experiments.md`.
 ```
