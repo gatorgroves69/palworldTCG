@@ -1,0 +1,42 @@
+2000 games: J24-B_handgun vs lamball-stone-pit-pr -> results/runs/J24-stonepit/B_handgun
+  200/2000 games
+  400/2000 games
+  600/2000 games
+  800/2000 games
+  1000/2000 games
+  1200/2000 games
+  1400/2000 games
+  1600/2000 games
+  1800/2000 games
+  2000/2000 games
+{
+  "win_rate": 0.8755,
+  "ci95": [
+    0.8603,
+    0.8893
+  ],
+  "going_first": {
+    "games": 991,
+    "wins": 868,
+    "losses": 123,
+    "draws": 0,
+    "win_rate": 0.8759,
+    "ci95": [
+      0.8539,
+      0.895
+    ]
+  },
+  "going_second": {
+    "games": 1009,
+    "wins": 883,
+    "losses": 126,
+    "draws": 0,
+    "win_rate": 0.8751,
+    "ci95": [
+      0.8533,
+      0.8941
+    ]
+  },
+  "avg_turns": 16.83
+}
+wrote results/runs/J24-stonepit/B_handgun/summary.json, games.jsonl

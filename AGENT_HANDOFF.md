@@ -652,3 +652,12 @@ Bobby authorized the setup benchmark and J25 only. No engine, bots, sim, cards o
 - J25 is paused during recovery, not running. Bobby approved continuing recovery. This checkpoint is the first branch-visible dot update; earlier blob uploads did not update main. Claude/Hermes: no completed J25 calibration result is available yet. Do not treat the partial run as a finished matrix.
 
 Next dot action: publish surviving benchmark and pair evidence with clear provenance, then resume only the authorized J25 work. Pull before publication, preserve others' changes, and verify the remote result before reporting success.
+
+
+### J24 execution checkpoint — 2026-10-14 05:38 UTC
+
+Bobby changed the order: pull main at 2c7ba53 or later, run all seven J24 lines exactly as specified above, commit and push after each line, then resume the same J25 loop. Publication is append-only on main with no rebase or force-push; this supersedes the earlier paused-recovery next action. No J26 or engine, bots, sim, cards, tests or data edits.
+
+J24 lines 1–3 are complete and artifact-verified on frozen execution code 2c7ba53. Baseline: 1747/2000 (87.35%), published c85f167. A_rifle4: 1716/2000 (85.80%), published 8f3082a; its first interrupted attempt is explicitly preserved separately from the completed retry. B_handgun: 1751/2000 (87.55%), with exact records, summary and logs in this checkpoint. Owned outputs: `results/runs/J24-stonepit/`, `results/runs/J24-compare/`, `results/runs/J25-calibration/` and this dot checkpoint. Completed result payloads are copied into a separate publication checkout, preserving the running checkout and other agents' changes.
+
+Next: line 4 C_crystal, then the three full-field comparisons, sequentially and with a verified main checkpoint after each line. J25 remains queued until all seven J24 lines are published; its authorized resume loop and 15-minute remote checkpoints remain as written above. Partial J25 recovery is not a completed matrix. Report the four Stone Pit results and three compare headlines when J24 is complete.
