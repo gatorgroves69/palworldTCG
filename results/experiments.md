@@ -233,3 +233,4 @@ The following observed rows are preserved, not certified as a consistent-input s
 | 2026-10-15 22:05 | run | cattiva_dragons_v3 | -2 Lamball – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent | human | +0.2 ± 1.0 | 0.24 | 4045 | — | **not better (inconclusive)** |
 | 2026-10-15 22:33 | run | cattiva_dragons_v3 | -2 Blazehowl – Hellflame Defender / +2 Reptyro – Ore Gorger | human | -0.0 ± 1.0 | -0.03 | 4045 | — | **not better (futility)** |
 | 2026-10-15 23:02 | run | cattiva_dragons_v3 | -2 Cattiva – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent | human | +0.7 ± 1.0 | 0.73 | 4045 | — | **not better (inconclusive)** |
+| 2026-10-15 23:14 | run | cattiva_dragons_v3 | -2 Fuack – Manic Wave Ripper / +2 Cryolinx – Arctic Ordeal | human | -0.2 ± 1.6 | -0.11 | 1618 | — | **not better (futility)** |
