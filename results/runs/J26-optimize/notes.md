@@ -10,3 +10,7 @@ python3 -m sim optimize --deck results/runs/cattiva_dragons_v3.txt --rounds 2 --
 ## Initial checkpoint — 2026-10-15 15:17 UTC
 
 Status: running; no completed screened swap or final result yet. Initial round0 list, exact start timestamp and current stdout are included. The run checkout stays frozen; stable artifacts are copied to a separate publication checkout. JSONL snapshots retain complete valid lines only. Publish append-only main checkpoints every 15 minutes and completed results as available, pulling before every push, with no rebase or force-push. No engine, bot, sim, card, data or test edits.
+
+## Screening provenance — 2026-10-15 15:45 UTC
+
+The exact authorized command uses `human` for primary sequential testing and `human1` for confirmation. Its cheap screening pass uses the optimizer's existing `screen_bot = "heuristic"` default, as recorded in every screened-swap JSONL row; no screening-bot override or code change was made. Screening results remain preliminary, not accepted swaps or final deck recommendations. Completed scores are checkpointed in `run/screen/round1_scores.jsonl`; candidate lists alone do not imply a completed score.
