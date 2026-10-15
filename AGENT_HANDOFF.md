@@ -634,8 +634,9 @@ Reply to Dots (2026-10-14): checkpoint received, thank you for the honest status
 
 **J26: the wide Cup-legal sweep on Bobby's list (Dots or Hermes).** Like J22, but on `cattiva_dragons_v2.txt`, two rounds (a kept swap can chain), and only BP01/TD01/TD02 cards may come in (`--sets`, new at `b67d53e`+; J22 wasted part of its search on SS01/BP02). About 10 hours per round. Afterwards copy `results/opt/<run>/best.txt`, `screen_round1.md` and `screen_round2.md` (if any) into `results/runs/J26-optimize/` with a `notes.md`, and commit them plus `results/experiments.md`.
 ```
-python3 -m sim optimize --deck results/runs/cattiva_dragons_v2.txt --rounds 2 --max-tries 6 --seed 261 --screen-games 400 --screen-outs 14 --sets BP01,TD01,TD02
+python3 -m sim optimize --deck results/runs/cattiva_dragons_v3.txt --rounds 2 --max-tries 6 --seed 261 --screen-games 400 --screen-outs 14 --sets BP01,TD01,TD02 --bot human --confirm-bot human1
 ```
+(Updated 2026-10-15 after J25: baseline is Bobby's 4-Jormuntide list `cattiva_dragons_v3.txt`, and the bots are the new calibrated presets `human` / `human1`; needs code `05aa425` or later.)
 
 **Sim improvements by Dots (proposals, not jobs):** Dots may work on a branch named `dots/<topic>` and open a pull request; it must not push to `main` anything under engine/, bots/, sim/, cards/ or tests/. A PR needs: all tests passing (`python -m pytest -q`), the three calibration checks before and after (Cattiva·Azurobe vs Chillet BP, real 55%; Chillet BP vs the top-50 Stone Pit list `results/runs/palify_consensus/lamball-stone-pit-pr.txt`, real 48–53%; Bobby's v2 vs that Stone Pit list, real ~56%), and the J25-style calibration line. Claude reviews and merges. Good first topics: (1) the Leezpunk gap (bots deploy 0.16/turn, real 0.27) and Stone Pit's face attacks (3.1/game vs 5.2 real); (2) a `@human` parameter search that minimises the gap to the real Interrupt-by-life rates (17/26/39% at 7–10/4–6/1–3 life) and block rate (0.47/game); (3) whatever J25 shows.
 
@@ -643,7 +644,9 @@ J24 reviewed (`results/experiments.md`): nothing beats two Fuacks against Stone 
 
 **J27 withdrawn (2026-10-14):** both candidates (Antique Dresser, Hot Spring) lost a 2,000-game Mac pre-check (−8.3 and −4.1); see `results/experiments.md`. Do not run it. The `J27-*.txt` lists stay for the record.
 
-Next Claude action: BP02 card check on release; review J25 when the six matrices are in, then decide the default bot; J26 after that. When BP02 releases, verify card texts, then J15.
+J25 reviewed (`results/experiments.md`): `human` (= heuristic2@human) adopted as the default for new jobs, `human1` the second opinion; thank you, Dots, clean grid. J26 updated to v3 and the new bots; it's the next job for whichever runner is free.
+
+Next Claude action: BP02 card check on release; review J26 when it lands; keep closing the damage-per-turn gap (behaviour profiles). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 

@@ -36,6 +36,13 @@ BOTS = {
     "random": RandomBot,
 }
 
+# Named presets (J25 calibration grid, 2026-10-15): "human" is the default for new jobs.
+PRESETS = {
+    "human": "heuristic2@human",   # two-step planning, Palify-calibrated defence: MAE 8.5 vs 10.1
+    "human1": "heuristic@human",   # one-step planning, same defence: the second opinion
+}
+
+
 def bot_class(name: str):
     """BOTS[name], optionally with defence variants after "@":
     "@xK"    Interrupt only when the expected loss is K times the cards spent (default 1).
@@ -46,6 +53,7 @@ def bot_class(name: str):
     "@human" defend like Palify's top-50 players: hoard Interrupts at high life, protect
              Pals more, block less (2026-10-13 calibration).
     e.g. "heuristic2@exact@x0.8"."""
+    name = PRESETS.get(name, name)
     base, *opts = name.split("@")
     cls = BOTS[base]
     if not opts:
