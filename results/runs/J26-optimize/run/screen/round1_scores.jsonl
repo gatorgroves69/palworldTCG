@@ -526,3 +526,7 @@
 {"out": "BP01-028", "in": "BP01-098", "win_rate": 0.7230689711734113, "games": 400, "bot": "heuristic", "seed": 762}
 {"out": "BP01-027", "in": "BP01-098", "win_rate": 0.6529035140808851, "games": 400, "bot": "heuristic", "seed": 762}
 {"out": "BP01-025", "in": "BP01-098", "win_rate": 0.6571742803881464, "games": 400, "bot": "heuristic", "seed": 762}
+{"out": "TD02-023", "in": "BP01-099", "win_rate": 0.7181306475273164, "games": 400, "bot": "heuristic", "seed": 762}
+{"out": "BP01-014", "in": "BP01-099", "win_rate": 0.7163580084075122, "games": 400, "bot": "heuristic", "seed": 762}
+{"out": "BP01-032", "in": "BP01-099", "win_rate": 0.7022812725505784, "games": 400, "bot": "heuristic", "seed": 762}
+{"out": "BP01-023", "in": "BP01-099", "win_rate": 0.7261590089140515, "games": 400, "bot": "heuristic", "seed": 762}

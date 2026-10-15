@@ -26,3 +26,7 @@ The exact command above resumed at 2026-10-15T17:22:30Z on the same frozen execu
 ## Second resumed attempt — 2026-10-15 18:00 UTC
 
 The 17:22 execution session was lost by 17:51 UTC without a final exit/end artifact. All 323 completed screening rows were already published and survived locally. The exact authorized command resumed again at 2026-10-15T17:51:40Z on the frozen checkout. Separate evidence: `dot-resume-20261015-1751.start` and `.log`; all earlier attempt logs are retained. At this checkpoint the new attempt is recomputing its baseline with the 323 completed scores preserved. No final verdict is available.
+
+## Third resumed attempt — 2026-10-15 19:30 UTC
+
+The 17:51 execution session was lost by 19:20 UTC without a final exit/end artifact. All 532 completed screening rows survived locally and are included in this checkpoint. The exact authorized command resumed at 2026-10-15T19:21:00Z on the frozen checkout. Separate evidence: `dot-resume-20261015-1921.start` and `.log`; prior attempt logs remain intact. At this checkpoint baseline recomputation is in progress with 532 completed scores preserved; no final verdict exists.
