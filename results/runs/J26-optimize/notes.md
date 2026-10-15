@@ -18,3 +18,7 @@ The exact authorized command uses `human` for primary sequential testing and `hu
 ## Interrupted attempt checkpoint — 2026-10-15 17:21 UTC
 
 The original execution session was lost around 17:20 UTC. No final exit/end artifact exists, so this is not a completed optimizer run. Its original start/stdout evidence is preserved unchanged. All 294 retained round-1 screening rows are complete, valid and unique (400 requested games, heuristic, seed 762). Frozen protected-file SHA-256 values and the v3 input were verified against the execution baseline before resume. The exact authorized command can resume from these 294 scores; no final swap verdict exists yet.
+
+## Resumed attempt — 2026-10-15 17:30 UTC
+
+The exact command above resumed at 2026-10-15T17:22:30Z on the same frozen execution checkout. Separate evidence: `dot-resume-20261015-1722.start` and `.log`; original attempt evidence remains intact. At this checkpoint 294 complete screening rows remain saved, while the resumed attempt recomputes its baseline before skipping completed screening swaps. Running, with no final verdict or exit/end artifact yet.
