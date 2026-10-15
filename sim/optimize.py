@@ -192,15 +192,36 @@ def screen(inc_path: Path, swaps, main, soul, db, weights, seed: int, cfg: TestC
            out: Path, rnd: int) -> list[tuple[float, str, str]]:
     """Quick paired estimate of every swap; returns (diff, out, in) sorted best first."""
     base = play_gauntlet(str(inc_path), weights, cfg.screen_games, seed, cfg.screen_bot)
+    # Checkpoint every screened swap, so a lost machine resumes with `--run-dir` instead of
+    # repeating ~10 hours (a cloud runner asked for this, 2026-10-15). Same seed and bot per
+    # swap, so a resumed screen equals an uninterrupted one.
+    ckpt = out / "screen" / f"round{rnd}_scores.jsonl"
+    ckpt.parent.mkdir(parents=True, exist_ok=True)
+    done: dict[tuple[str, str], float] = {}
+    if ckpt.exists():
+        for line in ckpt.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                rec = json.loads(line)
+                if rec.get("games") == cfg.screen_games and rec.get("bot") == cfg.screen_bot:
+                    done[(rec["out"], rec["in"])] = rec["win_rate"]
+    if done:
+        print(f"  resumed {len(done)} screened swaps from {ckpt.name}", flush=True)
     scored = []
-    for o, i in swaps:
-        m = Counter(main)
-        m[o] -= cfg.copies
-        m[i] += cfg.copies
-        path = out / "screen" / f"round{rnd}_{o}_to_{i}.txt"
-        write_list(path, +m, soul, db)
-        r = play_gauntlet(str(path), weights, cfg.screen_games, seed, cfg.screen_bot)
-        scored.append((r.win_rate - base.win_rate, o, i))
+    with ckpt.open("a", encoding="utf-8") as f:
+        for o, i in swaps:
+            if (o, i) in done:
+                scored.append((done[(o, i)] - base.win_rate, o, i))
+                continue
+            m = Counter(main)
+            m[o] -= cfg.copies
+            m[i] += cfg.copies
+            path = out / "screen" / f"round{rnd}_{o}_to_{i}.txt"
+            write_list(path, +m, soul, db)
+            r = play_gauntlet(str(path), weights, cfg.screen_games, seed, cfg.screen_bot)
+            scored.append((r.win_rate - base.win_rate, o, i))
+            f.write(json.dumps({"out": o, "in": i, "win_rate": r.win_rate, "games": cfg.screen_games,
+                                "bot": cfg.screen_bot, "seed": seed}) + "\n")
+            f.flush()
     scored.sort(reverse=True)
     lines = [f"# Round {rnd} screening: {len(scored)} swaps, {cfg.screen_games} games each, "
              f"bot {cfg.screen_bot}, seed {seed}", "",
@@ -279,14 +300,17 @@ def log_experiment(row: dict, results: Path = RESULTS) -> None:
 def optimize(deck: str, rounds: int = 1, seed: int = 1, bot: str = "heuristic2",
              confirm_bot: str = "heuristic", max_tries: int = 6,
              cfg: TestConfig | None = None, baseline_games: int = 3000,
-             matrix_dir: str | None = None, results: Path = RESULTS) -> Path:
+             matrix_dir: str | None = None, results: Path = RESULTS,
+             run_dir: Path | None = None) -> Path:
     import cards
     from cards.db import load_card_db
     cfg = cfg or TestConfig()
     db = load_card_db()
     weights = field_weights()
     run = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
-    out = results / "opt" / run
+    out = Path(run_dir) if run_dir else results / "opt" / run
+    if run_dir:
+        run = Path(run_dir).name
     out.mkdir(parents=True, exist_ok=True)
     main, soul = read_list(Path(deck))
     inc_path = out / "round0.txt"

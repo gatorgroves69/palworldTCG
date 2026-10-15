@@ -67,6 +67,8 @@ def main(argv=None) -> int:
                    help="screen every sensible swap with N cheap games first (0 = off)")
     o.add_argument("--screen-outs", type=int, default=4)
     o.add_argument("--copies", type=int, default=2)
+    o.add_argument("--run-dir", default=None, help="fixed output folder; rerun the same command "
+                   "with the same --run-dir to resume an interrupted screening pass")
     o.add_argument("--sets", default="", help="comma-separated set codes the incoming card may "
                    "come from, e.g. BP01,TD01,TD02 for a Cup-legal search (default: any)")
 
@@ -136,7 +138,7 @@ def main(argv=None) -> int:
                          copies=a.copies,
                          sets=tuple(x for x in a.sets.split(",") if x))
         optimize(a.deck, a.rounds, a.seed, a.bot, a.confirm_bot, a.max_tries, cfg,
-                 a.baseline_games)
+                 a.baseline_games, run_dir=a.run_dir)
         return 0
     if a.cmd == "matrix":
         from .matrix import run_matrix
