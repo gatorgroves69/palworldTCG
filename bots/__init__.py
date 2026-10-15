@@ -60,6 +60,9 @@ def bot_class(name: str):
             attrs["exposure_default"] = (0.85, 0.95)  # real Stone Pit deals 5.0/game, bot 2.9)
         elif o == "seq":  # assign engine structures before attacking (Palify calibration)
             attrs["engine_first"] = True
+        elif o == "allin":  # real players attack with everything (Palify: 2.0 face + 1.3 Pal
+            attrs["exposure_default"] = (1.0, 1.0)  # attacks per turn for Cattiva pilots, the
+            attrs["race_scale"] = 0.0               # bots half that): no value lost by resting
         elif o.startswith("kill"):  # enemy Pals on the board worth K times more (trade into them)
             attrs["kill_scale"] = float(o[4:] or 2.0)
         elif o.startswith("struct"):  # opponent/own structures worth K times more (kill the engine)

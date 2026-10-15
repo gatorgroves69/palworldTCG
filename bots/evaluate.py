@@ -149,7 +149,8 @@ def race_term(game: Game, me: int, leaf: bool) -> float:
 def evaluate(game: Game, me: int, leaf: bool = False,
              exposure: tuple[float, float] = EXPOSURE, resource_scale: float = 1.0,
              open_soul_by_life: bool = False, death_value: bool = False,
-             struct_scale: float = 1.0, kill_scale: float = 1.0) -> float:
+             struct_scale: float = 1.0, kill_scale: float = 1.0,
+             race_scale: float = 1.0) -> float:
     """`leaf=True`: scoring at the start of our turn after simulating the opponent's
     reply, so our rested Pals are about to stand and aren't penalized as exposed."""
     if game.winner is not None or game.reason:
@@ -192,7 +193,7 @@ def evaluate(game: Game, me: int, leaf: bool = False,
         if open_soul_by_life:  # "@human": a soul kept for ① saves a discard, likelier when low
             open_soul = HAND_CARD * (0.15 if P.life >= 7 else 0.4 if P.life >= 4 else 0.7)
         score += open_soul * min(P.souls_standing, 1)
-    score += race_term(game, me, leaf) - race_term(game, opp, leaf)
+    score += race_scale * (race_term(game, me, leaf) - race_term(game, opp, leaf))
     for ps, sign in ((P, 1), (O, -1)):
         if len(ps.deck) <= 4:
             score -= sign * (5 - len(ps.deck)) * 6

@@ -37,17 +37,20 @@ def real_profile(slug: str) -> dict:
             games += 1
             d = json.loads(gzip.open(DATA / r["replay_source"]["cache_body"]).read())
             seen = set()
+            active = None  # attacks carry no side; they belong to the active player's turn
             for fr in d["frames"]:
                 for e in fr["view"].get("feed") or []:
                     if e["id"] in seen:
                         continue
                     seen.add(e["id"])
                     t, k = e["text"], e.get("kind")
-                    if k == "turn" and f"{me}'s turn" in t:
-                        tot["turns/game"] += 1
+                    if k == "turn":
+                        active = me if f"{me}'s turn" in t else opp if f"{opp}'s turn" in t else active
+                        if active == me:
+                            tot["turns/game"] += 1
                     if not t.startswith(me) and k not in ("attack", "damage"):
                         continue
-                    if k == "attack" and not t.startswith(opp):
+                    if k == "attack" and active == me:
                         if re.search(rf"attacks {re.escape(opp)} for \d+", t):
                             tot["face attacks"] += 1
                         elif any(t.endswith(f"attacks {x}.") for x in STRUCTS):

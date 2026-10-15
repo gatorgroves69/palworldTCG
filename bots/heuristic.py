@@ -81,6 +81,8 @@ class HeuristicBot(RuleBot):
             opts["struct_scale"] = self.struct_scale
         if getattr(self, "kill_scale", 1.0) != 1.0:
             opts["kill_scale"] = self.kill_scale
+        if getattr(self, "race_scale", 1.0) != 1.0:
+            opts["race_scale"] = self.race_scale
         if evaluator is None and opts:
             import functools
             self.evaluate = functools.partial(evaluate, **opts)
@@ -152,6 +154,9 @@ class HeuristicBot(RuleBot):
         engine structure that assigns a Pal, unless the attacks this turn are lethal."""
         if not (best is None or isinstance(best, (EndMain, Attack))):
             return None
+        if isinstance(best, Attack) and best.target_uid is not None:
+            return None  # a chosen attack on a Pal or structure comes first: real pilots
+            # assign the leftover Pal, not the one that has a kill (trace, 2026-10-14)
         engine = [a for a in actions if isinstance(a, Activate) and a.assign_uid is not None
                   and game.card(a.uid).code in ENGINE_ASSIGN]
         if not engine:
