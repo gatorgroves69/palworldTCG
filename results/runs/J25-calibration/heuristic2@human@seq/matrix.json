@@ -1,0 +1,838 @@
+{
+  "consistent_pairs": 15,
+  "z_checked_pairs": 36,
+  "decks": [
+    "cattiva-azurobe-br",
+    "chillet-relaxaurus-bg",
+    "chillet-relaxaurus-bp",
+    "chillet-relaxaurus-br",
+    "foxparks-harness-br",
+    "lamball-cattiva-bg",
+    "lamball-stone-pit-pr",
+    "machine-gun-furnace-br",
+    "shadowbeak-menasting-bp",
+    "tombat-medicine-gp"
+  ],
+  "games_per_pair": 500,
+  "seed": 255,
+  "bot": "heuristic2@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "calibration_file": "matchups_2026-10-12.json",
+  "pairs": [
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "chillet-relaxaurus-bg",
+      "sim": 0.616,
+      "ci95": [
+        0.5726,
+        0.6576
+      ],
+      "games": 500,
+      "first": 0.6494,
+      "second": 0.5823,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "chillet-relaxaurus-bp",
+      "sim": 0.586,
+      "ci95": [
+        0.5423,
+        0.6284
+      ],
+      "games": 500,
+      "first": 0.6758,
+      "second": 0.516,
+      "real": 0.54,
+      "real_games": 2581,
+      "diff": 0.046,
+      "pass": true,
+      "z": 1.91,
+      "consistent": true
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "chillet-relaxaurus-br",
+      "sim": 0.442,
+      "ci95": [
+        0.3991,
+        0.4858
+      ],
+      "games": 500,
+      "first": 0.5234,
+      "second": 0.3698,
+      "real": 0.52,
+      "real_games": 700,
+      "diff": -0.078,
+      "pass": false,
+      "z": -2.68,
+      "consistent": false
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "foxparks-harness-br",
+      "sim": 0.586,
+      "ci95": [
+        0.5423,
+        0.6284
+      ],
+      "games": 500,
+      "first": 0.6063,
+      "second": 0.565,
+      "real": 0.54,
+      "real_games": 445,
+      "diff": 0.046,
+      "pass": true,
+      "z": 1.42,
+      "consistent": true
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "lamball-cattiva-bg",
+      "sim": 0.512,
+      "ci95": [
+        0.4683,
+        0.5556
+      ],
+      "games": 500,
+      "first": 0.6245,
+      "second": 0.4039,
+      "real": 0.46,
+      "real_games": 406,
+      "diff": 0.052,
+      "pass": false,
+      "z": 1.56,
+      "consistent": true
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "lamball-stone-pit-pr",
+      "sim": 0.85,
+      "ci95": [
+        0.816,
+        0.8786
+      ],
+      "games": 500,
+      "first": 0.8802,
+      "second": 0.8217,
+      "real": 0.55,
+      "real_games": 944,
+      "diff": 0.3,
+      "pass": false,
+      "z": 13.19,
+      "consistent": false
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.724,
+      "ci95": [
+        0.6832,
+        0.7614
+      ],
+      "games": 500,
+      "first": 0.7244,
+      "second": 0.7236,
+      "real": 0.64,
+      "real_games": 258,
+      "diff": 0.084,
+      "pass": false,
+      "z": 2.34,
+      "consistent": false
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.79,
+      "ci95": [
+        0.7522,
+        0.8234
+      ],
+      "games": 500,
+      "first": 0.759,
+      "second": 0.8207,
+      "real": 0.71,
+      "real_games": 272,
+      "diff": 0.08,
+      "pass": false,
+      "z": 2.42,
+      "consistent": false
+    },
+    {
+      "deck": "cattiva-azurobe-br",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.808,
+      "ci95": [
+        0.7712,
+        0.8401
+      ],
+      "games": 500,
+      "first": 0.7747,
+      "second": 0.8421,
+      "real": 0.54,
+      "real_games": 343,
+      "diff": 0.268,
+      "pass": false,
+      "z": 8.33,
+      "consistent": false
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "chillet-relaxaurus-bp",
+      "sim": 0.47,
+      "ci95": [
+        0.4266,
+        0.5138
+      ],
+      "games": 500,
+      "first": 0.3779,
+      "second": 0.5714,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "chillet-relaxaurus-br",
+      "sim": 0.418,
+      "ci95": [
+        0.3756,
+        0.4617
+      ],
+      "games": 500,
+      "first": 0.3879,
+      "second": 0.444,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "foxparks-harness-br",
+      "sim": 0.558,
+      "ci95": [
+        0.5142,
+        0.6009
+      ],
+      "games": 500,
+      "first": 0.5551,
+      "second": 0.5612,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "lamball-cattiva-bg",
+      "sim": 0.52,
+      "ci95": [
+        0.4762,
+        0.5635
+      ],
+      "games": 500,
+      "first": 0.5062,
+      "second": 0.5328,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "lamball-stone-pit-pr",
+      "sim": 0.54,
+      "ci95": [
+        0.4962,
+        0.5832
+      ],
+      "games": 500,
+      "first": 0.5444,
+      "second": 0.5357,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.528,
+      "ci95": [
+        0.4842,
+        0.5714
+      ],
+      "games": 500,
+      "first": 0.5063,
+      "second": 0.5475,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.662,
+      "ci95": [
+        0.6194,
+        0.7021
+      ],
+      "games": 500,
+      "first": 0.6341,
+      "second": 0.689,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bg",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.656,
+      "ci95": [
+        0.6133,
+        0.6963
+      ],
+      "games": 500,
+      "first": 0.6049,
+      "second": 0.7043,
+      "real": null,
+      "real_games": null,
+      "diff": null,
+      "pass": null,
+      "z": null,
+      "consistent": null
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "chillet-relaxaurus-br",
+      "sim": 0.46,
+      "ci95": [
+        0.4168,
+        0.5038
+      ],
+      "games": 500,
+      "first": 0.3957,
+      "second": 0.5148,
+      "real": 0.53,
+      "real_games": 5264,
+      "diff": -0.07,
+      "pass": false,
+      "z": -3.0,
+      "consistent": false
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "foxparks-harness-br",
+      "sim": 0.568,
+      "ci95": [
+        0.5242,
+        0.6107
+      ],
+      "games": 500,
+      "first": 0.5285,
+      "second": 0.6118,
+      "real": 0.54,
+      "real_games": 3514,
+      "diff": 0.028,
+      "pass": true,
+      "z": 1.18,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "lamball-cattiva-bg",
+      "sim": 0.508,
+      "ci95": [
+        0.4643,
+        0.5516
+      ],
+      "games": 500,
+      "first": 0.5399,
+      "second": 0.4726,
+      "real": 0.47,
+      "real_games": 2640,
+      "diff": 0.038,
+      "pass": true,
+      "z": 1.56,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "lamball-stone-pit-pr",
+      "sim": 0.548,
+      "ci95": [
+        0.5042,
+        0.5911
+      ],
+      "games": 500,
+      "first": 0.5628,
+      "second": 0.5336,
+      "real": 0.52,
+      "real_games": 6608,
+      "diff": 0.028,
+      "pass": true,
+      "z": 1.21,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.54,
+      "ci95": [
+        0.4962,
+        0.5832
+      ],
+      "games": 500,
+      "first": 0.5525,
+      "second": 0.5267,
+      "real": 0.59,
+      "real_games": 1865,
+      "diff": -0.05,
+      "pass": true,
+      "z": -2.0,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.674,
+      "ci95": [
+        0.6317,
+        0.7136
+      ],
+      "games": 500,
+      "first": 0.6236,
+      "second": 0.7336,
+      "real": 0.66,
+      "real_games": 1955,
+      "diff": 0.014,
+      "pass": true,
+      "z": 0.59,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-bp",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.658,
+      "ci95": [
+        0.6154,
+        0.6982
+      ],
+      "games": 500,
+      "first": 0.6098,
+      "second": 0.7119,
+      "real": 0.62,
+      "real_games": 2723,
+      "diff": 0.038,
+      "pass": true,
+      "z": 1.64,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-br",
+      "opp": "foxparks-harness-br",
+      "sim": 0.602,
+      "ci95": [
+        0.5585,
+        0.644
+      ],
+      "games": 500,
+      "first": 0.5896,
+      "second": 0.6164,
+      "real": 0.5,
+      "real_games": 989,
+      "diff": 0.102,
+      "pass": false,
+      "z": 3.77,
+      "consistent": false
+    },
+    {
+      "deck": "chillet-relaxaurus-br",
+      "opp": "lamball-cattiva-bg",
+      "sim": 0.522,
+      "ci95": [
+        0.4782,
+        0.5654
+      ],
+      "games": 500,
+      "first": 0.5447,
+      "second": 0.4979,
+      "real": 0.48,
+      "real_games": 755,
+      "diff": 0.042,
+      "pass": true,
+      "z": 1.46,
+      "consistent": true
+    },
+    {
+      "deck": "chillet-relaxaurus-br",
+      "opp": "lamball-stone-pit-pr",
+      "sim": 0.704,
+      "ci95": [
+        0.6626,
+        0.7423
+      ],
+      "games": 500,
+      "first": 0.6887,
+      "second": 0.7202,
+      "real": 0.47,
+      "real_games": 1748,
+      "diff": 0.234,
+      "pass": false,
+      "z": 9.89,
+      "consistent": false
+    },
+    {
+      "deck": "chillet-relaxaurus-br",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.7,
+      "ci95": [
+        0.6584,
+        0.7385
+      ],
+      "games": 500,
+      "first": 0.7114,
+      "second": 0.689,
+      "real": 0.55,
+      "real_games": 619,
+      "diff": 0.15,
+      "pass": false,
+      "z": 5.24,
+      "consistent": false
+    },
+    {
+      "deck": "chillet-relaxaurus-br",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.76,
+      "ci95": [
+        0.7207,
+        0.7954
+      ],
+      "games": 500,
+      "first": 0.7383,
+      "second": 0.7828,
+      "real": 0.65,
+      "real_games": 679,
+      "diff": 0.11,
+      "pass": false,
+      "z": 4.16,
+      "consistent": false
+    },
+    {
+      "deck": "chillet-relaxaurus-br",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.69,
+      "ci95": [
+        0.6481,
+        0.729
+      ],
+      "games": 500,
+      "first": 0.6527,
+      "second": 0.7311,
+      "real": 0.54,
+      "real_games": 893,
+      "diff": 0.15,
+      "pass": false,
+      "z": 5.65,
+      "consistent": false
+    },
+    {
+      "deck": "foxparks-harness-br",
+      "opp": "lamball-cattiva-bg",
+      "sim": 0.356,
+      "ci95": [
+        0.3153,
+        0.3989
+      ],
+      "games": 500,
+      "first": 0.412,
+      "second": 0.3134,
+      "real": 0.42,
+      "real_games": 478,
+      "diff": -0.064,
+      "pass": false,
+      "z": -2.06,
+      "consistent": false
+    },
+    {
+      "deck": "foxparks-harness-br",
+      "opp": "lamball-stone-pit-pr",
+      "sim": 0.624,
+      "ci95": [
+        0.5807,
+        0.6654
+      ],
+      "games": 500,
+      "first": 0.6025,
+      "second": 0.6437,
+      "real": 0.55,
+      "real_games": 1220,
+      "diff": 0.074,
+      "pass": false,
+      "z": 2.85,
+      "consistent": false
+    },
+    {
+      "deck": "foxparks-harness-br",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.652,
+      "ci95": [
+        0.6092,
+        0.6925
+      ],
+      "games": 500,
+      "first": 0.6502,
+      "second": 0.6537,
+      "real": 0.62,
+      "real_games": 357,
+      "diff": 0.032,
+      "pass": true,
+      "z": 0.96,
+      "consistent": true
+    },
+    {
+      "deck": "foxparks-harness-br",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.628,
+      "ci95": [
+        0.5848,
+        0.6692
+      ],
+      "games": 500,
+      "first": 0.5709,
+      "second": 0.6838,
+      "real": 0.64,
+      "real_games": 360,
+      "diff": -0.012,
+      "pass": true,
+      "z": -0.36,
+      "consistent": true
+    },
+    {
+      "deck": "foxparks-harness-br",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.59,
+      "ci95": [
+        0.5464,
+        0.6323
+      ],
+      "games": 500,
+      "first": 0.498,
+      "second": 0.6857,
+      "real": 0.58,
+      "real_games": 494,
+      "diff": 0.01,
+      "pass": true,
+      "z": 0.32,
+      "consistent": true
+    },
+    {
+      "deck": "lamball-cattiva-bg",
+      "opp": "lamball-stone-pit-pr",
+      "sim": 0.832,
+      "ci95": [
+        0.7967,
+        0.8622
+      ],
+      "games": 500,
+      "first": 0.8493,
+      "second": 0.8114,
+      "real": 0.58,
+      "real_games": 1006,
+      "diff": 0.252,
+      "pass": false,
+      "z": 11.03,
+      "consistent": false
+    },
+    {
+      "deck": "lamball-cattiva-bg",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.724,
+      "ci95": [
+        0.6832,
+        0.7614
+      ],
+      "games": 500,
+      "first": 0.7273,
+      "second": 0.7206,
+      "real": 0.64,
+      "real_games": 296,
+      "diff": 0.084,
+      "pass": false,
+      "z": 2.45,
+      "consistent": false
+    },
+    {
+      "deck": "lamball-cattiva-bg",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.718,
+      "ci95": [
+        0.677,
+        0.7557
+      ],
+      "games": 500,
+      "first": 0.6653,
+      "second": 0.7663,
+      "real": 0.69,
+      "real_games": 258,
+      "diff": 0.028,
+      "pass": true,
+      "z": 0.8,
+      "consistent": true
+    },
+    {
+      "deck": "lamball-cattiva-bg",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.752,
+      "ci95": [
+        0.7123,
+        0.7878
+      ],
+      "games": 500,
+      "first": 0.7393,
+      "second": 0.7654,
+      "real": 0.63,
+      "real_games": 328,
+      "diff": 0.122,
+      "pass": false,
+      "z": 3.71,
+      "consistent": false
+    },
+    {
+      "deck": "lamball-stone-pit-pr",
+      "opp": "machine-gun-furnace-br",
+      "sim": 0.47,
+      "ci95": [
+        0.4266,
+        0.5138
+      ],
+      "games": 500,
+      "first": 0.4173,
+      "second": 0.5244,
+      "real": 0.66,
+      "real_games": 680,
+      "diff": -0.19,
+      "pass": false,
+      "z": -6.6,
+      "consistent": false
+    },
+    {
+      "deck": "lamball-stone-pit-pr",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.626,
+      "ci95": [
+        0.5828,
+        0.6673
+      ],
+      "games": 500,
+      "first": 0.5763,
+      "second": 0.6807,
+      "real": 0.69,
+      "real_games": 665,
+      "diff": -0.064,
+      "pass": false,
+      "z": -2.28,
+      "consistent": false
+    },
+    {
+      "deck": "lamball-stone-pit-pr",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.502,
+      "ci95": [
+        0.4583,
+        0.5456
+      ],
+      "games": 500,
+      "first": 0.4435,
+      "second": 0.5595,
+      "real": 0.59,
+      "real_games": 916,
+      "diff": -0.088,
+      "pass": false,
+      "z": -3.18,
+      "consistent": false
+    },
+    {
+      "deck": "machine-gun-furnace-br",
+      "opp": "shadowbeak-menasting-bp",
+      "sim": 0.57,
+      "ci95": [
+        0.5262,
+        0.6127
+      ],
+      "games": 500,
+      "first": 0.5309,
+      "second": 0.607,
+      "real": 0.57,
+      "real_games": 356,
+      "diff": 0.0,
+      "pass": true,
+      "z": 0.0,
+      "consistent": true
+    },
+    {
+      "deck": "machine-gun-furnace-br",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.462,
+      "ci95": [
+        0.4188,
+        0.5058
+      ],
+      "games": 500,
+      "first": 0.3294,
+      "second": 0.5968,
+      "real": 0.58,
+      "real_games": 363,
+      "diff": -0.118,
+      "pass": false,
+      "z": -3.45,
+      "consistent": false
+    },
+    {
+      "deck": "shadowbeak-menasting-bp",
+      "opp": "tombat-medicine-gp",
+      "sim": 0.488,
+      "ci95": [
+        0.4444,
+        0.5317
+      ],
+      "games": 500,
+      "first": 0.3889,
+      "second": 0.5887,
+      "real": 0.39,
+      "real_games": 366,
+      "diff": 0.098,
+      "pass": false,
+      "z": 2.89,
+      "consistent": false
+    }
+  ],
+  "calibrated_pairs": 36,
+  "passing_pairs": 14,
+  "mean_abs_diff": 0.0901
+}

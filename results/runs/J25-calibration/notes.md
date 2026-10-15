@@ -28,3 +28,13 @@ This checkpoint saves all 90 pair summaries for the first two completed variants
 All 45 pairs completed, 500 games each (22,500 total), matrix seed 255, frozen source 815792c. All summaries passed exact raw-record validation. Matrix JSON agrees with all summaries and matchups_2026-10-12.json; exact Markdown matches renderer output. The unrounded mean absolute differences are 0.1009 for seq and 0.1005 for baseline; both display as 10.1 points. The human-only variant remains the lowest-error completed variant at 8.5 points; three variants remain unfinished and no default-bot decision is made.
 
 This checkpoint preserves all 135 summaries and matrices for the first three variants plus three completed heuristic2@human@seq summaries (138 total). Raw JSONL publication remains outstanding. The fourth variant is incomplete. Existing historical sections remain unchanged; this is the latest verified checkpoint. No protected-code changes or additional jobs.
+
+
+## heuristic2@human@seq — complete, verified 2026-10-15 04:29 UTC
+
+14/36 pairs within ±5 points; mean absolute difference 9.0 points.
+15/36 pairs consistent with the real data allowing for both sample sizes (|z| ≤ 2).
+
+All 45 pairs completed, 500 games each (22,500 total), matrix seed 255, frozen source 815792c. All summaries passed exact raw-record validation. Matrix JSON agrees with all summaries and matchups_2026-10-12.json; exact Markdown matches renderer output. Human-only remains the lowest-error completed variant at 8.5 points. Two variants remain unfinished; no default-bot adoption decision is made.
+
+This checkpoint preserves 216 validated pair summaries and the fourth variant's exact matrix.json/matrix.md. Raw JSONL publication remains outstanding. Publication resumed after user approval following the cancelled checkpoint call. Existing historical sections remain unchanged. No protected-code changes or additional jobs.

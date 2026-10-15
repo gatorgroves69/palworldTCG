@@ -1,0 +1,47 @@
+{
+  "deck": "foxparks-harness-br",
+  "opp": "lamball-cattiva-bg",
+  "bot": "heuristic2@human@seq@bold",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 285,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 168,
+  "losses": 332,
+  "draws": 0,
+  "win_rate": 0.336,
+  "ci95": [
+    0.296,
+    0.3785
+  ],
+  "going_first": {
+    "games": 216,
+    "wins": 77,
+    "losses": 139,
+    "draws": 0,
+    "win_rate": 0.3565,
+    "ci95": [
+      0.2956,
+      0.4224
+    ]
+  },
+  "going_second": {
+    "games": 284,
+    "wins": 91,
+    "losses": 193,
+    "draws": 0,
+    "win_rate": 0.3204,
+    "ci95": [
+      0.2689,
+      0.3768
+    ]
+  },
+  "avg_turns": 11.92,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 64.3,
+  "replay": "python -m sim replay --deck data/decks/foxparks-harness-br.txt --opp data/decks/lamball-cattiva-bg.txt --bot heuristic2@human@seq@bold --structures any --game-seed <seed>"
+}

@@ -1,0 +1,47 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@human@seq@bold",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 263,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 394,
+  "losses": 106,
+  "draws": 0,
+  "win_rate": 0.788,
+  "ci95": [
+    0.75,
+    0.8216
+  ],
+  "going_first": {
+    "games": 253,
+    "wins": 193,
+    "losses": 60,
+    "draws": 0,
+    "win_rate": 0.7628,
+    "ci95": [
+      0.7067,
+      0.8111
+    ]
+  },
+  "going_second": {
+    "games": 247,
+    "wins": 201,
+    "losses": 46,
+    "draws": 0,
+    "win_rate": 0.8138,
+    "ci95": [
+      0.7605,
+      0.8574
+    ]
+  },
+  "avg_turns": 12.07,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 81.8,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@human@seq@bold --structures any --game-seed <seed>"
+}

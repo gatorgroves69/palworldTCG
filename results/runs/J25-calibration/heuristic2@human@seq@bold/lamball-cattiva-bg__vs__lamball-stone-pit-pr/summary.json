@@ -1,0 +1,47 @@
+{
+  "deck": "lamball-cattiva-bg",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2@human@seq@bold",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 290,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 422,
+  "losses": 78,
+  "draws": 0,
+  "win_rate": 0.844,
+  "ci95": [
+    0.8096,
+    0.8732
+  ],
+  "going_first": {
+    "games": 272,
+    "wins": 232,
+    "losses": 40,
+    "draws": 0,
+    "win_rate": 0.8529,
+    "ci95": [
+      0.8059,
+      0.8901
+    ]
+  },
+  "going_second": {
+    "games": 228,
+    "wins": 190,
+    "losses": 38,
+    "draws": 0,
+    "win_rate": 0.8333,
+    "ci95": [
+      0.7795,
+      0.8761
+    ]
+  },
+  "avg_turns": 12.14,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 96.4,
+  "replay": "python -m sim replay --deck data/decks/lamball-cattiva-bg.txt --opp data/decks/lamball-stone-pit-pr.txt --bot heuristic2@human@seq@bold --structures any --game-seed <seed>"
+}

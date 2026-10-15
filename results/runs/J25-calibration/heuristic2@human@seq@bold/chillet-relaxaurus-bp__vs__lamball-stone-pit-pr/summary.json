@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-bp",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2@human@seq@bold",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 275,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 287,
+  "losses": 213,
+  "draws": 0,
+  "win_rate": 0.574,
+  "ci95": [
+    0.5303,
+    0.6166
+  ],
+  "going_first": {
+    "games": 247,
+    "wins": 151,
+    "losses": 96,
+    "draws": 0,
+    "win_rate": 0.6113,
+    "ci95": [
+      0.5493,
+      0.67
+    ]
+  },
+  "going_second": {
+    "games": 253,
+    "wins": 136,
+    "losses": 117,
+    "draws": 0,
+    "win_rate": 0.5375,
+    "ci95": [
+      0.476,
+      0.598
+    ]
+  },
+  "avg_turns": 17.66,
+  "end_reasons": {
+    "deckout": 13,
+    "life": 487
+  },
+  "seconds": 243.6,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-bp.txt --opp data/decks/lamball-stone-pit-pr.txt --bot heuristic2@human@seq@bold --structures any --game-seed <seed>"
+}
