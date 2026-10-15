@@ -22,3 +22,7 @@ The original execution session was lost around 17:20 UTC. No final exit/end arti
 ## Resumed attempt — 2026-10-15 17:30 UTC
 
 The exact command above resumed at 2026-10-15T17:22:30Z on the same frozen execution checkout. Separate evidence: `dot-resume-20261015-1722.start` and `.log`; original attempt evidence remains intact. At this checkpoint 294 complete screening rows remain saved, while the resumed attempt recomputes its baseline before skipping completed screening swaps. Running, with no final verdict or exit/end artifact yet.
+
+## Second resumed attempt — 2026-10-15 18:00 UTC
+
+The 17:22 execution session was lost by 17:51 UTC without a final exit/end artifact. All 323 completed screening rows were already published and survived locally. The exact authorized command resumed again at 2026-10-15T17:51:40Z on the frozen checkout. Separate evidence: `dot-resume-20261015-1751.start` and `.log`; all earlier attempt logs are retained. At this checkpoint the new attempt is recomputing its baseline with the 323 completed scores preserved. No final verdict is available.
