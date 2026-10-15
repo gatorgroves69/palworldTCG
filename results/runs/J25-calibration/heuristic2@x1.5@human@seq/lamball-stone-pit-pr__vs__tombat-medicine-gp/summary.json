@@ -1,0 +1,48 @@
+{
+  "deck": "lamball-stone-pit-pr",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@x1.5@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 296,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 256,
+  "losses": 244,
+  "draws": 0,
+  "win_rate": 0.512,
+  "ci95": [
+    0.4683,
+    0.5556
+  ],
+  "going_first": {
+    "games": 248,
+    "wins": 118,
+    "losses": 130,
+    "draws": 0,
+    "win_rate": 0.4758,
+    "ci95": [
+      0.4145,
+      0.5379
+    ]
+  },
+  "going_second": {
+    "games": 252,
+    "wins": 138,
+    "losses": 114,
+    "draws": 0,
+    "win_rate": 0.5476,
+    "ci95": [
+      0.4859,
+      0.6079
+    ]
+  },
+  "avg_turns": 16.65,
+  "end_reasons": {
+    "deckout": 9,
+    "life": 491
+  },
+  "seconds": 374.6,
+  "replay": "python -m sim replay --deck data/decks/lamball-stone-pit-pr.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@x1.5@human@seq --structures any --game-seed <seed>"
+}

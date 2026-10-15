@@ -53,3 +53,21 @@ This checkpoint preserves 229 validated pair summaries and the fifth variant's e
 ## Frozen execution provenance — verified 2026-10-15 05:45 UTC
 
 J25 continues on source commit 815792ca3fa13ef2d384ae803b0f8033b3cbbb0d. All 1,247 tracked engine/bots/sim/cards/data file blob hashes were verified against that commit, with no protected-path working-tree changes. Remote main has since advanced to 05aa425edc0a0e550412f2cb99771efa2afd57d0, including changed @seq behavior; those changes are preserved by publication but were not pulled into the running source. These J25 results characterize the original frozen implementation, not the later @seq implementation on main.
+
+
+## J25 six-variant grid complete — verified 2026-10-15 07:46 UTC
+
+All six variants completed 45 pairs each, 500 games per pair: 270 pair summaries / 135,000 games. All summaries passed exact 500-record raw validation; the sixth matrix agrees with all 45 summaries and calibration data, and its Markdown matches the renderer exactly.
+
+Calibration headlines (36 calibrated pairs; passing means within ±5 percentage points; noise-consistent means |z| ≤ 2):
+
+- heuristic2: 7/36 passing, MAE 10.05 points, 10/36 noise-consistent.
+- heuristic2@human: 14/36 passing, MAE 8.54 points, 16/36 noise-consistent.
+- heuristic2@seq: 7/36 passing, MAE 10.09 points, 11/36 noise-consistent.
+- heuristic2@human@seq: 14/36 passing, MAE 9.01 points, 15/36 noise-consistent.
+- heuristic2@human@seq@bold: 13/36 passing, MAE 9.36 points, 13/36 noise-consistent.
+- heuristic2@x1.5@human@seq: 13/36 passing, MAE 8.98 points, 14/36 noise-consistent.
+
+Human-only has the lowest observed mean absolute calibration error in this grid. This is a descriptive comparison, not a statistical superiority claim or automatic bot adoption decision. All results use frozen source 815792c and matchups_2026-10-12.json, matrix seed 255, structures_attackable=any. They do not evaluate the later @seq implementation on main.
+
+Publication handoff: all 270 summaries and six exact matrix JSON/Markdown pairs are preserved on main. Raw games.jsonl publication remains outstanding; raw evidence was validated locally but must not be described as remotely backed up. No extra jobs or protected-code edits were made. Earlier dated checkpoint statuses above are historical.
