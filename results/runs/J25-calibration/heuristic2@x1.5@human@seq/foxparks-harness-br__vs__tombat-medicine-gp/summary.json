@@ -1,0 +1,48 @@
+{
+  "deck": "foxparks-harness-br",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@x1.5@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 289,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 263,
+  "losses": 237,
+  "draws": 0,
+  "win_rate": 0.526,
+  "ci95": [
+    0.4822,
+    0.5694
+  ],
+  "going_first": {
+    "games": 255,
+    "wins": 123,
+    "losses": 132,
+    "draws": 0,
+    "win_rate": 0.4824,
+    "ci95": [
+      0.4217,
+      0.5435
+    ]
+  },
+  "going_second": {
+    "games": 245,
+    "wins": 140,
+    "losses": 105,
+    "draws": 0,
+    "win_rate": 0.5714,
+    "ci95": [
+      0.5088,
+      0.6318
+    ]
+  },
+  "avg_turns": 15.63,
+  "end_reasons": {
+    "deckout": 5,
+    "life": 495
+  },
+  "seconds": 108.1,
+  "replay": "python -m sim replay --deck data/decks/foxparks-harness-br.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@x1.5@human@seq --structures any --game-seed <seed>"
+}
