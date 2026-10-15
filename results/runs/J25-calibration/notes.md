@@ -19,3 +19,12 @@ The authorized loop has advanced to heuristic2@human. The other five variants ar
 All 45 pairs completed, 500 games each (22,500 total), matrix seed 255, frozen source 815792c. All summaries passed the same exact raw-record validation above. Matrix JSON agrees with all summaries and matchups_2026-10-12.json; exact Markdown matches renderer output. The human variant has lower mean absolute calibration error than baseline (8.5 vs 10.1 points) in this grid; the remaining four variants are unfinished.
 
 This checkpoint saves all 90 pair summaries for the first two completed variants, both matrix artifacts for heuristic2@human, and the first completed heuristic2@seq pair summary (91 summaries total). Raw JSONL publication remains pending. The loop is now running heuristic2@seq. Prior progress statements above describe their dated checkpoints; this section is the current status. No code changes or automatic adoption.
+
+## heuristic2@seq — complete, verified 2026-10-15 00:55 UTC
+
+7/36 pairs within ±5 points; mean absolute difference 10.1 points.
+11/36 pairs consistent with the real data allowing for both sample sizes (|z| ≤ 2).
+
+All 45 pairs completed, 500 games each (22,500 total), matrix seed 255, frozen source 815792c. All summaries passed exact raw-record validation. Matrix JSON agrees with all summaries and matchups_2026-10-12.json; exact Markdown matches renderer output. The unrounded mean absolute differences are 0.1009 for seq and 0.1005 for baseline; both display as 10.1 points. The human-only variant remains the lowest-error completed variant at 8.5 points; three variants remain unfinished and no default-bot decision is made.
+
+This checkpoint preserves all 135 summaries and matrices for the first three variants plus three completed heuristic2@human@seq summaries (138 total). Raw JSONL publication remains outstanding. The fourth variant is incomplete. Existing historical sections remain unchanged; this is the latest verified checkpoint. No protected-code changes or additional jobs.
