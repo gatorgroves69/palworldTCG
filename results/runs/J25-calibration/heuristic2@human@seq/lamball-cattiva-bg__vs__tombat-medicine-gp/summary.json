@@ -1,0 +1,47 @@
+{
+  "deck": "lamball-cattiva-bg",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 293,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 376,
+  "losses": 124,
+  "draws": 0,
+  "win_rate": 0.752,
+  "ci95": [
+    0.7123,
+    0.7878
+  ],
+  "going_first": {
+    "games": 257,
+    "wins": 190,
+    "losses": 67,
+    "draws": 0,
+    "win_rate": 0.7393,
+    "ci95": [
+      0.6824,
+      0.7892
+    ]
+  },
+  "going_second": {
+    "games": 243,
+    "wins": 186,
+    "losses": 57,
+    "draws": 0,
+    "win_rate": 0.7654,
+    "ci95": [
+      0.7083,
+      0.8143
+    ]
+  },
+  "avg_turns": 11.69,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 161.0,
+  "replay": "python -m sim replay --deck data/decks/lamball-cattiva-bg.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@human@seq --structures any --game-seed <seed>"
+}

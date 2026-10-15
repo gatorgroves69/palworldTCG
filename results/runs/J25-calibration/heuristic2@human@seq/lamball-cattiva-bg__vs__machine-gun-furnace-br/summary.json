@@ -1,0 +1,48 @@
+{
+  "deck": "lamball-cattiva-bg",
+  "opp": "machine-gun-furnace-br",
+  "bot": "heuristic2@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 291,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 362,
+  "losses": 138,
+  "draws": 0,
+  "win_rate": 0.724,
+  "ci95": [
+    0.6832,
+    0.7614
+  ],
+  "going_first": {
+    "games": 253,
+    "wins": 184,
+    "losses": 69,
+    "draws": 0,
+    "win_rate": 0.7273,
+    "ci95": [
+      0.6693,
+      0.7784
+    ]
+  },
+  "going_second": {
+    "games": 247,
+    "wins": 178,
+    "losses": 69,
+    "draws": 0,
+    "win_rate": 0.7206,
+    "ci95": [
+      0.6616,
+      0.7729
+    ]
+  },
+  "avg_turns": 12.73,
+  "end_reasons": {
+    "deckout": 1,
+    "life": 499
+  },
+  "seconds": 112.6,
+  "replay": "python -m sim replay --deck data/decks/lamball-cattiva-bg.txt --opp data/decks/machine-gun-furnace-br.txt --bot heuristic2@human@seq --structures any --game-seed <seed>"
+}
