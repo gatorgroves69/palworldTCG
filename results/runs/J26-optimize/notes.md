@@ -30,3 +30,7 @@ The 17:22 execution session was lost by 17:51 UTC without a final exit/end artif
 ## Third resumed attempt — 2026-10-15 19:30 UTC
 
 The 17:51 execution session was lost by 19:20 UTC without a final exit/end artifact. All 532 completed screening rows survived locally and are included in this checkpoint. The exact authorized command resumed at 2026-10-15T19:21:00Z on the frozen checkout. Separate evidence: `dot-resume-20261015-1921.start` and `.log`; prior attempt logs remain intact. At this checkpoint baseline recomputation is in progress with 532 completed scores preserved; no final verdict exists.
+
+## Round 1 screening complete — 2026-10-15 21:15 UTC
+
+All 801 round-1 screening scores are complete, valid and unique; `run/screen_round1.md` contains all 801 ranks. Screening used heuristic, 400 requested games per candidate, seed 762. The first full sequential candidate list is present (`run/round1_TD01-023_to_TD01-013.txt`, Lamball to Jolthog Cryst), but no completed sequential result or new experiment row is available yet. Rankings are noisy screening leads, not confirmed improvements or adoption decisions. Primary/confirmation remain human/human1 under the exact authorized command.
