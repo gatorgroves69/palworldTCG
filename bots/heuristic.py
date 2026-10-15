@@ -77,6 +77,8 @@ class HeuristicBot(RuleBot):
             opts["open_soul_by_life"] = True
         if getattr(self, "death_value", False):
             opts["death_value"] = True
+        if getattr(self, "struct_scale", 1.0) != 1.0:
+            opts["struct_scale"] = self.struct_scale
         if evaluator is None and opts:
             import functools
             self.evaluate = functools.partial(evaluate, **opts)

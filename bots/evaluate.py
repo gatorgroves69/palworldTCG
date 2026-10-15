@@ -148,7 +148,8 @@ def race_term(game: Game, me: int, leaf: bool) -> float:
 
 def evaluate(game: Game, me: int, leaf: bool = False,
              exposure: tuple[float, float] = EXPOSURE, resource_scale: float = 1.0,
-             open_soul_by_life: bool = False, death_value: bool = False) -> float:
+             open_soul_by_life: bool = False, death_value: bool = False,
+             struct_scale: float = 1.0) -> float:
     """`leaf=True`: scoring at the start of our turn after simulating the opponent's
     reply, so our rested Pals are about to stand and aren't penalized as exposed."""
     if game.winner is not None or game.reason:
@@ -177,8 +178,10 @@ def evaluate(game: Game, me: int, leaf: bool = False,
         score -= v
     score += sum(gear_value(c) for c in P.base if c.type.value == "gear")
     score -= sum(gear_value(c) for c in O.base if c.type.value == "gear")
-    score += sum(structure_value(c) for c in P.structures)
-    score -= sum(structure_value(c) for c in O.structures)
+    # "@structK": an engine structure keeps paying every turn it survives. Real top-50
+    # winners against Stone Pit destroy ~3 of its structures a game; the bots ~1.
+    score += struct_scale * sum(structure_value(c) for c in P.structures)
+    score -= struct_scale * sum(structure_value(c) for c in O.structures)
     for kind in ("material", "ingredient"):
         score += resource_scale * resource_rate(game, P, kind) * min(P.resources[kind], 9)
         score -= resource_scale * resource_rate(game, O, kind) * min(O.resources[kind], 9)
