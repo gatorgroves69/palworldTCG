@@ -235,3 +235,4 @@ The following observed rows are preserved, not certified as a consistent-input s
 | 2026-10-15 23:02 | run | cattiva_dragons_v3 | -2 Cattiva – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent | human | +0.7 ± 1.0 | 0.73 | 4045 | — | **not better (inconclusive)** |
 | 2026-10-15 23:14 | run | cattiva_dragons_v3 | -2 Fuack – Manic Wave Ripper / +2 Cryolinx – Arctic Ordeal | human | -0.2 ± 1.6 | -0.11 | 1618 | — | **not better (futility)** |
 | 2026-10-15 23:26 | run | cattiva_dragons_v3 | -2 Pump-Action Shotgun / +2 Reptyro – Ore Gorger | human | -1.0 ± 1.6 | -0.62 | 1618 | — | **not better (futility)** |
+| 2026-10-15 23:56 | run | cattiva_dragons_v3 | -2 Axel's Strategy / +2 Single-Shot Rifle | human | +0.5 ± 1.0 | 0.50 | 4045 | — | **not better (inconclusive)** |

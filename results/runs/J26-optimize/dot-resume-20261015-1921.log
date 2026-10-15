@@ -2,3 +2,11 @@ optimizing cattiva_dragons_v3; field weights: chillet-relaxaurus-bp 38.9%, lamba
 round 1: incumbent 69.5% ± 0.8 (655s)
   screening 801 swaps x 400 games
   resumed 532 screened swaps from round1_scores.jsonl
+  -2 Lamball – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent: +0.2 ± 1.0 (4045 games) -> not better (inconclusive)
+  -2 Blazehowl – Hellflame Defender / +2 Reptyro – Ore Gorger: -0.0 ± 1.0 (4045 games) -> not better (futility)
+  -2 Cattiva – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent: +0.7 ± 1.0 (4045 games) -> not better (inconclusive)
+  -2 Fuack – Manic Wave Ripper / +2 Cryolinx – Arctic Ordeal: -0.2 ± 1.6 (1618 games) -> not better (futility)
+  -2 Pump-Action Shotgun / +2 Reptyro – Ore Gorger: -1.0 ± 1.6 (1618 games) -> not better (futility)
+  -2 Axel's Strategy / +2 Single-Shot Rifle: +0.5 ± 1.0 (4045 games) -> not better (inconclusive)
+round 1: no swap passed; stopping
+best list: results/runs/J26-optimize/run/best.txt

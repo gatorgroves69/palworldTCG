@@ -34,3 +34,18 @@ The 17:51 execution session was lost by 19:20 UTC without a final exit/end artif
 ## Round 1 screening complete — 2026-10-15 21:15 UTC
 
 All 801 round-1 screening scores are complete, valid and unique; `run/screen_round1.md` contains all 801 ranks. Screening used heuristic, 400 requested games per candidate, seed 762. The first full sequential candidate list is present (`run/round1_TD01-023_to_TD01-013.txt`, Lamball to Jolthog Cryst), but no completed sequential result or new experiment row is available yet. Rankings are noisy screening leads, not confirmed improvements or adoption decisions. Primary/confirmation remain human/human1 under the exact authorized command.
+
+## Complete — 2026-10-15 23:56 UTC
+
+The final resumed attempt exited 0 at 2026-10-15T23:56:17Z. All 801 unique screening scores and ranks, six sequential verdicts, and final start/log/exit/end evidence are preserved. No swap passed the primary human sequential test; no human1 confirmation was triggered. The optimizer stopped after round 1 as designed. best.txt has exactly the original v3 card counts in each section, with canonical ordering (not byte-identical to the input). No deck adoption is implied.
+
+| Swap | Difference ± SE (percentage points) | z | Games/list | Verdict |
+|---|---:|---:|---:|---|
+| -2 Lamball – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent | +0.2 ± 1.0 | 0.24 | 4045 | not better (inconclusive) |
+| -2 Blazehowl – Hellflame Defender / +2 Reptyro – Ore Gorger | -0.0 ± 1.0 | -0.03 | 4045 | not better (futility) |
+| -2 Cattiva – My First Pal / +2 Jolthog Cryst – Stoic Yet Innocent | +0.7 ± 1.0 | 0.73 | 4045 | not better (inconclusive) |
+| -2 Fuack – Manic Wave Ripper / +2 Cryolinx – Arctic Ordeal | -0.2 ± 1.6 | -0.11 | 1618 | not better (futility) |
+| -2 Pump-Action Shotgun / +2 Reptyro – Ore Gorger | -1.0 ± 1.6 | -0.62 | 1618 | not better (futility) |
+| -2 Axel's Strategy / +2 Single-Shot Rifle | +0.5 ± 1.0 | 0.50 | 4045 | not better (inconclusive) |
+
+Validated all 1260 protected-file SHA-256 hashes unchanged against the frozen execution baseline, and the original v3 input byte-for-byte against frozen HEAD. Screening used heuristic, 400 requested games per swap, seed 762; primary/confirmation configuration was human/human1. Earlier running/interruption checkpoints above are historical. J26 is complete and stopped; no further job started.

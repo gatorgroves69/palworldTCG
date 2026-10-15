@@ -716,3 +716,8 @@ Raw games.jsonl publication remains outstanding; records were validated locally,
 Bobby explicitly approved J26 as written in the latest handoff. Started 2026-10-15T15:15:28Z on frozen source cb14dde81b161ac0752012bcf5b5c59e6114cb48: v3, two rounds, seed 261, human/human1, BP01/TD01/TD02, tracked run directory. Running; no completed screened swap or final result at this initial checkpoint. Exact command and evidence: `results/runs/J26-optimize/notes.md` and `dot-run-20261015-1515.*`.
 
 Owned paths: `results/runs/J26-optimize/`, resulting J26 rows in `results/experiments.md`, and this dot section. Publication uses a separate checkout, stable complete JSONL lines, pull before every push, append-only main, no rebase/force. Next checkpoint 15:30 UTC, then every 15 minutes while active. No protected-code/input edits, other jobs or automatic adoption.
+
+
+### J26 complete — 2026-10-15 23:56 UTC
+
+Exit 0 at 2026-10-15T23:56:17Z; 801 unique screening scores and all six sequential verdicts are complete. No swap passed primary human testing, so no human1 confirmation or second round occurred. best.txt preserves exactly the original v3 section/card counts, reordered canonically. Full verdicts, validation and final attempt evidence are in `results/runs/J26-optimize/notes.md` and `dot-resume-20261015-1921.*`; exact result JSON is in `sequential-results.jsonl`. All 1260 protected-file SHA-256 hashes and the v3 input were verified unchanged on frozen source cb14dde81b161ac0752012bcf5b5c59e6114cb48. Earlier running statuses above are historical. STOPPED at the authorized J26 boundary; no other job or adoption. Next owner: Claude to review; Bobby must authorize any further execution.
