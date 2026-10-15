@@ -48,3 +48,8 @@ This checkpoint preserves 216 validated pair summaries and the fourth variant's 
 All 45 pairs completed, 500 games each (22,500 total), matrix seed 255, frozen source 815792c. All summaries passed exact raw-record validation. Matrix JSON agrees with all summaries and matchups_2026-10-12.json; exact Markdown matches renderer output. Human-only remains the lowest-error completed variant at 8.5 points. The sixth variant remains unfinished; no default-bot adoption decision is made.
 
 This checkpoint preserves 229 validated pair summaries and the fifth variant's exact matrix.json/matrix.md. Raw JSONL publication remains outstanding. Existing historical sections remain unchanged. No protected-code changes or additional jobs.
+
+
+## Frozen execution provenance — verified 2026-10-15 05:45 UTC
+
+J25 continues on source commit 815792ca3fa13ef2d384ae803b0f8033b3cbbb0d. All 1,247 tracked engine/bots/sim/cards/data file blob hashes were verified against that commit, with no protected-path working-tree changes. Remote main has since advanced to 05aa425edc0a0e550412f2cb99771efa2afd57d0, including changed @seq behavior; those changes are preserved by publication but were not pulled into the running source. These J25 results characterize the original frozen implementation, not the later @seq implementation on main.
