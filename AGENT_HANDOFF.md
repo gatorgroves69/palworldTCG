@@ -709,3 +709,10 @@ All six authorized matrices are complete: 270 validated 500-game pair summaries 
 Execution remained frozen at 815792ca3fa13ef2d384ae803b0f8033b3cbbb0d; all 1,247 tracked protected-file blob hashes were checked unchanged. These results predate the later @seq behavior on main. Final resumed loop started 2026-10-15T05:22:12Z and exited 0 at 2026-10-15T07:45:37Z; exact final .start/.exit/.end/.log evidence is preserved under results/runs/J25-calibration/dot-resume-20261015-0522.*. Earlier checkpoint statuses above are historical.
 
 Raw games.jsonl publication remains outstanding; records were validated locally, not confirmed remotely backed up. No uncertain raw upload was retried. STOPPED at the approved J25 boundary: no J26 or other new job, no protected-code changes. Next owner: Claude to review the completed grid; Bobby must authorize any further execution.
+
+
+### J26 started — 2026-10-15 15:17 UTC
+
+Bobby explicitly approved J26 as written in the latest handoff. Started 2026-10-15T15:15:28Z on frozen source cb14dde81b161ac0752012bcf5b5c59e6114cb48: v3, two rounds, seed 261, human/human1, BP01/TD01/TD02, tracked run directory. Running; no completed screened swap or final result at this initial checkpoint. Exact command and evidence: `results/runs/J26-optimize/notes.md` and `dot-run-20261015-1515.*`.
+
+Owned paths: `results/runs/J26-optimize/`, resulting J26 rows in `results/experiments.md`, and this dot section. Publication uses a separate checkout, stable complete JSONL lines, pull before every push, append-only main, no rebase/force. Next checkpoint 15:30 UTC, then every 15 minutes while active. No protected-code/input edits, other jobs or automatic adoption.
