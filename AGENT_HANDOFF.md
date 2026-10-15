@@ -641,19 +641,9 @@ python3 -m sim optimize --deck results/runs/cattiva_dragons_v2.txt --rounds 2 --
 
 J24 reviewed (`results/experiments.md`): nothing beats two Fuacks against Stone Pit; Handgun and Crystal Breath closed; 4 Rifle flat. No list change. Thank you, Dots: clean run, good provenance. J25 interim noted (`@human` MAE 8.5 vs 10.1). Nothing new queued; J26 waits for J25.
 
-**J27 (needs Bobby's direct approval; Dots after J25, or Hermes): a different angle on Stone Pit, on Bobby's 4-Jormuntide list `cattiva_dragons_v3.txt`.** Same shape as J24: Part 1 vs the top-50 Stone Pit list with the engine bots (same seed, baseline is the control), Part 2 full-field sequential with the default bot. 7 lines, about 4 hours. Code `2c7ba53` or later.
-```
-python3 -m sim run --deck results/runs/cattiva_dragons_v3.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 271 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J27-stonepit/baseline
-python3 -m sim run --deck results/runs/J27-A_dresser.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 271 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J27-stonepit/A_dresser
-python3 -m sim run --deck results/runs/J27-B_hotspring.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 271 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J27-stonepit/B_hotspring
-python3 -m sim run --deck results/runs/J27-C_dresser_for_lamball.txt --opp results/runs/palify_consensus/lamball-stone-pit-pr.txt --games 2000 --seed 271 --bot heuristic2@human@seq --no-report --logs 0 --out results/runs/J27-stonepit/C_dresser_for_lamball
-python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J27-A_dresser.txt --games 12000 --seed 272 --bot heuristic2 --sequential --out results/runs/J27-compare/A_dresser.md
-python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J27-B_hotspring.txt --games 12000 --seed 273 --bot heuristic2 --sequential --out results/runs/J27-compare/B_hotspring.md
-python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J27-C_dresser_for_lamball.txt --games 12000 --seed 274 --bot heuristic2 --sequential --out results/runs/J27-compare/C_dresser_for_lamball.md
-```
-Variants: A = −2 Fuack +2 Antique Dresser (discard X: X Pals get +1000/+1 Strike, a finisher paid with cards, not souls; Bobby ends turns with ~4 cards in hand in his real games); B = −2 Fuack +2 Hot Spring (rest and lock 2 Pals costing ◇6 or less: Menasting, Leezpunk); C = −2 Lamball +2 Antique Dresser. All pass `cards.validate`, BP01/TD only. Checked on the Mac (60 games each): the bots play and activate both cards. Note the simulated Stone Pit still deals about half the damage real pilots do, so Part 1 is a difference between versions, not an absolute rate; Part 2 is the decisive number. Record Part 1 rates in `results/runs/J27-stonepit/notes.md` and Telegram Bobby the 7 headlines.
+**J27 withdrawn (2026-10-14):** both candidates (Antique Dresser, Hot Spring) lost a 2,000-game Mac pre-check (−8.3 and −4.1); see `results/experiments.md`. Do not run it. The `J27-*.txt` lists stay for the record.
 
-Next Claude action: BP02 card check on release; review J25 when the six matrices are in, then decide the default bot; J26 and J27 after that. When BP02 releases, verify card texts, then J15.
+Next Claude action: BP02 card check on release; review J25 when the six matrices are in, then decide the default bot; J26 after that. When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
