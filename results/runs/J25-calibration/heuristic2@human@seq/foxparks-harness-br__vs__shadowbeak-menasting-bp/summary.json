@@ -1,0 +1,48 @@
+{
+  "deck": "foxparks-harness-br",
+  "opp": "shadowbeak-menasting-bp",
+  "bot": "heuristic2@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 288,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 314,
+  "losses": 186,
+  "draws": 0,
+  "win_rate": 0.628,
+  "ci95": [
+    0.5848,
+    0.6692
+  ],
+  "going_first": {
+    "games": 247,
+    "wins": 141,
+    "losses": 106,
+    "draws": 0,
+    "win_rate": 0.5709,
+    "ci95": [
+      0.5085,
+      0.631
+    ]
+  },
+  "going_second": {
+    "games": 253,
+    "wins": 173,
+    "losses": 80,
+    "draws": 0,
+    "win_rate": 0.6838,
+    "ci95": [
+      0.6241,
+      0.738
+    ]
+  },
+  "avg_turns": 15.24,
+  "end_reasons": {
+    "deckout": 31,
+    "life": 469
+  },
+  "seconds": 100.0,
+  "replay": "python -m sim replay --deck data/decks/foxparks-harness-br.txt --opp data/decks/shadowbeak-menasting-bp.txt --bot heuristic2@human@seq --structures any --game-seed <seed>"
+}
