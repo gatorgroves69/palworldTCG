@@ -149,7 +149,7 @@ def race_term(game: Game, me: int, leaf: bool) -> float:
 def evaluate(game: Game, me: int, leaf: bool = False,
              exposure: tuple[float, float] = EXPOSURE, resource_scale: float = 1.0,
              open_soul_by_life: bool = False, death_value: bool = False,
-             struct_scale: float = 1.0) -> float:
+             struct_scale: float = 1.0, kill_scale: float = 1.0) -> float:
     """`leaf=True`: scoring at the start of our turn after simulating the opponent's
     reply, so our rested Pals are about to stand and aren't penalized as exposed."""
     if game.winner is not None or game.reason:
@@ -172,7 +172,9 @@ def evaluate(game: Game, me: int, leaf: bool = False,
             v *= 0.5
         score += v
     for c in O.pals:
-        v = pal_value(game, c)
+        # "@killK": real top-50 players attack Pals 0.9–1.5 times a turn, the bots 0.1–0.3;
+        # an enemy Pal on the board is worth K× to them (so killing it is worth K×).
+        v = pal_value(game, c) * kill_scale
         if _locked(game, c, True):
             v *= 0.5
         score -= v

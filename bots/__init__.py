@@ -60,6 +60,8 @@ def bot_class(name: str):
             attrs["exposure_default"] = (0.85, 0.95)  # real Stone Pit deals 5.0/game, bot 2.9)
         elif o == "seq":  # assign engine structures before attacking (Palify calibration)
             attrs["engine_first"] = True
+        elif o.startswith("kill"):  # enemy Pals on the board worth K times more (trade into them)
+            attrs["kill_scale"] = float(o[4:] or 2.0)
         elif o.startswith("struct"):  # opponent/own structures worth K times more (kill the engine)
             attrs["struct_scale"] = float(o[6:] or 2.0)
         elif o.startswith("engine"):  # Material/Ingredient worth K times more (experiment)
