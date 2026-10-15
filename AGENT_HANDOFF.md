@@ -695,3 +695,12 @@ All seven J24 lines are complete and artifact-verified on frozen execution code 
 Complete four-line Stone Pit rates and three field headlines are in `results/runs/J24-compare/notes.md`; raw Stone Pit summaries/records are in `results/runs/J24-stonepit/`. Each J24 line has its own append-only main checkpoint. No deck adoption, protected-code edit, input change or J26 work was made.
 
 Next: synchronize the execution checkout safely with current main, preserving untracked evidence, then resume exactly the authorized six-variant J25 loop above. J25 is queued, not yet resumed at this checkpoint. Publish `results/runs/J25-calibration/` every 15 minutes with non-force, append-only main commits; preserve complete pair summaries for resume. No rebase or force-push.
+
+
+### J25 complete — 2026-10-15 07:48 UTC
+
+All six authorized matrices are complete: 270 validated 500-game pair summaries / 135,000 games, plus six exact matrix.json/matrix.md pairs, published and verified at d75f3578f3667a75fc2c33d916faa7401a72d496. Six calibration headlines and validation details are in results/runs/J25-calibration/notes.md. Human-only has the lowest observed MAE (8.54 percentage points); no bot adoption or statistical superiority claim is made.
+
+Execution remained frozen at 815792ca3fa13ef2d384ae803b0f8033b3cbbb0d; all 1,247 tracked protected-file blob hashes were checked unchanged. These results predate the later @seq behavior on main. Final resumed loop started 2026-10-15T05:22:12Z and exited 0 at 2026-10-15T07:45:37Z; exact final .start/.exit/.end/.log evidence is preserved under results/runs/J25-calibration/dot-resume-20261015-0522.*. Earlier checkpoint statuses above are historical.
+
+Raw games.jsonl publication remains outstanding; records were validated locally, not confirmed remotely backed up. No uncertain raw upload was retried. STOPPED at the approved J25 boundary: no J26 or other new job, no protected-code changes. Next owner: Claude to review the completed grid; Bobby must authorize any further execution.
