@@ -1,0 +1,48 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "machine-gun-furnace-br",
+  "bot": "heuristic2@x1.5@human@seq",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 261,
+  "commit": "815792c",
+  "games": 500,
+  "wins": 376,
+  "losses": 124,
+  "draws": 0,
+  "win_rate": 0.752,
+  "ci95": [
+    0.7123,
+    0.7878
+  ],
+  "going_first": {
+    "games": 254,
+    "wins": 191,
+    "losses": 63,
+    "draws": 0,
+    "win_rate": 0.752,
+    "ci95": [
+      0.6954,
+      0.8011
+    ]
+  },
+  "going_second": {
+    "games": 246,
+    "wins": 185,
+    "losses": 61,
+    "draws": 0,
+    "win_rate": 0.752,
+    "ci95": [
+      0.6945,
+      0.8018
+    ]
+  },
+  "avg_turns": 14.51,
+  "end_reasons": {
+    "deckout": 11,
+    "life": 489
+  },
+  "seconds": 165.5,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/machine-gun-furnace-br.txt --bot heuristic2@x1.5@human@seq --structures any --game-seed <seed>"
+}
