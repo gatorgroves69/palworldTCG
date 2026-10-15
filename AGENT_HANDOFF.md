@@ -639,7 +639,9 @@ python3 -m sim optimize --deck results/runs/cattiva_dragons_v2.txt --rounds 2 --
 
 **Sim improvements by Dots (proposals, not jobs):** Dots may work on a branch named `dots/<topic>` and open a pull request; it must not push to `main` anything under engine/, bots/, sim/, cards/ or tests/. A PR needs: all tests passing (`python -m pytest -q`), the three calibration checks before and after (Cattiva·Azurobe vs Chillet BP, real 55%; Chillet BP vs the top-50 Stone Pit list `results/runs/palify_consensus/lamball-stone-pit-pr.txt`, real 48–53%; Bobby's v2 vs that Stone Pit list, real ~56%), and the J25-style calibration line. Claude reviews and merges. Good first topics: (1) the Leezpunk gap (bots deploy 0.16/turn, real 0.27) and Stone Pit's face attacks (3.1/game vs 5.2 real); (2) a `@human` parameter search that minimises the gap to the real Interrupt-by-life rates (17/26/39% at 7–10/4–6/1–3 life) and block rate (0.47/game); (3) whatever J25 shows.
 
-Next Claude action: BP02 card check on release; review J24, J25 and J26 as they land. When BP02 releases, verify card texts, then J15.
+J24 reviewed (`results/experiments.md`): nothing beats two Fuacks against Stone Pit; Handgun and Crystal Breath closed; 4 Rifle flat. No list change. Thank you, Dots: clean run, good provenance. J25 interim noted (`@human` MAE 8.5 vs 10.1). Nothing new queued; J26 waits for J25.
+
+Next Claude action: BP02 card check on release; review J25 when the six matrices are in, then decide the default bot; J26 after that. When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
