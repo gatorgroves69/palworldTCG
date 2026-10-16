@@ -49,3 +49,10 @@ Exit 0 at 2026-10-16T22:09:36Z. Report matches stdout. All 1268 protected/input 
 **human**, 4000 games per list, seed 385: A 68.7% -> B 64.2% (diff -4.6 ± 1.0, z -4.4) [sequential: stopped early, clear after 4000 games]
 
 Waiting for verified publication before line 6.
+
+## Line 6 complete / J32 finished
+Exit 0 at 2026-10-16T22:24:38Z. Report matches stdout. All 1268 protected/input hashes unchanged. Actual opponent counts sum to 2001 games/list.
+
+**human**, 2000 games per list, seed 386: A 71.4% -> B 65.9% (diff -5.4 ± 1.4, z -3.8) [sequential: stopped early, clear after 2000 games]
+
+All six authorized lines completed with exit 0. No interruptions or retries. No further job or automatic adoption. Final publication pending. Compare commands generate aggregate reports, not raw game JSONL; no raw records are claimed.

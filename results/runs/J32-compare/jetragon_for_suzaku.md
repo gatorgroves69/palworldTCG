@@ -1,0 +1,17 @@
+
+A = `results/runs/cattiva_dragons_v2.txt`, B = `results/runs/Q-jetragon_for_suzaku.txt`
+
+**human**, 2000 games per list, seed 386: A 71.4% -> B 65.9% (diff -5.4 ± 1.4, z -3.8) [sequential: stopped early, clear after 2000 games]
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.9% | 66.4 | 60.9 | -5.5 | 777 |
+| lamball-stone-pit-pr | 13.7% | 85.4 | 80.7 | -4.7 | 274 |
+| chillet-relaxaurus-br | 11.8% | 60.8 | 54.0 | -6.8 | 237 |
+| foxparks-harness-br | 7.2% | 72.2 | 71.5 | -0.7 | 144 |
+| tombat-medicine-gp | 6.2% | 79.2 | 75.2 | -4.0 | 125 |
+| lamball-cattiva-bg | 5.6% | 61.6 | 56.2 | -5.4 | 112 |
+| cattiva-azurobe-br | 5.2% | 72.4 | 67.6 | -4.8 | 105 |
+| shadowbeak-menasting-bp | 5.0% | 84.0 | 74.0 | -10.0 | 100 |
+| machine-gun-furnace-br | 4.7% | 83.2 | 77.9 | -5.3 | 95 |
+| chillet-relaxaurus-bg | 1.6% | 71.9 | 56.2 | -15.6 | 32 |
