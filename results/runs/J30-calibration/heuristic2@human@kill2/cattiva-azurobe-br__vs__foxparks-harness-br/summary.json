@@ -1,0 +1,48 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "foxparks-harness-br",
+  "bot": "heuristic2@human@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 258,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 302,
+  "losses": 198,
+  "draws": 0,
+  "win_rate": 0.604,
+  "ci95": [
+    0.5605,
+    0.6459
+  ],
+  "going_first": {
+    "games": 254,
+    "wins": 155,
+    "losses": 99,
+    "draws": 0,
+    "win_rate": 0.6102,
+    "ci95": [
+      0.549,
+      0.6681
+    ]
+  },
+  "going_second": {
+    "games": 246,
+    "wins": 147,
+    "losses": 99,
+    "draws": 0,
+    "win_rate": 0.5976,
+    "ci95": [
+      0.5352,
+      0.6569
+    ]
+  },
+  "avg_turns": 14.69,
+  "end_reasons": {
+    "deckout": 1,
+    "life": 499
+  },
+  "seconds": 61.2,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/foxparks-harness-br.txt --bot heuristic2@human@kill2 --structures any --game-seed <seed>"
+}
