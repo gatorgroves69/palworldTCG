@@ -699,7 +699,17 @@ J32 reviewed: Frostallion even in a lucky slot (−0.7 / −0.4); Gambits and Je
 python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r4_frostallion.txt --games 12000 --seed 376 --bot human --sequential --out results/runs/J31-compare/r4_frostallion.md
 ```
 
-Next Claude action: review J31's Quivern lines and r4; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+**J33 (needs Bobby's direct approval; whichever runner is free): Bobby's package ideas, on v3.** 3 compares plus 2 gauntlets for the new Swee deck. About 4 hours. Code at the commit below or later (Swee cards and the 8-copy rule are new).
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-A_myfirst_axels.txt --games 12000 --seed 391 --bot human --sequential --out results/runs/J33-compare/A_myfirst_axels.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-B_myfirst_heavy.txt --games 12000 --seed 392 --bot human --sequential --out results/runs/J33-compare/B_myfirst_heavy.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-C_orserk_flambelle.txt --games 12000 --seed 393 --bot human --sequential --out results/runs/J33-compare/C_orserk_flambelle.md
+python3 -m sim gauntlet --deck results/runs/swee_br.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/swee_br
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons_v3.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/v3
+```
+Variants: A = −2 Fuack +2 Chikipi, −2 Axel's +2 The Adventure Begins (3 different "My First" names → all Pals +1000/+5 Strike); B = −4 Fuack +4 Chikipi, −2 Axel's +2 The Adventure Begins; C = −2 Fuack +2 Flambelle – Feverish Tears (rest: 2 Material), −2 Kitsun +2 Orserk (Material-powered Dragon). The two gauntlets put the first Swee list and v3 against the same field, same seed. Telegram Bobby the headlines.
+
+Next Claude action: review J31's Quivern lines, r4 and J33; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 

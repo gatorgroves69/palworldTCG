@@ -385,3 +385,69 @@ class FrostallionSaddle(CardImpl):
             "opponent's Pals.\nACT [Rest this card] Choose 1 Pal, and it gets Power +200 until "
             "end of turn.")
     acts = [ActAbility("+200 power", _plus_power200, rest_self=True)]
+
+
+# ---------------------------------------------------------------------------------------------
+# The Swee package (added 2026-10-16). "Main name" is the part before " – ".
+
+def _is_swee(c) -> bool:
+    return c.is_pal and c.defn.main_name == "Swee"
+
+
+def _swee_family(c) -> bool:
+    return c.is_pal and c.defn.main_name in ("Swee", "Sweepa")
+
+
+# BP02-034 Swee – Hibernating Together (◇3 400/S1)
+# CONT You may put up to 8 cards with the same card name as this card into your deck.
+# AUTO OnDeploy If you have a total of 3 or more main name 《Sweepa》 and/or 《Swee》 Pals,
+# draw 1 card.
+# The deck-building CONT is enforced in engine/deck.copy_limit.
+@reg
+class Swee(CardImpl):
+    code = "BP02-034"
+    text = ("CONT You may put up to 8 cards with the same card name as this card into your deck.\n"
+            "AUTO OnDeploy If you have a total of 3 or more main name 《Sweepa》 and/or 《Swee》 "
+            "Pals, draw 1 card.")
+
+    def on_deploy(self, game, card):
+        if sum(_swee_family(c) for c in game.players[card.owner].pals) >= 3:
+            game.draw(card.owner)
+
+
+# BP02-027 Sweepa – Record Breaker (◇6 1200/S2, lucky)
+# AUTO OnDeploy Choose up to 101 main name 《Swee》 Pals from your hand, and deploy them.
+@reg
+class Sweepa(CardImpl):
+    code = "BP02-027"
+    text = "AUTO OnDeploy Choose up to 101 main name 《Swee》 Pals from your hand, and deploy them."
+
+    def on_deploy(self, game, card):
+        p = card.owner
+        swees = [c for c in game.players[p].hand if _is_swee(c)]
+        for c in game.choose_cards(p, "Sweepa: deploy Swee from hand", swees, 101, up_to=True,
+                                   intent="deploy"):
+            game.deploy(c)
+
+
+# BP02-045 Sweepa Saddle (Gear ◇3)
+# AUTO OnDeploy Reveal the top 5 cards of your deck, choose any number of main name 《Swee》
+# Pals from among them, add them to hand, and shuffle the rest of the cards with the deck.
+# ACT [Rest this card] Choose 1 Pal, and it gets Power +200 until end of turn.
+@reg
+class SweepaSaddle(CardImpl):
+    code = "BP02-045"
+    text = ("AUTO OnDeploy Reveal the top 5 cards of your deck, choose any number of main name "
+            "《Swee》 Pals from among them, add them to hand, and shuffle the rest of the cards "
+            "with the deck.\nACT [Rest this card] Choose 1 Pal, and it gets Power +200 until end "
+            "of turn.")
+    acts = [ActAbility("+200 power", _plus_power200, rest_self=True)]
+
+    def on_deploy(self, game, card):
+        p = card.owner
+        top = look_top(game, p, 5)
+        for c in game.choose_cards(p, "Sweepa Saddle: take Swee", [c for c in top if _is_swee(c)],
+                                   5, up_to=True, intent="recover"):
+            game.move(c, Zone.HAND)
+            game.log(f"  {c.name} goes to the hand")
+        shuffle_deck(game, p)
