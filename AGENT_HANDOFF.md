@@ -792,3 +792,7 @@ Line 1 complete, exit 0: Frostallion for Jormuntide on v3, human seed 381, 6000 
 ### J32 line 2 checkpoint — 2026-10-16 20:45 UTC
 
 Lines 1–2 complete. Axel's Gambit for Jormuntide on v3 (human seed 382): A 68.3% to B 63.0%, diff -5.3 ± 1.5 points, z -3.6; clear early stop at 2000 nominal games/list (2001 actual), exit 0. Exact report and execution evidence in `results/runs/J32-compare/`; all 1268 protected/input hashes unchanged. No generated experiment rows. Next: line 3 after verified publication; lines 3–6 pending. No adoption or additional jobs.
+
+### J32 line 3 checkpoint — 2026-10-16 21:01 UTC
+
+Lines 1–3 complete. Victor's Gambit for Jormuntide on v3 (human seed 383): A 69.2% to B 64.6%, diff -4.6 ± 1.4 points, z -3.2; clear early stop at 2000 nominal games/list (2001 actual), exit 0 at 21:00:40 UTC. Exact report and execution evidence in `results/runs/J32-compare/`; all 1268 protected/input hashes unchanged. No generated experiment rows. Next: line 4 after verified publication; lines 4–6 pending. No adoption or additional jobs.
