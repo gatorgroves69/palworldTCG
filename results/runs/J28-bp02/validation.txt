@@ -1,0 +1,21 @@
+
+=== best.txt
+# main (50)
+  4 BP01-007   Kitsun – Wyrmbane Fangs  (pal, red, cost 5, 400/S2)
+  2 BP01-014   Blazehowl – Hellflame Defender  (pal, red, cost 7, 1200/S3)
+  4 BP01-020   Pump-Action Shotgun  (gear, red, cost 7)
+  2 BP01-023   Axel's Strategy  (event, red, cost 4)
+  4 BP01-025   Chillet – Dragon Whisperer  (pal, blue, cost 5, 900/S2, LUCKY)
+  4 BP01-027   Jormuntide – Surging Sea Serpent  (pal, blue, cost 8, 1600/S3, LUCKY)
+  4 BP01-028   Pengullet – Yearning for the Sky  (pal, blue, cost 4, 600/S2)
+  4 BP01-032   Fuack – Manic Wave Ripper  (pal, blue, cost 2, 200/S1)
+  4 TD01-004   Foxparks – A Toasty Hug  (pal, red, cost 4, 400/S2)
+  2 TD01-010   Single-Shot Rifle  (gear, red, cost 4)
+  4 TD01-012   Elphidran Aqua – Gentle Ripples  (pal, blue, cost 6, 900/S2)
+  4 TD01-016   Reindrix – Icy Gaze  (pal, blue, cost 5, 600/S2)
+  4 TD01-023   Lamball – My First Pal  (pal, colorless, cost 2, 200/S1)
+  4 TD02-023   Cattiva – My First Pal  (pal, colorless, cost 2, 200/S1)
+# soul (10)
+  10 SOUL-001   Soul  (soul, colorless, cost 0)
+colours: {'red': 18, 'blue': 24, 'colorless': 8}   lucky: 8   names at max copies: 11
+RESULT: OK
