@@ -735,3 +735,9 @@ Owned paths: `results/runs/J26-optimize/`, resulting J26 rows in `results/experi
 ### J26 complete — 2026-10-15 23:56 UTC
 
 Exit 0 at 2026-10-15T23:56:17Z; 801 unique screening scores and all six sequential verdicts are complete. No swap passed primary human testing, so no human1 confirmation or second round occurred. best.txt preserves exactly the original v3 section/card counts, reordered canonically. Full verdicts, validation and final attempt evidence are in `results/runs/J26-optimize/notes.md` and `dot-resume-20261015-1921.*`; exact result JSON is in `sequential-results.jsonl`. All 1260 protected-file SHA-256 hashes and the v3 input were verified unchanged on frozen source cb14dde81b161ac0752012bcf5b5c59e6114cb48. Earlier running statuses above are historical. STOPPED at the authorized J26 boundary; no other job or adoption. Next owner: Claude to review; Bobby must authorize any further execution.
+
+### J30 started — 2026-10-16 07:49 UTC
+
+Bobby explicitly authorized J30 as written in the handoff. The exact four-bot calibration loop started under nohup on OpenAI cloud Linux at 07:49 UTC, frozen source 0795d7a29719f48dde11e08d940e0c2886aaa77d; 500 games per pair, seed 255, 45 pairs per bot. Running; no completed matrix at this initial claim. Exact command and execution evidence are in `results/runs/J30-calibration/notes.md` and `dot-run-20261016-0749.*`.
+
+Owned paths: `results/runs/J30-calibration/` and this dot section only. Separate publication checkout; pull before every push, append-only main, no rebase or force-push. Checkpoint every 15 minutes and after each matrix; finished pair summaries support the prescribed resume. No engine, bot, sim, card, data or test edits; no other job or automatic adoption. Next: finish all four matrices and publish their exact calibration headlines for Claude's review.
