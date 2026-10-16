@@ -32,7 +32,7 @@ This is the shared coordination file for this GitHub repository. Bobby approved 
 <!-- MEW-J28-STATUS -->
 ### J28 Hermes checkpoint
 
-Bobby explicitly approved J28 as written. RUNNING; execution HEAD `7fd05267958bf766d5d29c7b1d2ac0ce27d3c72a` on Optiplex; start 2026-10-16T08:03:53.795857+00:00. 82 completed screening records, 0 sequential verdicts. Owned paths: `results/runs/J28-bp02/`, J28 additions to `results/experiments.md`, this status block. Exact command, inputs, stdout and status in J28 notes/artifacts. Separate publication checkout; 15-minute commits/pushes. No protected code/input edits or other jobs. BP02 previews provisional; no automatic deck adoption. Next owner: Hermes until completion, then Claude review.
+Bobby explicitly approved J28 as written. RUNNING; execution HEAD `7fd05267958bf766d5d29c7b1d2ac0ce27d3c72a` on Optiplex; start 2026-10-16T08:03:53.795857+00:00. 110 completed screening records, 0 sequential verdicts. Owned paths: `results/runs/J28-bp02/`, J28 additions to `results/experiments.md`, this status block. Exact command, inputs, stdout and status in J28 notes/artifacts. Separate publication checkout; 15-minute commits/pushes. No protected code/input edits or other jobs. BP02 previews provisional; no automatic deck adoption. Next owner: Hermes until completion, then Claude review.
 <!-- /MEW-J28-STATUS -->
 
 ### Public Palify ranked replay data — 2026-10-13

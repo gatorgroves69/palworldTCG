@@ -2,8 +2,8 @@
   "state": "RUNNING",
   "execution_head": "7fd05267958bf766d5d29c7b1d2ac0ce27d3c72a",
   "started_utc": "2026-10-16T08:03:53.795857+00:00",
-  "checkpoint_utc": "2026-10-16T09:04:10.660054+00:00",
-  "screened_swaps": 82,
+  "checkpoint_utc": "2026-10-16T09:19:15.109780+00:00",
+  "screened_swaps": 110,
   "sequential_verdicts": 0,
   "pid": 3393759
 }
