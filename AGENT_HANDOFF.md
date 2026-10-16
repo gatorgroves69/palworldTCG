@@ -668,7 +668,30 @@ for b in heuristic2@human@struct3 heuristic2@human@kill2 heuristic2@human@allin 
 ```
 Write the four calibration lines into `results/runs/J30-calibration/notes.md`. The baseline to beat is J25's `heuristic2@human`: 14/36 within ±5, MAE 8.5.
 
-Next Claude action: BP02 card check on release (Oct 30); review J28 and J30 as they land; keep closing the damage-per-turn gap (behaviour profiles). When BP02 releases, verify card texts, then J15.
+J28 and J30 reviewed: no BP02 card beats its slot on v3 in J28 (best: Eikthyrdeer for Axel's +0.1); no J30 bot beats `heuristic2@human` (best `@struct3` ties at MAE 8.6). Thank you both.
+
+**J31 (needs Bobby's direct approval; Hermes on the Optiplex): November lists and Quivern, on Bobby's list `cattiva_dragons_v3.txt`.** 5 lines, sequential, `human` bot, cap 12,000. About 4–5 hours. Code `0795d7a` or later. Commit and push `results/runs/J31-compare/` after each line.
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r1_cheapest.txt --games 12000 --seed 371 --bot human --sequential --out results/runs/J31-compare/r1_cheapest.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r2_keep_bodies.txt --games 12000 --seed 372 --bot human --sequential --out results/runs/J31-compare/r2_keep_bodies.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r3_four_eik.txt --games 12000 --seed 373 --bot human --sequential --out results/runs/J31-compare/r3_four_eik.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-quivern4.txt --games 12000 --seed 374 --bot human --sequential --out results/runs/J31-compare/quivern4.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-quivern_for_jorm.txt --games 12000 --seed 375 --bot human --sequential --out results/runs/J31-compare/quivern2_jorm2.md
+```
+Lists: R-r1/r2/r3 are three 10-BP02 versions of v3 for the November Release Tournaments (decks need ≥10 BP02); the question is which costs least. Q-quivern4 = 4 Quivern, 0 Jormuntide; Q-quivern_for_jorm = 2 Quivern, 2 Jormuntide. Telegram Bobby the 5 headlines.
+
+**J32 (needs Bobby's direct approval; Dots): lucky BP02 cards in a lucky slot.** J28 could only test lucky cards in place of Chillet or Jormuntide; these are the fair swaps. Lines 1–3 on v3 (−2 Jormuntide), lines 4–6 on v2 (−2 Suzaku) as a yardstick. 6 lines, sequential, `human`, cap 12,000. About 5–6 hours. Commit and push `results/runs/J32-compare/` after each line; a sequential compare isn't resumable, so after an interruption rerun only the unfinished line.
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-frostallion_for_jorm.txt --games 12000 --seed 381 --bot human --sequential --out results/runs/J32-compare/frostallion_for_jorm.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-axgambit_for_jorm.txt --games 12000 --seed 382 --bot human --sequential --out results/runs/J32-compare/axgambit_for_jorm.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-vicgambit_for_jorm.txt --games 12000 --seed 383 --bot human --sequential --out results/runs/J32-compare/vicgambit_for_jorm.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/Q-frostallion_for_suzaku.txt --games 12000 --seed 384 --bot human --sequential --out results/runs/J32-compare/frostallion_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/Q-axgambit_for_suzaku.txt --games 12000 --seed 385 --bot human --sequential --out results/runs/J32-compare/axgambit_for_suzaku.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/Q-jetragon_for_suzaku.txt --games 12000 --seed 386 --bot human --sequential --out results/runs/J32-compare/jetragon_for_suzaku.md
+```
+Telegram Bobby the 6 headlines. Anything above +1.5 gets a `human1` confirmation line from Claude afterwards.
+
+Next Claude action: review J31 and J32; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
