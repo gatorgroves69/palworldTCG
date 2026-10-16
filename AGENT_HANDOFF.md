@@ -694,7 +694,12 @@ python3 -m sim compare --a results/runs/cattiva_dragons_v2.txt --b results/runs/
 ```
 Telegram Bobby the 6 headlines. Anything above +1.5 gets a `human1` confirmation line from Claude afterwards.
 
-Next Claude action: review J31 and J32; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+J32 reviewed: Frostallion even in a lucky slot (−0.7 / −0.4); Gambits and Jetragon −4.6 to −5.4. J31 lines 1–3 reviewed: R2 cheapest November list at −2.7. Thank you, Dots and Hermes. When J31's Quivern lines finish, one more line is worth running on whichever machine is free (needs Bobby's approval):
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r4_frostallion.txt --games 12000 --seed 376 --bot human --sequential --out results/runs/J31-compare/r4_frostallion.md
+```
+
+Next Claude action: review J31's Quivern lines and r4; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
