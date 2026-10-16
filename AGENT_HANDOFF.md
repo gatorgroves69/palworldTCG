@@ -788,3 +788,7 @@ Bobby explicitly approved J32 as written. dot owns the six sequential comparison
 ### J32 line 1 checkpoint — 2026-10-16 20:30 UTC
 
 Line 1 complete, exit 0: Frostallion for Jormuntide on v3, human seed 381, 6000 nominal games/list (6003 actual), A 69.3% to B 68.6%, diff -0.7 ± 0.8 points, z -0.9; sequential stopped early, no difference. Report, exact command, stdout, start/end/exit and validation in `results/runs/J32-compare/`. All 1268 protected/input hashes unchanged on frozen d26379e. No experiments rows generated. Next: line 2 only after remote verification of this checkpoint; lines 2–6 pending. No adoption or extra jobs.
+
+### J32 line 2 checkpoint — 2026-10-16 20:45 UTC
+
+Lines 1–2 complete. Axel's Gambit for Jormuntide on v3 (human seed 382): A 68.3% to B 63.0%, diff -5.3 ± 1.5 points, z -3.6; clear early stop at 2000 nominal games/list (2001 actual), exit 0. Exact report and execution evidence in `results/runs/J32-compare/`; all 1268 protected/input hashes unchanged. No generated experiment rows. Next: line 3 after verified publication; lines 3–6 pending. No adoption or additional jobs.

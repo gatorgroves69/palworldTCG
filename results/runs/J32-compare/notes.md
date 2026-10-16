@@ -21,3 +21,10 @@ Exit 0 at 2026-10-16T20:29:35Z. Report matches stdout. All 1268 protected/input 
 **human**, 6000 games per list, seed 381: A 69.3% -> B 68.6% (diff -0.7 ± 0.8, z -0.9) [sequential: stopped early, no difference after 6000 games]
 
 Waiting for verified publication before line 2.
+
+## Line 2 complete
+Exit 0 at 2026-10-16T20:45:15Z. Report matches stdout. All 1268 protected/input hashes unchanged. Actual opponent counts sum to 2001 games/list.
+
+**human**, 2000 games per list, seed 382: A 68.3% -> B 63.0% (diff -5.3 ± 1.5, z -3.6) [sequential: stopped early, clear after 2000 games]
+
+Waiting for verified publication before line 3.
