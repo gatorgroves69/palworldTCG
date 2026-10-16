@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-br",
+  "opp": "lamball-cattiva-bg",
+  "bot": "heuristic2@human@struct3@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 280,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 230,
+  "losses": 270,
+  "draws": 0,
+  "win_rate": 0.46,
+  "ci95": [
+    0.4168,
+    0.5038
+  ],
+  "going_first": {
+    "games": 257,
+    "wins": 122,
+    "losses": 135,
+    "draws": 0,
+    "win_rate": 0.4747,
+    "ci95": [
+      0.4145,
+      0.5357
+    ]
+  },
+  "going_second": {
+    "games": 243,
+    "wins": 108,
+    "losses": 135,
+    "draws": 0,
+    "win_rate": 0.4444,
+    "ci95": [
+      0.3833,
+      0.5073
+    ]
+  },
+  "avg_turns": 13.47,
+  "end_reasons": {
+    "deckout": 1,
+    "life": 499
+  },
+  "seconds": 82.1,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-br.txt --opp data/decks/lamball-cattiva-bg.txt --bot heuristic2@human@struct3@kill2 --structures any --game-seed <seed>"
+}
