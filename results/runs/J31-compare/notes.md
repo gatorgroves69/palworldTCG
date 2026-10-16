@@ -3,3 +3,5 @@
 STARTING: five approved lines, no results yet.
 
 Line 1 complete, exit 0. Report: r1_cheapest.md; stdout: line-1.log.
+
+Line 2 complete, exit 0. Report: r2_keep_bodies.md.

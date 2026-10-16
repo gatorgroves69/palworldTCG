@@ -1,0 +1,1 @@
+{"exit_code": 0, "command": "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r2_keep_bodies.txt --games 12000 --seed 372 --bot human --sequential --out results/runs/J31-compare/r2_keep_bodies.md"}
