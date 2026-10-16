@@ -1,0 +1,246 @@
+Seed 260000000. P1 = cattiva-azurobe-br, P2 = lamball-stone-pit-pr
+P1 goes first; P2 starts with 1 soul
+  P1 draws Lamball – My First Pal, Pengullet – Yearning for the Sky, Pal Sphere, Kitsun – Wyrmbane Fangs, Reindrix – Icy Gaze
+  P2 draws Mounted Machine Gun, Single-Shot Rifle, Pump-Action Shotgun, Medieval Medicine Workbench, Lamball – My First Pal
+P1 keeps
+P2 keeps
+
+=== Turn 1: P1 (cattiva-azurobe-br) ===
+  P1 skips the draw (first turn)
+  P1 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 2/2, grave 0 | P2: life 10, hand 5, deck 45, souls 1/1, grave 0
+P1 plays Lamball – My First Pal [TD01-023]#42 (cost 2)
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Foxparks – A Toasty Hug
+    P2 loses 1 life -> 9
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: (empty)
+
+=== Turn 2: P2 (lamball-stone-pit-pr) ===
+  P2 draws Suzaku – Hellfire Wings
+  P2 gains 2 soul(s): 3 total
+  P1: life 10, hand 4, deck 45, souls 0/2, grave 0 | P2: life 9, hand 6, deck 43, souls 3/3, grave 1
+P2 plays Lamball – My First Pal [TD01-023]#89 (cost 2)
+P2: Lamball – My First Pal (200/S1) attacks P1
+  P1 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Suzaku – Hellfire Wings (LUCKY): damage cancelled
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: Lamball – My First Pal 200/S1 (rested)
+
+=== Turn 3: P1 (cattiva-azurobe-br) ===
+  P1 draws Azurobe – Water Dragon Waltz
+  P1 gains 2 soul(s): 4 total
+  P1: life 10, hand 5, deck 43, souls 4/4, grave 1 | P2: life 9, hand 5, deck 43, souls 1/3, grave 1
+P1 plays Pal Sphere [BP01-047]#28 (cost 4)
+  P1 draws Hangyu Cryst – Frigid Wanderer, Sparkit – Hazardous Contact, Hangyu Cryst – Frigid Wanderer
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Zoe's Strategy
+    P2 loses 1 life -> 8
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: Lamball – My First Pal 200/S1 (rested)
+
+=== Turn 4: P2 (lamball-stone-pit-pr) ===
+  P2 draws Lamball – My First Pal
+  P2 gains 2 soul(s): 5 total
+  P1: life 10, hand 7, deck 40, souls 0/4, grave 2 | P2: life 8, hand 6, deck 41, souls 5/5, grave 2
+P2: Lamball – My First Pal (200/S1) attacks P1
+  P1 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Suzaku – Hellfire Wings (LUCKY): damage cancelled
+P2 plays Mounted Machine Gun [BP01-015]#53 (cost 4)
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: Lamball – My First Pal 200/S1 (rested), Mounted Machine Gun dur 1000
+
+=== Turn 5: P1 (cattiva-azurobe-br) ===
+  P1 draws Cattiva – My First Pal
+  P1 gains 2 soul(s): 6 total
+  P1: life 10, hand 8, deck 38, souls 6/6, grave 3 | P2: life 8, hand 5, deck 41, souls 1/5, grave 2
+P1 plays Azurobe – Water Dragon Waltz [BP01-029]#23 (cost 6)
+  [trigger] On Deploy: Azurobe – Water Dragon Waltz
+  P1 draws Sparkit – Hazardous Contact
+  Lamball – My First Pal is chosen (already rested)
+P1: Lamball – My First Pal (200/S1) attacks Lamball – My First Pal
+  battle: Lamball – My First Pal deals 200 to Lamball – My First Pal, Lamball – My First Pal deals 200 back
+  Lamball – My First Pal [TD01-023]#42 (P1) goes to the graveyard (defeated)
+  Lamball – My First Pal [TD01-023]#89 (P2) goes to the graveyard (defeated)
+P1: Azurobe – Water Dragon Waltz (1200/S2) attacks P2
+  P2 takes 2 damage from Azurobe – Water Dragon Waltz: damage check
+    flip 1: Menasting – Darkness-Dwelling Scorpion (LUCKY): damage cancelled
+  P1 base: Azurobe – Water Dragon Waltz 1200/S2 (rested)
+  P2 base: Mounted Machine Gun dur 1000
+
+=== Turn 6: P2 (lamball-stone-pit-pr) ===
+  P2 draws Cattiva – My First Pal
+  P2 gains 2 soul(s): 7 total
+  P1: life 10, hand 8, deck 37, souls 0/6, grave 4 | P2: life 8, hand 6, deck 39, souls 7/7, grave 4
+P2 plays Medieval Medicine Workbench [BP01-090]#70 (cost 4)
+P2 plays Lamball – My First Pal [TD01-023]#88 (cost 2)
+P2: Lamball – My First Pal (200/S1) attacks P1
+  P1 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Sparkit – Hazardous Contact
+    P1 loses 1 life -> 9
+  P1 base: Azurobe – Water Dragon Waltz 1200/S2 (rested)
+  P2 base: Mounted Machine Gun dur 1000, Medieval Medicine Workbench dur 1300, Lamball – My First Pal 200/S1 (rested)
+
+=== Turn 7: P1 (cattiva-azurobe-br) ===
+  P1 draws Cattiva – My First Pal
+  P1 gains 2 soul(s): 8 total
+  P1: life 9, hand 9, deck 35, souls 8/8, grave 5 | P2: life 8, hand 4, deck 39, souls 1/7, grave 4
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#16 (cost 4)
+P1: Azurobe – Water Dragon Waltz (1200/S2) attacks Mounted Machine Gun
+  Mounted Machine Gun takes 1200 damage (total 1200/1000)
+  Mounted Machine Gun [BP01-015]#53 (P2) goes to the graveyard (defeated)
+P1 plays Hangyu Cryst – Frigid Wanderer [TD01-015]#35 (cost 4)
+  [trigger] On Deploy: Hangyu Cryst – Frigid Wanderer
+  Lamball – My First Pal is chosen (already rested)
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Single-Shot Rifle
+    flip 2: Menasting – Darkness-Dwelling Scorpion (LUCKY): damage cancelled
+P1: Hangyu Cryst – Frigid Wanderer (600/S2) attacks P2
+  P2 takes 2 damage from Hangyu Cryst – Frigid Wanderer: damage check
+    flip 1: Cattiva – My First Pal
+    flip 2: Foxparks – A Toasty Hug
+    P2 loses 2 life -> 6
+  P1 base: Azurobe – Water Dragon Waltz 1200/S2 (rested), Pengullet – Yearning for the Sky 600/S2 (rested), Hangyu Cryst – Frigid Wanderer 600/S2 (rested)
+  P2 base: Medieval Medicine Workbench dur 1300, Lamball – My First Pal 200/S1 (rested)
+
+=== Turn 8: P2 (lamball-stone-pit-pr) ===
+  P2 draws Blazehowl Noct – Darkflame Defender
+  P2 gains 2 soul(s): 9 total
+  P1: life 9, hand 7, deck 35, souls 0/8, grave 5 | P2: life 6, hand 5, deck 34, souls 9/9, grave 9
+P2 plays Pump-Action Shotgun [BP01-020]#60 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Azurobe – Water Dragon Waltz takes 1200 damage (total 1200/1200)
+  Pengullet – Yearning for the Sky takes 1200 damage (total 1200/600)
+  Hangyu Cryst – Frigid Wanderer takes 1200 damage (total 1200/600)
+  Azurobe – Water Dragon Waltz [BP01-029]#23 (P1) goes to the graveyard (defeated)
+  Pengullet – Yearning for the Sky [BP01-028]#16 (P1) goes to the graveyard (defeated)
+  Hangyu Cryst – Frigid Wanderer [TD01-015]#35 (P1) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Fuack – Manic Wave Ripper
+P2 activates Pump-Action Shotgun: +200 power
+  Lamball – My First Pal power +200 until end of turn
+P2 plays Cattiva – My First Pal [TD02-023]#96 (cost 2)
+P2: Lamball – My First Pal (400/S1) attacks P1
+  P1 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Pump-Action Shotgun
+    P1 loses 1 life -> 8
+P2: Cattiva – My First Pal (200/S1) attacks P1
+  P1 takes 1 damage from Cattiva – My First Pal: damage check
+    flip 1: Pengullet – Yearning for the Sky
+    P1 loses 1 life -> 7
+  P1 base: (empty)
+  P2 base: Medieval Medicine Workbench dur 1300, Lamball – My First Pal 200/S1 (rested), Pump-Action Shotgun (rested), Cattiva – My First Pal 200/S1 (rested)
+
+=== Turn 9: P1 (cattiva-azurobe-br) ===
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 2 soul(s): 10 total
+  P1: life 7, hand 9, deck 31, souls 10/10, grave 10 | P2: life 6, hand 3, deck 34, souls 0/9, grave 9
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#18 (cost 4)
+P1 plays Hangyu Cryst – Frigid Wanderer [TD01-015]#34 (cost 4)
+  [trigger] On Deploy: Hangyu Cryst – Frigid Wanderer
+  Lamball – My First Pal is chosen (already rested)
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Single-Shot Rifle
+    flip 2: Primitive Furnace
+    P2 loses 2 life -> 4
+P1 plays Cattiva – My First Pal [TD02-023]#49 (cost 2)
+P1: Hangyu Cryst – Frigid Wanderer (600/S2) attacks Cattiva – My First Pal
+P2 uses Interrupt: Blazehowl Noct – Darkflame Defender (discarding Single-Shot Rifle)
+  the attack is nullified
+P1: Cattiva – My First Pal (200/S1) attacks Lamball – My First Pal
+  battle: Cattiva – My First Pal deals 200 to Lamball – My First Pal, Lamball – My First Pal deals 200 back
+  Cattiva – My First Pal [TD02-023]#49 (P1) goes to the graveyard (defeated)
+  Lamball – My First Pal [TD01-023]#88 (P2) goes to the graveyard (defeated)
+  P1 base: Pengullet – Yearning for the Sky 600/S2 (rested), Hangyu Cryst – Frigid Wanderer 600/S2 (rested)
+  P2 base: Medieval Medicine Workbench dur 1300, Pump-Action Shotgun (rested), Cattiva – My First Pal 200/S1 (rested)
+
+=== Turn 10: P2 (lamball-stone-pit-pr) ===
+  P2 draws Lamball – My First Pal
+  P2 gains 1 soul(s): 10 total
+  P1: life 7, hand 6, deck 31, souls 0/10, grave 11 | P2: life 4, hand 2, deck 31, souls 10/10, grave 14
+P2 plays Suzaku – Hellfire Wings [BP01-002]#52 (cost 7)
+  [trigger] On Deploy: Suzaku – Hellfire Wings
+  Pengullet – Yearning for the Sky takes 900 damage (total 900/600)
+  Pengullet – Yearning for the Sky [BP01-028]#18 (P1) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Sparkit – Hazardous Contact
+  Suzaku – Hellfire Wings is assigned to Medieval Medicine Workbench
+P2 activates Medieval Medicine Workbench: revive a Pal
+  P2 deploys Blazehowl Noct – Darkflame Defender from the graveyard (rested)
+P2 activates Pump-Action Shotgun: +200 power
+  Suzaku – Hellfire Wings power +200 until end of turn
+  P1 base: Hangyu Cryst – Frigid Wanderer 600/S2 (rested)
+  P2 base: Medieval Medicine Workbench dur 1300, Pump-Action Shotgun (rested), Cattiva – My First Pal 200/S1, Suzaku – Hellfire Wings 1200/S3 (rested), Blazehowl Noct – Darkflame Defender 900/S2 (rested)
+
+=== Turn 11: P1 (cattiva-azurobe-br) ===
+  P1 draws Reindrix – Icy Gaze
+  P1 gains 0 soul(s): 10 total
+  P1: life 7, hand 8, deck 29, souls 10/10, grave 12 | P2: life 4, hand 1, deck 31, souls 0/10, grave 13
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#5 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Suzaku – Hellfire Wings takes 1200 damage (total 1200/1200)
+  Suzaku – Hellfire Wings [BP01-002]#52 (P2) goes to the graveyard (defeated)
+P1 plays Sparkit – Hazardous Contact [BP01-008]#8 (cost 3)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+  Cattiva – My First Pal takes 500 damage (total 500/200)
+  Cattiva – My First Pal [TD02-023]#96 (P2) goes to the graveyard (defeated)
+P1: Kitsun – Wyrmbane Fangs (400/S2) attacks P2
+  P2 takes 2 damage from Kitsun – Wyrmbane Fangs: damage check
+    flip 1: Blazehowl Noct – Darkflame Defender
+    flip 2: Shadowbeak – Seed of Despair (LUCKY): damage cancelled
+P1: Hangyu Cryst – Frigid Wanderer (600/S2) attacks P2
+  P2 takes 2 damage from Hangyu Cryst – Frigid Wanderer: damage check
+    flip 1: Shadowbeak – Seed of Despair (LUCKY): damage cancelled
+P1 plays Cattiva – My First Pal [TD02-023]#46 (cost 2)
+P1: Sparkit – Hazardous Contact (400/S1) attacks P2
+  P2 takes 1 damage from Sparkit – Hazardous Contact: damage check
+    flip 1: Primitive Furnace
+    P2 loses 1 life -> 3
+P1: Cattiva – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Cattiva – My First Pal: damage check
+    flip 1: Blazehowl Noct – Darkflame Defender
+    P2 loses 1 life -> 2
+  P1 base: Hangyu Cryst – Frigid Wanderer 600/S2 (rested), Kitsun – Wyrmbane Fangs 400/S2 (rested), Sparkit – Hazardous Contact 400/S1 (rested), Cattiva – My First Pal 200/S1 (rested)
+  P2 base: Medieval Medicine Workbench dur 1300, Pump-Action Shotgun (rested), Blazehowl Noct – Darkflame Defender 900/S2 (rested)
+
+=== Turn 12: P2 (lamball-stone-pit-pr) ===
+  P2 draws Cattiva – My First Pal
+  P2 gains 0 soul(s): 10 total
+  P1: life 7, hand 5, deck 29, souls 0/10, grave 12 | P2: life 2, hand 2, deck 25, souls 10/10, grave 20
+P2 plays Lamball – My First Pal [TD01-023]#86 (cost 2)
+P2 plays Cattiva – My First Pal [TD02-023]#99 (cost 2)
+P2 activates Pump-Action Shotgun: +200 power
+  Blazehowl Noct – Darkflame Defender power +200 until end of turn
+P2: Blazehowl Noct – Darkflame Defender (1100/S2) attacks Sparkit – Hazardous Contact
+P1 uses Interrupt: Reindrix – Icy Gaze (discarding Fuack – Manic Wave Ripper)
+  the attack is nullified
+P2 rests 3 souls to draw 1
+  P2 draws Pump-Action Shotgun
+  P1 base: Hangyu Cryst – Frigid Wanderer 600/S2 (rested), Kitsun – Wyrmbane Fangs 400/S2 (rested), Sparkit – Hazardous Contact 400/S1 (rested), Cattiva – My First Pal 200/S1 (rested)
+  P2 base: Medieval Medicine Workbench dur 1300, Pump-Action Shotgun (rested), Blazehowl Noct – Darkflame Defender 900/S2 (rested), Lamball – My First Pal 200/S1, Cattiva – My First Pal 200/S1
+
+=== Turn 13: P1 (cattiva-azurobe-br) ===
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 0 soul(s): 10 total
+  P1: life 7, hand 4, deck 28, souls 10/10, grave 14 | P2: life 2, hand 1, deck 24, souls 3/10, grave 20
+P1 plays Sparkit – Hazardous Contact [BP01-008]#11 (cost 3)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+  Lamball – My First Pal takes 500 damage (total 500/200)
+  Lamball – My First Pal [TD01-023]#86 (P2) goes to the graveyard (defeated)
+P1 plays Sparkit – Hazardous Contact [BP01-008]#10 (cost 3)
+  Cattiva – My First Pal [TD02-023]#46 (P1) goes to the graveyard (Pal limit)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+  Cattiva – My First Pal takes 500 damage (total 500/200)
+  Cattiva – My First Pal [TD02-023]#99 (P2) goes to the graveyard (defeated)
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#17 (cost 4)
+  Sparkit – Hazardous Contact [BP01-008]#8 (P1) goes to the graveyard (Pal limit)
+P1: Hangyu Cryst – Frigid Wanderer (600/S2) attacks P2
+  P2 takes 2 damage from Hangyu Cryst – Frigid Wanderer: damage check
+    flip 1: Single-Shot Rifle
+    flip 2: Stone Pit
+    P2 loses 2 life -> 0
+GAME OVER: P1 (cattiva-azurobe-br) wins by life

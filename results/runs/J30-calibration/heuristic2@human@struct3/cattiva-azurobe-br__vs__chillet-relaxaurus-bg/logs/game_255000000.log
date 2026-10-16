@@ -1,0 +1,248 @@
+Seed 255000000. P1 = cattiva-azurobe-br, P2 = chillet-relaxaurus-bg
+P2 goes first; P1 starts with 1 soul
+  P2 draws Lyleen – Blessing of the Goddess, Chillet – Dragon Whisperer, Cryolinx – Arctic Ordeal, Teafant – Fountain of Cheer, Elphidran Aqua – Gentle Ripples
+  P1 draws Pump-Action Shotgun, Foxparks – A Toasty Hug, Lamball – My First Pal, Fuack – Manic Wave Ripper, Lamball – My First Pal
+P2 keeps
+P1 keeps
+
+=== Turn 1: P2 (chillet-relaxaurus-bg) ===
+  P2 skips the draw (first turn)
+  P2 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 1/1, grave 0 | P2: life 10, hand 5, deck 45, souls 2/2, grave 0
+P2 plays Teafant – Fountain of Cheer [BP01-034]#62 (cost 2)
+P2: Teafant – Fountain of Cheer (200/S1) attacks P1
+  P1 takes 1 damage from Teafant – Fountain of Cheer: damage check
+    flip 1: Pump-Action Shotgun
+    P1 loses 1 life -> 9
+  P1 base: (empty)
+  P2 base: Teafant – Fountain of Cheer 200/S1 (rested)
+
+=== Turn 2: P1 (cattiva-azurobe-br) ===
+  P1 draws Reindrix – Icy Gaze
+  P1 gains 2 soul(s): 3 total
+  P1: life 9, hand 6, deck 43, souls 3/3, grave 1 | P2: life 10, hand 4, deck 45, souls 0/2, grave 0
+P1 plays Lamball – My First Pal [TD01-023]#43 (cost 2)
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Reindrix – Icy Gaze
+    P2 loses 1 life -> 9
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: Teafant – Fountain of Cheer 200/S1 (rested)
+
+=== Turn 3: P2 (chillet-relaxaurus-bg) ===
+  P2 draws Aurora Guide
+  P2 gains 2 soul(s): 4 total
+  P1: life 9, hand 5, deck 43, souls 1/3, grave 1 | P2: life 9, hand 5, deck 43, souls 4/4, grave 1
+P2 rests 3 souls to draw 1
+  P2 draws Reindrix – Icy Gaze
+P2: Teafant – Fountain of Cheer (200/S1) attacks P1
+  P1 takes 1 damage from Teafant – Fountain of Cheer: damage check
+    flip 1: Suzaku – Hellfire Wings (LUCKY): damage cancelled
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: Teafant – Fountain of Cheer 200/S1 (rested)
+
+=== Turn 4: P1 (cattiva-azurobe-br) ===
+  P1 draws Azurobe – Water Dragon Waltz
+  P1 gains 2 soul(s): 5 total
+  P1: life 9, hand 6, deck 41, souls 5/5, grave 2 | P2: life 9, hand 6, deck 42, souls 1/4, grave 1
+P1 plays Reindrix – Icy Gaze [TD01-016]#39 (cost 5)
+P1: Lamball – My First Pal (200/S1) attacks Teafant – Fountain of Cheer
+  battle: Lamball – My First Pal deals 200 to Teafant – Fountain of Cheer, Teafant – Fountain of Cheer deals 200 back
+  Lamball – My First Pal [TD01-023]#43 (P1) goes to the graveyard (defeated)
+  Teafant – Fountain of Cheer [BP01-034]#62 (P2) goes to the graveyard (defeated)
+P1: Reindrix – Icy Gaze (600/S2) attacks P2
+  P2 takes 2 damage from Reindrix – Icy Gaze: damage check
+    flip 1: Victor's Strategy
+    flip 2: Victor's Strategy
+    P2 loses 2 life -> 7
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested)
+  P2 base: (empty)
+
+=== Turn 5: P2 (chillet-relaxaurus-bg) ===
+  P2 draws Relaxaurus – Hungry Gunner
+  P2 gains 2 soul(s): 6 total
+  P1: life 9, hand 5, deck 41, souls 0/5, grave 3 | P2: life 7, hand 7, deck 39, souls 6/6, grave 4
+P2 plays Chillet – Dragon Whisperer [BP01-025]#52 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Pal Sphere from the top of the deck
+  Pal Sphere is added to P2's hand
+P2: Chillet – Dragon Whisperer (900/S2) attacks Reindrix – Icy Gaze
+P1 uses Interrupt: Foxparks – A Toasty Hug (discarding Fuack – Manic Wave Ripper)
+  the attack is nullified
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 6: P1 (cattiva-azurobe-br) ===
+  P1 draws Fuack – Manic Wave Ripper
+  P1 gains 2 soul(s): 7 total
+  P1: life 9, hand 4, deck 40, souls 7/7, grave 5 | P2: life 7, hand 7, deck 38, souls 1/6, grave 4
+P1 plays Pump-Action Shotgun [BP01-020]#12 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Chillet – Dragon Whisperer takes 1200 damage (total 1200/900)
+  Chillet – Dragon Whisperer [BP01-025]#52 (P2) goes to the graveyard (defeated)
+P1 activates Pump-Action Shotgun: +200 power
+  Reindrix – Icy Gaze power +200 until end of turn
+P1: Reindrix – Icy Gaze (800/S2) attacks P2
+P2 uses Interrupt: Reindrix – Icy Gaze (resting 1 soul)
+  the attack is nullified
+  P1 base: Reindrix – Icy Gaze 600/S2 (rested), Pump-Action Shotgun (rested)
+  P2 base: (empty)
+
+=== Turn 7: P2 (chillet-relaxaurus-bg) ===
+  P2 draws Dinossom – Radiant Fragrance
+  P2 gains 2 soul(s): 8 total
+  P1: life 9, hand 3, deck 40, souls 0/7, grave 5 | P2: life 7, hand 7, deck 37, souls 8/8, grave 6
+P2 plays Elphidran Aqua – Gentle Ripples [TD01-012]#88 (cost 6)
+  [trigger] On Deploy: Elphidran Aqua – Gentle Ripples
+  P2 draws Elphidran – Gentle Radiance, Chillet – Dragon Whisperer
+  P2 puts Chillet – Dragon Whisperer from hand on top of the deck
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks Reindrix – Icy Gaze
+  battle: Elphidran Aqua – Gentle Ripples deals 900 to Reindrix – Icy Gaze, Reindrix – Icy Gaze deals 600 back
+  Reindrix – Icy Gaze [TD01-016]#39 (P1) goes to the graveyard (defeated)
+  P1 base: Pump-Action Shotgun (rested)
+  P2 base: Elphidran Aqua – Gentle Ripples 900/S2 (rested)
+
+=== Turn 8: P1 (cattiva-azurobe-br) ===
+  P1 draws Hangyu Cryst – Frigid Wanderer
+  P1 gains 2 soul(s): 9 total
+  P1: life 9, hand 4, deck 39, souls 9/9, grave 6 | P2: life 7, hand 7, deck 36, souls 2/8, grave 6
+P1 plays Azurobe – Water Dragon Waltz [BP01-029]#20 (cost 6)
+  [trigger] On Deploy: Azurobe – Water Dragon Waltz
+  P1 draws Kitsun – Wyrmbane Fangs
+  Elphidran Aqua – Gentle Ripples is chosen (already rested)
+P1 plays Lamball – My First Pal [TD01-023]#44 (cost 2)
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Chillet – Dragon Whisperer (LUCKY): damage cancelled
+P1 activates Pump-Action Shotgun: +200 power
+  Azurobe – Water Dragon Waltz power +200 until end of turn
+P1: Azurobe – Water Dragon Waltz (1400/S2) attacks P2
+P2 uses Interrupt: Dinossom – Radiant Fragrance (resting 1 soul)
+  the attack is nullified
+  P1 base: Pump-Action Shotgun (rested), Azurobe – Water Dragon Waltz 1200/S2 (rested), Lamball – My First Pal 200/S1 (rested)
+  P2 base: Elphidran Aqua – Gentle Ripples 900/S2 (rested)
+
+=== Turn 9: P2 (chillet-relaxaurus-bg) ===
+  P2 draws Aurora Guide
+  P2 gains 2 soul(s): 10 total
+  P1: life 9, hand 3, deck 38, souls 1/9, grave 6 | P2: life 7, hand 7, deck 34, souls 10/10, grave 8
+P2 plays Lyleen – Blessing of the Goddess [BP01-049]#80 (cost 7)
+  [trigger] On Deploy: Lyleen – Blessing of the Goddess
+  P2 gets 3 ingredient (3)
+  P2 consumes 3 ingredient (0 left)
+P2 activates Lyleen – Blessing of the Goddess: dig for a Pal
+  P2 looks at the top 5: Chillet – Dragon Whisperer, Relaxaurus – Hungry Gunner, Elphidran – Gentle Radiance, Pal Sphere, Aurora Guide
+  P2 deploys Chillet – Dragon Whisperer with Lyleen
+  P2 shuffles the deck
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Relaxaurus – Hungry Gunner from the top of the deck
+  P2 deploys Relaxaurus – Hungry Gunner with Chillet
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+  Azurobe – Water Dragon Waltz is chosen (already rested)
+  Azurobe – Water Dragon Waltz does not stand while Relaxaurus – Hungry Gunner is in the base
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks P1
+  P1 takes 2 damage from Elphidran Aqua – Gentle Ripples: damage check
+    flip 1: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+P2: Lyleen – Blessing of the Goddess (900/S3) attacks P1
+  P1 takes 3 damage from Lyleen – Blessing of the Goddess: damage check
+    flip 1: Sparkit – Hazardous Contact
+    flip 2: Pal Sphere
+    flip 3: Reindrix – Icy Gaze
+    P1 loses 3 life -> 6
+P2: Chillet – Dragon Whisperer (900/S2) attacks P1
+  P1 takes 2 damage from Chillet – Dragon Whisperer: damage check
+    flip 1: Kitsun – Wyrmbane Fangs
+    flip 2: Pengullet – Yearning for the Sky
+    P1 loses 2 life -> 4
+P2 plays Aurora Guide [BP01-048]#76 (cost 2)
+  P2 draws Reindrix – Icy Gaze
+P2: Relaxaurus – Hungry Gunner (1200/S3) attacks P1
+  P1 takes 3 damage from Relaxaurus – Hungry Gunner: damage check
+    flip 1: Cattiva – My First Pal
+    flip 2: Lamball – My First Pal
+    flip 3: Pump-Action Shotgun
+    P1 loses 3 life -> 1
+  P1 base: Pump-Action Shotgun (rested), Azurobe – Water Dragon Waltz 1200/S2 (rested), Lamball – My First Pal 200/S1 (rested)
+  P2 base: Elphidran Aqua – Gentle Ripples 900/S2 (rested), Lyleen – Blessing of the Goddess 900/S3 (rested), Chillet – Dragon Whisperer 900/S2 (rested), Relaxaurus – Hungry Gunner 1200/S3 (rested)
+
+=== Turn 10: P1 (cattiva-azurobe-br) ===
+  Azurobe – Water Dragon Waltz does not stand (locked)
+  P1 draws Kitsun – Wyrmbane Fangs
+  P1 gains 1 soul(s): 10 total
+  P1: life 1, hand 4, deck 28, souls 10/10, grave 15 | P2: life 7, hand 6, deck 31, souls 1/10, grave 9
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#6 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Relaxaurus – Hungry Gunner takes 1200 damage (total 1200/1200)
+  Relaxaurus – Hungry Gunner [BP01-026]#55 (P2) goes to the graveyard (defeated)
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#5 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Lyleen – Blessing of the Goddess takes 1200 damage (total 1200/900)
+  Lyleen – Blessing of the Goddess [BP01-049]#80 (P2) goes to the graveyard (defeated)
+P1 activates Pump-Action Shotgun: +200 power
+  Azurobe – Water Dragon Waltz power +200 until end of turn
+P1: Kitsun – Wyrmbane Fangs (400/S2) attacks P2
+P2 uses Interrupt: Reindrix – Icy Gaze (resting 1 soul)
+  the attack is nullified
+  P1 base: Pump-Action Shotgun (rested), Azurobe – Water Dragon Waltz 1200/S2 (rested), Lamball – My First Pal 200/S1, Kitsun – Wyrmbane Fangs 400/S2 (rested), Kitsun – Wyrmbane Fangs 400/S2
+  P2 base: Elphidran Aqua – Gentle Ripples 900/S2 (rested), Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 11: P2 (chillet-relaxaurus-bg) ===
+  P2 draws Victor's Strategy
+  P2 gains 0 soul(s): 10 total
+  P1: life 1, hand 2, deck 28, souls 0/10, grave 15 | P2: life 7, hand 6, deck 30, souls 10/10, grave 12
+P2 plays Relaxaurus – Hungry Gunner [BP01-026]#56 (cost 7)
+  [trigger] On Deploy: Relaxaurus – Hungry Gunner
+  Azurobe – Water Dragon Waltz is chosen (already rested)
+  Azurobe – Water Dragon Waltz does not stand while Relaxaurus – Hungry Gunner is in the base
+P2: Elphidran Aqua – Gentle Ripples (900/S2) attacks Kitsun – Wyrmbane Fangs
+  battle: Elphidran Aqua – Gentle Ripples deals 900 to Kitsun – Wyrmbane Fangs, Kitsun – Wyrmbane Fangs deals 400 back
+  Kitsun – Wyrmbane Fangs [BP01-007]#6 (P1) goes to the graveyard (defeated)
+P2: Chillet – Dragon Whisperer (900/S2) attacks P1
+  P1 blocks with Lamball – My First Pal (200)
+  battle: Chillet – Dragon Whisperer deals 900 to Lamball – My First Pal, Lamball – My First Pal deals 200 back
+  Lamball – My First Pal [TD01-023]#44 (P1) goes to the graveyard (defeated)
+P2: Relaxaurus – Hungry Gunner (1200/S3) attacks P1
+  P1 blocks with Kitsun – Wyrmbane Fangs (400)
+  battle: Relaxaurus – Hungry Gunner deals 1200 to Kitsun – Wyrmbane Fangs, Kitsun – Wyrmbane Fangs deals 400 back
+  Kitsun – Wyrmbane Fangs [BP01-007]#5 (P1) goes to the graveyard (defeated)
+P2 plays Victor's Strategy [BP01-046]#70 (cost 3), mode: return 1 Pal to hand
+  Azurobe – Water Dragon Waltz [BP01-029]#20 returns to P1's hand
+  P1 base: Pump-Action Shotgun (rested)
+  P2 base: Elphidran Aqua – Gentle Ripples 900/S2 (rested), Chillet – Dragon Whisperer 900/S2 (rested), Relaxaurus – Hungry Gunner 1200/S3 (rested)
+
+=== Turn 12: P1 (cattiva-azurobe-br) ===
+  P1 draws Pump-Action Shotgun
+  P1 gains 0 soul(s): 10 total
+  P1: life 1, hand 4, deck 27, souls 10/10, grave 18 | P2: life 7, hand 4, deck 30, souls 0/10, grave 13
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#26 (cost 2)
+P1 plays Pump-Action Shotgun [BP01-020]#13 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Elphidran Aqua – Gentle Ripples takes 1200 damage (total 1200/900)
+  Chillet – Dragon Whisperer takes 1200 damage (total 1200/900)
+  Relaxaurus – Hungry Gunner takes 1200 damage (total 1200/1200)
+  Elphidran Aqua – Gentle Ripples [TD01-012]#88 (P2) goes to the graveyard (defeated)
+  Chillet – Dragon Whisperer [BP01-025]#50 (P2) goes to the graveyard (defeated)
+  Relaxaurus – Hungry Gunner [BP01-026]#56 (P2) goes to the graveyard (defeated)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Jormuntide – Surging Sea Serpent (LUCKY): damage cancelled
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+  P1 base: Pump-Action Shotgun (rested), Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested)
+  P2 base: (empty)
+
+=== Turn 13: P2 (chillet-relaxaurus-bg) ===
+  P2 draws Cryolinx – Arctic Ordeal
+  P2 gains 0 soul(s): 10 total
+  P1: life 1, hand 2, deck 27, souls 1/10, grave 18 | P2: life 7, hand 5, deck 28, souls 10/10, grave 17
+P2 plays Cryolinx – Arctic Ordeal [BP01-038]#66 (cost 6)
+P2 plays Pal Sphere [BP01-047]#72 (cost 4)
+  P2 draws Pal Sphere, Pal Sphere, Dinossom – Radiant Fragrance
+P2: Cryolinx – Arctic Ordeal (900/S2) attacks P1
+  P1 takes 2 damage from Cryolinx – Arctic Ordeal: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Pengullet – Yearning for the Sky
+    P1 loses 2 life -> -1
+GAME OVER: P2 (chillet-relaxaurus-bg) wins by life

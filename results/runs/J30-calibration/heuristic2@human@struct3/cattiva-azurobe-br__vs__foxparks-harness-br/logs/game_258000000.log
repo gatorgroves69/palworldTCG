@@ -1,0 +1,301 @@
+Seed 258000000. P1 = cattiva-azurobe-br, P2 = foxparks-harness-br
+P1 goes first; P2 starts with 1 soul
+  P1 draws Reindrix – Icy Gaze, Pump-Action Shotgun, Sparkit – Hazardous Contact, Suzaku – Hellfire Wings, Kitsun – Wyrmbane Fangs
+  P2 draws Pump-Action Shotgun, Cryolinx – Arctic Ordeal, Foxparks – A Toasty Hug, Axel's Strategy, Chillet – Dragon Whisperer
+P1 keeps
+P2 keeps
+
+=== Turn 1: P1 (cattiva-azurobe-br) ===
+  P1 skips the draw (first turn)
+  P1 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 2/2, grave 0 | P2: life 10, hand 5, deck 45, souls 1/1, grave 0
+  P1 base: (empty)
+  P2 base: (empty)
+
+=== Turn 2: P2 (foxparks-harness-br) ===
+  P2 draws Blazehowl – Hellflame Defender
+  P2 gains 2 soul(s): 3 total
+  P1: life 10, hand 5, deck 45, souls 2/2, grave 0 | P2: life 10, hand 6, deck 44, souls 3/3, grave 0
+P2 rests 3 souls to draw 1
+  P2 draws Jormuntide Ignis – Savage Lava Dragon
+  P1 base: (empty)
+  P2 base: (empty)
+
+=== Turn 3: P1 (cattiva-azurobe-br) ===
+  P1 draws Fuack – Manic Wave Ripper
+  P1 gains 2 soul(s): 4 total
+  P1: life 10, hand 6, deck 44, souls 4/4, grave 0 | P2: life 10, hand 7, deck 43, souls 0/3, grave 0
+P1 plays Sparkit – Hazardous Contact [BP01-008]#9 (cost 3)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+P1: Sparkit – Hazardous Contact (400/S1) attacks P2
+  P2 takes 1 damage from Sparkit – Hazardous Contact: damage check
+    flip 1: Aurora Guide
+    P2 loses 1 life -> 9
+  P1 base: Sparkit – Hazardous Contact 400/S1 (rested)
+  P2 base: (empty)
+
+=== Turn 4: P2 (foxparks-harness-br) ===
+  P2 draws Axel's Strategy
+  P2 gains 2 soul(s): 5 total
+  P1: life 10, hand 5, deck 44, souls 1/4, grave 0 | P2: life 9, hand 8, deck 41, souls 5/5, grave 1
+P2 plays Chillet – Dragon Whisperer [BP01-025]#80 (cost 5)
+  [trigger] On Deploy: Chillet – Dragon Whisperer
+  P2 reveals Cryolinx – Arctic Ordeal from the top of the deck
+  Cryolinx – Arctic Ordeal is added to P2's hand
+P2: Chillet – Dragon Whisperer (900/S2) attacks Sparkit – Hazardous Contact
+P1 uses Interrupt: Reindrix – Icy Gaze (resting 1 soul)
+  the attack is nullified
+  P1 base: Sparkit – Hazardous Contact 400/S1 (rested)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 5: P1 (cattiva-azurobe-br) ===
+  P1 draws Lamball – My First Pal
+  P1 gains 2 soul(s): 6 total
+  P1: life 10, hand 5, deck 43, souls 6/6, grave 1 | P2: life 9, hand 8, deck 40, souls 0/5, grave 1
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#4 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+P1: Kitsun – Wyrmbane Fangs (400/S2) attacks P2
+  P2 takes 2 damage from Kitsun – Wyrmbane Fangs: damage check
+    flip 1: Foxparks – A Toasty Hug
+    flip 2: Foxparks – Light of Courage
+    P2 loses 2 life -> 7
+  P1 base: Sparkit – Hazardous Contact 400/S1, Kitsun – Wyrmbane Fangs 400/S2 (rested)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested)
+
+=== Turn 6: P2 (foxparks-harness-br) ===
+  P2 draws Single-Shot Rifle
+  P2 gains 2 soul(s): 7 total
+  P1: life 10, hand 4, deck 43, souls 1/6, grave 1 | P2: life 7, hand 9, deck 37, souls 7/7, grave 3
+P2: Chillet – Dragon Whisperer (900/S2) attacks P1
+  P1 takes 2 damage from Chillet – Dragon Whisperer: damage check
+    flip 1: Foxparks – A Toasty Hug
+    flip 2: Pump-Action Shotgun
+    P1 loses 2 life -> 8
+P2 plays Pump-Action Shotgun [BP01-020]#71 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Sparkit – Hazardous Contact takes 1200 damage (total 1200/400)
+  Kitsun – Wyrmbane Fangs takes 1200 damage (total 1200/400)
+  Sparkit – Hazardous Contact [BP01-008]#9 (P1) goes to the graveyard (defeated)
+  Kitsun – Wyrmbane Fangs [BP01-007]#4 (P1) goes to the graveyard (defeated)
+P2 activates Pump-Action Shotgun: +200 power
+  Chillet – Dragon Whisperer power +200 until end of turn
+  P1 base: (empty)
+  P2 base: Chillet – Dragon Whisperer 900/S2 (rested), Pump-Action Shotgun (rested)
+
+=== Turn 7: P1 (cattiva-azurobe-br) ===
+  P1 draws Pump-Action Shotgun
+  P1 gains 2 soul(s): 8 total
+  P1: life 8, hand 5, deck 40, souls 8/8, grave 5 | P2: life 7, hand 8, deck 37, souls 0/7, grave 3
+P1 plays Suzaku – Hellfire Wings [BP01-002]#2 (cost 7)
+  [trigger] On Deploy: Suzaku – Hellfire Wings
+  Chillet – Dragon Whisperer takes 900 damage (total 900/900)
+  Chillet – Dragon Whisperer [BP01-025]#80 (P2) goes to the graveyard (defeated)
+P1: Suzaku – Hellfire Wings (1200/S3) attacks P2
+  P2 takes 3 damage from Suzaku – Hellfire Wings: damage check
+    flip 1: Blazehowl – Hellflame Defender
+    flip 2: Blazehowl – Hellflame Defender
+    flip 3: Single-Shot Rifle
+    P2 loses 3 life -> 4
+  P1 base: Suzaku – Hellfire Wings 1200/S3 (rested)
+  P2 base: Pump-Action Shotgun (rested)
+
+=== Turn 8: P2 (foxparks-harness-br) ===
+  P2 draws Pal Sphere
+  P2 gains 2 soul(s): 9 total
+  P1: life 8, hand 4, deck 40, souls 1/8, grave 5 | P2: life 4, hand 9, deck 33, souls 9/9, grave 7
+P2 plays Single-Shot Rifle [TD01-010]#99 (cost 4)
+  [trigger] On Deploy: Single-Shot Rifle
+  Suzaku – Hellfire Wings takes 1500 damage (total 1500/1200)
+  Suzaku – Hellfire Wings [BP01-002]#2 (P1) goes to the graveyard (defeated)
+P2 plays Pal Sphere [BP01-047]#85 (cost 4)
+  P2 draws Single-Shot Rifle, Aurora Guide, Jormuntide Ignis – Savage Lava Dragon
+  P1 base: (empty)
+  P2 base: Pump-Action Shotgun, Single-Shot Rifle
+
+=== Turn 9: P1 (cattiva-azurobe-br) ===
+  P1 draws Fuack – Manic Wave Ripper
+  P1 gains 2 soul(s): 10 total
+  P1: life 8, hand 5, deck 39, souls 10/10, grave 6 | P2: life 4, hand 10, deck 30, souls 1/9, grave 8
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#26 (cost 2)
+P1 plays Pump-Action Shotgun [BP01-020]#13 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+P1: Fuack – Manic Wave Ripper (400/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Foxparks – Light of Courage
+    P2 loses 1 life -> 3
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested)
+  P2 base: Pump-Action Shotgun, Single-Shot Rifle
+
+=== Turn 10: P2 (foxparks-harness-br) ===
+  P2 draws Jormuntide Ignis – Savage Lava Dragon
+  P2 gains 1 soul(s): 10 total
+  P1: life 8, hand 3, deck 39, souls 1/10, grave 6 | P2: life 3, hand 11, deck 28, souls 10/10, grave 9
+P2 plays Jormuntide Ignis – Savage Lava Dragon [BP01-001]#53 (cost 8)
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2: Jormuntide Ignis – Savage Lava Dragon (1900/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Sparkit – Hazardous Contact
+    flip 2: Hangyu Cryst – Frigid Wanderer
+    flip 3: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P2 discards Aurora Guide
+  P2 discards Axel's Strategy
+P2 activates Jormuntide Ignis – Savage Lava Dragon: stand this card (discard 2)
+  Jormuntide Ignis – Savage Lava Dragon stands
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested)
+  P2 base: Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4
+
+=== Turn 11: P1 (cattiva-azurobe-br) ===
+  P1 draws Lamball – My First Pal
+  P1 gains 0 soul(s): 10 total
+  P1: life 8, hand 4, deck 35, souls 10/10, grave 9 | P2: life 3, hand 8, deck 28, souls 2/10, grave 11
+P1 plays Pump-Action Shotgun [BP01-020]#14 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Jormuntide Ignis – Savage Lava Dragon takes 1200 damage (total 1200/1700)
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+P1 plays Lamball – My First Pal [TD01-023]#44 (cost 2)
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+P1: Fuack – Manic Wave Ripper (600/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Reptyro – Ore Gorger
+    P2 loses 1 life -> 2
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested), Pump-Action Shotgun (rested), Lamball – My First Pal 200/S1
+  P2 base: Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4
+
+=== Turn 12: P2 (foxparks-harness-br) ===
+  P2 draws Cryolinx – Arctic Ordeal
+  P2 gains 0 soul(s): 10 total
+  P1: life 8, hand 2, deck 35, souls 1/10, grave 9 | P2: life 2, hand 9, deck 26, souls 10/10, grave 12
+P2 plays Jormuntide Ignis – Savage Lava Dragon [BP01-001]#52 (cost 8)
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 blocks with Lamball – My First Pal (200)
+  battle: Jormuntide Ignis – Savage Lava Dragon deals 1700 to Lamball – My First Pal, Lamball – My First Pal deals 200 back
+  Lamball – My First Pal [TD01-023]#44 (P1) goes to the graveyard (defeated)
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P2 discards Axel's Strategy
+  P2 discards Single-Shot Rifle
+P2 activates Jormuntide Ignis – Savage Lava Dragon: stand this card (discard 2)
+  Jormuntide Ignis – Savage Lava Dragon stands
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Lamball – My First Pal
+    flip 2: Cattiva – My First Pal
+    flip 3: Foxparks – A Toasty Hug
+    flip 4: Hangyu Cryst – Frigid Wanderer
+    P1 loses 4 life -> 4
+P2: Jormuntide Ignis – Savage Lava Dragon (2100/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested), Pump-Action Shotgun (rested)
+  P2 base: Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested)
+
+=== Turn 13: P1 (cattiva-azurobe-br) ===
+  P1 draws Hangyu Cryst – Frigid Wanderer
+  P1 gains 0 soul(s): 10 total
+  P1: life 4, hand 3, deck 29, souls 10/10, grave 15 | P2: life 2, hand 6, deck 26, souls 2/10, grave 14
+P1 plays Hangyu Cryst – Frigid Wanderer [TD01-015]#37 (cost 4)
+  [trigger] On Deploy: Hangyu Cryst – Frigid Wanderer
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#27 (cost 2)
+P1 plays Lamball – My First Pal [TD01-023]#43 (cost 2)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Jormuntide Ignis – Savage Lava Dragon (LUCKY): damage cancelled
+P1 activates Pump-Action Shotgun: +200 power
+  Hangyu Cryst – Frigid Wanderer power +200 until end of turn
+P1 activates Pump-Action Shotgun: +200 power
+  Hangyu Cryst – Frigid Wanderer power +200 until end of turn
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Foxparks' Harness
+    P2 loses 1 life -> 1
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested), Pump-Action Shotgun (rested), Hangyu Cryst – Frigid Wanderer 600/S2, Fuack – Manic Wave Ripper 200/S1 (rested), Lamball – My First Pal 200/S1
+  P2 base: Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested)
+
+=== Turn 14: P2 (foxparks-harness-br) ===
+  P2 draws Reptyro – Ore Gorger
+  P2 gains 0 soul(s): 10 total
+  P1: life 4, hand 0, deck 29, souls 2/10, grave 15 | P2: life 1, hand 7, deck 23, souls 10/10, grave 16
+P2 plays Reptyro – Ore Gorger [BP01-005]#57 (cost 8)
+  [trigger] On Deploy: Reptyro – Ore Gorger
+  P2 gets 3 material (3)
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 blocks with Lamball – My First Pal (200)
+  battle: Jormuntide Ignis – Savage Lava Dragon deals 1700 to Lamball – My First Pal, Lamball – My First Pal deals 200 back
+  Lamball – My First Pal [TD01-023]#43 (P1) goes to the graveyard (defeated)
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 blocks with Hangyu Cryst – Frigid Wanderer (600)
+  battle: Jormuntide Ignis – Savage Lava Dragon deals 1700 to Hangyu Cryst – Frigid Wanderer, Hangyu Cryst – Frigid Wanderer deals 600 back
+  Hangyu Cryst – Frigid Wanderer [TD01-015]#37 (P1) goes to the graveyard (defeated)
+  P2 discards Foxparks – A Toasty Hug
+  P2 discards Cryolinx – Arctic Ordeal
+P2 activates Jormuntide Ignis – Savage Lava Dragon: stand this card (discard 2)
+  Jormuntide Ignis – Savage Lava Dragon stands
+P2: Reptyro – Ore Gorger (1500/S3) attacks P1
+  P1 takes 3 damage from Reptyro – Ore Gorger: damage check
+    flip 1: Kitsun – Wyrmbane Fangs
+    flip 2: Pengullet – Yearning for the Sky
+    flip 3: Pump-Action Shotgun
+    P1 loses 3 life -> 1
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Cattiva – My First Pal
+    flip 2: Foxparks – A Toasty Hug
+    flip 3: Kitsun – Wyrmbane Fangs
+    flip 4: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+  P2 discards Cryolinx – Arctic Ordeal
+  P2 discards Cryolinx – Arctic Ordeal
+P2 activates Jormuntide Ignis – Savage Lava Dragon: stand this card (discard 2)
+  Jormuntide Ignis – Savage Lava Dragon stands
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2: Jormuntide Ignis – Savage Lava Dragon (1900/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Suzaku – Hellfire Wings (LUCKY): damage cancelled
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P2 consumes 3 material (0 left)
+P2 activates Reptyro – Ore Gorger: dig for a gear
+  P2 looks at the top 5: Chillet – Dragon Whisperer, Foxparks – A Toasty Hug, Reptyro – Ore Gorger, Foxparks' Harness, Chillet – Dragon Whisperer
+  P2 deploys Foxparks' Harness with Reptyro
+  P2 shuffles the deck
+P2 activates Foxparks' Harness: power up a Pal
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  P1 base: Fuack – Manic Wave Ripper 200/S1 (rested), Pump-Action Shotgun (rested), Pump-Action Shotgun (rested), Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: Pump-Action Shotgun (rested), Single-Shot Rifle (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested), Reptyro – Ore Gorger 1500/S3 (rested), Foxparks' Harness (rested)
+
+=== Turn 15: P1 (cattiva-azurobe-br) ===
+  P1 draws Lamball – My First Pal
+  P1 gains 0 soul(s): 10 total
+  P1: life 1, hand 1, deck 19, souls 10/10, grave 26 | P2: life 1, hand 2, deck 22, souls 2/10, grave 20
+P1 plays Lamball – My First Pal [TD01-023]#45 (cost 2)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+P2 uses Interrupt: Blazehowl – Hellflame Defender (resting 1 soul)
+  the attack is nullified
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+P1 activates Pump-Action Shotgun: +200 power
+  Fuack – Manic Wave Ripper power +200 until end of turn
+P1: Fuack – Manic Wave Ripper (600/S1) attacks Jormuntide Ignis – Savage Lava Dragon
+  battle: Fuack – Manic Wave Ripper deals 600 to Jormuntide Ignis – Savage Lava Dragon, Jormuntide Ignis – Savage Lava Dragon deals 1700 back
+  Fuack – Manic Wave Ripper [BP01-032]#27 (P1) goes to the graveyard (defeated)
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Chillet – Dragon Whisperer (LUCKY): damage cancelled
+P1 rests 3 souls to draw 1
+  P1 draws Fuack – Manic Wave Ripper
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#24 (cost 2)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks P2
+  P2 takes 1 damage from Fuack – Manic Wave Ripper: damage check
+    flip 1: Foxparks – A Toasty Hug
+    P2 loses 1 life -> 0
+GAME OVER: P1 (cattiva-azurobe-br) wins by life

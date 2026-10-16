@@ -1,0 +1,355 @@
+Seed 261000000. P1 = cattiva-azurobe-br, P2 = machine-gun-furnace-br
+P2 goes first; P1 starts with 1 soul
+  P2 draws Kitsun – Wyrmbane Fangs, Suzaku – Hellfire Wings, Kitsun – Wyrmbane Fangs, Grappling Gun, Single-Shot Rifle
+  P1 draws Reindrix – Icy Gaze, Pump-Action Shotgun, Azurobe – Water Dragon Waltz, Lamball – My First Pal, Fuack – Manic Wave Ripper
+P2 redraws
+  P2 draws Lamball – My First Pal, Primitive Furnace, Reptyro – Ore Gorger, Grappling Gun, Single-Shot Rifle
+P1 keeps
+
+=== Turn 1: P2 (machine-gun-furnace-br) ===
+  P2 skips the draw (first turn)
+  P2 gains 2 soul(s): 2 total
+  P1: life 10, hand 5, deck 45, souls 1/1, grave 0 | P2: life 10, hand 5, deck 45, souls 2/2, grave 0
+P2 plays Primitive Furnace [BP01-016]#72 (cost 2)
+  P1 base: (empty)
+  P2 base: Primitive Furnace dur 800
+
+=== Turn 2: P1 (cattiva-azurobe-br) ===
+  P1 draws Kitsun – Wyrmbane Fangs
+  P1 gains 2 soul(s): 3 total
+  P1: life 10, hand 6, deck 44, souls 3/3, grave 0 | P2: life 10, hand 4, deck 45, souls 0/2, grave 0
+P1 plays Lamball – My First Pal [TD01-023]#43 (cost 2)
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 takes 1 damage from Lamball – My First Pal: damage check
+    flip 1: Foxparks – A Toasty Hug
+    P2 loses 1 life -> 9
+  P1 base: Lamball – My First Pal 200/S1 (rested)
+  P2 base: Primitive Furnace dur 800
+
+=== Turn 3: P2 (machine-gun-furnace-br) ===
+  P2 draws Suzaku – Hellfire Wings
+  P2 gains 2 soul(s): 4 total
+  P1: life 10, hand 5, deck 44, souls 1/3, grave 0 | P2: life 9, hand 5, deck 43, souls 4/4, grave 1
+P2 plays Lamball – My First Pal [TD01-023]#97 (cost 2)
+  Lamball – My First Pal is assigned to Primitive Furnace
+P2 activates Primitive Furnace: get 3 Material and draw
+  P2 gets 3 material (3)
+  P2 draws Pump-Action Shotgun
+  P2 consumes 2 material (1 left)
+P2 activates Primitive Furnace: discount next gear by X (X=2)
+  P2's next gear this turn costs 2 less
+P2 plays Single-Shot Rifle [TD01-010]#92 (cost 2)
+  [trigger] On Deploy: Single-Shot Rifle
+  Lamball – My First Pal takes 1500 damage (total 1500/200)
+  Lamball – My First Pal [TD01-023]#43 (P1) goes to the graveyard (defeated)
+P2 activates Single-Shot Rifle: +200 power
+  Lamball – My First Pal power +200 until end of turn
+  P1 base: (empty)
+  P2 base: Primitive Furnace dur 800, Lamball – My First Pal 200/S1 (rested), Single-Shot Rifle (rested)
+
+=== Turn 4: P1 (cattiva-azurobe-br) ===
+  P1 draws Pengullet – Yearning for the Sky
+  P1 gains 2 soul(s): 5 total
+  P1: life 10, hand 6, deck 43, souls 5/5, grave 1 | P2: life 9, hand 4, deck 42, souls 0/4, grave 1
+P1 plays Pengullet – Yearning for the Sky [BP01-028]#18 (cost 4)
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Cryolinx – Arctic Ordeal
+    flip 2: Cryolinx – Arctic Ordeal
+    P2 loses 2 life -> 7
+  P1 base: Pengullet – Yearning for the Sky 600/S2 (rested)
+  P2 base: Primitive Furnace dur 800, Lamball – My First Pal 200/S1 (rested), Single-Shot Rifle (rested)
+
+=== Turn 5: P2 (machine-gun-furnace-br) ===
+  P2 draws Reindrix – Icy Gaze
+  P2 gains 2 soul(s): 6 total
+  P1: life 10, hand 5, deck 43, souls 1/5, grave 1 | P2: life 7, hand 5, deck 39, souls 6/6, grave 3
+  Lamball – My First Pal is assigned to Primitive Furnace
+P2 activates Primitive Furnace: get 3 Material and draw
+  P2 gets 3 material (4)
+  P2 draws Mounted Machine Gun
+P2 plays Mounted Machine Gun [BP01-015]#68 (cost 4)
+P2 activates Single-Shot Rifle: +200 power
+  Lamball – My First Pal power +200 until end of turn
+  P2 consumes 3 material (1 left)
+P2 activates Primitive Furnace: discount next gear by X (X=3)
+  P2's next gear this turn costs 3 less
+P2 plays Grappling Gun [BP01-045]#83 (cost 2)
+P2 activates Grappling Gun: +200 and Vigilance
+  Lamball – My First Pal power +200 until end of turn
+  Lamball – My First Pal gains vigilance until end of turn
+  [trigger] Vigilance: Lamball – My First Pal
+  P1 base: Pengullet – Yearning for the Sky 600/S2 (rested)
+  P2 base: Primitive Furnace dur 800, Lamball – My First Pal 200/S1, Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested)
+
+=== Turn 6: P1 (cattiva-azurobe-br) ===
+  P1 draws Cattiva – My First Pal
+  P1 gains 2 soul(s): 7 total
+  P1: life 10, hand 6, deck 42, souls 7/7, grave 1 | P2: life 7, hand 4, deck 38, souls 0/6, grave 3
+P1 plays Azurobe – Water Dragon Waltz [BP01-029]#20 (cost 6)
+  [trigger] On Deploy: Azurobe – Water Dragon Waltz
+  P1 draws Kitsun – Wyrmbane Fangs
+  Lamball – My First Pal is rested
+P1: Azurobe – Water Dragon Waltz (1200/S2) attacks Primitive Furnace
+P2 uses Interrupt: Reindrix – Icy Gaze (discarding Pump-Action Shotgun)
+  the attack is nullified
+P1: Pengullet – Yearning for the Sky (600/S2) attacks P2
+  P2 takes 2 damage from Pengullet – Yearning for the Sky: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Single-Shot Rifle
+    P2 loses 2 life -> 5
+  P1 base: Pengullet – Yearning for the Sky 600/S2 (rested), Azurobe – Water Dragon Waltz 1200/S2 (rested)
+  P2 base: Primitive Furnace dur 800, Lamball – My First Pal 200/S1 (rested), Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested)
+
+=== Turn 7: P2 (machine-gun-furnace-br) ===
+  P2 draws Pump-Action Shotgun
+  P2 gains 2 soul(s): 8 total
+  P1: life 10, hand 6, deck 41, souls 1/7, grave 1 | P2: life 5, hand 3, deck 35, souls 8/8, grave 7
+P2 plays Pump-Action Shotgun [BP01-020]#74 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Pengullet – Yearning for the Sky takes 1200 damage (total 1200/600)
+  Azurobe – Water Dragon Waltz takes 1200 damage (total 1200/1200)
+  Pengullet – Yearning for the Sky [BP01-028]#18 (P1) goes to the graveyard (defeated)
+  Azurobe – Water Dragon Waltz [BP01-029]#20 (P1) goes to the graveyard (defeated)
+  [trigger] Pengullet – Yearning for the Sky: draw 1
+  P1 draws Sparkit – Hazardous Contact
+  Lamball – My First Pal is assigned to Primitive Furnace
+P2 activates Primitive Furnace: get 3 Material and draw
+  P2 gets 3 material (4)
+  P2 draws Pump-Action Shotgun
+P2 activates Single-Shot Rifle: +200 power
+  Lamball – My First Pal power +200 until end of turn
+P2 activates Grappling Gun: +200 and Vigilance
+  Lamball – My First Pal power +200 until end of turn
+  Lamball – My First Pal gains vigilance until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Lamball – My First Pal power +200 until end of turn
+  [trigger] Vigilance: Lamball – My First Pal
+  P1 base: (empty)
+  P2 base: Primitive Furnace dur 800, Lamball – My First Pal 200/S1, Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested)
+
+=== Turn 8: P1 (cattiva-azurobe-br) ===
+  P1 draws Hangyu Cryst – Frigid Wanderer
+  P1 gains 2 soul(s): 9 total
+  P1: life 10, hand 8, deck 39, souls 9/9, grave 3 | P2: life 5, hand 3, deck 34, souls 1/8, grave 7
+P1 plays Sparkit – Hazardous Contact [BP01-008]#10 (cost 3)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+  Lamball – My First Pal takes 500 damage (total 500/200)
+  Lamball – My First Pal [TD01-023]#97 (P2) goes to the graveyard (defeated)
+P1: Sparkit – Hazardous Contact (400/S1) attacks P2
+  P2 takes 1 damage from Sparkit – Hazardous Contact: damage check
+    flip 1: Kitsun – Wyrmbane Fangs
+    P2 loses 1 life -> 4
+P1 plays Hangyu Cryst – Frigid Wanderer [TD01-015]#36 (cost 4)
+  [trigger] On Deploy: Hangyu Cryst – Frigid Wanderer
+P1 plays Fuack – Manic Wave Ripper [BP01-032]#25 (cost 2)
+P1: Hangyu Cryst – Frigid Wanderer (600/S2) attacks Primitive Furnace
+  Primitive Furnace takes 600 damage (total 600/800)
+P1: Fuack – Manic Wave Ripper (200/S1) attacks Primitive Furnace
+  Primitive Furnace takes 200 damage (total 800/800)
+  Primitive Furnace [BP01-016]#72 (P2) goes to the graveyard (defeated)
+  P1 base: Sparkit – Hazardous Contact 400/S1 (rested), Hangyu Cryst – Frigid Wanderer 600/S2 (rested), Fuack – Manic Wave Ripper 200/S1 (rested)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested)
+
+=== Turn 9: P2 (machine-gun-furnace-br) ===
+  P2 draws Flambelle – Scorching Tears
+  P2 gains 2 soul(s): 10 total
+  P1: life 10, hand 5, deck 39, souls 0/9, grave 3 | P2: life 4, hand 4, deck 32, souls 10/10, grave 10
+P2 plays Reptyro – Ore Gorger [BP01-005]#59 (cost 8)
+  [trigger] On Deploy: Reptyro – Ore Gorger
+  P2 gets 3 material (7)
+  Reptyro – Ore Gorger is assigned to Mounted Machine Gun
+  P2 consumes 4 material (3 left)
+P2 activates Mounted Machine Gun: fire X times (X=4)
+  Sparkit – Hazardous Contact takes 500 damage (total 500/400)
+  Fuack – Manic Wave Ripper takes 500 damage (total 500/200)
+  Hangyu Cryst – Frigid Wanderer takes 500 damage (total 500/600)
+  Hangyu Cryst – Frigid Wanderer takes 500 damage (total 1000/600)
+  Sparkit – Hazardous Contact [BP01-008]#10 (P1) goes to the graveyard (defeated)
+  Hangyu Cryst – Frigid Wanderer [TD01-015]#36 (P1) goes to the graveyard (defeated)
+  Fuack – Manic Wave Ripper [BP01-032]#25 (P1) goes to the graveyard (defeated)
+P2 activates Single-Shot Rifle: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+P2 activates Grappling Gun: +200 and Vigilance
+  Reptyro – Ore Gorger power +200 until end of turn
+  Reptyro – Ore Gorger gains vigilance until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Reptyro – Ore Gorger power +200 until end of turn
+  P2 consumes 3 material (0 left)
+P2 activates Reptyro – Ore Gorger: dig for a gear
+  P2 looks at the top 5: Pal Sphere, Cryolinx – Arctic Ordeal, Primitive Furnace, Jormuntide Ignis – Savage Lava Dragon, Reindrix – Icy Gaze
+  P2 shuffles the deck
+  [trigger] Vigilance: Reptyro – Ore Gorger
+  P1 base: (empty)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested), Reptyro – Ore Gorger 1500/S3
+
+=== Turn 10: P1 (cattiva-azurobe-br) ===
+  P1 draws Hangyu Cryst – Frigid Wanderer
+  P1 gains 1 soul(s): 10 total
+  P1: life 10, hand 6, deck 38, souls 10/10, grave 6 | P2: life 4, hand 3, deck 32, souls 2/10, grave 10
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#5 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Reptyro – Ore Gorger takes 1200 damage (total 1200/1500)
+P1: Kitsun – Wyrmbane Fangs (400/S2) attacks P2
+  P2 takes 2 damage from Kitsun – Wyrmbane Fangs: damage check
+    flip 1: Primitive Furnace
+    flip 2: Jormuntide Ignis – Savage Lava Dragon (LUCKY): damage cancelled
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#4 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Reptyro – Ore Gorger takes 1200 damage (total 2400/1500)
+  Reptyro – Ore Gorger [BP01-005]#59 (P2) goes to the graveyard (defeated)
+P1: Kitsun – Wyrmbane Fangs (400/S2) attacks P2
+  P2 takes 2 damage from Kitsun – Wyrmbane Fangs: damage check
+    flip 1: Reptyro – Ore Gorger
+    flip 2: Suzaku – Hellfire Wings (LUCKY): damage cancelled
+  P1 base: Kitsun – Wyrmbane Fangs 400/S2 (rested), Kitsun – Wyrmbane Fangs 400/S2 (rested)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested)
+
+=== Turn 11: P2 (machine-gun-furnace-br) ===
+  P2 draws Cryolinx – Arctic Ordeal
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 4, deck 38, souls 0/10, grave 6 | P2: life 4, hand 4, deck 27, souls 10/10, grave 15
+P2 plays Suzaku – Hellfire Wings [BP01-002]#56 (cost 7)
+  [trigger] On Deploy: Suzaku – Hellfire Wings
+  Kitsun – Wyrmbane Fangs takes 900 damage (total 900/400)
+  Kitsun – Wyrmbane Fangs [BP01-007]#5 (P1) goes to the graveyard (defeated)
+P2: Suzaku – Hellfire Wings (1200/S3) attacks P1
+  P1 takes 3 damage from Suzaku – Hellfire Wings: damage check
+    flip 1: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+P2 plays Flambelle – Scorching Tears [BP01-012]#63 (cost 3)
+  [trigger] On Deploy: Flambelle – Scorching Tears
+  P2 gets 2 material (2)
+P2 activates Single-Shot Rifle: +200 power
+  Suzaku – Hellfire Wings power +200 until end of turn
+  Flambelle – Scorching Tears is assigned to Mounted Machine Gun
+  P2 consumes 1 material (1 left)
+P2 activates Mounted Machine Gun: fire X times (X=1)
+  Kitsun – Wyrmbane Fangs takes 700 damage (total 700/400)
+  Kitsun – Wyrmbane Fangs [BP01-007]#4 (P1) goes to the graveyard (defeated)
+P2 activates Grappling Gun: +200 and Vigilance
+  Suzaku – Hellfire Wings power +200 until end of turn
+  Suzaku – Hellfire Wings gains vigilance until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Suzaku – Hellfire Wings power +200 until end of turn
+  [trigger] Vigilance: Suzaku – Hellfire Wings
+  P1 base: (empty)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested), Suzaku – Hellfire Wings 1200/S3, Flambelle – Scorching Tears 400/S1 (rested)
+
+=== Turn 12: P1 (cattiva-azurobe-br) ===
+  P1 draws Sparkit – Hazardous Contact
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 5, deck 36, souls 10/10, grave 9 | P2: life 4, hand 2, deck 27, souls 0/10, grave 15
+P1 plays Pump-Action Shotgun [BP01-020]#13 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Suzaku – Hellfire Wings takes 1200 damage (total 1200/1200)
+  Flambelle – Scorching Tears takes 1200 damage (total 1200/400)
+  Suzaku – Hellfire Wings [BP01-002]#56 (P2) goes to the graveyard (defeated)
+  Flambelle – Scorching Tears [BP01-012]#63 (P2) goes to the graveyard (defeated)
+P1 plays Sparkit – Hazardous Contact [BP01-008]#8 (cost 3)
+  [trigger] On Deploy: Sparkit – Hazardous Contact
+P1 activates Pump-Action Shotgun: +200 power
+  Sparkit – Hazardous Contact power +200 until end of turn
+P1: Sparkit – Hazardous Contact (600/S1) attacks P2
+  P2 takes 1 damage from Sparkit – Hazardous Contact: damage check
+    flip 1: Kitsun – Wyrmbane Fangs
+    P2 loses 1 life -> 3
+  P1 base: Pump-Action Shotgun (rested), Sparkit – Hazardous Contact 400/S1 (rested)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested)
+
+=== Turn 13: P2 (machine-gun-furnace-br) ===
+  P2 draws Jormuntide Ignis – Savage Lava Dragon
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 3, deck 36, souls 0/10, grave 9 | P2: life 3, hand 3, deck 25, souls 10/10, grave 18
+P2 plays Jormuntide Ignis – Savage Lava Dragon [BP01-001]#53 (cost 8)
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Grappling Gun: +200 and Vigilance
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  Jormuntide Ignis – Savage Lava Dragon gains vigilance until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2: Jormuntide Ignis – Savage Lava Dragon (2300/S4) attacks Sparkit – Hazardous Contact
+P1 uses Interrupt: Reindrix – Icy Gaze (discarding Cattiva – My First Pal)
+  the attack is nullified
+  [trigger] Vigilance: Jormuntide Ignis – Savage Lava Dragon
+  P1 base: Pump-Action Shotgun (rested), Sparkit – Hazardous Contact 400/S1 (rested)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4
+
+=== Turn 14: P1 (cattiva-azurobe-br) ===
+  P1 draws Lamball – My First Pal
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 2, deck 35, souls 10/10, grave 11 | P2: life 3, hand 2, deck 25, souls 2/10, grave 18
+P1 plays Hangyu Cryst – Frigid Wanderer [TD01-015]#35 (cost 4)
+  [trigger] On Deploy: Hangyu Cryst – Frigid Wanderer
+P1 plays Lamball – My First Pal [TD01-023]#42 (cost 2)
+P1 rests 3 souls to draw 1
+  P1 draws Cattiva – My First Pal
+P1 activates Pump-Action Shotgun: +200 power
+  Hangyu Cryst – Frigid Wanderer power +200 until end of turn
+P1: Lamball – My First Pal (200/S1) attacks P2
+  P2 blocks with Jormuntide Ignis – Savage Lava Dragon (1700)
+  battle: Lamball – My First Pal deals 200 to Jormuntide Ignis – Savage Lava Dragon, Jormuntide Ignis – Savage Lava Dragon deals 1700 back
+  Lamball – My First Pal [TD01-023]#42 (P1) goes to the graveyard (defeated)
+P1: Sparkit – Hazardous Contact (400/S1) attacks P2
+  P2 takes 1 damage from Sparkit – Hazardous Contact: damage check
+    flip 1: Foxparks – A Toasty Hug
+    P2 loses 1 life -> 2
+P1: Hangyu Cryst – Frigid Wanderer (800/S2) attacks P2
+P2 uses Interrupt: Cryolinx – Arctic Ordeal (resting 1 soul)
+  the attack is nullified
+  P1 base: Pump-Action Shotgun (rested), Sparkit – Hazardous Contact 400/S1 (rested), Hangyu Cryst – Frigid Wanderer 600/S2 (rested)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4 (rested)
+
+=== Turn 15: P2 (machine-gun-furnace-br) ===
+  P2 draws Suzaku – Hellfire Wings
+  P2 gains 0 soul(s): 10 total
+  P1: life 10, hand 1, deck 34, souls 1/10, grave 12 | P2: life 2, hand 2, deck 23, souls 10/10, grave 20
+P2 plays Pump-Action Shotgun [BP01-020]#75 (cost 7)
+  [trigger] On Deploy: Pump-Action Shotgun
+  Sparkit – Hazardous Contact takes 1200 damage (total 1200/400)
+  Hangyu Cryst – Frigid Wanderer takes 1200 damage (total 1200/600)
+  Sparkit – Hazardous Contact [BP01-008]#8 (P1) goes to the graveyard (defeated)
+  Hangyu Cryst – Frigid Wanderer [TD01-015]#35 (P1) goes to the graveyard (defeated)
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Pump-Action Shotgun
+    flip 2: Suzaku – Hellfire Wings (LUCKY): damage cancelled
+P2 activates Jormuntide Ignis – Savage Lava Dragon: stand this card (pay ③)
+  Jormuntide Ignis – Savage Lava Dragon stands
+P2: Jormuntide Ignis – Savage Lava Dragon (1700/S4) attacks P1
+  P1 takes 4 damage from Jormuntide Ignis – Savage Lava Dragon: damage check
+    flip 1: Hangyu Cryst – Frigid Wanderer
+    flip 2: Azurobe – Water Dragon Waltz (LUCKY): damage cancelled
+P2 activates Single-Shot Rifle: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Grappling Gun: +200 and Vigilance
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  Jormuntide Ignis – Savage Lava Dragon gains vigilance until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+P2 activates Pump-Action Shotgun: +200 power
+  Jormuntide Ignis – Savage Lava Dragon power +200 until end of turn
+  [trigger] Vigilance: Jormuntide Ignis – Savage Lava Dragon
+  P1 base: Pump-Action Shotgun (rested)
+  P2 base: Single-Shot Rifle (rested), Mounted Machine Gun dur 1000, Grappling Gun (rested), Pump-Action Shotgun (rested), Jormuntide Ignis – Savage Lava Dragon 1700/S4, Pump-Action Shotgun (rested)
+
+=== Turn 16: P1 (cattiva-azurobe-br) ===
+  P1 draws Kitsun – Wyrmbane Fangs
+  P1 gains 0 soul(s): 10 total
+  P1: life 10, hand 2, deck 29, souls 10/10, grave 18 | P2: life 2, hand 1, deck 23, souls 0/10, grave 20
+P1 plays Cattiva – My First Pal [TD02-023]#49 (cost 2)
+P1 plays Kitsun – Wyrmbane Fangs [BP01-007]#7 (cost 5)
+  [trigger] On Deploy: Kitsun – Wyrmbane Fangs
+  Jormuntide Ignis – Savage Lava Dragon takes 1200 damage (total 1200/1700)
+P1: Cattiva – My First Pal (200/S1) attacks P2
+  P2 blocks with Jormuntide Ignis – Savage Lava Dragon (1700)
+  battle: Cattiva – My First Pal deals 200 to Jormuntide Ignis – Savage Lava Dragon, Jormuntide Ignis – Savage Lava Dragon deals 1700 back
+  Cattiva – My First Pal [TD02-023]#49 (P1) goes to the graveyard (defeated)
+P1 activates Pump-Action Shotgun: +200 power
+  Kitsun – Wyrmbane Fangs power +200 until end of turn
+P1: Kitsun – Wyrmbane Fangs (600/S2) attacks P2
+  P2 takes 2 damage from Kitsun – Wyrmbane Fangs: damage check
+    flip 1: Reindrix – Icy Gaze
+    flip 2: Single-Shot Rifle
+    P2 loses 2 life -> 0
+GAME OVER: P1 (cattiva-azurobe-br) wins by life
