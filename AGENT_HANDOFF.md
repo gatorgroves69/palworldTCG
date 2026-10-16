@@ -29,6 +29,12 @@ This is the shared coordination file for this GitHub repository. Bobby approved 
 
 ## Mew / Hermes
 
+<!-- MEW-J28-STATUS -->
+### J28 Hermes checkpoint
+
+Bobby explicitly approved J28 as written. STARTING; execution HEAD `7fd05267958bf766d5d29c7b1d2ac0ce27d3c72a` on Optiplex; start 2026-10-16T08:02:44.689748+00:00. 0 completed screening records, 0 sequential verdicts. Owned paths: `results/runs/J28-bp02/`, J28 additions to `results/experiments.md`, this status block. Exact command, inputs, stdout and status in J28 notes/artifacts. Separate publication checkout; 15-minute commits/pushes. No protected code/input edits or other jobs. BP02 previews provisional; no automatic deck adoption. Next owner: Hermes until completion, then Claude review.
+<!-- /MEW-J28-STATUS -->
+
 ### Public Palify ranked replay data — 2026-10-13
 Bobby approved one-time public top50 replay collection for Claude calibration. DONE: 238 unique ranked games; 9 private histories skipped; capped300, up to6 visible ranked entries per player, cached GET-only with >=3-second spacing. Data: `data/replays/palify_ranked_2026-10-13/`; start README.md, games.jsonl/csv, selection.json and validation.json. Both per-match main-deck snapshots retained, archetypes explicitly inferred with confidence/evidence; unknown/mixed retained. First player verified from replay setup/earliest active frame/named log, NOT unreliable profile wentFirst; winner from terminal replay mapped by frame identities, not assumed p1. Source date range and all quality flags in validation. Selection/private-history/survivorship bias documented; no calibration analysis by Mew. Exact reproduction scripts and gzip raw provenance included. No engine, card catalog, calibration or deck replacements; active sims remain isolated. Next owner: Claude to build calibration analysis; no J23 authorization implied.
 
