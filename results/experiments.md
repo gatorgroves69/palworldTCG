@@ -246,3 +246,5 @@ The following observed rows are preserved, not certified as a consistent-input s
 | 2026-10-16 10:48 | run | cattiva_dragons_v3 | -2 Axel's Strategy / +2 Eikthyrdeer – Warden of the Woods | human | +0.1 ± 1.0 | 0.08 | 4045 | — | **not better (inconclusive)** |
 | 2026-10-16 10:59 | run | cattiva_dragons_v3 | -2 Fuack – Manic Wave Ripper / +2 Foxcicle – Aurora Hymn | human | -1.1 ± 1.6 | -0.68 | 1618 | — | **not better (futility)** |
 | 2026-10-16 11:11 | run | cattiva_dragons_v3 | -2 Fuack – Manic Wave Ripper / +2 Foxparks – Breathing Practice | human | -1.0 ± 1.6 | -0.61 | 1618 | — | **not better (futility)** |
+| 2026-10-16 11:22 | run | cattiva_dragons_v3 | -2 Axel's Strategy / +2 Orserk – Thunderclap Roar | human | -1.5 ± 1.6 | -0.96 | 1618 | — | **not better (futility)** |
+| 2026-10-16 11:33 | run | cattiva_dragons_v3 | -2 Fuack – Manic Wave Ripper / +2 Eikthyrdeer – Warden of the Woods | human | -1.4 ± 1.6 | -0.87 | 1618 | — | **not better (futility)** |
