@@ -1,0 +1,48 @@
+{
+  "deck": "shadowbeak-menasting-bp",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@human@struct3@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 299,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 227,
+  "losses": 273,
+  "draws": 0,
+  "win_rate": 0.454,
+  "ci95": [
+    0.4109,
+    0.4978
+  ],
+  "going_first": {
+    "games": 252,
+    "wins": 102,
+    "losses": 150,
+    "draws": 0,
+    "win_rate": 0.4048,
+    "ci95": [
+      0.346,
+      0.4664
+    ]
+  },
+  "going_second": {
+    "games": 248,
+    "wins": 125,
+    "losses": 123,
+    "draws": 0,
+    "win_rate": 0.504,
+    "ci95": [
+      0.4422,
+      0.5657
+    ]
+  },
+  "avg_turns": 17.07,
+  "end_reasons": {
+    "deckout": 36,
+    "life": 464
+  },
+  "seconds": 95.3,
+  "replay": "python -m sim replay --deck data/decks/shadowbeak-menasting-bp.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@human@struct3@kill2 --structures any --game-seed <seed>"
+}

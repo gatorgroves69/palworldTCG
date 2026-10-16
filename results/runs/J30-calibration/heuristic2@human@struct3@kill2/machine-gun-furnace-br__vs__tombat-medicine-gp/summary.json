@@ -1,0 +1,48 @@
+{
+  "deck": "machine-gun-furnace-br",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@human@struct3@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 298,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 231,
+  "losses": 269,
+  "draws": 0,
+  "win_rate": 0.462,
+  "ci95": [
+    0.4188,
+    0.5058
+  ],
+  "going_first": {
+    "games": 252,
+    "wins": 92,
+    "losses": 160,
+    "draws": 0,
+    "win_rate": 0.3651,
+    "ci95": [
+      0.3081,
+      0.4261
+    ]
+  },
+  "going_second": {
+    "games": 248,
+    "wins": 139,
+    "losses": 109,
+    "draws": 0,
+    "win_rate": 0.5605,
+    "ci95": [
+      0.4983,
+      0.6209
+    ]
+  },
+  "avg_turns": 17.37,
+  "end_reasons": {
+    "deckout": 6,
+    "life": 494
+  },
+  "seconds": 152.7,
+  "replay": "python -m sim replay --deck data/decks/machine-gun-furnace-br.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@human@struct3@kill2 --structures any --game-seed <seed>"
+}
