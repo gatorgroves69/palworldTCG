@@ -2,3 +2,4 @@ optimizing cattiva_dragons_v3; field weights: chillet-relaxaurus-bp 38.9%, lamba
 round 1: incumbent 71.0% ± 0.8 (1005s)
   screening 166 swaps x 400 games
   -2 Axel's Strategy / +2 Eikthyrdeer – Warden of the Woods: +0.1 ± 1.0 (4045 games) -> not better (inconclusive)
+  -2 Fuack – Manic Wave Ripper / +2 Foxcicle – Aurora Hymn: -1.1 ± 1.6 (1618 games) -> not better (futility)
