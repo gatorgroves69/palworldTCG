@@ -1,0 +1,47 @@
+{
+  "deck": "lamball-cattiva-bg",
+  "opp": "shadowbeak-menasting-bp",
+  "bot": "heuristic2@human@allin",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 292,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 395,
+  "losses": 105,
+  "draws": 0,
+  "win_rate": 0.79,
+  "ci95": [
+    0.7522,
+    0.8234
+  ],
+  "going_first": {
+    "games": 239,
+    "wins": 187,
+    "losses": 52,
+    "draws": 0,
+    "win_rate": 0.7824,
+    "ci95": [
+      0.7259,
+      0.83
+    ]
+  },
+  "going_second": {
+    "games": 261,
+    "wins": 208,
+    "losses": 53,
+    "draws": 0,
+    "win_rate": 0.7969,
+    "ci95": [
+      0.744,
+      0.8413
+    ]
+  },
+  "avg_turns": 9.9,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 109.9,
+  "replay": "python -m sim replay --deck data/decks/lamball-cattiva-bg.txt --opp data/decks/shadowbeak-menasting-bp.txt --bot heuristic2@human@allin --structures any --game-seed <seed>"
+}

@@ -1,0 +1,48 @@
+{
+  "deck": "foxparks-harness-br",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2@human@allin",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 286,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 287,
+  "losses": 213,
+  "draws": 0,
+  "win_rate": 0.574,
+  "ci95": [
+    0.5303,
+    0.6166
+  ],
+  "going_first": {
+    "games": 239,
+    "wins": 127,
+    "losses": 112,
+    "draws": 0,
+    "win_rate": 0.5314,
+    "ci95": [
+      0.4681,
+      0.5936
+    ]
+  },
+  "going_second": {
+    "games": 261,
+    "wins": 160,
+    "losses": 101,
+    "draws": 0,
+    "win_rate": 0.613,
+    "ci95": [
+      0.5527,
+      0.6701
+    ]
+  },
+  "avg_turns": 15.36,
+  "end_reasons": {
+    "deckout": 6,
+    "life": 494
+  },
+  "seconds": 192.8,
+  "replay": "python -m sim replay --deck data/decks/foxparks-harness-br.txt --opp data/decks/lamball-stone-pit-pr.txt --bot heuristic2@human@allin --structures any --game-seed <seed>"
+}
