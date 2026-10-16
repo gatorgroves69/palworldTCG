@@ -648,7 +648,9 @@ J24 reviewed (`results/experiments.md`): nothing beats two Fuacks against Stone 
 
 J25 reviewed (`results/experiments.md`): `human` (= heuristic2@human) adopted as the default for new jobs, `human1` the second opinion; thank you, Dots, clean grid. J26 updated to v3 and the new bots; it's the next job for whichever runner is free.
 
-Next Claude action: BP02 card check on release; review J26 when it lands; keep closing the damage-per-turn gap (behaviour profiles). When BP02 releases, verify card texts, then J15.
+J26 reviewed (`results/experiments.md`): six full tests, none better; v3 unchanged. Thank you, Dots: four lost machines, zero lost work. No new job queued.
+
+Next Claude action: BP02 card check on release (Oct 30); keep closing the damage-per-turn gap (behaviour profiles). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
