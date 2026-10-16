@@ -1,0 +1,48 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "shadowbeak-menasting-bp",
+  "bot": "heuristic2@human@struct3@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 262,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 397,
+  "losses": 103,
+  "draws": 0,
+  "win_rate": 0.794,
+  "ci95": [
+    0.7564,
+    0.8271
+  ],
+  "going_first": {
+    "games": 249,
+    "wins": 187,
+    "losses": 62,
+    "draws": 0,
+    "win_rate": 0.751,
+    "ci95": [
+      0.6938,
+      0.8006
+    ]
+  },
+  "going_second": {
+    "games": 251,
+    "wins": 210,
+    "losses": 41,
+    "draws": 0,
+    "win_rate": 0.8367,
+    "ci95": [
+      0.7859,
+      0.8773
+    ]
+  },
+  "avg_turns": 13.74,
+  "end_reasons": {
+    "deckout": 25,
+    "life": 475
+  },
+  "seconds": 102.1,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/shadowbeak-menasting-bp.txt --bot heuristic2@human@struct3@kill2 --structures any --game-seed <seed>"
+}
