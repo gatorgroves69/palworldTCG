@@ -1,0 +1,48 @@
+{
+  "deck": "machine-gun-furnace-br",
+  "opp": "shadowbeak-menasting-bp",
+  "bot": "heuristic2@human@struct3",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 297,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 289,
+  "losses": 211,
+  "draws": 0,
+  "win_rate": 0.578,
+  "ci95": [
+    0.5343,
+    0.6205
+  ],
+  "going_first": {
+    "games": 243,
+    "wins": 132,
+    "losses": 111,
+    "draws": 0,
+    "win_rate": 0.5432,
+    "ci95": [
+      0.4804,
+      0.6047
+    ]
+  },
+  "going_second": {
+    "games": 257,
+    "wins": 157,
+    "losses": 100,
+    "draws": 0,
+    "win_rate": 0.6109,
+    "ci95": [
+      0.5501,
+      0.6685
+    ]
+  },
+  "avg_turns": 16.2,
+  "end_reasons": {
+    "deckout": 59,
+    "life": 441
+  },
+  "seconds": 224.7,
+  "replay": "python -m sim replay --deck data/decks/machine-gun-furnace-br.txt --opp data/decks/shadowbeak-menasting-bp.txt --bot heuristic2@human@struct3 --structures any --game-seed <seed>"
+}
