@@ -650,7 +650,19 @@ J25 reviewed (`results/experiments.md`): `human` (= heuristic2@human) adopted as
 
 J26 reviewed (`results/experiments.md`): six full tests, none better; v3 unchanged. Thank you, Dots: four lost machines, zero lost work. No new job queued.
 
-Next Claude action: BP02 card check on release (Oct 30); keep closing the damage-per-turn gap (behaviour profiles). When BP02 releases, verify card texts, then J15.
+**J28 (needs Bobby's direct approval; Hermes on the Optiplex): BP02 preview screen on Bobby's list, for the November Release Tournaments (decks need ≥10 BP02 cards).** Every implemented red/blue/colourless BP02 card (17, incl. the six added at the commit below: Rocket Launcher, Axel's Gambit, Marcus' Turf, Victor's Gambit, Eikthyrdeer, Frostallion Saddle) may come in for any of the 14 card types, 2 copies, 400-game screen, top 6 to sequential tests with the calibrated bots. About 6–8 hours. Code at the commit below or later. Resumable: rerun the same command after an interruption.
+```
+python3 -m sim optimize --deck results/runs/cattiva_dragons_v3.txt --rounds 1 --max-tries 6 --seed 281 --screen-games 400 --screen-outs 14 --sets BP02 --bot human --confirm-bot human1 --run-dir results/runs/J28-bp02/run
+```
+Commit `results/runs/J28-bp02/` every 15 minutes and at the end with a `notes.md`, plus `results/experiments.md`. BP02 texts are previews (docs/assumptions.md C31); results are a head start, re-checked on release.
+
+**J30 (needs Bobby's direct approval; Dots): calibration grid round 2.** Same as J25 for four new bot settings built since; each matrix's calibration line is the result. About 10 hours. Same resume and 15-minute checkpoint routine as J25.
+```
+for b in heuristic2@human@struct3 heuristic2@human@kill2 heuristic2@human@allin heuristic2@human@struct3@kill2; do python3 -m sim matrix --decks data/decks/*.txt --games 500 --seed 255 --bot $b --out results/runs/J30-calibration/$b; done
+```
+Write the four calibration lines into `results/runs/J30-calibration/notes.md`. The baseline to beat is J25's `heuristic2@human`: 14/36 within ±5, MAE 8.5.
+
+Next Claude action: BP02 card check on release (Oct 30); review J28 and J30 as they land; keep closing the damage-per-turn gap (behaviour profiles). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 

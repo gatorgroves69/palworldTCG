@@ -109,3 +109,36 @@ def test_faleris_power_per_gear_and_flambelle_material(box):
     fl = put(g, 0, "BP02-007")
     act(g, bots, fl, 0)
     assert g.players[0].resources["material"] == 2 and fl.rested
+
+
+def test_rocket_launcher_hits_up_to_three(box):
+    g, bots = G(box)
+    a, b, c = (put(g, 1, "BP01-028") for _ in range(3))   # three Pengullets, 600 each
+    d = put(g, 1, "BP01-025")                             # Chillet 900
+    play(g, bots, 0, "BP02-018", answers=[[a.uid, b.uid, d.uid]])
+    assert a.zone is b.zone is d.zone is Zone.GRAVEYARD and c.zone is Zone.BASE
+
+
+def test_axels_gambit_stands_pals_and_gears(box):
+    g, bots = G(box)
+    p = put(g, 0, "BP01-028")
+    gear = put(g, 0, "BP01-020")
+    p.rested = gear.rested = True
+    play(g, bots, 0, "BP02-022")
+    assert not p.rested and not gear.rested
+
+
+def test_victors_gambit_needs_same_cost_pal(box):
+    g, bots = G(box)
+    v = put(g, 0, "BP02-046", Zone.HAND)
+    hand_pal = put(g, 0, "BP01-028", Zone.HAND)           # Pengullet ◇4
+    assert PlayCard(v.uid) not in g.legal_actions(0)      # no ◇4 Pal on the base yet
+    put(g, 0, "TD01-004")                                 # Foxparks ◇4 on the base
+    play(g, bots, 0, "BP02-046", answers=[[hand_pal.uid]])
+    assert hand_pal.zone is Zone.BASE
+
+
+def test_eikthyrdeer_is_an_interrupt(box):
+    g, bots = G(box)
+    e = put(g, 0, "BP02-099", Zone.HAND)
+    assert e.kw("interrupt")

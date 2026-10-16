@@ -9,7 +9,7 @@ from engine.abilities import ActAbility, CardImpl, Trigger
 from engine.state import Zone
 
 from .common import (choose_pal, consume_cost, graveyard_cards, has_resources, is_dragon_pal,
-                     look_top, my_gears, opp_pals)
+                     look_top, my_gears, opp_pals, shuffle_deck)
 from .registry import REGISTRY
 
 reg = REGISTRY.register
@@ -268,3 +268,120 @@ class Jetragon(Legendary):
                        can_pay_extra=lambda g, c: len(graveyard_cards(
                            g, c.owner, lambda x: x.is_pal and x.defn.cost >= 7)) >= 2,
                        pay_extra=_jetragon_pay)]
+
+
+# ---------------------------------------------------------------------------------------------
+# Added 2026-10-16 from the 2026-10-12 data refresh (texts may still change before release).
+
+def _plus_strike1(game, card, ctx):
+    t = choose_pal(game, card.owner, f"{card.name}: Strike +1 to 1 Pal",
+                   lambda c: c.owner == card.owner, up_to=False, intent="help")
+    if t:
+        game.add_mod(t, "strike", 1, "turn", card.name)
+
+
+def _plus_power200(game, card, ctx):
+    t = choose_pal(game, card.owner, f"{card.name}: +200 Power to 1 Pal", up_to=False,
+                   intent="help", amount=200)
+    if t:
+        game.add_mod(t, "power", 200, "turn", card.name)
+
+
+# BP02-018 Rocket Launcher (Gear)
+# AUTO OnDeploy Choose up to 3 Pals, and deal 1000 Damage.
+# ACT [Rest this card] Choose 1 Pal, and it gets Strike +1 until end of turn.
+@reg
+class RocketLauncher(CardImpl):
+    code = "BP02-018"
+    text = ("AUTO OnDeploy Choose up to 3 Pals, and deal 1000 Damage.\nACT [Rest this card] "
+            "Choose 1 Pal, and it gets Strike +1 until end of turn.")
+    acts = [ActAbility("Strike +1", _plus_strike1, rest_self=True)]
+
+    def on_deploy(self, game, card):
+        p = card.owner
+        pals = [c for ps in game.players for c in ps.pals]
+        for t in game.choose_cards(p, "Rocket Launcher: deal 1000 to up to 3 Pals", pals, 3,
+                                   up_to=True, intent="harm", amount=1000):
+            game.deal_card_damage(t, 1000, card)
+
+
+# BP02-022 Axel's Gambit (Event, lucky)
+# Choose all of your Pals and gears, and stand them.
+@reg
+class AxelsGambit(CardImpl):
+    code = "BP02-022"
+    text = "Choose all of your Pals and gears, and stand them."
+
+    def resolve_event(self, game, card, mode):
+        p = card.owner
+        for c in list(game.players[p].base):
+            if (c.is_pal or c.type.value == "gear") and c.rested:
+                game.stand(c)
+                game.log(f"  {c.name} stands")
+
+
+# BP02-023 Marcus' Turf (Event)
+# Look at the top 5 cards of your deck, choose up to 1 ◇8 or greater red card from among them
+# and add it to hand, and shuffle the rest of the cards with the deck.
+@reg
+class MarcusTurf(CardImpl):
+    code = "BP02-023"
+    text = ("Look at the top 5 cards of your deck, choose up to 1 ◇8 or greater red card from "
+            "among them and add it to hand, and shuffle the rest of the cards with the deck.")
+
+    def resolve_event(self, game, card, mode):
+        p = card.owner
+        top = look_top(game, p, 5)
+        hits = [c for c in top if c.defn.cost >= 8 and c.defn.color.value == "red"]
+        for c in game.choose_cards(p, "Marcus' Turf: add a ◇8+ red card", hits, 1, up_to=True,
+                                   intent="recover"):
+            game.move(c, Zone.HAND)
+            game.log(f"  {c.name} goes to the hand")
+        shuffle_deck(game, p)
+
+
+# BP02-046 Victor's Gambit (Event, lucky)
+# Choose 1 of your Pals, choose 1 Pal from your hand with the same cost as that card, and
+# deploy it.
+def _victor_pairs(game, p):
+    costs = {c.defn.cost for c in game.players[p].pals}
+    return [c for c in game.players[p].hand if c.is_pal and c.defn.cost in costs
+            and c.impl.can_play(game, c)]
+
+
+@reg
+class VictorsGambit(CardImpl):
+    code = "BP02-046"
+    text = ("Choose 1 of your Pals, choose 1 Pal from your hand with the same cost as that "
+            "card, and deploy it.")
+
+    def can_play(self, game, card):
+        return bool(_victor_pairs(game, card.owner))
+
+    def resolve_event(self, game, card, mode):
+        p = card.owner
+        for c in game.choose_cards(p, "Victor's Gambit: deploy a Pal of the same cost",
+                                   _victor_pairs(game, p), 1, up_to=False, intent="deploy"):
+            game.deploy(c)
+
+
+# BP02-099 Eikthyrdeer – Warden of the Woods (colorless Pal, 900/S2, Interrupt)
+@reg
+class Eikthyrdeer(CardImpl):
+    code = "BP02-099"
+    text = ("ACT Interrupt (Hand Quick [①, discard this card] OR [Discard this card and 1 other "
+            "card from hand] Nullify the opponent's attack. Battle damage does not occur)")
+    keywords = {"interrupt": True}
+
+
+# BP02-044 Frostallion Saddle (Gear)
+# CONT Your main name 《Frostallion》 Pals cannot be chosen by the effects of your opponent's
+# Pals. ACT [Rest this card] Choose 1 Pal, and it gets Power +200 until end of turn.
+# The CONT half isn't modelled (it only protects Frostallion from Pal effects).
+@reg
+class FrostallionSaddle(CardImpl):
+    code = "BP02-044"
+    text = ("CONT Your main name 《Frostallion》 Pals cannot be chosen by the effects of your "
+            "opponent's Pals.\nACT [Rest this card] Choose 1 Pal, and it gets Power +200 until "
+            "end of turn.")
+    acts = [ActAbility("+200 power", _plus_power200, rest_self=True)]
