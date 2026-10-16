@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-bp",
+  "opp": "tombat-medicine-gp",
+  "bot": "heuristic2@human@struct3",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 278,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 360,
+  "losses": 140,
+  "draws": 0,
+  "win_rate": 0.72,
+  "ci95": [
+    0.6791,
+    0.7576
+  ],
+  "going_first": {
+    "games": 264,
+    "wins": 190,
+    "losses": 74,
+    "draws": 0,
+    "win_rate": 0.7197,
+    "ci95": [
+      0.6627,
+      0.7704
+    ]
+  },
+  "going_second": {
+    "games": 236,
+    "wins": 170,
+    "losses": 66,
+    "draws": 0,
+    "win_rate": 0.7203,
+    "ci95": [
+      0.6599,
+      0.7737
+    ]
+  },
+  "avg_turns": 15.39,
+  "end_reasons": {
+    "deckout": 13,
+    "life": 487
+  },
+  "seconds": 148.2,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-bp.txt --opp data/decks/tombat-medicine-gp.txt --bot heuristic2@human@struct3 --structures any --game-seed <seed>"
+}
