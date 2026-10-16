@@ -1,7 +1,7 @@
 {
   "command": "python3 -m sim optimize --deck results/runs/cattiva_dragons_v3.txt --rounds 1 --max-tries 6 --seed 281 --screen-games 400 --screen-outs 14 --sets BP02 --bot human --confirm-bot human1 --run-dir results/runs/J28-bp02/run",
   "execution_head": "7fd05267958bf766d5d29c7b1d2ac0ce27d3c72a",
-  "started_utc": "2026-10-16T08:02:44.689748+00:00",
+  "started_utc": "2026-10-16T08:03:53.795857+00:00",
   "approval": "Bobby: Run J28 as written; git pull --ff-only and HEAD 0795d7a or later; one command with --run-dir.",
   "protected_sha256": {
     "bots/__init__.py": "ac15eaa4198a1c4ec70c6c65ff4e723da09f62f408a0f043d033136844310901",
