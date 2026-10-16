@@ -1,0 +1,48 @@
+{
+  "deck": "chillet-relaxaurus-bp",
+  "opp": "foxparks-harness-br",
+  "bot": "heuristic2@human@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 273,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 366,
+  "losses": 134,
+  "draws": 0,
+  "win_rate": 0.732,
+  "ci95": [
+    0.6915,
+    0.7689
+  ],
+  "going_first": {
+    "games": 263,
+    "wins": 174,
+    "losses": 89,
+    "draws": 0,
+    "win_rate": 0.6616,
+    "ci95": [
+      0.6024,
+      0.7161
+    ]
+  },
+  "going_second": {
+    "games": 237,
+    "wins": 192,
+    "losses": 45,
+    "draws": 0,
+    "win_rate": 0.8101,
+    "ci95": [
+      0.7554,
+      0.855
+    ]
+  },
+  "avg_turns": 17.81,
+  "end_reasons": {
+    "deckout": 21,
+    "life": 479
+  },
+  "seconds": 77.6,
+  "replay": "python -m sim replay --deck data/decks/chillet-relaxaurus-bp.txt --opp data/decks/foxparks-harness-br.txt --bot heuristic2@human@kill2 --structures any --game-seed <seed>"
+}
