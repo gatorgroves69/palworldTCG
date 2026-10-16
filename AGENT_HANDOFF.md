@@ -800,3 +800,7 @@ Lines 1–3 complete. Victor's Gambit for Jormuntide on v3 (human seed 383): A 6
 ### J32 line 4 checkpoint — 2026-10-16 21:43 UTC
 
 Lines 1–4 complete. Frostallion for Suzaku on v2 (human seed 384): A 68.4% to B 68.0%, diff -0.4 ± 0.8 points, z -0.5; early no-difference stop at 6000 nominal games/list (6003 actual), exit 0 at 21:42:56 UTC. Exact report and execution evidence in `results/runs/J32-compare/`; all 1268 protected/input hashes unchanged. No generated experiment rows. Next: line 5 after verified publication; lines 5–6 pending. No adoption or additional jobs.
+
+### J32 line 5 checkpoint — 2026-10-16 22:10 UTC
+
+Lines 1–5 complete. Axel's Gambit for Suzaku on v2 (human seed 385): A 68.7% to B 64.2%, diff -4.6 ± 1.0 points, z -4.4; clear early stop at 4000 nominal games/list (4002 actual), exit 0 at 22:09:34 UTC. Difference uses unrounded rates. Exact report and execution evidence in `results/runs/J32-compare/`; all 1268 protected/input hashes unchanged. No generated experiment rows. Next: final line 6 after verified publication. No adoption or additional jobs.
