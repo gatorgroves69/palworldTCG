@@ -784,3 +784,7 @@ Runner verified all 90,000 local raw records against pair summaries and all 1,26
 ### J32 execution claim — 2026-10-16 19:44 UTC
 
 Bobby explicitly approved J32 as written. dot owns the six sequential comparisons under `results/runs/J32-compare/`, any generated J32 experiment rows, and this status section. Frozen execution source: d26379e; OpenAI cloud Linux only. Line 1 started under supervised nohup at 19:43 UTC; no completed J32 result at this claim. Run the six specified commands unchanged, publish and verify each completed line before starting the next. An interrupted sequential comparison must restart only its unfinished line. Separate publication checkout; pull before every push, append-only main, no rebase or force-push. No protected engine, bots, sim, cards, data or tests edits, automatic adoption, or additional confirmation job. Next: finish and publish line 1.
+
+### J32 line 1 checkpoint — 2026-10-16 20:30 UTC
+
+Line 1 complete, exit 0: Frostallion for Jormuntide on v3, human seed 381, 6000 nominal games/list (6003 actual), A 69.3% to B 68.6%, diff -0.7 ± 0.8 points, z -0.9; sequential stopped early, no difference. Report, exact command, stdout, start/end/exit and validation in `results/runs/J32-compare/`. All 1268 protected/input hashes unchanged on frozen d26379e. No experiments rows generated. Next: line 2 only after remote verification of this checkpoint; lines 2–6 pending. No adoption or extra jobs.

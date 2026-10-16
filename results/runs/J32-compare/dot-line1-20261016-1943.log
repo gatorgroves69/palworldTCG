@@ -1,0 +1,15 @@
+**human**, 6000 games per list, seed 381: A 69.3% -> B 68.6% (diff -0.7 ± 0.8, z -0.9) [sequential: stopped early, no difference after 6000 games]
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.9% | 63.5 | 63.1 | -0.4 | 2331 |
+| lamball-stone-pit-pr | 13.7% | 87.5 | 85.5 | -1.9 | 822 |
+| chillet-relaxaurus-br | 11.8% | 63.6 | 62.4 | -1.1 | 711 |
+| foxparks-harness-br | 7.2% | 70.8 | 67.4 | -3.5 | 432 |
+| tombat-medicine-gp | 6.2% | 78.9 | 78.4 | -0.5 | 375 |
+| lamball-cattiva-bg | 5.6% | 49.1 | 49.4 | +0.3 | 336 |
+| cattiva-azurobe-br | 5.2% | 62.9 | 63.5 | +0.6 | 315 |
+| shadowbeak-menasting-bp | 5.0% | 83.3 | 84.3 | +1.0 | 300 |
+| machine-gun-furnace-br | 4.7% | 79.3 | 79.3 | +0.0 | 285 |
+| chillet-relaxaurus-bg | 1.6% | 69.8 | 70.8 | +1.0 | 96 |
+
