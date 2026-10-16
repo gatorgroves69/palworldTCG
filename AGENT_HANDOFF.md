@@ -827,3 +827,7 @@ All six exact lines complete, exit 0; each received its own verified main checkp
 ### J33 execution claim — 2026-10-16 23:41 UTC
 
 Bobby explicitly authorized the five J33 commands. dot owns `results/runs/J33-compare/`, `results/runs/J33-gauntlet/`, generated J33 experiment rows if any, and this status section. Preflight complete on frozen source 5f0282063d05bfe48f9d79b029e8b409791612a0; not yet launched. OpenAI cloud Linux only. Three sequential comparisons (seeds 391–393), then the Swee/v3 human gauntlets (seed 394), exactly as above. Publish and verify each completed line before starting the next. Separate publication checkout; pull before every push, append-only main, no rebase or force-push. No protected code/input edits, additional jobs or automatic adoption. Exact commands and evidence: `results/runs/J33-compare/notes.md`. Next: line 1 after this claim is verified remotely.
+
+### J33 line 1 checkpoint — 2026-10-16 23:56 UTC
+
+Line 1 complete, exit 0: My First/Axel package A versus v3, human seed 391, A 71.1% to B 64.4%, diff -6.7 ± 1.4 points, z -4.6; clear early stop at nominal 2000 games/list (2001 actual). Exact report, command, stdout, start/exit evidence and validation in `results/runs/J33-compare/`. All 1265 protected/input hashes unchanged on frozen 5f0282063d05bfe48f9d79b029e8b409791612a0. No experiment rows generated. Next: line 2 after verified publication; lines 2–5 pending. No adoption or extra jobs.

@@ -9,3 +9,9 @@ Bobby explicitly authorized J33 in chat. Frozen source: 5f0282063d05bfe48f9d79b0
 5. `python3 -m sim gauntlet --deck results/runs/cattiva_dragons_v3.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/v3`
 
 All reports are simulation evidence, not real-event predictions or automatic adoption. BP02 preview texts remain provisional.
+
+## Line 1 complete
+
+Exit 0 at 2026-10-16T23:55:19.644490+00:00. Report/stdout agree; 2001 actual games per list from allocation rounding. **human**, 2000 games per list, seed 391: A 71.1% -> B 64.4% (diff -6.7 ± 1.4, z -4.6) [sequential: stopped early, clear after 2000 games]
+
+All 1265 protected/input hashes unchanged. Next: line 2 after verified main publication.
