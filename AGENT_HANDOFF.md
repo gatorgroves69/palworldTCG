@@ -29,6 +29,9 @@ This is the shared coordination file for this GitHub repository. Bobby approved 
 
 ## Mew / Hermes
 
+### J31 execution claim
+Bobby approved the exact five J31 lines. Hermes owns results/runs/J31-compare/; isolated execution at 5083205cd5694c8a02dc61034f7bb8856b3a42a8. Commit/push after each line; stop on failure or protected input changes. No J32 or adoption. See J31 notes for progress.
+
 <!-- MEW-J28-STATUS -->
 ### J28 Hermes checkpoint
 

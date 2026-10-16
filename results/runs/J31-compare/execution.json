@@ -1,0 +1,12 @@
+{
+  "head": "5083205cd5694c8a02dc61034f7bb8856b3a42a8",
+  "started": "2026-10-16T18:41:23.282783+00:00",
+  "commands": [
+    "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r1_cheapest.txt --games 12000 --seed 371 --bot human --sequential --out results/runs/J31-compare/r1_cheapest.md",
+    "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r2_keep_bodies.txt --games 12000 --seed 372 --bot human --sequential --out results/runs/J31-compare/r2_keep_bodies.md",
+    "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r3_four_eik.txt --games 12000 --seed 373 --bot human --sequential --out results/runs/J31-compare/r3_four_eik.md",
+    "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-quivern4.txt --games 12000 --seed 374 --bot human --sequential --out results/runs/J31-compare/quivern4.md",
+    "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/Q-quivern_for_jorm.txt --games 12000 --seed 375 --bot human --sequential --out results/runs/J31-compare/quivern2_jorm2.md"
+  ],
+  "approval": "Bobby: Run J31 as written in the handoff."
+}
