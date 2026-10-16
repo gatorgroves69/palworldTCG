@@ -1,0 +1,48 @@
+{
+  "deck": "lamball-stone-pit-pr",
+  "opp": "shadowbeak-menasting-bp",
+  "bot": "heuristic2@human@struct3@kill2",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 295,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 321,
+  "losses": 179,
+  "draws": 0,
+  "win_rate": 0.642,
+  "ci95": [
+    0.599,
+    0.6828
+  ],
+  "going_first": {
+    "games": 262,
+    "wins": 158,
+    "losses": 104,
+    "draws": 0,
+    "win_rate": 0.6031,
+    "ci95": [
+      0.5427,
+      0.6604
+    ]
+  },
+  "going_second": {
+    "games": 238,
+    "wins": 163,
+    "losses": 75,
+    "draws": 0,
+    "win_rate": 0.6849,
+    "ci95": [
+      0.6233,
+      0.7406
+    ]
+  },
+  "avg_turns": 17.88,
+  "end_reasons": {
+    "deckout": 97,
+    "life": 403
+  },
+  "seconds": 271.0,
+  "replay": "python -m sim replay --deck data/decks/lamball-stone-pit-pr.txt --opp data/decks/shadowbeak-menasting-bp.txt --bot heuristic2@human@struct3@kill2 --structures any --game-seed <seed>"
+}
