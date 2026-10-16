@@ -13,3 +13,6 @@ Status: running since 2026-10-16T07:49:26Z. First two matrices complete, third m
 - heuristic2@human@struct3: 14/36 pairs within ±5 points; mean absolute difference 8.6 points (unrounded 8.55). 14/36 pairs consistent with real data allowing for both sample sizes (|z| ≤ 2). All 45 pair summaries validated against 22,500 raw game records, including win/loss and first/second counts, source, bot and seed. No demonstrated improvement over J25 baseline.
 - heuristic2@human@kill2: 10/36 pairs within ±5 points; mean absolute difference 11.0 points. 13/36 pairs consistent with real data allowing for both sample sizes (|z| ≤ 2). All 45 pair summaries validated against 22,500 raw game records with the same checks above.
 - Remaining two variants pending.
+
+## Interrupted attempt and resume
+Original supervised session disappeared after 97 finished pairs; no exit status was produced. Verified unknown process ID and unchanged protected inputs before rerunning the exact authorized loop at 2026-10-16T11:37:30Z. All 97 completed pair summaries were already verified on main at 588c0bf8d2ac4166467f4931a1d019ca7e04f8be. Earlier attempt evidence remains separately preserved; current attempt is dot-resume-20261016-1137.*.

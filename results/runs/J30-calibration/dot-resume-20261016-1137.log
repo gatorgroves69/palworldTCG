@@ -1,0 +1,323 @@
+[1/45] cattiva-azurobe-br vs chillet-relaxaurus-bg
+  resumed from summary.json
+[2/45] cattiva-azurobe-br vs chillet-relaxaurus-bp
+  resumed from summary.json
+[3/45] cattiva-azurobe-br vs chillet-relaxaurus-br
+  resumed from summary.json
+[4/45] cattiva-azurobe-br vs foxparks-harness-br
+  resumed from summary.json
+[5/45] cattiva-azurobe-br vs lamball-cattiva-bg
+  resumed from summary.json
+[6/45] cattiva-azurobe-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[7/45] cattiva-azurobe-br vs machine-gun-furnace-br
+  resumed from summary.json
+[8/45] cattiva-azurobe-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[9/45] cattiva-azurobe-br vs tombat-medicine-gp
+  resumed from summary.json
+[10/45] chillet-relaxaurus-bg vs chillet-relaxaurus-bp
+  resumed from summary.json
+[11/45] chillet-relaxaurus-bg vs chillet-relaxaurus-br
+  resumed from summary.json
+[12/45] chillet-relaxaurus-bg vs foxparks-harness-br
+  resumed from summary.json
+[13/45] chillet-relaxaurus-bg vs lamball-cattiva-bg
+  resumed from summary.json
+[14/45] chillet-relaxaurus-bg vs lamball-stone-pit-pr
+  resumed from summary.json
+[15/45] chillet-relaxaurus-bg vs machine-gun-furnace-br
+  resumed from summary.json
+[16/45] chillet-relaxaurus-bg vs shadowbeak-menasting-bp
+  resumed from summary.json
+[17/45] chillet-relaxaurus-bg vs tombat-medicine-gp
+  resumed from summary.json
+[18/45] chillet-relaxaurus-bp vs chillet-relaxaurus-br
+  resumed from summary.json
+[19/45] chillet-relaxaurus-bp vs foxparks-harness-br
+  resumed from summary.json
+[20/45] chillet-relaxaurus-bp vs lamball-cattiva-bg
+  resumed from summary.json
+[21/45] chillet-relaxaurus-bp vs lamball-stone-pit-pr
+  resumed from summary.json
+[22/45] chillet-relaxaurus-bp vs machine-gun-furnace-br
+  resumed from summary.json
+[23/45] chillet-relaxaurus-bp vs shadowbeak-menasting-bp
+  resumed from summary.json
+[24/45] chillet-relaxaurus-bp vs tombat-medicine-gp
+  resumed from summary.json
+[25/45] chillet-relaxaurus-br vs foxparks-harness-br
+  resumed from summary.json
+[26/45] chillet-relaxaurus-br vs lamball-cattiva-bg
+  resumed from summary.json
+[27/45] chillet-relaxaurus-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[28/45] chillet-relaxaurus-br vs machine-gun-furnace-br
+  resumed from summary.json
+[29/45] chillet-relaxaurus-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[30/45] chillet-relaxaurus-br vs tombat-medicine-gp
+  resumed from summary.json
+[31/45] foxparks-harness-br vs lamball-cattiva-bg
+  resumed from summary.json
+[32/45] foxparks-harness-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[33/45] foxparks-harness-br vs machine-gun-furnace-br
+  resumed from summary.json
+[34/45] foxparks-harness-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[35/45] foxparks-harness-br vs tombat-medicine-gp
+  resumed from summary.json
+[36/45] lamball-cattiva-bg vs lamball-stone-pit-pr
+  resumed from summary.json
+[37/45] lamball-cattiva-bg vs machine-gun-furnace-br
+  resumed from summary.json
+[38/45] lamball-cattiva-bg vs shadowbeak-menasting-bp
+  resumed from summary.json
+[39/45] lamball-cattiva-bg vs tombat-medicine-gp
+  resumed from summary.json
+[40/45] lamball-stone-pit-pr vs machine-gun-furnace-br
+  resumed from summary.json
+[41/45] lamball-stone-pit-pr vs shadowbeak-menasting-bp
+  resumed from summary.json
+[42/45] lamball-stone-pit-pr vs tombat-medicine-gp
+  resumed from summary.json
+[43/45] machine-gun-furnace-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[44/45] machine-gun-furnace-br vs tombat-medicine-gp
+  resumed from summary.json
+[45/45] shadowbeak-menasting-bp vs tombat-medicine-gp
+  resumed from summary.json
+# Matchup matrix (500 games per pair, bot `heuristic2@human@struct3`, structures `any`)
+
+Row deck's win rate against the column deck.
+
+| | cattiva-azurobe-br | chillet-relaxaurus-bg | chillet-relaxaurus-bp | chillet-relaxaurus-br | foxparks-harness-br | lamball-cattiva-bg | lamball-stone-pit-pr | machine-gun-furnace-br | shadowbeak-menasting-bp | tombat-medicine-gp |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **cattiva-azurobe-br** | — | 62 | 59 | 44 | 59 | 51 | 77 | 69 | 80 | 83 |
+| **chillet-relaxaurus-bg** | 38 | — | 47 | 42 | 56 | 52 | 54 | 54 | 66 | 68 |
+| **chillet-relaxaurus-bp** | 41 | 53 | — | 46 | 57 | 51 | 57 | 58 | 72 | 72 |
+| **chillet-relaxaurus-br** | 56 | 58 | 54 | — | 60 | 52 | 65 | 65 | 79 | 72 |
+| **foxparks-harness-br** | 41 | 44 | 43 | 40 | — | 36 | 54 | 58 | 66 | 60 |
+| **lamball-cattiva-bg** | 49 | 48 | 49 | 48 | 64 | — | 82 | 76 | 77 | 77 |
+| **lamball-stone-pit-pr** | 23 | 46 | 43 | 35 | 46 | 18 | — | 53 | 69 | 53 |
+| **machine-gun-furnace-br** | 31 | 46 | 42 | 35 | 42 | 24 | 47 | — | 58 | 48 |
+| **shadowbeak-menasting-bp** | 20 | 34 | 28 | 21 | 34 | 23 | 31 | 42 | — | 47 |
+| **tombat-medicine-gp** | 17 | 32 | 28 | 28 | 40 | 23 | 47 | 52 | 53 | — |
+
+## Calibration vs matchups_2026-10-12.json
+
+14/36 pairs within ±5 points; mean absolute difference 8.6 points.
+14/36 pairs consistent with the real data allowing for both sample sizes (|z| ≤ 2).
+
+| Matchup | Sim | 95% CI | Real (games) | Diff | z | |
+|---|---|---|---|---|---|---|
+| cattiva-azurobe-br vs tombat-medicine-gp | 82.8 | 79.2–85.9 | 54.0 (343) | +28.8 | +9.1 | ❌ |
+| lamball-cattiva-bg vs lamball-stone-pit-pr | 81.8 | 78.2–84.9 | 58.0 (1006) | +23.8 | +10.2 | ❌ |
+| cattiva-azurobe-br vs lamball-stone-pit-pr | 76.8 | 72.9–80.3 | 55.0 (944) | +21.8 | +8.8 | ❌ |
+| chillet-relaxaurus-br vs tombat-medicine-gp | 72.0 | 67.9–75.8 | 54.0 (893) | +18.0 | +6.9 | ❌ |
+| chillet-relaxaurus-br vs lamball-stone-pit-pr | 64.6 | 60.3–68.7 | 47.0 (1748) | +17.6 | +7.2 | ❌ |
+| lamball-cattiva-bg vs tombat-medicine-gp | 77.4 | 73.5–80.8 | 63.0 (328) | +14.4 | +4.4 | ❌ |
+| chillet-relaxaurus-br vs shadowbeak-menasting-bp | 78.6 | 74.8–82.0 | 65.0 (679) | +13.6 | +5.2 | ❌ |
+| lamball-stone-pit-pr vs machine-gun-furnace-br | 53.0 | 48.6–57.3 | 66.0 (680) | -13.0 | -4.5 | ❌ |
+| lamball-cattiva-bg vs machine-gun-furnace-br | 75.8 | 71.9–79.3 | 64.0 (296) | +11.8 | +3.5 | ❌ |
+| chillet-relaxaurus-br vs foxparks-harness-br | 60.2 | 55.9–64.4 | 50.0 (989) | +10.2 | +3.8 | ❌ |
+| machine-gun-furnace-br vs tombat-medicine-gp | 47.8 | 43.5–52.2 | 58.0 (363) | -10.2 | -3.0 | ❌ |
+| chillet-relaxaurus-bp vs tombat-medicine-gp | 72.0 | 67.9–75.8 | 62.0 (2723) | +10.0 | +4.5 | ❌ |
+| chillet-relaxaurus-br vs machine-gun-furnace-br | 65.0 | 60.7–69.0 | 55.0 (619) | +10.0 | +3.4 | ❌ |
+| cattiva-azurobe-br vs shadowbeak-menasting-bp | 80.2 | 76.5–83.5 | 71.0 (272) | +9.2 | +2.8 | ❌ |
+| lamball-cattiva-bg vs shadowbeak-menasting-bp | 77.0 | 73.1–80.5 | 69.0 (258) | +8.0 | +2.3 | ❌ |
+| cattiva-azurobe-br vs chillet-relaxaurus-br | 44.2 | 39.9–48.6 | 52.0 (700) | -7.8 | -2.7 | ❌ |
+| shadowbeak-menasting-bp vs tombat-medicine-gp | 46.8 | 42.5–51.2 | 39.0 (366) | +7.8 | +2.3 | ❌ |
+| chillet-relaxaurus-bp vs chillet-relaxaurus-br | 46.0 | 41.7–50.4 | 53.0 (5264) | -7.0 | -3.0 | ❌ |
+| foxparks-harness-br vs lamball-cattiva-bg | 35.6 | 31.5–39.9 | 42.0 (478) | -6.4 | -2.1 | ❌ |
+| lamball-stone-pit-pr vs tombat-medicine-gp | 52.6 | 48.2–56.9 | 59.0 (916) | -6.4 | -2.3 | ❌ |
+| chillet-relaxaurus-bp vs shadowbeak-menasting-bp | 72.0 | 67.9–75.8 | 66.0 (1955) | +6.0 | +2.6 | ❌ |
+| cattiva-azurobe-br vs lamball-cattiva-bg | 51.2 | 46.8–55.6 | 46.0 (406) | +5.2 | +1.6 | ❌ |
+| cattiva-azurobe-br vs machine-gun-furnace-br | 68.8 | 64.6–72.7 | 64.0 (258) | +4.8 | +1.3 | ✅ |
+| chillet-relaxaurus-bp vs lamball-stone-pit-pr | 56.8 | 52.4–61.1 | 52.0 (6608) | +4.8 | +2.1 | ✅ |
+| cattiva-azurobe-br vs chillet-relaxaurus-bp | 58.6 | 54.2–62.8 | 54.0 (2581) | +4.6 | +1.9 | ✅ |
+| cattiva-azurobe-br vs foxparks-harness-br | 58.6 | 54.2–62.8 | 54.0 (445) | +4.6 | +1.4 | ✅ |
+| foxparks-harness-br vs machine-gun-furnace-br | 57.6 | 53.2–61.9 | 62.0 (357) | -4.4 | -1.3 | ✅ |
+| chillet-relaxaurus-br vs lamball-cattiva-bg | 52.2 | 47.8–56.5 | 48.0 (755) | +4.2 | +1.5 | ✅ |
+| chillet-relaxaurus-bp vs lamball-cattiva-bg | 50.8 | 46.4–55.2 | 47.0 (2640) | +3.8 | +1.6 | ✅ |
+| chillet-relaxaurus-bp vs foxparks-harness-br | 56.8 | 52.4–61.1 | 54.0 (3514) | +2.8 | +1.2 | ✅ |
+| foxparks-harness-br vs tombat-medicine-gp | 60.4 | 56.0–64.6 | 58.0 (494) | +2.4 | +0.8 | ✅ |
+| foxparks-harness-br vs shadowbeak-menasting-bp | 65.6 | 61.3–69.6 | 64.0 (360) | +1.6 | +0.5 | ✅ |
+| foxparks-harness-br vs lamball-stone-pit-pr | 54.0 | 49.6–58.3 | 55.0 (1220) | -1.0 | -0.4 | ✅ |
+| chillet-relaxaurus-bp vs machine-gun-furnace-br | 58.2 | 53.8–62.4 | 59.0 (1865) | -0.8 | -0.3 | ✅ |
+| machine-gun-furnace-br vs shadowbeak-menasting-bp | 57.8 | 53.4–62.1 | 57.0 (356) | +0.8 | +0.2 | ✅ |
+| lamball-stone-pit-pr vs shadowbeak-menasting-bp | 69.2 | 65.0–73.1 | 69.0 (665) | +0.2 | +0.1 | ✅ |
+
+No real-world data for: cattiva-azurobe-br vs chillet-relaxaurus-bg, chillet-relaxaurus-bg vs chillet-relaxaurus-bp, chillet-relaxaurus-bg vs chillet-relaxaurus-br, chillet-relaxaurus-bg vs foxparks-harness-br, chillet-relaxaurus-bg vs lamball-cattiva-bg, chillet-relaxaurus-bg vs lamball-stone-pit-pr, chillet-relaxaurus-bg vs machine-gun-furnace-br, chillet-relaxaurus-bg vs shadowbeak-menasting-bp, chillet-relaxaurus-bg vs tombat-medicine-gp
+
+wrote results/runs/J30-calibration/heuristic2@human@struct3/matrix.json, matrix.md (14/36 calibrated pairs within ±5)
+[1/45] cattiva-azurobe-br vs chillet-relaxaurus-bg
+  resumed from summary.json
+[2/45] cattiva-azurobe-br vs chillet-relaxaurus-bp
+  resumed from summary.json
+[3/45] cattiva-azurobe-br vs chillet-relaxaurus-br
+  resumed from summary.json
+[4/45] cattiva-azurobe-br vs foxparks-harness-br
+  resumed from summary.json
+[5/45] cattiva-azurobe-br vs lamball-cattiva-bg
+  resumed from summary.json
+[6/45] cattiva-azurobe-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[7/45] cattiva-azurobe-br vs machine-gun-furnace-br
+  resumed from summary.json
+[8/45] cattiva-azurobe-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[9/45] cattiva-azurobe-br vs tombat-medicine-gp
+  resumed from summary.json
+[10/45] chillet-relaxaurus-bg vs chillet-relaxaurus-bp
+  resumed from summary.json
+[11/45] chillet-relaxaurus-bg vs chillet-relaxaurus-br
+  resumed from summary.json
+[12/45] chillet-relaxaurus-bg vs foxparks-harness-br
+  resumed from summary.json
+[13/45] chillet-relaxaurus-bg vs lamball-cattiva-bg
+  resumed from summary.json
+[14/45] chillet-relaxaurus-bg vs lamball-stone-pit-pr
+  resumed from summary.json
+[15/45] chillet-relaxaurus-bg vs machine-gun-furnace-br
+  resumed from summary.json
+[16/45] chillet-relaxaurus-bg vs shadowbeak-menasting-bp
+  resumed from summary.json
+[17/45] chillet-relaxaurus-bg vs tombat-medicine-gp
+  resumed from summary.json
+[18/45] chillet-relaxaurus-bp vs chillet-relaxaurus-br
+  resumed from summary.json
+[19/45] chillet-relaxaurus-bp vs foxparks-harness-br
+  resumed from summary.json
+[20/45] chillet-relaxaurus-bp vs lamball-cattiva-bg
+  resumed from summary.json
+[21/45] chillet-relaxaurus-bp vs lamball-stone-pit-pr
+  resumed from summary.json
+[22/45] chillet-relaxaurus-bp vs machine-gun-furnace-br
+  resumed from summary.json
+[23/45] chillet-relaxaurus-bp vs shadowbeak-menasting-bp
+  resumed from summary.json
+[24/45] chillet-relaxaurus-bp vs tombat-medicine-gp
+  resumed from summary.json
+[25/45] chillet-relaxaurus-br vs foxparks-harness-br
+  resumed from summary.json
+[26/45] chillet-relaxaurus-br vs lamball-cattiva-bg
+  resumed from summary.json
+[27/45] chillet-relaxaurus-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[28/45] chillet-relaxaurus-br vs machine-gun-furnace-br
+  resumed from summary.json
+[29/45] chillet-relaxaurus-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[30/45] chillet-relaxaurus-br vs tombat-medicine-gp
+  resumed from summary.json
+[31/45] foxparks-harness-br vs lamball-cattiva-bg
+  resumed from summary.json
+[32/45] foxparks-harness-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[33/45] foxparks-harness-br vs machine-gun-furnace-br
+  resumed from summary.json
+[34/45] foxparks-harness-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[35/45] foxparks-harness-br vs tombat-medicine-gp
+  resumed from summary.json
+[36/45] lamball-cattiva-bg vs lamball-stone-pit-pr
+  resumed from summary.json
+[37/45] lamball-cattiva-bg vs machine-gun-furnace-br
+  resumed from summary.json
+[38/45] lamball-cattiva-bg vs shadowbeak-menasting-bp
+  resumed from summary.json
+[39/45] lamball-cattiva-bg vs tombat-medicine-gp
+  resumed from summary.json
+[40/45] lamball-stone-pit-pr vs machine-gun-furnace-br
+  resumed from summary.json
+[41/45] lamball-stone-pit-pr vs shadowbeak-menasting-bp
+  resumed from summary.json
+[42/45] lamball-stone-pit-pr vs tombat-medicine-gp
+  resumed from summary.json
+[43/45] machine-gun-furnace-br vs shadowbeak-menasting-bp
+  resumed from summary.json
+[44/45] machine-gun-furnace-br vs tombat-medicine-gp
+  resumed from summary.json
+[45/45] shadowbeak-menasting-bp vs tombat-medicine-gp
+  resumed from summary.json
+# Matchup matrix (500 games per pair, bot `heuristic2@human@kill2`, structures `any`)
+
+Row deck's win rate against the column deck.
+
+| | cattiva-azurobe-br | chillet-relaxaurus-bg | chillet-relaxaurus-bp | chillet-relaxaurus-br | foxparks-harness-br | lamball-cattiva-bg | lamball-stone-pit-pr | machine-gun-furnace-br | shadowbeak-menasting-bp | tombat-medicine-gp |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **cattiva-azurobe-br** | — | 59 | 51 | 45 | 60 | 47 | 87 | 73 | 78 | 71 |
+| **chillet-relaxaurus-bg** | 41 | — | 45 | 53 | 64 | 49 | 62 | 53 | 75 | 76 |
+| **chillet-relaxaurus-bp** | 49 | 55 | — | 52 | 73 | 52 | 63 | 64 | 82 | 78 |
+| **chillet-relaxaurus-br** | 55 | 47 | 48 | — | 68 | 46 | 69 | 67 | 79 | 71 |
+| **foxparks-harness-br** | 40 | 36 | 27 | 32 | — | 33 | 61 | 60 | 68 | 53 |
+| **lamball-cattiva-bg** | 53 | 51 | 48 | 54 | 67 | — | 85 | 74 | 74 | 75 |
+| **lamball-stone-pit-pr** | 13 | 38 | 37 | 31 | 39 | 15 | — | 45 | 54 | 42 |
+| **machine-gun-furnace-br** | 27 | 47 | 36 | 33 | 40 | 26 | 55 | — | 62 | 44 |
+| **shadowbeak-menasting-bp** | 22 | 25 | 18 | 21 | 32 | 26 | 46 | 38 | — | 42 |
+| **tombat-medicine-gp** | 29 | 24 | 22 | 29 | 47 | 25 | 58 | 56 | 58 | — |
+
+## Calibration vs matchups_2026-10-12.json
+
+10/36 pairs within ±5 points; mean absolute difference 11.0 points.
+13/36 pairs consistent with the real data allowing for both sample sizes (|z| ≤ 2).
+
+| Matchup | Sim | 95% CI | Real (games) | Diff | z | |
+|---|---|---|---|---|---|---|
+| cattiva-azurobe-br vs lamball-stone-pit-pr | 86.8 | 83.5–89.5 | 55.0 (944) | +31.8 | +14.3 | ❌ |
+| lamball-cattiva-bg vs lamball-stone-pit-pr | 85.0 | 81.6–87.9 | 58.0 (1006) | +27.0 | +12.1 | ❌ |
+| chillet-relaxaurus-br vs lamball-stone-pit-pr | 68.8 | 64.6–72.7 | 47.0 (1748) | +21.8 | +9.1 | ❌ |
+| lamball-stone-pit-pr vs machine-gun-furnace-br | 45.0 | 40.7–49.4 | 66.0 (680) | -21.0 | -7.3 | ❌ |
+| chillet-relaxaurus-bp vs foxparks-harness-br | 73.2 | 69.2–76.9 | 54.0 (3514) | +19.2 | +8.9 | ❌ |
+| chillet-relaxaurus-br vs foxparks-harness-br | 68.0 | 63.8–71.9 | 50.0 (989) | +18.0 | +6.9 | ❌ |
+| cattiva-azurobe-br vs tombat-medicine-gp | 71.0 | 66.9–74.8 | 54.0 (343) | +17.0 | +5.0 | ❌ |
+| chillet-relaxaurus-br vs tombat-medicine-gp | 71.0 | 66.9–74.8 | 54.0 (893) | +17.0 | +6.5 | ❌ |
+| lamball-stone-pit-pr vs tombat-medicine-gp | 42.2 | 38.0–46.6 | 59.0 (916) | -16.8 | -6.1 | ❌ |
+| chillet-relaxaurus-bp vs shadowbeak-menasting-bp | 82.4 | 78.8–85.5 | 66.0 (1955) | +16.4 | +8.2 | ❌ |
+| chillet-relaxaurus-bp vs tombat-medicine-gp | 78.0 | 74.2–81.4 | 62.0 (2723) | +16.0 | +7.7 | ❌ |
+| lamball-stone-pit-pr vs shadowbeak-menasting-bp | 53.6 | 49.2–57.9 | 69.0 (665) | -15.4 | -5.4 | ❌ |
+| chillet-relaxaurus-br vs shadowbeak-menasting-bp | 79.4 | 75.6–82.7 | 65.0 (679) | +14.4 | +5.6 | ❌ |
+| machine-gun-furnace-br vs tombat-medicine-gp | 44.4 | 40.1–48.8 | 58.0 (363) | -13.6 | -4.0 | ❌ |
+| lamball-cattiva-bg vs tombat-medicine-gp | 75.2 | 71.2–78.8 | 63.0 (328) | +12.2 | +3.7 | ❌ |
+| chillet-relaxaurus-br vs machine-gun-furnace-br | 66.8 | 62.6–70.8 | 55.0 (619) | +11.8 | +4.1 | ❌ |
+| chillet-relaxaurus-bp vs lamball-stone-pit-pr | 62.8 | 58.5–66.9 | 52.0 (6608) | +10.8 | +4.8 | ❌ |
+| lamball-cattiva-bg vs machine-gun-furnace-br | 73.8 | 69.8–77.5 | 64.0 (296) | +9.8 | +2.9 | ❌ |
+| foxparks-harness-br vs lamball-cattiva-bg | 32.8 | 28.8–37.0 | 42.0 (478) | -9.2 | -3.0 | ❌ |
+| cattiva-azurobe-br vs machine-gun-furnace-br | 72.8 | 68.7–76.5 | 64.0 (258) | +8.8 | +2.5 | ❌ |
+| cattiva-azurobe-br vs chillet-relaxaurus-br | 44.8 | 40.5–49.2 | 52.0 (700) | -7.2 | -2.5 | ❌ |
+| cattiva-azurobe-br vs shadowbeak-menasting-bp | 77.6 | 73.7–81.0 | 71.0 (272) | +6.6 | +2.0 | ❌ |
+| cattiva-azurobe-br vs foxparks-harness-br | 60.4 | 56.0–64.6 | 54.0 (445) | +6.4 | +2.0 | ❌ |
+| foxparks-harness-br vs lamball-stone-pit-pr | 60.8 | 56.5–65.0 | 55.0 (1220) | +5.8 | +2.2 | ❌ |
+| chillet-relaxaurus-bp vs machine-gun-furnace-br | 64.2 | 59.9–68.3 | 59.0 (1865) | +5.2 | +2.1 | ❌ |
+| lamball-cattiva-bg vs shadowbeak-menasting-bp | 74.2 | 70.2–77.8 | 69.0 (258) | +5.2 | +1.5 | ❌ |
+| machine-gun-furnace-br vs shadowbeak-menasting-bp | 62.0 | 57.7–66.1 | 57.0 (356) | +5.0 | +1.5 | ✅ |
+| chillet-relaxaurus-bp vs lamball-cattiva-bg | 51.6 | 47.2–56.0 | 47.0 (2640) | +4.6 | +1.9 | ✅ |
+| foxparks-harness-br vs tombat-medicine-gp | 53.4 | 49.0–57.7 | 58.0 (494) | -4.6 | -1.5 | ✅ |
+| foxparks-harness-br vs shadowbeak-menasting-bp | 67.8 | 63.6–71.8 | 64.0 (360) | +3.8 | +1.2 | ✅ |
+| cattiva-azurobe-br vs chillet-relaxaurus-bp | 51.0 | 46.6–55.4 | 54.0 (2581) | -3.0 | -1.2 | ✅ |
+| shadowbeak-menasting-bp vs tombat-medicine-gp | 42.0 | 37.8–46.4 | 39.0 (366) | +3.0 | +0.9 | ✅ |
+| foxparks-harness-br vs machine-gun-furnace-br | 59.6 | 55.2–63.8 | 62.0 (357) | -2.4 | -0.7 | ✅ |
+| chillet-relaxaurus-br vs lamball-cattiva-bg | 46.0 | 41.7–50.4 | 48.0 (755) | -2.0 | -0.7 | ✅ |
+| chillet-relaxaurus-bp vs chillet-relaxaurus-br | 51.6 | 47.2–56.0 | 53.0 (5264) | -1.4 | -0.6 | ✅ |
+| cattiva-azurobe-br vs lamball-cattiva-bg | 47.2 | 42.9–51.6 | 46.0 (406) | +1.2 | +0.4 | ✅ |
+
+No real-world data for: cattiva-azurobe-br vs chillet-relaxaurus-bg, chillet-relaxaurus-bg vs chillet-relaxaurus-bp, chillet-relaxaurus-bg vs chillet-relaxaurus-br, chillet-relaxaurus-bg vs foxparks-harness-br, chillet-relaxaurus-bg vs lamball-cattiva-bg, chillet-relaxaurus-bg vs lamball-stone-pit-pr, chillet-relaxaurus-bg vs machine-gun-furnace-br, chillet-relaxaurus-bg vs shadowbeak-menasting-bp, chillet-relaxaurus-bg vs tombat-medicine-gp
+
+wrote results/runs/J30-calibration/heuristic2@human@kill2/matrix.json, matrix.md (10/36 calibrated pairs within ±5)
+[1/45] cattiva-azurobe-br vs chillet-relaxaurus-bg
+  resumed from summary.json
+[2/45] cattiva-azurobe-br vs chillet-relaxaurus-bp
+  resumed from summary.json
+[3/45] cattiva-azurobe-br vs chillet-relaxaurus-br
+  resumed from summary.json
+[4/45] cattiva-azurobe-br vs foxparks-harness-br
+  resumed from summary.json
+[5/45] cattiva-azurobe-br vs lamball-cattiva-bg
+  resumed from summary.json
+[6/45] cattiva-azurobe-br vs lamball-stone-pit-pr
+  resumed from summary.json
+[7/45] cattiva-azurobe-br vs machine-gun-furnace-br
+  resumed from summary.json
+[8/45] cattiva-azurobe-br vs shadowbeak-menasting-bp
