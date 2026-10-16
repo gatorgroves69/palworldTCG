@@ -1,0 +1,47 @@
+{
+  "deck": "cattiva-azurobe-br",
+  "opp": "lamball-stone-pit-pr",
+  "bot": "heuristic2@human@allin",
+  "rules": {
+    "structures_attackable": "any"
+  },
+  "seed": 260,
+  "commit": "0795d7a",
+  "games": 500,
+  "wins": 421,
+  "losses": 79,
+  "draws": 0,
+  "win_rate": 0.842,
+  "ci95": [
+    0.8074,
+    0.8713
+  ],
+  "going_first": {
+    "games": 242,
+    "wins": 212,
+    "losses": 30,
+    "draws": 0,
+    "win_rate": 0.876,
+    "ci95": [
+      0.8285,
+      0.9118
+    ]
+  },
+  "going_second": {
+    "games": 258,
+    "wins": 209,
+    "losses": 49,
+    "draws": 0,
+    "win_rate": 0.8101,
+    "ci95": [
+      0.7578,
+      0.8533
+    ]
+  },
+  "avg_turns": 12.79,
+  "end_reasons": {
+    "life": 500
+  },
+  "seconds": 109.0,
+  "replay": "python -m sim replay --deck data/decks/cattiva-azurobe-br.txt --opp data/decks/lamball-stone-pit-pr.txt --bot heuristic2@human@allin --structures any --game-seed <seed>"
+}
