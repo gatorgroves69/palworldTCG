@@ -835,3 +835,7 @@ Line 1 complete, exit 0: My First/Axel package A versus v3, human seed 391, A 71
 ### J33 line 2 checkpoint — 2026-10-17 00:10 UTC
 
 Lines 1–2 complete. Heavy My First package B versus v3, human seed 392: A 68.4% to B 62.5%, diff -5.9 ± 1.5 points, z -4.1; clear early stop at nominal 2000 games/list (2001 actual), exit 0. Exact report/stdout and execution evidence are in `results/runs/J33-compare/`; all 1265 protected/input hashes unchanged. No experiment rows generated. Next: line 3 after verified publication; three lines remain. No adoption or extra jobs.
+
+### J33 line 3 checkpoint — 2026-10-17 00:50 UTC
+
+Lines 1–3 complete. Orserk/Flambelle package C versus v3, human seed 393: A 71.9% to B 66.9%, diff -5.0 ± 1.4 points, z -3.5; clear early stop at nominal 2000 games/list (2001 actual). Line 3's interrupted attempt is preserved; the exact unfinished command was retried and exited 0 at 00:49:46 UTC. Report/stdout and execution evidence are in `results/runs/J33-compare/`; all 1265 protected/input hashes unchanged. No experiment rows generated. Next: Swee gauntlet line 4 after verified publication, then v3 gauntlet line 5. No adoption or extra jobs.

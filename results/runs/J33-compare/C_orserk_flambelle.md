@@ -1,0 +1,17 @@
+
+A = `results/runs/cattiva_dragons_v3.txt`, B = `results/runs/J33-C_orserk_flambelle.txt`
+
+**human**, 2000 games per list, seed 393: A 71.9% -> B 66.9% (diff -5.0 ± 1.4, z -3.5) [sequential: stopped early, clear after 2000 games]
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.9% | 66.2 | 62.7 | -3.5 | 777 |
+| lamball-stone-pit-pr | 13.7% | 89.8 | 83.2 | -6.6 | 274 |
+| chillet-relaxaurus-br | 11.8% | 65.4 | 58.2 | -7.2 | 237 |
+| foxparks-harness-br | 7.2% | 72.2 | 61.8 | -10.4 | 144 |
+| tombat-medicine-gp | 6.2% | 84.8 | 76.0 | -8.8 | 125 |
+| lamball-cattiva-bg | 5.6% | 53.6 | 48.2 | -5.4 | 112 |
+| cattiva-azurobe-br | 5.2% | 64.8 | 61.0 | -3.8 | 105 |
+| shadowbeak-menasting-bp | 5.0% | 85.0 | 85.0 | +0.0 | 100 |
+| machine-gun-furnace-br | 4.7% | 75.8 | 78.9 | +3.2 | 95 |
+| chillet-relaxaurus-bg | 1.6% | 87.5 | 71.9 | -15.6 | 32 |

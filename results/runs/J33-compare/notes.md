@@ -21,3 +21,13 @@ All 1265 protected/input hashes unchanged. Next: line 2 after verified main publ
 Exit 0 at 2026-10-17T00:10:08.313271+00:00. Report/stdout agree; 2001 actual games per list from allocation rounding. **human**, 2000 games per list, seed 392: A 68.4% -> B 62.5% (diff -5.9 ± 1.5, z -4.1) [sequential: stopped early, clear after 2000 games]
 
 All 1265 protected/input hashes unchanged. Next: line 3 after verified main publication.
+
+## Line 3 interruption
+
+The original 2026-10-17 00:11 UTC supervised session became unavailable after cloud restart. At 00:37 UTC the session was unknown, no result/exit existed and no simulation process was found. Empty log and start/PID preserved as line-3-interrupted-001118.*. All 1265 protected/input hashes unchanged. Restarting only unfinished line 3 with the identical command; completed lines 1 and 2 are not rerun.
+
+## Line 3 complete
+
+Retry exit 0 at 2026-10-17T00:49:46.059578+00:00. Report/stdout agree; 2001 actual games per list from allocation rounding. **human**, 2000 games per list, seed 393: A 71.9% -> B 66.9% (diff -5.0 ± 1.4, z -3.5) [sequential: stopped early, clear after 2000 games]
+
+All 1265 protected/input hashes unchanged. Next: line 4 after verified main publication.
