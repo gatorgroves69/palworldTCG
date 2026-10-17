@@ -16,4 +16,15 @@ seed 394, commit fcda92f, 17 min
 
 Next: publish and remotely verify line 4 including lossless raw evidence, then run exact line 5.
 
-Publication format: exact raw records are stored losslessly as `swee_br/games.jsonl.xz`; decompress with `xz -dk games.jsonl.xz` and verify against `games.jsonl.sha256`. The uncompressed file is retained in the execution checkout. Compressed bytes and decompressed SHA-256 are verified against GitHub after publication.
+## Line 5 complete / execution finished
+
+Exit 0 at 2026-10-17T06:40:31.064971+00:00. Requested 4000 games, 3999 actual from allocation rounding. Validated all 3999 raw records, unique opponent/seed keys and per-opponent counts/winrates against summary. All 1265 protected/input hashes unchanged.
+
+cattiva_dragons_v3: 70.4% vs field (69.0-71.7, 3999 games, bot human)
+Worst: lamball-cattiva-bg 54% (6% of field); chillet-relaxaurus-bp 62% (39% of field); chillet-relaxaurus-bg 63% (2% of field)
+Losses: ran out of cards 36%; behind on board by round 4-6 31%; opponent lucky saves 3+ 21%
+seed 394, commit fcda92f, 12 min
+
+Both gauntlets completed. No simulation remains running; no further job started. Final publication/remote verification pending. These are simulation results using provisional BP02 texts, not real-event predictions or an adoption decision.
+
+Publication format: both exact raw record files are stored losslessly as `swee_br/games.jsonl.xz` and `v3/games.jsonl.xz`; decompress each with `xz -dk games.jsonl.xz` and verify against its `games.jsonl.sha256`. Uncompressed files remain in the execution checkout. Remote compressed bytes and decompressed SHA-256 are verified before completion is reported.

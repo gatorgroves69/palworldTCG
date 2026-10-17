@@ -1,0 +1,6 @@
+cattiva_dragons_v3: 70.4% vs field (69.0-71.7, 3999 games, bot human)
+Worst: lamball-cattiva-bg 54% (6% of field); chillet-relaxaurus-bp 62% (39% of field); chillet-relaxaurus-bg 63% (2% of field)
+Losses: ran out of cards 36%; behind on board by round 4-6 31%; opponent lucky saves 3+ 21%
+seed 394, commit fcda92f, 12 min
+
+wrote results/runs/J33-gauntlet/v3/summary.json, telegram.txt, games.jsonl

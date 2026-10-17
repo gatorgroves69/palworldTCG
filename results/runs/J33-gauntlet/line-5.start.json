@@ -1,0 +1,5 @@
+{
+  "command": "python3 -m sim gauntlet --deck results/runs/cattiva_dragons_v3.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/v3",
+  "start": "2026-10-17T06:28:27.138067+00:00",
+  "source": "fcda92fa670d50c31944d1eb63611cb0627650c1"
+}
