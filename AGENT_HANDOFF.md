@@ -713,14 +713,13 @@ J31 complete and reviewed (Quivern +1.0/+1.1, recommended where SS01 is legal); 
 
 r4 reviewed: −2.0, cheapest 10-BP02 list so far, saved as `release_tournament_bp02.txt`. Thank you, Hermes. Dots: J33 lines 4–5 (the two gauntlets) haven't been published yet; please check whether the session is alive and rerun only the unfinished line if not.
 
-**J34 (needs Bobby's direct approval; Hermes): BP02 tests on the Quivern list.** BP02 is post-Cup, so the baseline for everything BP02 is the SS01 list 4 Chillet + 4 Quivern (`Q-quivern4.txt`, +1.1 over v3), not v3. 4 lines, sequential, `human`, cap 12,000. About 3–4 hours.
+**J34 (needs Bobby's direct approval; Hermes): BP02 tests on the Quivern list.** BP02 is post-Cup, so the baseline for everything BP02 is the SS01 list 4 Chillet + 4 Quivern (`Q-quivern4.txt`, +1.1 over v3), not v3. 3 lines, sequential, `human`, cap 12,000. About 2–3 hours.
 ```
 python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/R-r5_quivern_flambelle.txt --games 12000 --seed 401 --bot human --sequential --out results/runs/J34-compare/r5_vs_quivern4.md
 python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/R-r6_quivern_frostallion.txt --games 12000 --seed 402 --bot human --sequential --out results/runs/J34-compare/r6_vs_quivern4.md
 python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J34-lux_for_quivern.txt --games 12000 --seed 405 --bot human --sequential --out results/runs/J34-compare/lux_for_quivern.md
-python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J34-q4_flambelle4_orserk2.txt --games 12000 --seed 406 --bot human --sequential --out results/runs/J34-compare/flambelle4_orserk2.md
 ```
-R5 = Quivern base with Eikthyrdeer for Axel's and 2 Reindrix, Chillet Ignis for Rifle, Foxcicle for 2 Fuack, Flambelle – Feverish Tears for 2 Cattiva. R6 = the same but Frostallion for 2 Quivern instead of Flambelle for Cattiva. Line 3: 2 Relaxaurus Lux – Party Time for 2 Quivern (lucky for lucky; Assault Dragon that stands on each kill). Line 4: 4 Flambelle – Feverish Tears for 4 Cattiva and 2 Orserk for 2 Axel's (keeps Kitsun and Fuack, unlike J33 line 3). Telegram Bobby the 4 headlines.
+R5 = Quivern base with Eikthyrdeer for Axel's and 2 Reindrix, Chillet Ignis for Rifle, Foxcicle for 2 Fuack, Flambelle – Feverish Tears for 2 Cattiva. R6 = the same but Frostallion for 2 Quivern instead of Flambelle for Cattiva. Line 3: 2 Relaxaurus Lux – Party Time for 2 Quivern (lucky for lucky; Assault Dragon that stands on each kill). Telegram Bobby the 3 headlines.
 
 **J35 (needs Bobby's direct approval; whichever runner is free): Elphidran – Gentle Radiance on v3.** A non-lucky colourless Dragon (◇4 600, +500 revealing an Aqua); +0.5 back with 8 Dragons, J26 screen +3.4 for Axel's but not fully tested. 2 lines, sequential, `human`, cap 12,000. About 1–2 hours.
 ```
