@@ -722,7 +722,13 @@ python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/
 ```
 R5 = Quivern base with Eikthyrdeer for Axel's and 2 Reindrix, Chillet Ignis for Rifle, Foxcicle for 2 Fuack, Flambelle – Feverish Tears for 2 Cattiva. R6 = the same but Frostallion for 2 Quivern instead of Flambelle for Cattiva. Telegram Bobby the 4 headlines.
 
-Next Claude action: review J33's Swee gauntlets and J34; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+**J35 (needs Bobby's direct approval; whichever runner is free): Elphidran – Gentle Radiance on v3.** A non-lucky colourless Dragon (◇4 600, +500 revealing an Aqua); +0.5 back with 8 Dragons, J26 screen +3.4 for Axel's but not fully tested. 2 lines, sequential, `human`, cap 12,000. About 1–2 hours.
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J35-radiance_for_axels.txt --games 12000 --seed 411 --bot human --sequential --out results/runs/J35-compare/radiance_for_axels.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J35-radiance_for_fuack.txt --games 12000 --seed 412 --bot human --sequential --out results/runs/J35-compare/radiance_for_fuack.md
+```
+
+Next Claude action: review J33's Swee gauntlets, J34 and J35; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
