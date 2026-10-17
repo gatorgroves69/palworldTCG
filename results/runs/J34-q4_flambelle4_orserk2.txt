@@ -1,7 +1,7 @@
 # main
 2 BP02-001 Orserk – Thunderclap Roar
 4 BP02-007 Flambelle – Feverish Tears
-4 BP01-027 Jormuntide – Surging Sea Serpent
+4 SS01-005 Quivern – Breath of the Wyvern
 4 BP01-007 Kitsun – Wyrmbane Fangs
 2 TD01-010 Single-Shot Rifle
 2 BP01-014 Blazehowl – Hellflame Defender

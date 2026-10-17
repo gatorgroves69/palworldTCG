@@ -1,6 +1,6 @@
 # main
 2 BP02-010 Relaxaurus Lux – Party Time
-2 BP01-027 Jormuntide – Surging Sea Serpent
+2 SS01-005 Quivern – Breath of the Wyvern
 4 BP01-007 Kitsun – Wyrmbane Fangs
 2 BP01-023 Axel's Strategy
 2 TD01-010 Single-Shot Rifle
