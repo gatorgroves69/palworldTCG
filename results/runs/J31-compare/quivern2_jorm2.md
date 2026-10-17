@@ -1,0 +1,17 @@
+
+A = `results/runs/cattiva_dragons_v3.txt`, B = `results/runs/Q-quivern_for_jorm.txt`
+
+**human**, 12000 games per list, seed 375: A 70.3% -> B 71.3% (diff +1.0 ± 0.6, z 1.7) [sequential: ran to the cap of 12000 games]
+
+| Opponent | Weight | A | B | Diff | Games |
+|---|---|---|---|---|---|
+| chillet-relaxaurus-bp | 38.9% | 64.3 | 64.8 | +0.5 | 4662 |
+| lamball-stone-pit-pr | 13.7% | 86.1 | 87.3 | +1.3 | 1644 |
+| chillet-relaxaurus-br | 11.8% | 64.4 | 63.4 | -1.0 | 1422 |
+| foxparks-harness-br | 7.2% | 73.7 | 72.0 | -1.7 | 864 |
+| tombat-medicine-gp | 6.2% | 78.8 | 81.7 | +2.9 | 750 |
+| lamball-cattiva-bg | 5.6% | 55.1 | 60.0 | +4.9 | 672 |
+| cattiva-azurobe-br | 5.2% | 64.3 | 70.0 | +5.7 | 630 |
+| shadowbeak-menasting-bp | 5.0% | 86.8 | 87.3 | +0.5 | 600 |
+| machine-gun-furnace-br | 4.7% | 82.6 | 83.9 | +1.2 | 570 |
+| chillet-relaxaurus-bg | 1.6% | 64.6 | 65.6 | +1.0 | 192 |

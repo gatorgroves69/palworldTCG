@@ -9,3 +9,5 @@ Line 2 complete, exit 0. Report: r2_keep_bodies.md.
 Line 3 complete, exit 0. Report: r3_four_eik.md.
 
 Line 4 complete, exit 0. Report: quivern4.md.
+
+Line 5 complete, exit 0. Report: quivern2_jorm2.md.
