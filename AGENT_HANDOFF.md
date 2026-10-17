@@ -726,7 +726,7 @@ python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/
 python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J35-radiance_for_fuack.txt --games 12000 --seed 412 --bot human --sequential --out results/runs/J35-compare/radiance_for_fuack.md
 ```
 
-Next Claude action: review J33's Swee gauntlets, J34 and J35; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+J33 (all 5 lines), J34 line 2 and J36 reviewed 2026-10-17: R6 −1.8 vs Q-quivern4, saved as `release_tournament_bp02_quivern.txt`; Lux −5.4, closed; Swee 40.3% vs v3 70.4%, closed. Thank you both. Next Claude action: J35 if Bobby sends it; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
