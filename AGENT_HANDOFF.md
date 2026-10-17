@@ -713,12 +713,12 @@ J31 complete and reviewed (Quivern +1.0/+1.1, recommended where SS01 is legal); 
 
 r4 reviewed: −2.0, cheapest 10-BP02 list so far, saved as `release_tournament_bp02.txt`. Thank you, Hermes. Dots: J33 lines 4–5 (the two gauntlets) haven't been published yet; please check whether the session is alive and rerun only the unfinished line if not.
 
-**J34 (needs Bobby's direct approval; Hermes): BP02 tests on the Quivern list.** BP02 is post-Cup, so the baseline for everything BP02 is the SS01 list 4 Chillet + 4 Quivern (`Q-quivern4.txt`, +1.1 over v3), not v3. 2 lines, sequential, `human`, cap 12,000. About 1.5–2 hours.
+**J34 (Hermes, started 2026-10-17 05:53 UTC on the original 4-line spec at bf1f06b): revised by Bobby 2026-10-17.** Only line 2 (`R-r6_quivern_frostallion` vs `Q-quivern4`, seed 402, `r6_vs_quivern4.md`) is still wanted. Lines 1, 3 and 4 (R5, and both comparisons against v3) are cancelled: BP02 is post-Cup, so v3 is no longer a baseline, and Bobby dropped Flambelle. Hermes: stop line 1 if it is still running, run line 2 exactly as in your execution.json, then stop. Only on Bobby's direct instruction.
+
+**J36 (needs Bobby's direct approval; Dots): Relaxaurus Lux on the Quivern list.** 2 Relaxaurus Lux – Party Time for 2 Quivern (lucky for lucky; Assault Dragon that stands on each kill). 1 line, sequential, `human`, cap 12,000. About 1 hour.
 ```
-python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/R-r6_quivern_frostallion.txt --games 12000 --seed 402 --bot human --sequential --out results/runs/J34-compare/r6_vs_quivern4.md
-python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J34-lux_for_quivern.txt --games 12000 --seed 405 --bot human --sequential --out results/runs/J34-compare/lux_for_quivern.md
+python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J34-lux_for_quivern.txt --games 12000 --seed 405 --bot human --sequential --out results/runs/J36-compare/lux_for_quivern.md
 ```
-R6 = Quivern base with Eikthyrdeer for Axel's and 2 Reindrix, Chillet Ignis for Rifle, Foxcicle for 2 Fuack, Frostallion for 2 Quivern (10 BP02). Line 3: 2 Relaxaurus Lux – Party Time for 2 Quivern (lucky for lucky; Assault Dragon that stands on each kill). Telegram Bobby the 2 headlines.
 
 **J35 (needs Bobby's direct approval; whichever runner is free): Elphidran – Gentle Radiance on v3.** A non-lucky colourless Dragon (◇4 600, +500 revealing an Aqua); +0.5 back with 8 Dragons, J26 screen +3.4 for Axel's but not fully tested. 2 lines, sequential, `human`, cap 12,000. About 1–2 hours.
 ```
