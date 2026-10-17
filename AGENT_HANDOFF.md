@@ -709,7 +709,9 @@ python3 -m sim gauntlet --deck results/runs/cattiva_dragons_v3.txt --games 4000 
 ```
 Variants: A = −2 Fuack +2 Chikipi, −2 Axel's +2 The Adventure Begins (3 different "My First" names → all Pals +1000/+5 Strike); B = −4 Fuack +4 Chikipi, −2 Axel's +2 The Adventure Begins; C = −2 Fuack +2 Flambelle – Feverish Tears (rest: 2 Material), −2 Kitsun +2 Orserk (Material-powered Dragon). The two gauntlets put the first Swee list and v3 against the same field, same seed. Telegram Bobby the headlines.
 
-Next Claude action: review J31's Quivern lines, r4 and J33; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+J31 complete and reviewed (Quivern +1.0/+1.1, recommended where SS01 is legal); J33 lines 1–3 reviewed (My First package −6.7/−5.9, Orserk+Flambelle −5.0). Thank you both. Hermes is free: the r4 Frostallion November line above is the next line for it (needs Bobby's approval).
+
+Next Claude action: review J33's Swee gauntlets and r4; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
