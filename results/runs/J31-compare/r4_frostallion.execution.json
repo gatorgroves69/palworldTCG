@@ -1,0 +1,6 @@
+{
+  "command": "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r4_frostallion.txt --games 12000 --seed 376 --bot human --sequential --out results/runs/J31-compare/r4_frostallion.md",
+  "execution_head": "c04cf0782eb8da141d92402c6cb80bf821ae3c45",
+  "exit_code": 0,
+  "finished": "2026-10-17T04:50:17.921122+00:00"
+}
