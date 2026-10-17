@@ -1,0 +1,6 @@
+swee_br: 40.3% vs field (38.9-41.8, 3999 games, bot human)
+Worst: chillet-relaxaurus-br 27% (12% of field); lamball-cattiva-bg 32% (6% of field); chillet-relaxaurus-bp 33% (39% of field)
+Losses: ran out of cards 42%; behind on board by round 4-6 39%; behind on board by round 7+ 20%
+seed 394, commit fcda92f, 17 min
+
+wrote results/runs/J33-gauntlet/swee_br/summary.json, telegram.txt, games.jsonl

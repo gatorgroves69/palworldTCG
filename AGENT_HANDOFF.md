@@ -856,3 +856,8 @@ Lines 1–2 complete. Heavy My First package B versus v3, human seed 392: A 68.4
 ### J33 line 3 checkpoint — 2026-10-17 00:50 UTC
 
 Lines 1–3 complete. Orserk/Flambelle package C versus v3, human seed 393: A 71.9% to B 66.9%, diff -5.0 ± 1.4 points, z -3.5; clear early stop at nominal 2000 games/list (2001 actual). Line 3's interrupted attempt is preserved; the exact unfinished command was retried and exited 0 at 00:49:46 UTC. Report/stdout and execution evidence are in `results/runs/J33-compare/`; all 1265 protected/input hashes unchanged. No experiment rows generated. Next: Swee gauntlet line 4 after verified publication, then v3 gauntlet line 5. No adoption or extra jobs.
+
+
+### J33 line 4 rerun checkpoint — 2026-10-17 06:16 UTC
+
+Bobby explicitly requested rerunning only gauntlets 4 and 5 after pulling main. Fresh line 4 completed at 06:11:06 UTC, exit 0, frozen source fcda92fa670d50c31944d1eb63611cb0627650c1; all 1265 protected/input hashes match the prior source and remain unchanged. Swee: 40.3% against the field (38.9–41.8 interval), 3999 actual games from 4000 requested. All raw records validated against the summary. Reports, stdout, execution evidence and losslessly compressed raw records are under `results/runs/J33-gauntlet/`. Old unpublished evidence remains separate; no claim of its publication. Next: exact v3 gauntlet line 5 only after verified publication. Lines 1–3 were not rerun; no other job or adoption.

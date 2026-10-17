@@ -1,0 +1,5 @@
+{
+  "command": "python3 -m sim gauntlet --deck results/runs/swee_br.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/swee_br",
+  "start": "2026-10-17T05:53:15.141812+00:00",
+  "source": "fcda92fa670d50c31944d1eb63611cb0627650c1"
+}
