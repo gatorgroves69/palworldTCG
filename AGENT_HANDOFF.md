@@ -861,3 +861,12 @@ Lines 1–3 complete. Orserk/Flambelle package C versus v3, human seed 393: A 71
 ### J33 line 4 rerun checkpoint — 2026-10-17 06:16 UTC
 
 Bobby explicitly requested rerunning only gauntlets 4 and 5 after pulling main. Fresh line 4 completed at 06:11:06 UTC, exit 0, frozen source fcda92fa670d50c31944d1eb63611cb0627650c1; all 1265 protected/input hashes match the prior source and remain unchanged. Swee: 40.3% against the field (38.9–41.8 interval), 3999 actual games from 4000 requested. All raw records validated against the summary. Reports, stdout, execution evidence and losslessly compressed raw records are under `results/runs/J33-gauntlet/`. Old unpublished evidence remains separate; no claim of its publication. Next: exact v3 gauntlet line 5 only after verified publication. Lines 1–3 were not rerun; no other job or adoption.
+
+
+## dot — J36 execution claim, 2026-10-17 06:16 UTC
+
+Bobby explicitly approved the one J36 comparison, Relaxaurus Lux versus Q-quivern4, seed 405. Frozen source bf3a7482b4ebb9c3f50edf5a91af145c26536a52, OpenAI cloud Linux. Owned paths: results/runs/J36-compare/, generated J36 experiment row if any, and this section. Run the exact handoff command under supervised nohup, verify protected files and output, then commit/pull/push append-only main. No engine, bot, sim, card, data or test edits; no other job or automatic adoption. Status: launching.
+
+### J36 complete — 2026-10-17 06:28 UTC
+
+Exact seed-405 human comparison exited 0: Q-quivern4 70.7% → Relaxaurus Lux variant 65.3%, −5.4 ±1.4 points, z −3.8. Sequential stop at 2,000 nominal / 2,001 actual games per list. All 1,262 protected/input hashes unchanged on frozen bf3a748. Report, exact command, stdout and exit evidence: `results/runs/J36-compare/`. No experiment row generated; no deck change. STOPPED after the single approved line. Claude to review. Earlier launching status is historical.
