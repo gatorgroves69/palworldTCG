@@ -1,0 +1,1 @@
+{"command": "python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/R-r6_quivern_frostallion.txt --games 12000 --seed 402 --bot human --sequential --out results/runs/J34-compare/r6_vs_quivern4.md", "exit_code": 0}
