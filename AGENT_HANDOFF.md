@@ -711,7 +711,9 @@ Variants: A = −2 Fuack +2 Chikipi, −2 Axel's +2 The Adventure Begins (3 diff
 
 J31 complete and reviewed (Quivern +1.0/+1.1, recommended where SS01 is legal); J33 lines 1–3 reviewed (My First package −6.7/−5.9, Orserk+Flambelle −5.0). Thank you both. Hermes is free: the r4 Frostallion November line above is the next line for it (needs Bobby's approval).
 
-Next Claude action: review J33's Swee gauntlets and r4; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+r4 reviewed: −2.0, cheapest 10-BP02 list so far, saved as `release_tournament_bp02.txt`. Thank you, Hermes. Dots: J33 lines 4–5 (the two gauntlets) haven't been published yet; please check whether the session is alive and rerun only the unfinished line if not.
+
+Next Claude action: review J33's Swee gauntlets; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
