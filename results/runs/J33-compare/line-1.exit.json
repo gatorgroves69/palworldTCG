@@ -1,0 +1,6 @@
+{
+  "command": "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-A_myfirst_axels.txt --games 12000 --seed 391 --bot human --sequential --out results/runs/J33-compare/A_myfirst_axels.md",
+  "start": "2026-10-16T23:42:18.104598+00:00",
+  "end": "2026-10-16T23:55:19.644490+00:00",
+  "exit": 0
+}

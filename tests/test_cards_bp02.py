@@ -142,3 +142,26 @@ def test_eikthyrdeer_is_an_interrupt(box):
     g, bots = G(box)
     e = put(g, 0, "BP02-099", Zone.HAND)
     assert e.kw("interrupt")
+
+
+def test_sweepa_deploys_all_swee_from_hand(box):
+    g, bots = G(box)
+    swees = [put(g, 0, "BP02-034", Zone.HAND) for _ in range(3)]
+    other = put(g, 0, "BP01-028", Zone.HAND)
+    play(g, bots, 0, "BP02-027", answers=[[s.uid for s in swees]])
+    assert all(s.zone is Zone.BASE for s in swees) and other.zone is Zone.HAND
+
+
+def test_swee_draws_with_three_in_family(box):
+    g, bots = G(box)
+    put(g, 0, "BP02-034"); put(g, 0, "BP02-027")
+    n = len(g.players[0].hand)
+    play(g, bots, 0, "BP02-034")
+    assert len(g.players[0].hand) == n + 1  # the played Swee was added by the helper; it drew 1
+
+
+def test_swee_allows_eight_copies():
+    from cards.db import load_card_db
+    from engine.deck import copy_limit
+    db = load_card_db()
+    assert copy_limit(db["BP02-034"]) == 8 and copy_limit(db["BP01-025"]) == 4

@@ -699,7 +699,17 @@ J32 reviewed: Frostallion even in a lucky slot (−0.7 / −0.4); Gambits and Je
 python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r4_frostallion.txt --games 12000 --seed 376 --bot human --sequential --out results/runs/J31-compare/r4_frostallion.md
 ```
 
-Next Claude action: review J31's Quivern lines and r4; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+**J33 (needs Bobby's direct approval; whichever runner is free): Bobby's package ideas, on v3.** 3 compares plus 2 gauntlets for the new Swee deck. About 4 hours. Code at the commit below or later (Swee cards and the 8-copy rule are new).
+```
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-A_myfirst_axels.txt --games 12000 --seed 391 --bot human --sequential --out results/runs/J33-compare/A_myfirst_axels.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-B_myfirst_heavy.txt --games 12000 --seed 392 --bot human --sequential --out results/runs/J33-compare/B_myfirst_heavy.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-C_orserk_flambelle.txt --games 12000 --seed 393 --bot human --sequential --out results/runs/J33-compare/C_orserk_flambelle.md
+python3 -m sim gauntlet --deck results/runs/swee_br.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/swee_br
+python3 -m sim gauntlet --deck results/runs/cattiva_dragons_v3.txt --games 4000 --seed 394 --bot human --out results/runs/J33-gauntlet/v3
+```
+Variants: A = −2 Fuack +2 Chikipi, −2 Axel's +2 The Adventure Begins (3 different "My First" names → all Pals +1000/+5 Strike); B = −4 Fuack +4 Chikipi, −2 Axel's +2 The Adventure Begins; C = −2 Fuack +2 Flambelle – Feverish Tears (rest: 2 Material), −2 Kitsun +2 Orserk (Material-powered Dragon). The two gauntlets put the first Swee list and v3 against the same field, same seed. Telegram Bobby the headlines.
+
+Next Claude action: review J31's Quivern lines, r4 and J33; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
@@ -813,3 +823,19 @@ Lines 1–5 complete. Axel's Gambit for Suzaku on v2 (human seed 385): A 68.7% t
 ### J32 complete — 2026-10-16 22:25 UTC
 
 All six exact lines complete, exit 0; each received its own verified main checkpoint before the next started. Final Jetragon for Suzaku on v2 (human seed 386): diff -5.4 ± 1.4 points, z -3.8; clear early stop at 2000 nominal games/list (2001 actual), exit 0 at 22:24:37 UTC. Six headlines: v3 Frostallion -0.7 ± 0.8, Axel's Gambit -5.3 ± 1.5, Victor's Gambit -4.6 ± 1.4; v2 Frostallion -0.4 ± 0.8, Axel's Gambit -4.6 ± 1.0, Jetragon -5.4 ± 1.4 percentage points. No positive result or +1.5-point confirmation candidate. Aggregate reports, commands, stdout and start/end/exit evidence are in `results/runs/J32-compare/`; no raw game records were generated or claimed. All 1268 protected/input hashes remain unchanged on frozen d26379e. No generated experiment rows, adoption, human1 confirmation or additional job. STOPPED at the authorized boundary; next owner Claude to review, Bobby to authorize any further execution. Earlier running checkpoints are historical.
+
+### J33 execution claim — 2026-10-16 23:41 UTC
+
+Bobby explicitly authorized the five J33 commands. dot owns `results/runs/J33-compare/`, `results/runs/J33-gauntlet/`, generated J33 experiment rows if any, and this status section. Preflight complete on frozen source 5f0282063d05bfe48f9d79b029e8b409791612a0; not yet launched. OpenAI cloud Linux only. Three sequential comparisons (seeds 391–393), then the Swee/v3 human gauntlets (seed 394), exactly as above. Publish and verify each completed line before starting the next. Separate publication checkout; pull before every push, append-only main, no rebase or force-push. No protected code/input edits, additional jobs or automatic adoption. Exact commands and evidence: `results/runs/J33-compare/notes.md`. Next: line 1 after this claim is verified remotely.
+
+### J33 line 1 checkpoint — 2026-10-16 23:56 UTC
+
+Line 1 complete, exit 0: My First/Axel package A versus v3, human seed 391, A 71.1% to B 64.4%, diff -6.7 ± 1.4 points, z -4.6; clear early stop at nominal 2000 games/list (2001 actual). Exact report, command, stdout, start/exit evidence and validation in `results/runs/J33-compare/`. All 1265 protected/input hashes unchanged on frozen 5f0282063d05bfe48f9d79b029e8b409791612a0. No experiment rows generated. Next: line 2 after verified publication; lines 2–5 pending. No adoption or extra jobs.
+
+### J33 line 2 checkpoint — 2026-10-17 00:10 UTC
+
+Lines 1–2 complete. Heavy My First package B versus v3, human seed 392: A 68.4% to B 62.5%, diff -5.9 ± 1.5 points, z -4.1; clear early stop at nominal 2000 games/list (2001 actual), exit 0. Exact report/stdout and execution evidence are in `results/runs/J33-compare/`; all 1265 protected/input hashes unchanged. No experiment rows generated. Next: line 3 after verified publication; three lines remain. No adoption or extra jobs.
+
+### J33 line 3 checkpoint — 2026-10-17 00:50 UTC
+
+Lines 1–3 complete. Orserk/Flambelle package C versus v3, human seed 393: A 71.9% to B 66.9%, diff -5.0 ± 1.4 points, z -3.5; clear early stop at nominal 2000 games/list (2001 actual). Line 3's interrupted attempt is preserved; the exact unfinished command was retried and exited 0 at 00:49:46 UTC. Report/stdout and execution evidence are in `results/runs/J33-compare/`; all 1265 protected/input hashes unchanged. No experiment rows generated. Next: Swee gauntlet line 4 after verified publication, then v3 gauntlet line 5. No adoption or extra jobs.

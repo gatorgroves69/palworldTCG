@@ -1,0 +1,5 @@
+{
+  "command": "python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J33-C_orserk_flambelle.txt --games 12000 --seed 393 --bot human --sequential --out results/runs/J33-compare/C_orserk_flambelle.md",
+  "start": "2026-10-17T00:11:18.071145+00:00",
+  "source": "5f0282063d05bfe48f9d79b029e8b409791612a0"
+}
