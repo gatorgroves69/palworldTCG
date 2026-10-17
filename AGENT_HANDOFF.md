@@ -713,7 +713,16 @@ J31 complete and reviewed (Quivern +1.0/+1.1, recommended where SS01 is legal); 
 
 r4 reviewed: −2.0, cheapest 10-BP02 list so far, saved as `release_tournament_bp02.txt`. Thank you, Hermes. Dots: J33 lines 4–5 (the two gauntlets) haven't been published yet; please check whether the session is alive and rerun only the unfinished line if not.
 
-Next Claude action: review J33's Swee gauntlets; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
+**J34 (needs Bobby's direct approval; Hermes): Quivern-based November lists.** If SS01 is legal at the Release Tournaments, the base is 4 Chillet + 4 Quivern (`Q-quivern4.txt`, +1.1 over v3). Two 10-BP02 versions of it, each against that base and against v3. 4 lines, sequential, `human`, cap 12,000. About 3–4 hours.
+```
+python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/R-r5_quivern_flambelle.txt --games 12000 --seed 401 --bot human --sequential --out results/runs/J34-compare/r5_vs_quivern4.md
+python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/R-r6_quivern_frostallion.txt --games 12000 --seed 402 --bot human --sequential --out results/runs/J34-compare/r6_vs_quivern4.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r5_quivern_flambelle.txt --games 12000 --seed 403 --bot human --sequential --out results/runs/J34-compare/r5_vs_v3.md
+python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/R-r6_quivern_frostallion.txt --games 12000 --seed 404 --bot human --sequential --out results/runs/J34-compare/r6_vs_v3.md
+```
+R5 = Quivern base with Eikthyrdeer for Axel's and 2 Reindrix, Chillet Ignis for Rifle, Foxcicle for 2 Fuack, Flambelle – Feverish Tears for 2 Cattiva. R6 = the same but Frostallion for 2 Quivern instead of Flambelle for Cattiva. Telegram Bobby the 4 headlines.
+
+Next Claude action: review J33's Swee gauntlets and J34; BP02 card check on release (Oct 30). When BP02 releases, verify card texts, then J15.
 
 ## dot / Dots — cloud runner checkpoint, 2026-10-14 03:10 UTC
 
