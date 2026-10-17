@@ -720,6 +720,12 @@ r4 reviewed: −2.0, cheapest 10-BP02 list so far, saved as `release_tournament_
 python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J34-lux_for_quivern.txt --games 12000 --seed 405 --bot human --sequential --out results/runs/J36-compare/lux_for_quivern.md
 ```
 
+**J37 (needs Bobby's direct approval; whichever runner is free): Chillet – Final Frostneedle on the Quivern list.** SS01-002 (◇6 1000 Dragon, draws when its opposing combat Pal dies). Only tested before in Blazehowl's slot (J11: −1.5/−1.8); here it replaces Fuack, the weakest slot in both the sim and Bobby's games. 2 lines, sequential, `human`, cap 12,000. About 1–2 hours.
+```
+python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J37-frostneedle_for_fuack.txt --games 12000 --seed 421 --bot human --sequential --out results/runs/J37-compare/frostneedle_for_fuack.md
+python3 -m sim compare --a results/runs/Q-quivern4.txt --b results/runs/J37-frostneedle4_for_fuack.txt --games 12000 --seed 422 --bot human --sequential --out results/runs/J37-compare/frostneedle4_for_fuack.md
+```
+
 **J35 (needs Bobby's direct approval; whichever runner is free): Elphidran – Gentle Radiance on v3.** A non-lucky colourless Dragon (◇4 600, +500 revealing an Aqua); +0.5 back with 8 Dragons, J26 screen +3.4 for Axel's but not fully tested. 2 lines, sequential, `human`, cap 12,000. About 1–2 hours.
 ```
 python3 -m sim compare --a results/runs/cattiva_dragons_v3.txt --b results/runs/J35-radiance_for_axels.txt --games 12000 --seed 411 --bot human --sequential --out results/runs/J35-compare/radiance_for_axels.md
