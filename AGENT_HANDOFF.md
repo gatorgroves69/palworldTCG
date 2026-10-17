@@ -831,3 +831,7 @@ Bobby explicitly authorized the five J33 commands. dot owns `results/runs/J33-co
 ### J33 line 1 checkpoint — 2026-10-16 23:56 UTC
 
 Line 1 complete, exit 0: My First/Axel package A versus v3, human seed 391, A 71.1% to B 64.4%, diff -6.7 ± 1.4 points, z -4.6; clear early stop at nominal 2000 games/list (2001 actual). Exact report, command, stdout, start/exit evidence and validation in `results/runs/J33-compare/`. All 1265 protected/input hashes unchanged on frozen 5f0282063d05bfe48f9d79b029e8b409791612a0. No experiment rows generated. Next: line 2 after verified publication; lines 2–5 pending. No adoption or extra jobs.
+
+### J33 line 2 checkpoint — 2026-10-17 00:10 UTC
+
+Lines 1–2 complete. Heavy My First package B versus v3, human seed 392: A 68.4% to B 62.5%, diff -5.9 ± 1.5 points, z -4.1; clear early stop at nominal 2000 games/list (2001 actual), exit 0. Exact report/stdout and execution evidence are in `results/runs/J33-compare/`; all 1265 protected/input hashes unchanged. No experiment rows generated. Next: line 3 after verified publication; three lines remain. No adoption or extra jobs.

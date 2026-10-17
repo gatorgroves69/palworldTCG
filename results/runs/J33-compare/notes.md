@@ -15,3 +15,9 @@ All reports are simulation evidence, not real-event predictions or automatic ado
 Exit 0 at 2026-10-16T23:55:19.644490+00:00. Report/stdout agree; 2001 actual games per list from allocation rounding. **human**, 2000 games per list, seed 391: A 71.1% -> B 64.4% (diff -6.7 ± 1.4, z -4.6) [sequential: stopped early, clear after 2000 games]
 
 All 1265 protected/input hashes unchanged. Next: line 2 after verified main publication.
+
+## Line 2 complete
+
+Exit 0 at 2026-10-17T00:10:08.313271+00:00. Report/stdout agree; 2001 actual games per list from allocation rounding. **human**, 2000 games per list, seed 392: A 68.4% -> B 62.5% (diff -5.9 ± 1.5, z -4.1) [sequential: stopped early, clear after 2000 games]
+
+All 1265 protected/input hashes unchanged. Next: line 3 after verified main publication.
